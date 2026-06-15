@@ -24,33 +24,83 @@ $client = new \ThothApi\GraphQL\Client();
 
 #### Queries
 
-The GraphQL client has a generic request executor. Query, mutation, schema, input, enum and scalar
-classes are generated from the Thoth GraphQL introspection schema.
+Query, mutation, schema, input, enum and scalar classes are generated from the Thoth GraphQL
+introspection schema. The most convenient API is the dynamic client method named after the GraphQL
+operation.
 
 ```php
-use ThothApi\GraphQL\Generated\Queries\ContributorsQuery;
+$works = $client->works(5, [
+    'workId',
+    'fullTitle',
+]);
 
-$contributors = $client->execute(ContributorsQuery::operation([], [
-    'contributorId',
-    'fullName',
-    'orcid',
-]));
+echo $works[0]->getWorkId();
+echo $works[0]->getFullTitle();
 ```
 
-Arguments must match the Thoth GraphQL schema. Enum values can be wrapped with `OperationRequest::enum()`.
+Arguments can be passed positionally or by name. Enum values must be wrapped with the generated enum
+class or `OperationRequest::enum()`.
 
 ```php
-use ThothApi\GraphQL\Generated\Queries\WorksQuery;
-use ThothApi\GraphQL\OperationRequest;
+use ThothApi\GraphQL\Generated\Enums\Direction;
+use ThothApi\GraphQL\Generated\Enums\WorkField;
 
-$works = $client->execute(WorksQuery::operation([
+$works = $client->works([
     'publishers' => ['71faf1c3-900a-4b8c-bca7-4f927699fb90'],
     'limit' => 5,
     'order' => [
-        'field' => OperationRequest::enum('PUBLICATION_DATE'),
-        'direction' => OperationRequest::enum('DESC'),
+        'field' => WorkField::value(WorkField::PUBLICATION_DATE),
+        'direction' => Direction::value(Direction::DESC),
     ],
-], ['workId', 'fullTitle', 'doi']));
+], [
+    'workId',
+    'fullTitle',
+    'doi',
+]);
+```
+
+Selections can include nested fields. Returned object fields and lists are hydrated into generated
+schema classes.
+
+```php
+$work = $client->work('5a5b0fe3-03a9-444b-b221-ecae5370ff30', [
+    'workId',
+    'fullTitle',
+    'titles' => [
+        'titleId',
+        'fullTitle',
+    ],
+    'imprint' => [
+        'imprintId',
+        'publisher' => [
+            'publisherId',
+            'publisherName',
+        ],
+    ],
+]);
+
+echo $work->getImprint()->getPublisher()->getPublisherName();
+echo $work->getTitles()[0]->getFullTitle();
+```
+
+The generic executor is still available when you want to use the generated operation classes
+directly. It returns raw arrays instead of hydrated schema objects.
+
+```php
+use ThothApi\GraphQL\Generated\Queries\WorksQuery;
+
+$works = $client->execute(WorksQuery::operation([
+    'limit' => 5,
+], [
+    'workId',
+    'fullTitle',
+]));
+```
+
+Raw GraphQL queries are supported and use the configured token.
+
+```php
+$data = $client->rawQuery('query { workCount }');
 ```
 
 #### Mutations
@@ -61,38 +111,53 @@ To execute mutations, provide a valid personal access token to the client.
 $client->setToken($token);
 ```
 
-Mutations use the generated mutation classes and return the selected fields from the GraphQL response.
+Inputs are generated from the schema. They can be created from arrays, from DTOs that expose
+`getAllData()`, or from `JsonSerializable` objects.
 
 ```php
 use ThothApi\GraphQL\Generated\Enums\SubjectType;
 use ThothApi\GraphQL\Generated\Inputs\NewSubject;
 
-$subjectId = $client->createSubject(new NewSubject([
+$newSubject = new NewSubject([
     'workId' => '5a5b0fe3-03a9-444b-b221-ecae5370ff30',
     'subjectType' => SubjectType::value(SubjectType::BIC),
     'subjectCode' => '1D',
     'subjectOrdinal' => 3,
-]));
-```
-
-Generated schema classes can also be hydrated from explicit selections and expose getters, setters and
-`toArray()`.
-
-```php
-$work = $client->createWork($newWork, [
-    'workId',
-    'fullTitle',
-    'imprint' => [
-        'imprintId',
-        'publisher' => [
-            'publisherId',
-            'publisherName',
-        ],
-    ],
 ]);
 
-echo $work->getWorkId();
-echo $work->getImprint()->getPublisher()->getPublisherName();
+$subjectId = $client->createSubject($newSubject);
+```
+
+By default, mutations returning objects select the first `*Id` field and return that scalar value, so
+existing calls stay short.
+
+```php
+$subjectId = $client->createSubject($newSubject);
+```
+
+Pass an explicit selection when you want a hydrated schema object with getters, setters and `toArray()`.
+
+```php
+$subject = $client->createSubject($newSubject, [
+    'subjectId',
+    'subjectCode',
+]);
+
+echo $subject->getSubjectId();
+echo $subject->getSubjectCode();
+print_r($subject->toArray());
+```
+
+Generated schema objects can also be instantiated and populated manually.
+
+```php
+use ThothApi\GraphQL\Generated\Schemas\Work;
+
+$work = (new Work())
+    ->setWorkId('5a5b0fe3-03a9-444b-b221-ecae5370ff30')
+    ->setFullTitle('Example title');
+
+echo $work->getFullTitle();
 print_r($work->toArray());
 ```
 
@@ -200,14 +265,13 @@ The constructor of both Clients can receive an optional array to add custom [Guz
 $client = new Client([
     'allow_redirects' => false,
     'connect_timeout' => 3.14,
-    'timeout' => 3.14
+    'timeout' => 3.14,
     'proxy' => [
-        'http'  => 'http://localhost:8125', // Use this proxy with "http"
-        'https' => 'http://localhost:9124', // Use this proxy with "https",
-        'no' => ['.mit.edu', 'foo.com']    // Don't use a proxy with these
+        'http' => 'http://localhost:8125',
+        'https' => 'http://localhost:9124',
+        'no' => ['.mit.edu', 'foo.com'],
     ],
-    'debug' => true
-    ...
+    'debug' => true,
 ]);
 ```
 

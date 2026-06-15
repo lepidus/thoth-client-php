@@ -4,6 +4,14 @@
 
 Cliente PHP para las API GraphQL y REST de Thoth.
 
+## Instalación
+
+Esta biblioteca se puede instalar con Composer:
+
+```bash
+composer require thoth-pub/thoth-client-php
+```
+
 ## Uso
 
 ### GraphQL
@@ -16,53 +24,83 @@ $client = new \ThothApi\GraphQL\Client();
 
 #### Consultas
 
-El cliente mapea todas las consultas de la API GraphQL de Thoth. Los métodos retornan datos en formato orientado a objetos, facilitando el uso y manipulación de la información.
+Las clases de consultas, mutaciones, schemas, inputs, enums y scalars se generan a partir del schema
+de introspección GraphQL de Thoth. La API más simple es llamar en el cliente al método con el mismo
+nombre de la operación GraphQL.
 
 ```php
-$contributors = $client->contributors();
+$works = $client->works(5, [
+    'workId',
+    'fullTitle',
+]);
 
-echo print_r($contributors, true);
-/**
- * Array (
- *    [0] => ThothApi\GraphQL\Models\Contributor Object (
- *            [data] => Array (
- *                    [contributorId] => e1de541c-e84b-4092-941f-dab9b5dac865
- *                    [firstName] => Aaron
- *                    [lastName] => Ansell
- *                    [fullName] => Aaron Ansell
- *                    [orcid] => https://orcid.org/0000-0001-6365-5168
- *                    [website] =>
- *                )
- *        )
- *    [1] => ThothApi\GraphQL\Models\Contributor Object (
- *            [data] => Array (
- *                    [contributorId] => 1c3aade6-6d48-41b4-8def-b435f4b43573
- *                    [firstName] => Aaron D.
- *                    [lastName] => Hornkohl
- *                    [fullName] => Aaron D. Hornkohl
- *                    [orcid] =>
- *                    [website] => https://www.ames.cam.ac.uk/people/dr-aaron-d-hornkohl
- *                )
- *        )
- *    ...
- * )
-*/
-
-$contributor = array_shift($contributors);
-
-echo $contributor->getLastName(); // Ansell
-echo $contributor->getOrcid(); // https://orcid.org/0000-0001-6365-5168
+echo $works[0]->getWorkId();
+echo $works[0]->getFullTitle();
 ```
 
-Las consultas pueden aceptar un array con los argumentos necesarios, según lo especificado en el esquema GraphQL de Thoth. Es posible utilizar el argumento "order" especificando solo el campo y la dirección deseada.
+Los argumentos pueden pasarse por posición o por nombre. Los valores enum deben crearse con la clase
+enum generada o con `OperationRequest::enum()`.
 
 ```php
+use ThothApi\GraphQL\Generated\Enums\Direction;
+use ThothApi\GraphQL\Generated\Enums\WorkField;
+
 $works = $client->works([
     'publishers' => ['71faf1c3-900a-4b8c-bca7-4f927699fb90'],
     'limit' => 5,
-    'field' => 'PUBLICATION_DATE',
-    'direction' => 'DESC'
+    'order' => [
+        'field' => WorkField::value(WorkField::PUBLICATION_DATE),
+        'direction' => Direction::value(Direction::DESC),
+    ],
+], [
+    'workId',
+    'fullTitle',
+    'doi',
 ]);
+```
+
+La selección puede incluir campos anidados. Los campos que devuelven objetos o listas se hidratan en
+clases generadas de schema.
+
+```php
+$work = $client->work('5a5b0fe3-03a9-444b-b221-ecae5370ff30', [
+    'workId',
+    'fullTitle',
+    'titles' => [
+        'titleId',
+        'fullTitle',
+    ],
+    'imprint' => [
+        'imprintId',
+        'publisher' => [
+            'publisherId',
+            'publisherName',
+        ],
+    ],
+]);
+
+echo $work->getImprint()->getPublisher()->getPublisherName();
+echo $work->getTitles()[0]->getFullTitle();
+```
+
+El ejecutor genérico sigue disponible cuando sea mejor usar directamente las clases generadas de
+operación. Devuelve arrays sin hidratar objetos de schema.
+
+```php
+use ThothApi\GraphQL\Generated\Queries\WorksQuery;
+
+$works = $client->execute(WorksQuery::operation([
+    'limit' => 5,
+], [
+    'workId',
+    'fullTitle',
+]));
+```
+
+También es posible ejecutar GraphQL bruto. El token configurado con `setToken()` se usa en este camino.
+
+```php
+$data = $client->rawQuery('query { workCount }');
 ```
 
 #### Mutaciones
@@ -73,50 +111,77 @@ Para ejecutar mutaciones, proporcione al cliente un personal access token valido
 $client->setToken($token);
 ```
 
-Las mutaciones pueden ejecutarse proporcionando una instancia de la clase modelo correspondiente al tipo de mutación. Para las mutaciones de eliminación, solo es necesario proporcionar la ID del objeto. Cuando la operación se realiza con éxito, se devuelve la ID del objeto.
+Los inputs se generan a partir del schema. Se pueden crear con arrays, a partir de DTOs que exponen
+`getAllData()` o con objetos `JsonSerializable`.
 
 ```php
-use ThothApi\GraphQL\Models\Subject;
+use ThothApi\GraphQL\Generated\Enums\SubjectType;
+use ThothApi\GraphQL\Generated\Inputs\NewSubject;
 
-$subject = new Subject();
-$subject->setWorkId('5a5b0fe3-03a9-444b-b221-ecae5370ff30');
-$subject->setSubjectType(Subject::SUBJECT_TYPE_BIC);
-$subject->setSubjectCode('1D');
-$subject->setSubjectOrdinal(3);
+$newSubject = new NewSubject([
+    'workId' => '5a5b0fe3-03a9-444b-b221-ecae5370ff30',
+    'subjectType' => SubjectType::value(SubjectType::BIC),
+    'subjectCode' => '1D',
+    'subjectOrdinal' => 3,
+]);
 
-$subjectId = $client->createSubject($subject); // 1d5ae47b-9e0c-4fba-b2d4-a3a2cdd8860c
+$subjectId = $client->createSubject($newSubject);
+```
 
-$client->deleteSubject($subjectId);
+Por defecto, las mutaciones que devuelven objetos seleccionan el primer campo `*Id` y devuelven ese
+valor escalar.
+
+```php
+$subjectId = $client->createSubject($newSubject);
+```
+
+Indique una selección explícita cuando quiera recibir un objeto de schema hidratado con getters,
+setters y `toArray()`.
+
+```php
+$subject = $client->createSubject($newSubject, [
+    'subjectId',
+    'subjectCode',
+]);
+
+echo $subject->getSubjectId();
+echo $subject->getSubjectCode();
+print_r($subject->toArray());
+```
+
+Las clases de schema también pueden instanciarse y poblarse manualmente.
+
+```php
+use ThothApi\GraphQL\Generated\Schemas\Work;
+
+$work = (new Work())
+    ->setWorkId('5a5b0fe3-03a9-444b-b221-ecae5370ff30')
+    ->setFullTitle('Titulo de ejemplo');
+
+echo $work->getFullTitle();
+print_r($work->toArray());
+```
+
+Regenera las clases GraphQL a partir del schema actual de Thoth:
+
+```bash
+composer generate-graphql-client
 ```
 
 #### Excepciones
 
-Se lanza una excepción del tipo *QueryException* en caso de error en la solicitud a la API GraphQL. Es posible recuperar el mensaje del error y una descripción más detallada a partir de la excepción.
+Se lanza una excepción del tipo *QueryException* en caso de error en la solicitud a la API GraphQL. Es posible recuperar el mensaje, los detalles, la query y las variables enviadas.
 
 ```php
 try {
-    $work = new \ThothApi\GraphQL\Models\Work([
+    $client->createWork(new \ThothApi\GraphQL\Generated\Inputs\NewWork([
         'doi' => 'https://doi.org/10.00000/00000000',
-    ]);
-    $workId = $client->createWork($work);
+    ]));
 } catch (\ThothApi\Exception\QueryException $exception) {
     echo $exception->getMessage();
-    /**
-     * Invalid value for argument "data", reason:
-     * "NewWork" is missing fields: "imprintId", "workStatus", "workType"
-    */
-    echo print_r($exception->getDetails());
-    /**
-     *  Array (
-     *      [message] => Invalid value for argument "data", reason: "NewWork" is missing fields: "imprintId", "workStatus", "workType"
-     *      [locations] => Array (
-     *          [0] => Array (
-     *              [line] => 3
-     *              [column] => 15
-     *          )
-     *      )
-     * )
-    */
+    echo print_r($exception->getDetails(), true);
+    echo $exception->getQuery();
+    echo print_r($exception->getVariables(), true);
 }
 ```
 
@@ -184,14 +249,13 @@ El constructor de ambos Clientes puede recibir un array opcional para agregar co
 $client = new Client([
     'allow_redirects' => false,
     'connect_timeout' => 3.14,
-    'timeout' => 3.14
+    'timeout' => 3.14,
     'proxy' => [
-        'http'  => 'http://localhost:8125', // Use this proxy with "http"
-        'https' => 'http://localhost:9124', // Use this proxy with "https",
-        'no' => ['.mit.edu', 'foo.com']    // Don't use a proxy with these
+        'http' => 'http://localhost:8125',
+        'https' => 'http://localhost:9124',
+        'no' => ['.mit.edu', 'foo.com'],
     ],
-    'debug' => true
-    ...
+    'debug' => true,
 ]);
 ```
 
