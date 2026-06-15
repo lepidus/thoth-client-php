@@ -7,16 +7,9 @@ use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 use ThothApi\GraphQL\Client;
-use ThothApi\Tests\GraphQL\Concerns\HasClientMutationTests;
-use ThothApi\Tests\GraphQL\Concerns\HasClientQueryTests;
-use ThothApi\Tests\GraphQL\Concerns\HasClientSchemaSyncTests;
 
 final class ClientTest extends TestCase
 {
-    use HasClientMutationTests;
-    use HasClientQueryTests;
-    use HasClientSchemaSyncTests;
-
     private MockHandler $mockHandler;
 
     private Client $client;

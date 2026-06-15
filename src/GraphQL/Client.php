@@ -2,19 +2,8 @@
 
 namespace ThothApi\GraphQL;
 
-use ThothApi\GraphQL\Concerns\HasMutationOperations;
-use ThothApi\GraphQL\Concerns\HasQueryOperations;
-use ThothApi\GraphQL\Models\AbstractModel;
-use ThothApi\GraphQL\Models\AbstractText;
-use ThothApi\GraphQL\Models\AdditionalResource;
-use ThothApi\GraphQL\Models\Me;
-use ThothApi\GraphQL\Models\Work;
-
 class Client
 {
-    use HasMutationOperations;
-    use HasQueryOperations;
-
     private Request $request;
 
     private string $token = '';
@@ -41,99 +30,167 @@ class Client
         return $response->getData();
     }
 
-    private function get(string $entityName, string $entityId, array $args = []): AbstractModel
+    public function execute(OperationRequest $operation): array
     {
-        $entityClass = $this->getModelClass($entityName);
-        $args = array_merge(
-            [$this->getIdentifierField($entityName) => $entityId],
-            array_filter($args, fn ($value) => $value !== null)
+        $response = $this->request->runQuery($operation->toGraphQL(), null, $this->token ?: null);
+        $data = $response->getData();
+
+        return $data[$operation->getField()->getName()];
+    }
+
+    public function __call(string $name, array $arguments)
+    {
+        $operationClass = $this->getOperationClass($name);
+        $selection = $this->getSelectionArgument($arguments);
+        $field = $operationClass::field();
+        $operation = $operationClass::operation(
+            $this->getOperationArguments($field->getArguments(), $arguments),
+            $selection ?: $this->getDefaultSelection($field->getType()->baseName())
         );
+        $result = $this->execute($operation);
 
-        $result = $this->query($entityName, $args, $entityName === 'me' ? $this->token : null);
-        return new $entityClass($result[$entityName]);
-    }
+        if (is_array($result) && count($operation->getSelection()) === 1) {
+            $selectedField = $operation->getSelection()[0];
 
-    private function getMany(string $entityName, array $args = []): array
-    {
-        $entityClass = $this->getModelClass($entityName);
-        $queryName = $this->getPluralQueryName($entityName);
-
-        $result = $this->query($queryName, $args);
-        return array_map(fn ($data) => new $entityClass($data), $result[$queryName]);
-    }
-
-    private function count(string $entityName, array $args = []): int
-    {
-        $queryName = $entityName . 'Count';
-        $result = $this->query($queryName, $args);
-        return $result[$queryName];
-    }
-
-    private function getByDoi(string $entityName, string $doi): AbstractModel
-    {
-        $entityClass = $this->getModelClass($entityName);
-        $queryName = $entityName . 'ByDoi';
-        $result = $this->query($queryName, ['doi' => $doi]);
-        return new $entityClass($result[$queryName]);
-    }
-
-    private function mutation(string $mutationName, array $data, string $returnValue, array $extraArgs = []): string
-    {
-        $result = $this->runMutation($mutationName, $data, $extraArgs);
-        return $result[$returnValue];
-    }
-
-    private function runMutation(string $mutationName, array $data, array $extraArgs = []): array
-    {
-        $mutation = MutationBuilder::build($mutationName, $data, $extraArgs);
-        $response = $this->request->runQuery($mutation, null, $this->token);
-        $body = $response->getData();
-        return $body[$mutationName];
-    }
-
-    private function getModelClass(string $entityName): string
-    {
-        $mapping = [
-            'abstract' => AbstractText::class,
-            'additionalResource' => AdditionalResource::class,
-            'book' => Work::class,
-            'chapter' => Work::class,
-            'me' => Me::class,
-        ];
-
-        return $mapping[$entityName] ?? '\\ThothApi\\GraphQL\\Models\\' . ucfirst($entityName);
-    }
-
-    private function getIdentifierField(string $entityName): string
-    {
-        switch ($entityName) {
-            case 'additionalResource':
-                return 'additionalResourceId';
-            case 'bookReview':
-                return 'bookReviewId';
-            case 'workFeaturedVideo':
-                return 'workFeaturedVideoId';
-            default:
-                return $entityName . 'Id';
+            if (is_string($selectedField) && array_key_exists($selectedField, $result)) {
+                return $result[$selectedField];
+            }
         }
+
+        return $result;
     }
 
-    private function getPluralQueryName(string $entityName): string
+    private function getOperationClass(string $name): string
     {
-        switch ($entityName) {
-            case 'biography':
-                return 'biographies';
-            case 'series':
-                return 'serieses';
-            default:
-                return $entityName . 's';
+        $className = $this->studly($name);
+        $mutationClass = '\\ThothApi\\GraphQL\\Generated\\Mutations\\' . $className . 'Mutation';
+
+        if (class_exists($mutationClass)) {
+            return $mutationClass;
         }
+
+        $queryClass = '\\ThothApi\\GraphQL\\Generated\\Queries\\' . $className . 'Query';
+
+        if (class_exists($queryClass)) {
+            return $queryClass;
+        }
+
+        throw new \BadMethodCallException("Operation '{$name}' not found.");
     }
 
-    private function query(string $queryName, array $args = [], ?string $token = null): array
+    private function getSelectionArgument(array &$arguments): array
     {
-        $query = QueryProvider::get($queryName);
-        $response = $this->request->runQuery($query, array_filter($args, fn ($value) => $value !== null), $token);
-        return $response->getData();
+        if (count($arguments) < 2) {
+            return [];
+        }
+
+        $selection = end($arguments);
+
+        if (!is_array($selection)) {
+            return [];
+        }
+
+        array_pop($arguments);
+        return $selection;
+    }
+
+    private function getOperationArguments(array $schemaArguments, array $arguments): array
+    {
+        if ($schemaArguments === []) {
+            return [];
+        }
+
+        if (count($arguments) === 1 && is_array($arguments[0]) && $this->isAssociativeArray($arguments[0])) {
+            if (count($schemaArguments) !== 1 || array_key_exists($schemaArguments[0]->getName(), $arguments[0])) {
+                return $this->normalizeValue($arguments[0]);
+            }
+        }
+
+        if (count($schemaArguments) === 1) {
+            return [$schemaArguments[0]->getName() => $this->normalizeValue($arguments[0] ?? null)];
+        }
+
+        $operationArguments = [];
+
+        foreach ($schemaArguments as $index => $schemaArgument) {
+            if (array_key_exists($index, $arguments)) {
+                $operationArguments[$schemaArgument->getName()] = $this->normalizeValue($arguments[$index]);
+            }
+        }
+
+        return $operationArguments;
+    }
+
+    private function normalizeValue($value)
+    {
+        if ($value instanceof EnumValue) {
+            return $value;
+        }
+
+        if (is_array($value)) {
+            return array_map([$this, 'normalizeValue'], $value);
+        }
+
+        if (is_object($value)) {
+            if (method_exists($value, 'getAllData')) {
+                return $this->normalizeValue($value->getAllData());
+            }
+
+            if ($value instanceof \JsonSerializable) {
+                return $this->normalizeValue($value->jsonSerialize());
+            }
+
+            return $this->normalizeValue(get_object_vars($value));
+        }
+
+        return $value;
+    }
+
+    private function getDefaultSelection(?string $typeName): array
+    {
+        if ($typeName === null || in_array($typeName, ['Boolean', 'Date', 'Doi', 'Float', 'Int', 'Isbn', 'Orcid', 'Ror', 'String', 'Timestamp', 'Uuid'], true)) {
+            return [];
+        }
+
+        $schemaClass = '\\ThothApi\\GraphQL\\Generated\\Schemas\\' . $this->safeClassName($this->studly($typeName));
+
+        if (!class_exists($schemaClass)) {
+            return [];
+        }
+
+        foreach ($schemaClass::definition()->getFields() as $field) {
+            if (substr($field->getName(), -2) === 'Id') {
+                return [$field->getName()];
+            }
+        }
+
+        return [];
+    }
+
+    private function studly(string $value): string
+    {
+        $value = preg_replace('/[^A-Za-z0-9]+/', ' ', $value);
+        $value = preg_replace('/(?<!^)([A-Z])/', ' $1', (string) $value);
+        $value = str_replace(' ', '', ucwords(strtolower((string) $value)));
+
+        if ($value === '' || preg_match('/^[0-9]/', $value)) {
+            return 'Type' . $value;
+        }
+
+        return $value;
+    }
+
+    private function safeClassName(string $className): string
+    {
+        if (in_array(strtolower($className), ['abstract', 'and', 'array', 'as', 'break', 'callable', 'case', 'catch', 'class', 'clone', 'const', 'continue', 'declare', 'default', 'die', 'do', 'echo', 'else', 'elseif', 'empty', 'enddeclare', 'endfor', 'endforeach', 'endif', 'endswitch', 'endwhile', 'eval', 'exit', 'extends', 'final', 'finally', 'fn', 'for', 'foreach', 'function', 'global', 'goto', 'if', 'implements', 'include', 'include_once', 'instanceof', 'insteadof', 'interface', 'isset', 'list', 'match', 'namespace', 'new', 'or', 'print', 'private', 'protected', 'public', 'readonly', 'require', 'require_once', 'return', 'static', 'switch', 'throw', 'trait', 'try', 'unset', 'use', 'var', 'while', 'xor', 'yield'], true)) {
+            return 'GraphQL' . $className;
+        }
+
+        return $className;
+    }
+
+    private function isAssociativeArray(array $value): bool
+    {
+        return $value !== [] && array_keys($value) !== range(0, count($value) - 1);
     }
 }

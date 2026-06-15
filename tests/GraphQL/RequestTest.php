@@ -52,6 +52,9 @@ final class RequestTest extends TestCase
 
     public function testInvalidQueryWithResponse200(): void
     {
+        $query = 'query { invalid }';
+        $variables = ['limit' => 1];
+
         $this->mockHandler->append(new Response(200, [], json_encode([
             'errors' => [
                 [
@@ -66,8 +69,13 @@ final class RequestTest extends TestCase
             ]
         ])));
 
-        $this->expectException(QueryException::class);
-        $this->request->runQuery('');
+        try {
+            $this->request->runQuery($query, $variables);
+            $this->fail('Expected query exception.');
+        } catch (QueryException $exception) {
+            $this->assertSame($query, $exception->getQuery());
+            $this->assertSame($variables, $exception->getVariables());
+        }
     }
 
     public function testInvalidQueryResponseWith400(): void

@@ -24,53 +24,33 @@ $client = new \ThothApi\GraphQL\Client();
 
 #### Queries
 
-The client maps all queries from the Thoth GraphQL API. Methods return data in an object-oriented format, making it easy to use and manipulate information.
+The GraphQL client has a generic request executor. Query, mutation, schema, input, enum and scalar
+classes are generated from the Thoth GraphQL introspection schema.
 
 ```php
-$contributors = $client->contributors();
+use ThothApi\GraphQL\Generated\Queries\ContributorsQuery;
 
-echo print_r($contributors, true);
-/**
- * Array (
- *    [0] => ThothApi\GraphQL\Models\Contributor Object (
- *            [data] => Array (
- *                    [contributorId] => e1de541c-e84b-4092-941f-dab9b5dac865
- *                    [firstName] => Aaron
- *                    [lastName] => Ansell
- *                    [fullName] => Aaron Ansell
- *                    [orcid] => https://orcid.org/0000-0001-6365-5168
- *                    [website] =>
- *                )
- *        )
- *    [1] => ThothApi\GraphQL\Models\Contributor Object (
- *            [data] => Array (
- *                    [contributorId] => 1c3aade6-6d48-41b4-8def-b435f4b43573
- *                    [firstName] => Aaron D.
- *                    [lastName] => Hornkohl
- *                    [fullName] => Aaron D. Hornkohl
- *                    [orcid] =>
- *                    [website] => https://www.ames.cam.ac.uk/people/dr-aaron-d-hornkohl
- *                )
- *        )
- *    ...
- * )
-*/
-
-$contributor = array_shift($contributors);
-
-echo $contributor->getLastName(); // Ansell
-echo $contributor->getOrcid(); // https://orcid.org/0000-0001-6365-5168
+$contributors = $client->execute(ContributorsQuery::operation([], [
+    'contributorId',
+    'fullName',
+    'orcid',
+]));
 ```
 
-Queries can accept an array with the required arguments as specified in the Thoth GraphQL schema. It's possible to use the "order" argument specifying only the field and the desired direction.
+Arguments must match the Thoth GraphQL schema. Enum values can be wrapped with `OperationRequest::enum()`.
 
 ```php
-$works = $client->works([
+use ThothApi\GraphQL\Generated\Queries\WorksQuery;
+use ThothApi\GraphQL\OperationRequest;
+
+$works = $client->execute(WorksQuery::operation([
     'publishers' => ['71faf1c3-900a-4b8c-bca7-4f927699fb90'],
     'limit' => 5,
-    'field' => 'PUBLICATION_DATE',
-    'direction' => 'DESC'
-]);
+    'order' => [
+        'field' => OperationRequest::enum('PUBLICATION_DATE'),
+        'direction' => OperationRequest::enum('DESC'),
+    ],
+], ['workId', 'fullTitle', 'doi']));
 ```
 
 #### Mutations
@@ -81,20 +61,24 @@ To execute mutations, provide a valid personal access token to the client.
 $client->setToken($token);
 ```
 
-Mutations can be executed by providing an instance of the model class corresponding to the mutation type. To delete mutations, only the object's ID is required. When the operation is successful, the object's ID is returned.
+Mutations use the generated mutation classes and return the selected fields from the GraphQL response.
 
 ```php
-use ThothApi\GraphQL\Models\Subject;
+use ThothApi\GraphQL\Generated\Enums\SubjectType;
+use ThothApi\GraphQL\Generated\Inputs\NewSubject;
 
-$subject = new Subject();
-$subject->setWorkId('5a5b0fe3-03a9-444b-b221-ecae5370ff30');
-$subject->setSubjectType(Subject::SUBJECT_TYPE_BIC);
-$subject->setSubjectCode('1D');
-$subject->setSubjectOrdinal(3);
+$subjectId = $client->createSubject(new NewSubject([
+    'workId' => '5a5b0fe3-03a9-444b-b221-ecae5370ff30',
+    'subjectType' => SubjectType::value(SubjectType::BIC),
+    'subjectCode' => '1D',
+    'subjectOrdinal' => 3,
+]));
+```
 
-$subjectId = $client->createSubject($subject); // 1d5ae47b-9e0c-4fba-b2d4-a3a2cdd8860c
+Regenerate the GraphQL classes from the current Thoth GraphQL schema:
 
-$client->deleteSubject($subjectId);
+```bash
+composer generate-graphql-client
 ```
 
 #### Exceptions
@@ -103,10 +87,11 @@ A QueryException is thrown in case of an error in the request to the GraphQL API
 
 ```php
 try {
-    $work = new \ThothApi\GraphQL\Models\Work([
-        'doi' => 'https://doi.org/10.00000/00000000',
-    ]);
-    $workId = $client->createWork($work);
+    $client->execute(\ThothApi\GraphQL\Generated\Mutations\CreateWorkMutation::operation([
+        'data' => [
+            'doi' => 'https://doi.org/10.00000/00000000',
+        ],
+    ], ['workId']));
 } catch (\ThothApi\Exception\QueryException $exception) {
     echo $exception->getMessage();
     /**

@@ -23,4 +23,16 @@ class QueryExceptionTest extends TestCase
         $this->assertSame($error, $queryException->getDetails());
         $this->assertSame($error['message'], $queryException->getMessage());
     }
+
+    public function testGetQueryAndVariables(): void
+    {
+        $error = ['message' => 'some syntax error'];
+        $query = 'query { books { workId } }';
+        $variables = ['limit' => 1];
+
+        $queryException = new QueryException($error, $query, $variables);
+
+        $this->assertSame($query, $queryException->getQuery());
+        $this->assertSame($variables, $queryException->getVariables());
+    }
 }

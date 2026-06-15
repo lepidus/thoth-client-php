@@ -12,13 +12,19 @@ class Response
 
     private GuzzleResponse $previousResponse;
 
-    public function __construct(ResponseInterface $guzzleResponse)
+    private ?string $query;
+
+    private ?array $variables;
+
+    public function __construct(ResponseInterface $guzzleResponse, ?string $query = null, ?array $variables = null)
     {
         $this->previousResponse = $guzzleResponse;
         $this->body = $guzzleResponse->getBody()->getContents();
+        $this->query = $query;
+        $this->variables = $variables;
 
         if ($error = $this->getErrors()) {
-            throw new QueryException($error);
+            throw new QueryException($error, $this->query, $this->variables);
         }
     }
 

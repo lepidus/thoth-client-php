@@ -33,17 +33,22 @@ class Request
             $options['headers']['Authorization'] = 'Bearer ' . $token;
         }
 
-        return $this->execute('POST', 'graphql', $options);
+        return $this->execute('POST', 'graphql', $options, $query, $variables);
     }
 
-    public function execute(string $method, string $endpoint, array $options = []): Response
-    {
+    public function execute(
+        string $method,
+        string $endpoint,
+        array $options = [],
+        ?string $query = null,
+        ?array $variables = null
+    ): Response {
         try {
             $httpResponse = $this->httpClient->request($method, $endpoint, $options);
         } catch (ClientException $exception) {
             $httpResponse = $exception->getResponse();
         }
 
-        return new Response($httpResponse);
+        return new Response($httpResponse, $query, $variables);
     }
 }
