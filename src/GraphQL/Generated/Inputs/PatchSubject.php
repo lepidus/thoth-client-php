@@ -3,21 +3,10 @@
 namespace ThothApi\GraphQL\Generated\Inputs;
 
 use ThothApi\GraphQL\Definition\InputObjectTypeDefinition;
+use ThothApi\GraphQL\InputObject;
 
-final class PatchSubject
+final class PatchSubject extends InputObject
 {
-    private array $data;
-
-    public function __construct(array $data = [])
-    {
-        $this->data = $data;
-    }
-
-    public function getAllData(): array
-    {
-        return $this->data;
-    }
-
     public static function definition(): InputObjectTypeDefinition
     {
         return new InputObjectTypeDefinition('PatchSubject', [

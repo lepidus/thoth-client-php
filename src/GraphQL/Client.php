@@ -4,6 +4,8 @@ namespace ThothApi\GraphQL;
 
 class Client
 {
+    private const SCALAR_TYPES = ['Boolean', 'Date', 'Doi', 'Float', 'Int', 'Isbn', 'Orcid', 'Ror', 'String', 'Timestamp', 'Uuid'];
+
     private Request $request;
 
     private string $token = '';
@@ -47,17 +49,8 @@ class Client
             $this->getOperationArguments($field->getArguments(), $arguments),
             $selection ?: $this->getDefaultSelection($field->getType()->baseName())
         );
-        $result = $this->execute($operation);
 
-        if (is_array($result) && count($operation->getSelection()) === 1) {
-            $selectedField = $operation->getSelection()[0];
-
-            if (is_string($selectedField) && array_key_exists($selectedField, $result)) {
-                return $result[$selectedField];
-            }
-        }
-
-        return $result;
+        return $this->unwrapSingleSelection($this->execute($operation), $operation->getSelection());
     }
 
     private function getOperationClass(string $name): string
@@ -80,18 +73,13 @@ class Client
 
     private function getSelectionArgument(array &$arguments): array
     {
-        if (count($arguments) < 2) {
+        $lastArgument = count($arguments) - 1;
+
+        if ($lastArgument < 1 || !is_array($arguments[$lastArgument])) {
             return [];
         }
 
-        $selection = end($arguments);
-
-        if (!is_array($selection)) {
-            return [];
-        }
-
-        array_pop($arguments);
-        return $selection;
+        return array_pop($arguments);
     }
 
     private function getOperationArguments(array $schemaArguments, array $arguments): array
@@ -148,11 +136,11 @@ class Client
 
     private function getDefaultSelection(?string $typeName): array
     {
-        if ($typeName === null || in_array($typeName, ['Boolean', 'Date', 'Doi', 'Float', 'Int', 'Isbn', 'Orcid', 'Ror', 'String', 'Timestamp', 'Uuid'], true)) {
+        if ($typeName === null || in_array($typeName, self::SCALAR_TYPES, true)) {
             return [];
         }
 
-        $schemaClass = '\\ThothApi\\GraphQL\\Generated\\Schemas\\' . $this->safeClassName($this->studly($typeName));
+        $schemaClass = '\\ThothApi\\GraphQL\\Generated\\Schemas\\' . ($typeName === 'Abstract' ? 'GraphQLAbstract' : $typeName);
 
         if (!class_exists($schemaClass)) {
             return [];
@@ -167,6 +155,15 @@ class Client
         return [];
     }
 
+    private function unwrapSingleSelection($result, array $selection)
+    {
+        if (!is_array($result) || count($selection) !== 1 || !is_string($selection[0])) {
+            return $result;
+        }
+
+        return array_key_exists($selection[0], $result) ? $result[$selection[0]] : $result;
+    }
+
     private function studly(string $value): string
     {
         $value = preg_replace('/[^A-Za-z0-9]+/', ' ', $value);
@@ -178,15 +175,6 @@ class Client
         }
 
         return $value;
-    }
-
-    private function safeClassName(string $className): string
-    {
-        if (in_array(strtolower($className), ['abstract', 'and', 'array', 'as', 'break', 'callable', 'case', 'catch', 'class', 'clone', 'const', 'continue', 'declare', 'default', 'die', 'do', 'echo', 'else', 'elseif', 'empty', 'enddeclare', 'endfor', 'endforeach', 'endif', 'endswitch', 'endwhile', 'eval', 'exit', 'extends', 'final', 'finally', 'fn', 'for', 'foreach', 'function', 'global', 'goto', 'if', 'implements', 'include', 'include_once', 'instanceof', 'insteadof', 'interface', 'isset', 'list', 'match', 'namespace', 'new', 'or', 'print', 'private', 'protected', 'public', 'readonly', 'require', 'require_once', 'return', 'static', 'switch', 'throw', 'trait', 'try', 'unset', 'use', 'var', 'while', 'xor', 'yield'], true)) {
-            return 'GraphQL' . $className;
-        }
-
-        return $className;
     }
 
     private function isAssociativeArray(array $value): bool

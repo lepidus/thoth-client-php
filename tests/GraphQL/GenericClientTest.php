@@ -9,6 +9,7 @@ use PHPUnit\Framework\TestCase;
 use ThothApi\GraphQL\Client;
 use ThothApi\GraphQL\Definition\FieldDefinition;
 use ThothApi\GraphQL\Definition\TypeReference;
+use ThothApi\GraphQL\Generated\Inputs\NewPublicationFileUpload;
 use ThothApi\GraphQL\Generated\Inputs\NewWork;
 use ThothApi\GraphQL\OperationRequest;
 
@@ -113,5 +114,28 @@ final class GenericClientTest extends TestCase
         ]);
 
         $this->assertSame('work-1', $client->createWork($newWork));
+    }
+
+    public function testItUsesFirstIdFieldFromGeneratedSchemaAsDefaultSelection(): void
+    {
+        $mockHandler = new MockHandler([
+            new Response(200, [], json_encode([
+                'data' => [
+                    'initPublicationFileUpload' => [
+                        'fileUploadId' => 'upload-1',
+                    ],
+                ],
+            ])),
+        ]);
+
+        $client = new Client(['handler' => HandlerStack::create($mockHandler)]);
+        $input = new NewPublicationFileUpload([
+            'publicationId' => 'publication-1',
+            'declaredMimeType' => 'application/pdf',
+            'declaredExtension' => 'pdf',
+            'declaredSha256' => str_repeat('a', 64),
+        ]);
+
+        $this->assertSame('upload-1', $client->initPublicationFileUpload($input));
     }
 }

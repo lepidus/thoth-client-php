@@ -21,12 +21,10 @@ foreach ($schema['types'] as $type) {
 }
 
 removeDirectory($target);
-mkdir($target . '/Queries', 0777, true);
-mkdir($target . '/Mutations', 0777, true);
-mkdir($target . '/Schemas', 0777, true);
-mkdir($target . '/Inputs', 0777, true);
-mkdir($target . '/Enums', 0777, true);
-mkdir($target . '/Scalars', 0777, true);
+
+foreach (['Queries', 'Mutations', 'Schemas', 'Inputs', 'Enums', 'Scalars'] as $directory) {
+    mkdir($target . '/' . $directory, 0777, true);
+}
 
 generateOperations($types[$schema['queryType']['name']], 'query', $target . '/Queries', 'Queries');
 generateOperations($types[$schema['mutationType']['name']], 'mutation', $target . '/Mutations', 'Mutations');
@@ -36,14 +34,19 @@ foreach ($types as $type) {
         continue;
     }
 
-    if ($type['kind'] === 'OBJECT') {
-        generateObjectType($type, $target . '/Schemas', 'Schemas');
-    } elseif ($type['kind'] === 'INPUT_OBJECT') {
-        generateInputType($type, $target . '/Inputs', 'Inputs');
-    } elseif ($type['kind'] === 'ENUM') {
-        generateEnumType($type, $target . '/Enums', 'Enums');
-    } elseif ($type['kind'] === 'SCALAR') {
-        generateScalarType($type, $target . '/Scalars', 'Scalars');
+    switch ($type['kind']) {
+        case 'OBJECT':
+            generateObjectType($type, $target . '/Schemas', 'Schemas');
+            break;
+        case 'INPUT_OBJECT':
+            generateInputType($type, $target . '/Inputs', 'Inputs');
+            break;
+        case 'ENUM':
+            generateEnumType($type, $target . '/Enums', 'Enums');
+            break;
+        case 'SCALAR':
+            generateScalarType($type, $target . '/Scalars', 'Scalars');
+            break;
     }
 }
 
@@ -150,21 +153,10 @@ function generateInputType(array $type, string $directory, string $namespacePart
 namespace ThothApi\\GraphQL\\Generated\\{$namespacePart};
 
 use ThothApi\\GraphQL\\Definition\\InputObjectTypeDefinition;
+use ThothApi\\GraphQL\\InputObject;
 
-final class {$className}
+final class {$className} extends InputObject
 {
-    private array \$data;
-
-    public function __construct(array \$data = [])
-    {
-        \$this->data = \$data;
-    }
-
-    public function getAllData(): array
-    {
-        return \$this->data;
-    }
-
     public static function definition(): InputObjectTypeDefinition
     {
         return new InputObjectTypeDefinition('{$type['name']}', [
