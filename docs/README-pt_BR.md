@@ -192,44 +192,17 @@ Documentação da API: https://export.thoth.pub/
 
 ```php
 $client = new \ThothApi\Rest\Client();
+```
 
-echo(print_r($client->work('doideposit::crossref', 'e0f748b2-984f-45cc-8b9e-13989c31dda4'), true));
-/**
- * <?xml version="1.0" encoding="utf-8"?>
- * <doi_batch version="5.3.1" xmlns="http://www.crossref.org/schema/5.3.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/schema/5.3.1 http://www.crossref.org/schemas/crossref5.3.1.xsd" xmlns:ai="http://www.crossref.org/AccessIndicators.xsd" xmlns:jats="http://www.ncbi.nlm.nih.gov/JATS1" xmlns:fr="http://www.crossref.org/fundref.xsd">
- *  <head>
- *      <doi_batch_id>e0f748b2-984f-45cc-8b9e-13989c31dda4_20241010195624</doi_batch_id>
- *      <timestamp>20241010195624</timestamp>
- *      <depositor>
- *          <depositor_name>Thoth</depositor_name>
- *          <email_address>distribution@thoth.pub</email_address>
- *      </depositor>
- *      <registrant>Thoth</registrant>
- *  </head>
- *  <body>
- *      <book book_type="monograph">
- *          <book_metadata language="en">
- *          <contributors>
- *              <person_name sequence="first" contributor_role="author">
- *                  <given_name>Ammiel</given_name>
- *                  <surname>Alcalay</surname>
- *                  <affiliations>
- *                      <institution>
- *                          <institution_name>Queens College, CUNY</institution_name>
- *                          <institution_id type="ror">https://ror.org/03v8adn41</institution_id>
- *                      </institution>
- *                      <institution>
- *                          <institution_name>The Graduate Center, CUNY</institution_name>
- *                          <institution_id type="ror">https://ror.org/00awd9g61</institution_id>
- *                      </institution>
- *                  </affiliations>
- *              </person_name>
- *          </contributors>
- *          <titles>
- *              <title>A Bibliography for After Jews and Arabs</title>
- *          </titles>
- *          ...
- */
+O client REST exporta metadados nos formatos disponibilizados pela API de exportação do Thoth.
+
+```php
+$formats = $client->formats();
+
+$metadata = $client->work(
+    'doideposit::crossref',
+    'e0f748b2-984f-45cc-8b9e-13989c31dda4'
+);
 ```
 
 #### Exceções
