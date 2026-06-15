@@ -3,6 +3,7 @@
 namespace ThothApi\GraphQL;
 
 use ThothApi\GraphQL\Definition\FieldDefinition;
+use ThothApi\GraphQL\Definition\TypeReference;
 
 final class OperationRequest
 {
@@ -58,6 +59,7 @@ final class OperationRequest
     private function formatArguments(array $arguments): string
     {
         $formatted = [];
+        $schemaArguments = $this->getSchemaArgumentsByName();
 
         foreach ($arguments as $name => $value) {
             if ($value === null) {
@@ -65,7 +67,7 @@ final class OperationRequest
             }
 
             $this->assertIdentifier((string) $name);
-            $formatted[] = $name . ': ' . $this->formatValue($value);
+            $formatted[] = $name . ': ' . $this->formatValue($value, $schemaArguments[$name] ?? null);
         }
 
         return implode(', ', $formatted);
@@ -89,7 +91,7 @@ final class OperationRequest
         return implode("\n", $lines);
     }
 
-    private function formatValue($value): string
+    private function formatValue($value, ?TypeReference $type = null): string
     {
         if ($value instanceof EnumValue) {
             $this->assertIdentifier((string) $value);
@@ -98,14 +100,20 @@ final class OperationRequest
 
         if (is_array($value)) {
             if ($this->isList($value)) {
-                return '[' . implode(', ', array_map([$this, 'formatValue'], $value)) . ']';
+                $listType = $this->getListItemType($type);
+                return '[' . implode(', ', array_map(function ($item) use ($listType) {
+                    return $this->formatValue($item, $listType);
+                }, $value)) . ']';
             }
 
             $fields = [];
             foreach ($value as $field => $fieldValue) {
                 if ($fieldValue !== null) {
                     $this->assertIdentifier((string) $field);
-                    $fields[] = $field . ': ' . $this->formatValue($fieldValue);
+                    $fields[] = $field . ': ' . $this->formatValue(
+                        $fieldValue,
+                        $this->getInputFieldType($type, (string) $field)
+                    );
                 }
             }
 
@@ -117,6 +125,11 @@ final class OperationRequest
         }
 
         if (is_int($value) || is_float($value)) {
+            return (string) $value;
+        }
+
+        if ($this->isEnumType($type)) {
+            $this->assertIdentifier((string) $value);
             return (string) $value;
         }
 
@@ -142,5 +155,68 @@ final class OperationRequest
         if (!preg_match('/^[_A-Za-z][_0-9A-Za-z]*$/', $value)) {
             throw new \InvalidArgumentException("Invalid GraphQL identifier '{$value}'.");
         }
+    }
+
+    private function getSchemaArgumentsByName(): array
+    {
+        $arguments = [];
+
+        foreach ($this->field->getArguments() as $argument) {
+            $arguments[$argument->getName()] = $argument->getType();
+        }
+
+        return $arguments;
+    }
+
+    private function getListItemType(?TypeReference $type): ?TypeReference
+    {
+        if ($type === null) {
+            return null;
+        }
+
+        if ($type->getKind() === 'NON_NULL') {
+            return $this->getListItemType($type->getOfType());
+        }
+
+        if ($type->getKind() === 'LIST') {
+            return $type->getOfType();
+        }
+
+        return null;
+    }
+
+    private function getInputFieldType(?TypeReference $type, string $fieldName): ?TypeReference
+    {
+        $inputClass = $this->getGeneratedClassName('Inputs', $type ? $type->baseName() : null);
+
+        if (!class_exists($inputClass)) {
+            return null;
+        }
+
+        foreach ($inputClass::definition()->getFields() as $field) {
+            if ($field->getName() === $fieldName) {
+                return $field->getType();
+            }
+        }
+
+        return null;
+    }
+
+    private function isEnumType(?TypeReference $type): bool
+    {
+        if ($type === null) {
+            return false;
+        }
+
+        if ($type->getKind() === 'NON_NULL') {
+            return $this->isEnumType($type->getOfType());
+        }
+
+        return class_exists($this->getGeneratedClassName('Enums', $type->baseName()));
+    }
+
+    private function getGeneratedClassName(string $namespacePart, ?string $typeName): string
+    {
+        return '\\ThothApi\\GraphQL\\Generated\\' . $namespacePart . '\\' . ($typeName === 'Abstract' ? 'GraphQLAbstract' : $typeName);
     }
 }

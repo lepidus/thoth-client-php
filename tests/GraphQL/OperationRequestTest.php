@@ -6,6 +6,10 @@ use PHPUnit\Framework\TestCase;
 use ThothApi\GraphQL\Definition\ArgumentDefinition;
 use ThothApi\GraphQL\Definition\FieldDefinition;
 use ThothApi\GraphQL\Definition\TypeReference;
+use ThothApi\GraphQL\Generated\Enums\Direction;
+use ThothApi\GraphQL\Generated\Enums\WorkField;
+use ThothApi\GraphQL\Generated\Enums\WorkStatus;
+use ThothApi\GraphQL\Generated\Enums\WorkType;
 use ThothApi\GraphQL\OperationRequest;
 
 final class OperationRequestTest extends TestCase
@@ -153,5 +157,87 @@ final class OperationRequestTest extends TestCase
         $this->expectExceptionMessage('Invalid GraphQL identifier');
 
         $operation->toGraphQL();
+    }
+
+    public function testItFormatsGeneratedEnumConstantsFromInputSchema(): void
+    {
+        $operation = new OperationRequest(
+            'query',
+            new FieldDefinition(
+                'books',
+                TypeReference::named('Work'),
+                [
+                    new ArgumentDefinition('order', TypeReference::named('WorkOrderBy')),
+                ]
+            ),
+            [
+                'order' => [
+                    'field' => WorkField::PUBLICATION_DATE,
+                    'direction' => Direction::DESC,
+                ],
+            ],
+            ['workId']
+        );
+
+        $this->assertStringContainsString(
+            'order: {field: PUBLICATION_DATE, direction: DESC}',
+            $operation->toGraphQL()
+        );
+    }
+
+    public function testItFormatsGeneratedEnumConstantsFromInputLists(): void
+    {
+        $operation = new OperationRequest(
+            'query',
+            new FieldDefinition(
+                'books',
+                TypeReference::named('Work'),
+                [
+                    new ArgumentDefinition(
+                        'workTypes',
+                        TypeReference::listOf(TypeReference::nonNull(TypeReference::named('WorkType')))
+                    ),
+                ]
+            ),
+            [
+                'workTypes' => [
+                    WorkType::MONOGRAPH,
+                    WorkType::EDITED_BOOK,
+                ],
+            ],
+            ['workId']
+        );
+
+        $this->assertStringContainsString(
+            'workTypes: [MONOGRAPH, EDITED_BOOK]',
+            $operation->toGraphQL()
+        );
+    }
+
+    public function testItKeepsStringValuesQuotedWhenSchemaTypeIsString(): void
+    {
+        $operation = new OperationRequest(
+            'mutation',
+            new FieldDefinition(
+                'createWork',
+                TypeReference::named('Work'),
+                [
+                    new ArgumentDefinition('data', TypeReference::named('NewWork')),
+                ]
+            ),
+            [
+                'data' => [
+                    'workType' => WorkType::MONOGRAPH,
+                    'workStatus' => WorkStatus::ACTIVE,
+                    'fullTitle' => 'MONOGRAPH',
+                ],
+            ],
+            ['workId']
+        );
+
+        $this->assertStringContainsString(
+            'data: {workType: MONOGRAPH, workStatus: ACTIVE, fullTitle: "MONOGRAPH"}',
+            $operation->toGraphQL()
+        );
     }
 }

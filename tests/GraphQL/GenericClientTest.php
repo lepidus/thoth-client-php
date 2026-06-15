@@ -10,6 +10,10 @@ use PHPUnit\Framework\TestCase;
 use ThothApi\GraphQL\Client;
 use ThothApi\GraphQL\Definition\FieldDefinition;
 use ThothApi\GraphQL\Definition\TypeReference;
+use ThothApi\GraphQL\Generated\Enums\Direction;
+use ThothApi\GraphQL\Generated\Enums\WorkField;
+use ThothApi\GraphQL\Generated\Enums\WorkStatus;
+use ThothApi\GraphQL\Generated\Enums\WorkType;
 use ThothApi\GraphQL\Generated\Inputs\NewPublicationFileUpload;
 use ThothApi\GraphQL\Generated\Inputs\NewWork;
 use ThothApi\GraphQL\Generated\Schemas\Imprint;
@@ -112,8 +116,8 @@ final class GenericClientTest extends TestCase
 
         $client = new Client(['handler' => HandlerStack::create($mockHandler)]);
         $newWork = new NewWork([
-            'workType' => OperationRequest::enum('MONOGRAPH'),
-            'workStatus' => OperationRequest::enum('ACTIVE'),
+            'workType' => WorkType::MONOGRAPH,
+            'workStatus' => WorkStatus::ACTIVE,
             'fullTitle' => 'Generated client',
         ]);
 
@@ -137,8 +141,8 @@ final class GenericClientTest extends TestCase
         $handlerStack->push(Middleware::history($history));
         $client = new Client(['handler' => $handlerStack]);
         $newWork = new NewWork([
-            'workType' => OperationRequest::enum('MONOGRAPH'),
-            'workStatus' => OperationRequest::enum('ACTIVE'),
+            'workType' => WorkType::MONOGRAPH,
+            'workStatus' => WorkStatus::ACTIVE,
             'fullTitle' => 'Generated client',
         ]);
 
@@ -175,8 +179,8 @@ final class GenericClientTest extends TestCase
 
         $client = new Client(['handler' => HandlerStack::create($mockHandler)]);
         $newWork = new NewWork([
-            'workType' => OperationRequest::enum('MONOGRAPH'),
-            'workStatus' => OperationRequest::enum('ACTIVE'),
+            'workType' => WorkType::MONOGRAPH,
+            'workStatus' => WorkStatus::ACTIVE,
             'fullTitle' => 'Generated client',
         ]);
         $work = $client->createWork($newWork, [
@@ -283,8 +287,8 @@ final class GenericClientTest extends TestCase
         $client = new Client(['handler' => $handlerStack]);
 
         $client->works(100, 0, '', [
-            'field' => OperationRequest::enum('FULL_TITLE'),
-            'direction' => OperationRequest::enum('ASC'),
+            'field' => WorkField::FULL_TITLE,
+            'direction' => Direction::ASC,
         ]);
 
         $body = json_decode((string) $history[0]['request']->getBody(), true);

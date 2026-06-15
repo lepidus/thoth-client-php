@@ -38,8 +38,9 @@ echo $works[0]->getWorkId();
 echo $works[0]->getFullTitle();
 ```
 
-Los argumentos pueden pasarse por posición o por nombre. Los valores enum deben crearse con la clase
-enum generada o con `OperationRequest::enum()`.
+Los argumentos pueden pasarse por posición o por nombre. Los valores enum pueden pasarse directamente
+con constantes de las clases enum generadas. `OperationRequest::enum()` sigue disponible para
+operaciones personalizadas.
 
 ```php
 use ThothApi\GraphQL\Generated\Enums\Direction;
@@ -49,8 +50,8 @@ $works = $client->works([
     'publishers' => ['71faf1c3-900a-4b8c-bca7-4f927699fb90'],
     'limit' => 5,
     'order' => [
-        'field' => WorkField::value(WorkField::PUBLICATION_DATE),
-        'direction' => Direction::value(Direction::DESC),
+        'field' => WorkField::PUBLICATION_DATE,
+        'direction' => Direction::DESC,
     ],
 ], [
     'workId',
@@ -120,7 +121,7 @@ use ThothApi\GraphQL\Generated\Inputs\NewSubject;
 
 $newSubject = new NewSubject([
     'workId' => '5a5b0fe3-03a9-444b-b221-ecae5370ff30',
-    'subjectType' => SubjectType::value(SubjectType::BIC),
+    'subjectType' => SubjectType::BIC,
     'subjectCode' => '1D',
     'subjectOrdinal' => 3,
 ]);
