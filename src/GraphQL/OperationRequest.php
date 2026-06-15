@@ -187,7 +187,7 @@ final class OperationRequest
 
     private function getInputFieldType(?TypeReference $type, string $fieldName): ?TypeReference
     {
-        $inputClass = $this->getGeneratedClassName('Inputs', $type ? $type->baseName() : null);
+        $inputClass = $this->getSchemaClassName('Inputs', $type ? $type->baseName() : null);
 
         if (!class_exists($inputClass)) {
             return null;
@@ -212,11 +212,11 @@ final class OperationRequest
             return $this->isEnumType($type->getOfType());
         }
 
-        return class_exists($this->getGeneratedClassName('Enums', $type->baseName()));
+        return class_exists($this->getSchemaClassName('Enums', $type->baseName()));
     }
 
-    private function getGeneratedClassName(string $namespacePart, ?string $typeName): string
+    private function getSchemaClassName(string $namespacePart, ?string $typeName): string
     {
-        return '\\ThothApi\\GraphQL\\Generated\\' . $namespacePart . '\\' . ($typeName === 'Abstract' ? 'GraphQLAbstract' : $typeName);
+        return '\\ThothApi\\GraphQL\\' . $namespacePart . '\\' . ($typeName === 'Abstract' ? 'GraphQLAbstract' : $typeName);
     }
 }

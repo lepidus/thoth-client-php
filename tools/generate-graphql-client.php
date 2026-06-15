@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 $root = dirname(__DIR__);
 $schemaSource = $argv[1] ?? null;
-$target = $argv[2] ?? $root . '/src/GraphQL/Generated';
+$target = $argv[2] ?? $root . '/src/GraphQL';
+$generatedDirectories = ['Queries', 'Mutations', 'Schemas', 'Inputs', 'Enums', 'Scalars'];
 
 $schema = $schemaSource ? loadSchemaFromFile($schemaSource) : fetchSchema('https://api.thoth.pub/graphql');
 if (!isset($schema['data']['__schema'])) {
@@ -20,9 +21,8 @@ foreach ($schema['types'] as $type) {
     }
 }
 
-removeDirectory($target);
-
-foreach (['Queries', 'Mutations', 'Schemas', 'Inputs', 'Enums', 'Scalars'] as $directory) {
+foreach ($generatedDirectories as $directory) {
+    removeDirectory($target . '/' . $directory);
     mkdir($target . '/' . $directory, 0777, true);
 }
 
@@ -85,7 +85,7 @@ function generateOperations(array $rootType, string $operationType, string $dire
         $contents = <<<PHP
 <?php
 
-namespace ThothApi\\GraphQL\\Generated\\{$namespacePart};
+namespace ThothApi\\GraphQL\\{$namespacePart};
 
 use ThothApi\\GraphQL\\Definition\\FieldDefinition;
 use ThothApi\\GraphQL\\OperationRequest;
@@ -127,7 +127,7 @@ function generateObjectType(array $type, string $directory, string $namespacePar
     $contents = <<<PHP
 <?php
 
-namespace ThothApi\\GraphQL\\Generated\\{$namespacePart};
+namespace ThothApi\\GraphQL\\{$namespacePart};
 
 use ThothApi\\GraphQL\\Definition\\ObjectTypeDefinition;
 use ThothApi\\GraphQL\\ObjectData;
@@ -178,7 +178,7 @@ function generateInputType(array $type, string $directory, string $namespacePart
     $contents = <<<PHP
 <?php
 
-namespace ThothApi\\GraphQL\\Generated\\{$namespacePart};
+namespace ThothApi\\GraphQL\\{$namespacePart};
 
 use ThothApi\\GraphQL\\Definition\\InputObjectTypeDefinition;
 use ThothApi\\GraphQL\\InputObject;
@@ -212,7 +212,7 @@ function generateEnumType(array $type, string $directory, string $namespacePart)
     $contents = <<<PHP
 <?php
 
-namespace ThothApi\\GraphQL\\Generated\\{$namespacePart};
+namespace ThothApi\\GraphQL\\{$namespacePart};
 
 use ThothApi\\GraphQL\\Definition\\EnumTypeDefinition;
 use ThothApi\\GraphQL\\EnumValue;
@@ -242,7 +242,7 @@ function generateScalarType(array $type, string $directory, string $namespacePar
     $contents = <<<PHP
 <?php
 
-namespace ThothApi\\GraphQL\\Generated\\{$namespacePart};
+namespace ThothApi\\GraphQL\\{$namespacePart};
 
 use ThothApi\\GraphQL\\Definition\\ScalarTypeDefinition;
 

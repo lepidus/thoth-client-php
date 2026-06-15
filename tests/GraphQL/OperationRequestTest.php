@@ -6,10 +6,10 @@ use PHPUnit\Framework\TestCase;
 use ThothApi\GraphQL\Definition\ArgumentDefinition;
 use ThothApi\GraphQL\Definition\FieldDefinition;
 use ThothApi\GraphQL\Definition\TypeReference;
-use ThothApi\GraphQL\Generated\Enums\Direction;
-use ThothApi\GraphQL\Generated\Enums\WorkField;
-use ThothApi\GraphQL\Generated\Enums\WorkStatus;
-use ThothApi\GraphQL\Generated\Enums\WorkType;
+use ThothApi\GraphQL\Enums\Direction;
+use ThothApi\GraphQL\Enums\WorkField;
+use ThothApi\GraphQL\Enums\WorkStatus;
+use ThothApi\GraphQL\Enums\WorkType;
 use ThothApi\GraphQL\OperationRequest;
 
 final class OperationRequestTest extends TestCase

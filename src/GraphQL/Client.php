@@ -66,13 +66,13 @@ class Client
     private function getOperationClass(string $name): string
     {
         $className = $this->studly($name);
-        $mutationClass = '\\ThothApi\\GraphQL\\Generated\\Mutations\\' . $className . 'Mutation';
+        $mutationClass = '\\ThothApi\\GraphQL\\Mutations\\' . $className . 'Mutation';
 
         if (class_exists($mutationClass)) {
             return $mutationClass;
         }
 
-        $queryClass = '\\ThothApi\\GraphQL\\Generated\\Queries\\' . $className . 'Query';
+        $queryClass = '\\ThothApi\\GraphQL\\Queries\\' . $className . 'Query';
 
         if (class_exists($queryClass)) {
             return $queryClass;
@@ -175,7 +175,7 @@ class Client
             return self::$defaultSelections[$typeName];
         }
 
-        $schemaClass = '\\ThothApi\\GraphQL\\Generated\\Schemas\\' . ($typeName === 'Abstract' ? 'GraphQLAbstract' : $typeName);
+        $schemaClass = '\\ThothApi\\GraphQL\\Schemas\\' . ($typeName === 'Abstract' ? 'GraphQLAbstract' : $typeName);
 
         if (!class_exists($schemaClass)) {
             self::$defaultSelections[$typeName] = [];
@@ -301,6 +301,6 @@ class Client
 
     private function getSchemaClass(?string $typeName): string
     {
-        return '\\ThothApi\\GraphQL\\Generated\\Schemas\\' . ($typeName === 'Abstract' ? 'GraphQLAbstract' : $typeName);
+        return '\\ThothApi\\GraphQL\\Schemas\\' . ($typeName === 'Abstract' ? 'GraphQLAbstract' : $typeName);
     }
 }

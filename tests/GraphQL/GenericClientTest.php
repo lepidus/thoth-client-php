@@ -10,16 +10,16 @@ use PHPUnit\Framework\TestCase;
 use ThothApi\GraphQL\Client;
 use ThothApi\GraphQL\Definition\FieldDefinition;
 use ThothApi\GraphQL\Definition\TypeReference;
-use ThothApi\GraphQL\Generated\Enums\Direction;
-use ThothApi\GraphQL\Generated\Enums\WorkField;
-use ThothApi\GraphQL\Generated\Enums\WorkStatus;
-use ThothApi\GraphQL\Generated\Enums\WorkType;
-use ThothApi\GraphQL\Generated\Inputs\NewPublicationFileUpload;
-use ThothApi\GraphQL\Generated\Inputs\NewWork;
-use ThothApi\GraphQL\Generated\Schemas\Imprint;
-use ThothApi\GraphQL\Generated\Schemas\Publisher;
-use ThothApi\GraphQL\Generated\Schemas\Work;
+use ThothApi\GraphQL\Enums\Direction;
+use ThothApi\GraphQL\Enums\WorkField;
+use ThothApi\GraphQL\Enums\WorkStatus;
+use ThothApi\GraphQL\Enums\WorkType;
+use ThothApi\GraphQL\Inputs\NewPublicationFileUpload;
+use ThothApi\GraphQL\Inputs\NewWork;
 use ThothApi\GraphQL\OperationRequest;
+use ThothApi\GraphQL\Schemas\Imprint;
+use ThothApi\GraphQL\Schemas\Publisher;
+use ThothApi\GraphQL\Schemas\Work;
 
 final class GenericClientTest extends TestCase
 {

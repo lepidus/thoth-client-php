@@ -95,7 +95,7 @@ class ObjectData
 
     private static function schemaClassForType(?string $typeName): string
     {
-        return '\\ThothApi\\GraphQL\\Generated\\Schemas\\' . ($typeName === 'Abstract' ? 'GraphQLAbstract' : $typeName);
+        return '\\ThothApi\\GraphQL\\Schemas\\' . ($typeName === 'Abstract' ? 'GraphQLAbstract' : $typeName);
     }
 
     private function normalizeArray(array $data): array

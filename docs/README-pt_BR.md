@@ -43,8 +43,8 @@ diretamente com constantes das classes de enum geradas. `OperationRequest::enum(
 para operações customizadas.
 
 ```php
-use ThothApi\GraphQL\Generated\Enums\Direction;
-use ThothApi\GraphQL\Generated\Enums\WorkField;
+use ThothApi\GraphQL\Enums\Direction;
+use ThothApi\GraphQL\Enums\WorkField;
 
 $works = $client->works([
     'publishers' => ['71faf1c3-900a-4b8c-bca7-4f927699fb90'],
@@ -88,7 +88,7 @@ O executor genérico continua disponível quando for melhor usar diretamente as 
 operação. Ele retorna arrays brutos, sem hidratar objetos de schema.
 
 ```php
-use ThothApi\GraphQL\Generated\Queries\WorksQuery;
+use ThothApi\GraphQL\Queries\WorksQuery;
 
 $works = $client->execute(WorksQuery::operation([
     'limit' => 5,
@@ -116,8 +116,8 @@ Inputs são gerados a partir do schema. Eles podem ser criados com arrays, a par
 `getAllData()` ou de objetos `JsonSerializable`.
 
 ```php
-use ThothApi\GraphQL\Generated\Enums\SubjectType;
-use ThothApi\GraphQL\Generated\Inputs\NewSubject;
+use ThothApi\GraphQL\Enums\SubjectType;
+use ThothApi\GraphQL\Inputs\NewSubject;
 
 $newSubject = new NewSubject([
     'workId' => '5a5b0fe3-03a9-444b-b221-ecae5370ff30',
@@ -153,7 +153,7 @@ print_r($subject->toArray());
 As classes de schema também podem ser instanciadas e populadas manualmente.
 
 ```php
-use ThothApi\GraphQL\Generated\Schemas\Work;
+use ThothApi\GraphQL\Schemas\Work;
 
 $work = (new Work())
     ->setWorkId('5a5b0fe3-03a9-444b-b221-ecae5370ff30')
@@ -175,7 +175,7 @@ Uma exceção do tipo *QueryException* é lançada em caso de erro na solicitaç
 
 ```php
 try {
-    $client->createWork(new \ThothApi\GraphQL\Generated\Inputs\NewWork([
+    $client->createWork(new \ThothApi\GraphQL\Inputs\NewWork([
         'doi' => 'https://doi.org/10.00000/00000000',
     ]));
 } catch (\ThothApi\Exception\QueryException $exception) {

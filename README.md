@@ -42,8 +42,8 @@ Arguments can be passed positionally or by name. Enum values can be passed direc
 enum constants. `OperationRequest::enum()` is still supported for custom operations.
 
 ```php
-use ThothApi\GraphQL\Generated\Enums\Direction;
-use ThothApi\GraphQL\Generated\Enums\WorkField;
+use ThothApi\GraphQL\Enums\Direction;
+use ThothApi\GraphQL\Enums\WorkField;
 
 $works = $client->works([
     'publishers' => ['71faf1c3-900a-4b8c-bca7-4f927699fb90'],
@@ -87,7 +87,7 @@ The generic executor is still available when you want to use the generated opera
 directly. It returns raw arrays instead of hydrated schema objects.
 
 ```php
-use ThothApi\GraphQL\Generated\Queries\WorksQuery;
+use ThothApi\GraphQL\Queries\WorksQuery;
 
 $works = $client->execute(WorksQuery::operation([
     'limit' => 5,
@@ -115,8 +115,8 @@ Inputs are generated from the schema. They can be created from arrays, from DTOs
 `getAllData()`, or from `JsonSerializable` objects.
 
 ```php
-use ThothApi\GraphQL\Generated\Enums\SubjectType;
-use ThothApi\GraphQL\Generated\Inputs\NewSubject;
+use ThothApi\GraphQL\Enums\SubjectType;
+use ThothApi\GraphQL\Inputs\NewSubject;
 
 $newSubject = new NewSubject([
     'workId' => '5a5b0fe3-03a9-444b-b221-ecae5370ff30',
@@ -148,10 +148,10 @@ echo $subject->getSubjectCode();
 print_r($subject->toArray());
 ```
 
-Generated schema objects can also be instantiated and populated manually.
+Schema objects can also be instantiated and populated manually.
 
 ```php
-use ThothApi\GraphQL\Generated\Schemas\Work;
+use ThothApi\GraphQL\Schemas\Work;
 
 $work = (new Work())
     ->setWorkId('5a5b0fe3-03a9-444b-b221-ecae5370ff30')
@@ -173,7 +173,7 @@ A QueryException is thrown in case of an error in the request to the GraphQL API
 
 ```php
 try {
-    $client->execute(\ThothApi\GraphQL\Generated\Mutations\CreateWorkMutation::operation([
+    $client->execute(\ThothApi\GraphQL\Mutations\CreateWorkMutation::operation([
         'data' => [
             'doi' => 'https://doi.org/10.00000/00000000',
         ],
