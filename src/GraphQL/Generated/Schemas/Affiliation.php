@@ -3,9 +3,100 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Affiliation
+final class Affiliation extends ObjectData
 {
+    public function getAffiliationId()
+    {
+        return $this->get('affiliationId');
+    }
+
+    public function setAffiliationId($value): self
+    {
+        return $this->set('affiliationId', $value);
+    }
+
+    public function getContributionId()
+    {
+        return $this->get('contributionId');
+    }
+
+    public function setContributionId($value): self
+    {
+        return $this->set('contributionId', $value);
+    }
+
+    public function getInstitutionId()
+    {
+        return $this->get('institutionId');
+    }
+
+    public function setInstitutionId($value): self
+    {
+        return $this->set('institutionId', $value);
+    }
+
+    public function getAffiliationOrdinal()
+    {
+        return $this->get('affiliationOrdinal');
+    }
+
+    public function setAffiliationOrdinal($value): self
+    {
+        return $this->set('affiliationOrdinal', $value);
+    }
+
+    public function getPosition()
+    {
+        return $this->get('position');
+    }
+
+    public function setPosition($value): self
+    {
+        return $this->set('position', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getInstitution()
+    {
+        return $this->get('institution');
+    }
+
+    public function setInstitution($value): self
+    {
+        return $this->set('institution', $value);
+    }
+
+    public function getContribution()
+    {
+        return $this->get('contribution');
+    }
+
+    public function setContribution($value): self
+    {
+        return $this->set('contribution', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Affiliation', [

@@ -3,9 +3,560 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Work
+final class Work extends ObjectData
 {
+    public function getWorkId()
+    {
+        return $this->get('workId');
+    }
+
+    public function setWorkId($value): self
+    {
+        return $this->set('workId', $value);
+    }
+
+    public function getWorkType()
+    {
+        return $this->get('workType');
+    }
+
+    public function setWorkType($value): self
+    {
+        return $this->set('workType', $value);
+    }
+
+    public function getWorkStatus()
+    {
+        return $this->get('workStatus');
+    }
+
+    public function setWorkStatus($value): self
+    {
+        return $this->set('workStatus', $value);
+    }
+
+    public function getFullTitle()
+    {
+        return $this->get('fullTitle');
+    }
+
+    public function setFullTitle($value): self
+    {
+        return $this->set('fullTitle', $value);
+    }
+
+    public function getTitle()
+    {
+        return $this->get('title');
+    }
+
+    public function setTitle($value): self
+    {
+        return $this->set('title', $value);
+    }
+
+    public function getSubtitle()
+    {
+        return $this->get('subtitle');
+    }
+
+    public function setSubtitle($value): self
+    {
+        return $this->set('subtitle', $value);
+    }
+
+    public function getShortAbstract()
+    {
+        return $this->get('shortAbstract');
+    }
+
+    public function setShortAbstract($value): self
+    {
+        return $this->set('shortAbstract', $value);
+    }
+
+    public function getLongAbstract()
+    {
+        return $this->get('longAbstract');
+    }
+
+    public function setLongAbstract($value): self
+    {
+        return $this->set('longAbstract', $value);
+    }
+
+    public function getTitles()
+    {
+        return $this->get('titles');
+    }
+
+    public function setTitles($value): self
+    {
+        return $this->set('titles', $value);
+    }
+
+    public function getAbstracts()
+    {
+        return $this->get('abstracts');
+    }
+
+    public function setAbstracts($value): self
+    {
+        return $this->set('abstracts', $value);
+    }
+
+    public function getReference()
+    {
+        return $this->get('reference');
+    }
+
+    public function setReference($value): self
+    {
+        return $this->set('reference', $value);
+    }
+
+    public function getEdition()
+    {
+        return $this->get('edition');
+    }
+
+    public function setEdition($value): self
+    {
+        return $this->set('edition', $value);
+    }
+
+    public function getImprintId()
+    {
+        return $this->get('imprintId');
+    }
+
+    public function setImprintId($value): self
+    {
+        return $this->set('imprintId', $value);
+    }
+
+    public function getDoi()
+    {
+        return $this->get('doi');
+    }
+
+    public function setDoi($value): self
+    {
+        return $this->set('doi', $value);
+    }
+
+    public function getPublicationDate()
+    {
+        return $this->get('publicationDate');
+    }
+
+    public function setPublicationDate($value): self
+    {
+        return $this->set('publicationDate', $value);
+    }
+
+    public function getWithdrawnDate()
+    {
+        return $this->get('withdrawnDate');
+    }
+
+    public function setWithdrawnDate($value): self
+    {
+        return $this->set('withdrawnDate', $value);
+    }
+
+    public function getPlace()
+    {
+        return $this->get('place');
+    }
+
+    public function setPlace($value): self
+    {
+        return $this->set('place', $value);
+    }
+
+    public function getPageCount()
+    {
+        return $this->get('pageCount');
+    }
+
+    public function setPageCount($value): self
+    {
+        return $this->set('pageCount', $value);
+    }
+
+    public function getPageBreakdown()
+    {
+        return $this->get('pageBreakdown');
+    }
+
+    public function setPageBreakdown($value): self
+    {
+        return $this->set('pageBreakdown', $value);
+    }
+
+    public function getImageCount()
+    {
+        return $this->get('imageCount');
+    }
+
+    public function setImageCount($value): self
+    {
+        return $this->set('imageCount', $value);
+    }
+
+    public function getTableCount()
+    {
+        return $this->get('tableCount');
+    }
+
+    public function setTableCount($value): self
+    {
+        return $this->set('tableCount', $value);
+    }
+
+    public function getAudioCount()
+    {
+        return $this->get('audioCount');
+    }
+
+    public function setAudioCount($value): self
+    {
+        return $this->set('audioCount', $value);
+    }
+
+    public function getVideoCount()
+    {
+        return $this->get('videoCount');
+    }
+
+    public function setVideoCount($value): self
+    {
+        return $this->set('videoCount', $value);
+    }
+
+    public function getLicense()
+    {
+        return $this->get('license');
+    }
+
+    public function setLicense($value): self
+    {
+        return $this->set('license', $value);
+    }
+
+    public function getCopyrightHolder()
+    {
+        return $this->get('copyrightHolder');
+    }
+
+    public function setCopyrightHolder($value): self
+    {
+        return $this->set('copyrightHolder', $value);
+    }
+
+    public function getLandingPage()
+    {
+        return $this->get('landingPage');
+    }
+
+    public function setLandingPage($value): self
+    {
+        return $this->set('landingPage', $value);
+    }
+
+    public function getLccn()
+    {
+        return $this->get('lccn');
+    }
+
+    public function setLccn($value): self
+    {
+        return $this->set('lccn', $value);
+    }
+
+    public function getOclc()
+    {
+        return $this->get('oclc');
+    }
+
+    public function setOclc($value): self
+    {
+        return $this->set('oclc', $value);
+    }
+
+    public function getGeneralNote()
+    {
+        return $this->get('generalNote');
+    }
+
+    public function setGeneralNote($value): self
+    {
+        return $this->set('generalNote', $value);
+    }
+
+    public function getBibliographyNote()
+    {
+        return $this->get('bibliographyNote');
+    }
+
+    public function setBibliographyNote($value): self
+    {
+        return $this->set('bibliographyNote', $value);
+    }
+
+    public function getToc()
+    {
+        return $this->get('toc');
+    }
+
+    public function setToc($value): self
+    {
+        return $this->set('toc', $value);
+    }
+
+    public function getResourcesDescription()
+    {
+        return $this->get('resourcesDescription');
+    }
+
+    public function setResourcesDescription($value): self
+    {
+        return $this->set('resourcesDescription', $value);
+    }
+
+    public function getCoverUrl()
+    {
+        return $this->get('coverUrl');
+    }
+
+    public function setCoverUrl($value): self
+    {
+        return $this->set('coverUrl', $value);
+    }
+
+    public function getCoverCaption()
+    {
+        return $this->get('coverCaption');
+    }
+
+    public function setCoverCaption($value): self
+    {
+        return $this->set('coverCaption', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getFirstPage()
+    {
+        return $this->get('firstPage');
+    }
+
+    public function setFirstPage($value): self
+    {
+        return $this->set('firstPage', $value);
+    }
+
+    public function getLastPage()
+    {
+        return $this->get('lastPage');
+    }
+
+    public function setLastPage($value): self
+    {
+        return $this->set('lastPage', $value);
+    }
+
+    public function getPageInterval()
+    {
+        return $this->get('pageInterval');
+    }
+
+    public function setPageInterval($value): self
+    {
+        return $this->set('pageInterval', $value);
+    }
+
+    public function getUpdatedAtWithRelations()
+    {
+        return $this->get('updatedAtWithRelations');
+    }
+
+    public function setUpdatedAtWithRelations($value): self
+    {
+        return $this->set('updatedAtWithRelations', $value);
+    }
+
+    public function getImprint()
+    {
+        return $this->get('imprint');
+    }
+
+    public function setImprint($value): self
+    {
+        return $this->set('imprint', $value);
+    }
+
+    public function getContributions()
+    {
+        return $this->get('contributions');
+    }
+
+    public function setContributions($value): self
+    {
+        return $this->set('contributions', $value);
+    }
+
+    public function getLanguages()
+    {
+        return $this->get('languages');
+    }
+
+    public function setLanguages($value): self
+    {
+        return $this->set('languages', $value);
+    }
+
+    public function getPublications()
+    {
+        return $this->get('publications');
+    }
+
+    public function setPublications($value): self
+    {
+        return $this->set('publications', $value);
+    }
+
+    public function getSubjects()
+    {
+        return $this->get('subjects');
+    }
+
+    public function setSubjects($value): self
+    {
+        return $this->set('subjects', $value);
+    }
+
+    public function getFundings()
+    {
+        return $this->get('fundings');
+    }
+
+    public function setFundings($value): self
+    {
+        return $this->set('fundings', $value);
+    }
+
+    public function getIssues()
+    {
+        return $this->get('issues');
+    }
+
+    public function setIssues($value): self
+    {
+        return $this->set('issues', $value);
+    }
+
+    public function getRelations()
+    {
+        return $this->get('relations');
+    }
+
+    public function setRelations($value): self
+    {
+        return $this->set('relations', $value);
+    }
+
+    public function getFrontcover()
+    {
+        return $this->get('frontcover');
+    }
+
+    public function setFrontcover($value): self
+    {
+        return $this->set('frontcover', $value);
+    }
+
+    public function getReferences()
+    {
+        return $this->get('references');
+    }
+
+    public function setReferences($value): self
+    {
+        return $this->set('references', $value);
+    }
+
+    public function getAdditionalResources()
+    {
+        return $this->get('additionalResources');
+    }
+
+    public function setAdditionalResources($value): self
+    {
+        return $this->set('additionalResources', $value);
+    }
+
+    public function getAwards()
+    {
+        return $this->get('awards');
+    }
+
+    public function setAwards($value): self
+    {
+        return $this->set('awards', $value);
+    }
+
+    public function getEndorsements()
+    {
+        return $this->get('endorsements');
+    }
+
+    public function setEndorsements($value): self
+    {
+        return $this->set('endorsements', $value);
+    }
+
+    public function getBookReviews()
+    {
+        return $this->get('bookReviews');
+    }
+
+    public function setBookReviews($value): self
+    {
+        return $this->set('bookReviews', $value);
+    }
+
+    public function getFeaturedVideo()
+    {
+        return $this->get('featuredVideo');
+    }
+
+    public function setFeaturedVideo($value): self
+    {
+        return $this->set('featuredVideo', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Work', [

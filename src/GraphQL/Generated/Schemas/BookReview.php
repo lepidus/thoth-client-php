@@ -3,9 +3,210 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class BookReview
+final class BookReview extends ObjectData
 {
+    public function getBookReviewId()
+    {
+        return $this->get('bookReviewId');
+    }
+
+    public function setBookReviewId($value): self
+    {
+        return $this->set('bookReviewId', $value);
+    }
+
+    public function getWorkId()
+    {
+        return $this->get('workId');
+    }
+
+    public function setWorkId($value): self
+    {
+        return $this->set('workId', $value);
+    }
+
+    public function getTitle()
+    {
+        return $this->get('title');
+    }
+
+    public function setTitle($value): self
+    {
+        return $this->set('title', $value);
+    }
+
+    public function getAuthorName()
+    {
+        return $this->get('authorName');
+    }
+
+    public function setAuthorName($value): self
+    {
+        return $this->set('authorName', $value);
+    }
+
+    public function getReviewerOrcid()
+    {
+        return $this->get('reviewerOrcid');
+    }
+
+    public function setReviewerOrcid($value): self
+    {
+        return $this->set('reviewerOrcid', $value);
+    }
+
+    public function getReviewerInstitutionId()
+    {
+        return $this->get('reviewerInstitutionId');
+    }
+
+    public function setReviewerInstitutionId($value): self
+    {
+        return $this->set('reviewerInstitutionId', $value);
+    }
+
+    public function getUrl()
+    {
+        return $this->get('url');
+    }
+
+    public function setUrl($value): self
+    {
+        return $this->set('url', $value);
+    }
+
+    public function getDoi()
+    {
+        return $this->get('doi');
+    }
+
+    public function setDoi($value): self
+    {
+        return $this->set('doi', $value);
+    }
+
+    public function getReviewDate()
+    {
+        return $this->get('reviewDate');
+    }
+
+    public function setReviewDate($value): self
+    {
+        return $this->set('reviewDate', $value);
+    }
+
+    public function getJournalName()
+    {
+        return $this->get('journalName');
+    }
+
+    public function setJournalName($value): self
+    {
+        return $this->set('journalName', $value);
+    }
+
+    public function getJournalVolume()
+    {
+        return $this->get('journalVolume');
+    }
+
+    public function setJournalVolume($value): self
+    {
+        return $this->set('journalVolume', $value);
+    }
+
+    public function getJournalNumber()
+    {
+        return $this->get('journalNumber');
+    }
+
+    public function setJournalNumber($value): self
+    {
+        return $this->set('journalNumber', $value);
+    }
+
+    public function getJournalIssn()
+    {
+        return $this->get('journalIssn');
+    }
+
+    public function setJournalIssn($value): self
+    {
+        return $this->set('journalIssn', $value);
+    }
+
+    public function getPageRange()
+    {
+        return $this->get('pageRange');
+    }
+
+    public function setPageRange($value): self
+    {
+        return $this->set('pageRange', $value);
+    }
+
+    public function getText()
+    {
+        return $this->get('text');
+    }
+
+    public function setText($value): self
+    {
+        return $this->set('text', $value);
+    }
+
+    public function getReviewOrdinal()
+    {
+        return $this->get('reviewOrdinal');
+    }
+
+    public function setReviewOrdinal($value): self
+    {
+        return $this->set('reviewOrdinal', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getWork()
+    {
+        return $this->get('work');
+    }
+
+    public function setWork($value): self
+    {
+        return $this->set('work', $value);
+    }
+
+    public function getReviewerInstitution()
+    {
+        return $this->get('reviewerInstitution');
+    }
+
+    public function setReviewerInstitution($value): self
+    {
+        return $this->set('reviewerInstitution', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('BookReview', [

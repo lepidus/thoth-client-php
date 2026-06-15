@@ -3,9 +3,140 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Endorsement
+final class Endorsement extends ObjectData
 {
+    public function getEndorsementId()
+    {
+        return $this->get('endorsementId');
+    }
+
+    public function setEndorsementId($value): self
+    {
+        return $this->set('endorsementId', $value);
+    }
+
+    public function getWorkId()
+    {
+        return $this->get('workId');
+    }
+
+    public function setWorkId($value): self
+    {
+        return $this->set('workId', $value);
+    }
+
+    public function getAuthorName()
+    {
+        return $this->get('authorName');
+    }
+
+    public function setAuthorName($value): self
+    {
+        return $this->set('authorName', $value);
+    }
+
+    public function getAuthorRole()
+    {
+        return $this->get('authorRole');
+    }
+
+    public function setAuthorRole($value): self
+    {
+        return $this->set('authorRole', $value);
+    }
+
+    public function getAuthorOrcid()
+    {
+        return $this->get('authorOrcid');
+    }
+
+    public function setAuthorOrcid($value): self
+    {
+        return $this->set('authorOrcid', $value);
+    }
+
+    public function getAuthorInstitutionId()
+    {
+        return $this->get('authorInstitutionId');
+    }
+
+    public function setAuthorInstitutionId($value): self
+    {
+        return $this->set('authorInstitutionId', $value);
+    }
+
+    public function getUrl()
+    {
+        return $this->get('url');
+    }
+
+    public function setUrl($value): self
+    {
+        return $this->set('url', $value);
+    }
+
+    public function getText()
+    {
+        return $this->get('text');
+    }
+
+    public function setText($value): self
+    {
+        return $this->set('text', $value);
+    }
+
+    public function getEndorsementOrdinal()
+    {
+        return $this->get('endorsementOrdinal');
+    }
+
+    public function setEndorsementOrdinal($value): self
+    {
+        return $this->set('endorsementOrdinal', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getWork()
+    {
+        return $this->get('work');
+    }
+
+    public function setWork($value): self
+    {
+        return $this->set('work', $value);
+    }
+
+    public function getAuthorInstitution()
+    {
+        return $this->get('authorInstitution');
+    }
+
+    public function setAuthorInstitution($value): self
+    {
+        return $this->set('authorInstitution', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Endorsement', [

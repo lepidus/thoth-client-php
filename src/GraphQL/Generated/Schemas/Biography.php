@@ -3,9 +3,80 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Biography
+final class Biography extends ObjectData
 {
+    public function getBiographyId()
+    {
+        return $this->get('biographyId');
+    }
+
+    public function setBiographyId($value): self
+    {
+        return $this->set('biographyId', $value);
+    }
+
+    public function getContributionId()
+    {
+        return $this->get('contributionId');
+    }
+
+    public function setContributionId($value): self
+    {
+        return $this->set('contributionId', $value);
+    }
+
+    public function getLocaleCode()
+    {
+        return $this->get('localeCode');
+    }
+
+    public function setLocaleCode($value): self
+    {
+        return $this->set('localeCode', $value);
+    }
+
+    public function getContent()
+    {
+        return $this->get('content');
+    }
+
+    public function setContent($value): self
+    {
+        return $this->set('content', $value);
+    }
+
+    public function getCanonical()
+    {
+        return $this->get('canonical');
+    }
+
+    public function setCanonical($value): self
+    {
+        return $this->set('canonical', $value);
+    }
+
+    public function getWork()
+    {
+        return $this->get('work');
+    }
+
+    public function setWork($value): self
+    {
+        return $this->set('work', $value);
+    }
+
+    public function getContribution()
+    {
+        return $this->get('contribution');
+    }
+
+    public function setContribution($value): self
+    {
+        return $this->set('contribution', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Biography', [

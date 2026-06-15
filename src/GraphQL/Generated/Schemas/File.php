@@ -3,9 +3,140 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class File
+final class File extends ObjectData
 {
+    public function getFileId()
+    {
+        return $this->get('fileId');
+    }
+
+    public function setFileId($value): self
+    {
+        return $this->set('fileId', $value);
+    }
+
+    public function getFileType()
+    {
+        return $this->get('fileType');
+    }
+
+    public function setFileType($value): self
+    {
+        return $this->set('fileType', $value);
+    }
+
+    public function getWorkId()
+    {
+        return $this->get('workId');
+    }
+
+    public function setWorkId($value): self
+    {
+        return $this->set('workId', $value);
+    }
+
+    public function getPublicationId()
+    {
+        return $this->get('publicationId');
+    }
+
+    public function setPublicationId($value): self
+    {
+        return $this->set('publicationId', $value);
+    }
+
+    public function getAdditionalResourceId()
+    {
+        return $this->get('additionalResourceId');
+    }
+
+    public function setAdditionalResourceId($value): self
+    {
+        return $this->set('additionalResourceId', $value);
+    }
+
+    public function getWorkFeaturedVideoId()
+    {
+        return $this->get('workFeaturedVideoId');
+    }
+
+    public function setWorkFeaturedVideoId($value): self
+    {
+        return $this->set('workFeaturedVideoId', $value);
+    }
+
+    public function getObjectKey()
+    {
+        return $this->get('objectKey');
+    }
+
+    public function setObjectKey($value): self
+    {
+        return $this->set('objectKey', $value);
+    }
+
+    public function getCdnUrl()
+    {
+        return $this->get('cdnUrl');
+    }
+
+    public function setCdnUrl($value): self
+    {
+        return $this->set('cdnUrl', $value);
+    }
+
+    public function getMimeType()
+    {
+        return $this->get('mimeType');
+    }
+
+    public function setMimeType($value): self
+    {
+        return $this->set('mimeType', $value);
+    }
+
+    public function getBytes()
+    {
+        return $this->get('bytes');
+    }
+
+    public function setBytes($value): self
+    {
+        return $this->set('bytes', $value);
+    }
+
+    public function getSha256()
+    {
+        return $this->get('sha256');
+    }
+
+    public function setSha256($value): self
+    {
+        return $this->set('sha256', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('File', [

@@ -3,9 +3,120 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Location
+final class Location extends ObjectData
 {
+    public function getLocationId()
+    {
+        return $this->get('locationId');
+    }
+
+    public function setLocationId($value): self
+    {
+        return $this->set('locationId', $value);
+    }
+
+    public function getPublicationId()
+    {
+        return $this->get('publicationId');
+    }
+
+    public function setPublicationId($value): self
+    {
+        return $this->set('publicationId', $value);
+    }
+
+    public function getLandingPage()
+    {
+        return $this->get('landingPage');
+    }
+
+    public function setLandingPage($value): self
+    {
+        return $this->set('landingPage', $value);
+    }
+
+    public function getFullTextUrl()
+    {
+        return $this->get('fullTextUrl');
+    }
+
+    public function setFullTextUrl($value): self
+    {
+        return $this->set('fullTextUrl', $value);
+    }
+
+    public function getLocationPlatform()
+    {
+        return $this->get('locationPlatform');
+    }
+
+    public function setLocationPlatform($value): self
+    {
+        return $this->set('locationPlatform', $value);
+    }
+
+    public function getCanonical()
+    {
+        return $this->get('canonical');
+    }
+
+    public function setCanonical($value): self
+    {
+        return $this->set('canonical', $value);
+    }
+
+    public function getChecksum()
+    {
+        return $this->get('checksum');
+    }
+
+    public function setChecksum($value): self
+    {
+        return $this->set('checksum', $value);
+    }
+
+    public function getChecksumAlgorithm()
+    {
+        return $this->get('checksumAlgorithm');
+    }
+
+    public function setChecksumAlgorithm($value): self
+    {
+        return $this->set('checksumAlgorithm', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getPublication()
+    {
+        return $this->get('publication');
+    }
+
+    public function setPublication($value): self
+    {
+        return $this->set('publication', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Location', [

@@ -3,9 +3,30 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class UploadRequestHeader
+final class UploadRequestHeader extends ObjectData
 {
+    public function getName()
+    {
+        return $this->get('name');
+    }
+
+    public function setName($value): self
+    {
+        return $this->set('name', $value);
+    }
+
+    public function getValue()
+    {
+        return $this->get('value');
+    }
+
+    public function setValue($value): self
+    {
+        return $this->set('value', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('UploadRequestHeader', [

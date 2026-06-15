@@ -3,9 +3,90 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Subject
+final class Subject extends ObjectData
 {
+    public function getSubjectId()
+    {
+        return $this->get('subjectId');
+    }
+
+    public function setSubjectId($value): self
+    {
+        return $this->set('subjectId', $value);
+    }
+
+    public function getWorkId()
+    {
+        return $this->get('workId');
+    }
+
+    public function setWorkId($value): self
+    {
+        return $this->set('workId', $value);
+    }
+
+    public function getSubjectType()
+    {
+        return $this->get('subjectType');
+    }
+
+    public function setSubjectType($value): self
+    {
+        return $this->set('subjectType', $value);
+    }
+
+    public function getSubjectCode()
+    {
+        return $this->get('subjectCode');
+    }
+
+    public function setSubjectCode($value): self
+    {
+        return $this->set('subjectCode', $value);
+    }
+
+    public function getSubjectOrdinal()
+    {
+        return $this->get('subjectOrdinal');
+    }
+
+    public function setSubjectOrdinal($value): self
+    {
+        return $this->set('subjectOrdinal', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getWork()
+    {
+        return $this->get('work');
+    }
+
+    public function setWork($value): self
+    {
+        return $this->set('work', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Subject', [

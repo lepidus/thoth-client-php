@@ -3,9 +3,100 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Contributor
+final class Contributor extends ObjectData
 {
+    public function getContributorId()
+    {
+        return $this->get('contributorId');
+    }
+
+    public function setContributorId($value): self
+    {
+        return $this->set('contributorId', $value);
+    }
+
+    public function getFirstName()
+    {
+        return $this->get('firstName');
+    }
+
+    public function setFirstName($value): self
+    {
+        return $this->set('firstName', $value);
+    }
+
+    public function getLastName()
+    {
+        return $this->get('lastName');
+    }
+
+    public function setLastName($value): self
+    {
+        return $this->set('lastName', $value);
+    }
+
+    public function getFullName()
+    {
+        return $this->get('fullName');
+    }
+
+    public function setFullName($value): self
+    {
+        return $this->set('fullName', $value);
+    }
+
+    public function getOrcid()
+    {
+        return $this->get('orcid');
+    }
+
+    public function setOrcid($value): self
+    {
+        return $this->set('orcid', $value);
+    }
+
+    public function getWebsite()
+    {
+        return $this->get('website');
+    }
+
+    public function setWebsite($value): self
+    {
+        return $this->set('website', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getContributions()
+    {
+        return $this->get('contributions');
+    }
+
+    public function setContributions($value): self
+    {
+        return $this->set('contributions', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Contributor', [

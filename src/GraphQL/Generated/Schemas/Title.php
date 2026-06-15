@@ -3,9 +3,90 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Title
+final class Title extends ObjectData
 {
+    public function getTitleId()
+    {
+        return $this->get('titleId');
+    }
+
+    public function setTitleId($value): self
+    {
+        return $this->set('titleId', $value);
+    }
+
+    public function getWorkId()
+    {
+        return $this->get('workId');
+    }
+
+    public function setWorkId($value): self
+    {
+        return $this->set('workId', $value);
+    }
+
+    public function getLocaleCode()
+    {
+        return $this->get('localeCode');
+    }
+
+    public function setLocaleCode($value): self
+    {
+        return $this->set('localeCode', $value);
+    }
+
+    public function getFullTitle()
+    {
+        return $this->get('fullTitle');
+    }
+
+    public function setFullTitle($value): self
+    {
+        return $this->set('fullTitle', $value);
+    }
+
+    public function getTitle()
+    {
+        return $this->get('title');
+    }
+
+    public function setTitle($value): self
+    {
+        return $this->set('title', $value);
+    }
+
+    public function getSubtitle()
+    {
+        return $this->get('subtitle');
+    }
+
+    public function setSubtitle($value): self
+    {
+        return $this->set('subtitle', $value);
+    }
+
+    public function getCanonical()
+    {
+        return $this->get('canonical');
+    }
+
+    public function setCanonical($value): self
+    {
+        return $this->set('canonical', $value);
+    }
+
+    public function getWork()
+    {
+        return $this->get('work');
+    }
+
+    public function setWork($value): self
+    {
+        return $this->set('work', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Title', [

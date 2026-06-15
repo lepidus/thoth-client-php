@@ -3,9 +3,100 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Institution
+final class Institution extends ObjectData
 {
+    public function getInstitutionId()
+    {
+        return $this->get('institutionId');
+    }
+
+    public function setInstitutionId($value): self
+    {
+        return $this->set('institutionId', $value);
+    }
+
+    public function getInstitutionName()
+    {
+        return $this->get('institutionName');
+    }
+
+    public function setInstitutionName($value): self
+    {
+        return $this->set('institutionName', $value);
+    }
+
+    public function getInstitutionDoi()
+    {
+        return $this->get('institutionDoi');
+    }
+
+    public function setInstitutionDoi($value): self
+    {
+        return $this->set('institutionDoi', $value);
+    }
+
+    public function getCountryCode()
+    {
+        return $this->get('countryCode');
+    }
+
+    public function setCountryCode($value): self
+    {
+        return $this->set('countryCode', $value);
+    }
+
+    public function getRor()
+    {
+        return $this->get('ror');
+    }
+
+    public function setRor($value): self
+    {
+        return $this->set('ror', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getFundings()
+    {
+        return $this->get('fundings');
+    }
+
+    public function setFundings($value): self
+    {
+        return $this->set('fundings', $value);
+    }
+
+    public function getAffiliations()
+    {
+        return $this->get('affiliations');
+    }
+
+    public function setAffiliations($value): self
+    {
+        return $this->set('affiliations', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Institution', [

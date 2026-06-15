@@ -3,9 +3,270 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Reference
+final class Reference extends ObjectData
 {
+    public function getReferenceId()
+    {
+        return $this->get('referenceId');
+    }
+
+    public function setReferenceId($value): self
+    {
+        return $this->set('referenceId', $value);
+    }
+
+    public function getWorkId()
+    {
+        return $this->get('workId');
+    }
+
+    public function setWorkId($value): self
+    {
+        return $this->set('workId', $value);
+    }
+
+    public function getReferenceOrdinal()
+    {
+        return $this->get('referenceOrdinal');
+    }
+
+    public function setReferenceOrdinal($value): self
+    {
+        return $this->set('referenceOrdinal', $value);
+    }
+
+    public function getDoi()
+    {
+        return $this->get('doi');
+    }
+
+    public function setDoi($value): self
+    {
+        return $this->set('doi', $value);
+    }
+
+    public function getUnstructuredCitation()
+    {
+        return $this->get('unstructuredCitation');
+    }
+
+    public function setUnstructuredCitation($value): self
+    {
+        return $this->set('unstructuredCitation', $value);
+    }
+
+    public function getIssn()
+    {
+        return $this->get('issn');
+    }
+
+    public function setIssn($value): self
+    {
+        return $this->set('issn', $value);
+    }
+
+    public function getIsbn()
+    {
+        return $this->get('isbn');
+    }
+
+    public function setIsbn($value): self
+    {
+        return $this->set('isbn', $value);
+    }
+
+    public function getJournalTitle()
+    {
+        return $this->get('journalTitle');
+    }
+
+    public function setJournalTitle($value): self
+    {
+        return $this->set('journalTitle', $value);
+    }
+
+    public function getArticleTitle()
+    {
+        return $this->get('articleTitle');
+    }
+
+    public function setArticleTitle($value): self
+    {
+        return $this->set('articleTitle', $value);
+    }
+
+    public function getSeriesTitle()
+    {
+        return $this->get('seriesTitle');
+    }
+
+    public function setSeriesTitle($value): self
+    {
+        return $this->set('seriesTitle', $value);
+    }
+
+    public function getVolumeTitle()
+    {
+        return $this->get('volumeTitle');
+    }
+
+    public function setVolumeTitle($value): self
+    {
+        return $this->set('volumeTitle', $value);
+    }
+
+    public function getEdition()
+    {
+        return $this->get('edition');
+    }
+
+    public function setEdition($value): self
+    {
+        return $this->set('edition', $value);
+    }
+
+    public function getAuthor()
+    {
+        return $this->get('author');
+    }
+
+    public function setAuthor($value): self
+    {
+        return $this->set('author', $value);
+    }
+
+    public function getVolume()
+    {
+        return $this->get('volume');
+    }
+
+    public function setVolume($value): self
+    {
+        return $this->set('volume', $value);
+    }
+
+    public function getIssue()
+    {
+        return $this->get('issue');
+    }
+
+    public function setIssue($value): self
+    {
+        return $this->set('issue', $value);
+    }
+
+    public function getFirstPage()
+    {
+        return $this->get('firstPage');
+    }
+
+    public function setFirstPage($value): self
+    {
+        return $this->set('firstPage', $value);
+    }
+
+    public function getComponentNumber()
+    {
+        return $this->get('componentNumber');
+    }
+
+    public function setComponentNumber($value): self
+    {
+        return $this->set('componentNumber', $value);
+    }
+
+    public function getStandardDesignator()
+    {
+        return $this->get('standardDesignator');
+    }
+
+    public function setStandardDesignator($value): self
+    {
+        return $this->set('standardDesignator', $value);
+    }
+
+    public function getStandardsBodyName()
+    {
+        return $this->get('standardsBodyName');
+    }
+
+    public function setStandardsBodyName($value): self
+    {
+        return $this->set('standardsBodyName', $value);
+    }
+
+    public function getStandardsBodyAcronym()
+    {
+        return $this->get('standardsBodyAcronym');
+    }
+
+    public function setStandardsBodyAcronym($value): self
+    {
+        return $this->set('standardsBodyAcronym', $value);
+    }
+
+    public function getUrl()
+    {
+        return $this->get('url');
+    }
+
+    public function setUrl($value): self
+    {
+        return $this->set('url', $value);
+    }
+
+    public function getPublicationDate()
+    {
+        return $this->get('publicationDate');
+    }
+
+    public function setPublicationDate($value): self
+    {
+        return $this->set('publicationDate', $value);
+    }
+
+    public function getRetrievalDate()
+    {
+        return $this->get('retrievalDate');
+    }
+
+    public function setRetrievalDate($value): self
+    {
+        return $this->set('retrievalDate', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getWork()
+    {
+        return $this->get('work');
+    }
+
+    public function setWork($value): self
+    {
+        return $this->set('work', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Reference', [

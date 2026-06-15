@@ -3,9 +3,120 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Publisher
+final class Publisher extends ObjectData
 {
+    public function getPublisherId()
+    {
+        return $this->get('publisherId');
+    }
+
+    public function setPublisherId($value): self
+    {
+        return $this->set('publisherId', $value);
+    }
+
+    public function getPublisherName()
+    {
+        return $this->get('publisherName');
+    }
+
+    public function setPublisherName($value): self
+    {
+        return $this->set('publisherName', $value);
+    }
+
+    public function getPublisherShortname()
+    {
+        return $this->get('publisherShortname');
+    }
+
+    public function setPublisherShortname($value): self
+    {
+        return $this->set('publisherShortname', $value);
+    }
+
+    public function getPublisherUrl()
+    {
+        return $this->get('publisherUrl');
+    }
+
+    public function setPublisherUrl($value): self
+    {
+        return $this->set('publisherUrl', $value);
+    }
+
+    public function getZitadelId()
+    {
+        return $this->get('zitadelId');
+    }
+
+    public function setZitadelId($value): self
+    {
+        return $this->set('zitadelId', $value);
+    }
+
+    public function getAccessibilityStatement()
+    {
+        return $this->get('accessibilityStatement');
+    }
+
+    public function setAccessibilityStatement($value): self
+    {
+        return $this->set('accessibilityStatement', $value);
+    }
+
+    public function getAccessibilityReportUrl()
+    {
+        return $this->get('accessibilityReportUrl');
+    }
+
+    public function setAccessibilityReportUrl($value): self
+    {
+        return $this->set('accessibilityReportUrl', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getImprints()
+    {
+        return $this->get('imprints');
+    }
+
+    public function setImprints($value): self
+    {
+        return $this->set('imprints', $value);
+    }
+
+    public function getContacts()
+    {
+        return $this->get('contacts');
+    }
+
+    public function setContacts($value): self
+    {
+        return $this->set('contacts', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Publisher', [

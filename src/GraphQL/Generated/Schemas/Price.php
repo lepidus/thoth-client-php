@@ -3,9 +3,80 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Price
+final class Price extends ObjectData
 {
+    public function getPriceId()
+    {
+        return $this->get('priceId');
+    }
+
+    public function setPriceId($value): self
+    {
+        return $this->set('priceId', $value);
+    }
+
+    public function getPublicationId()
+    {
+        return $this->get('publicationId');
+    }
+
+    public function setPublicationId($value): self
+    {
+        return $this->set('publicationId', $value);
+    }
+
+    public function getCurrencyCode()
+    {
+        return $this->get('currencyCode');
+    }
+
+    public function setCurrencyCode($value): self
+    {
+        return $this->set('currencyCode', $value);
+    }
+
+    public function getUnitPrice()
+    {
+        return $this->get('unitPrice');
+    }
+
+    public function setUnitPrice($value): self
+    {
+        return $this->set('unitPrice', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getPublication()
+    {
+        return $this->get('publication');
+    }
+
+    public function setPublication($value): self
+    {
+        return $this->set('publication', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Price', [

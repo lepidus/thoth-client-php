@@ -3,9 +3,820 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class QueryRoot
+final class QueryRoot extends ObjectData
 {
+    public function getWorks()
+    {
+        return $this->get('works');
+    }
+
+    public function setWorks($value): self
+    {
+        return $this->set('works', $value);
+    }
+
+    public function getWork()
+    {
+        return $this->get('work');
+    }
+
+    public function setWork($value): self
+    {
+        return $this->set('work', $value);
+    }
+
+    public function getWorkByDoi()
+    {
+        return $this->get('workByDoi');
+    }
+
+    public function setWorkByDoi($value): self
+    {
+        return $this->set('workByDoi', $value);
+    }
+
+    public function getWorkCount()
+    {
+        return $this->get('workCount');
+    }
+
+    public function setWorkCount($value): self
+    {
+        return $this->set('workCount', $value);
+    }
+
+    public function getBooks()
+    {
+        return $this->get('books');
+    }
+
+    public function setBooks($value): self
+    {
+        return $this->set('books', $value);
+    }
+
+    public function getBookByDoi()
+    {
+        return $this->get('bookByDoi');
+    }
+
+    public function setBookByDoi($value): self
+    {
+        return $this->set('bookByDoi', $value);
+    }
+
+    public function getBookCount()
+    {
+        return $this->get('bookCount');
+    }
+
+    public function setBookCount($value): self
+    {
+        return $this->set('bookCount', $value);
+    }
+
+    public function getChapters()
+    {
+        return $this->get('chapters');
+    }
+
+    public function setChapters($value): self
+    {
+        return $this->set('chapters', $value);
+    }
+
+    public function getChapterByDoi()
+    {
+        return $this->get('chapterByDoi');
+    }
+
+    public function setChapterByDoi($value): self
+    {
+        return $this->set('chapterByDoi', $value);
+    }
+
+    public function getChapterCount()
+    {
+        return $this->get('chapterCount');
+    }
+
+    public function setChapterCount($value): self
+    {
+        return $this->set('chapterCount', $value);
+    }
+
+    public function getPublications()
+    {
+        return $this->get('publications');
+    }
+
+    public function setPublications($value): self
+    {
+        return $this->set('publications', $value);
+    }
+
+    public function getPublication()
+    {
+        return $this->get('publication');
+    }
+
+    public function setPublication($value): self
+    {
+        return $this->set('publication', $value);
+    }
+
+    public function getFile()
+    {
+        return $this->get('file');
+    }
+
+    public function setFile($value): self
+    {
+        return $this->set('file', $value);
+    }
+
+    public function getPublicationCount()
+    {
+        return $this->get('publicationCount');
+    }
+
+    public function setPublicationCount($value): self
+    {
+        return $this->set('publicationCount', $value);
+    }
+
+    public function getPublishers()
+    {
+        return $this->get('publishers');
+    }
+
+    public function setPublishers($value): self
+    {
+        return $this->set('publishers', $value);
+    }
+
+    public function getPublisher()
+    {
+        return $this->get('publisher');
+    }
+
+    public function setPublisher($value): self
+    {
+        return $this->set('publisher', $value);
+    }
+
+    public function getPublisherCount()
+    {
+        return $this->get('publisherCount');
+    }
+
+    public function setPublisherCount($value): self
+    {
+        return $this->set('publisherCount', $value);
+    }
+
+    public function getImprints()
+    {
+        return $this->get('imprints');
+    }
+
+    public function setImprints($value): self
+    {
+        return $this->set('imprints', $value);
+    }
+
+    public function getImprint()
+    {
+        return $this->get('imprint');
+    }
+
+    public function setImprint($value): self
+    {
+        return $this->set('imprint', $value);
+    }
+
+    public function getImprintCount()
+    {
+        return $this->get('imprintCount');
+    }
+
+    public function setImprintCount($value): self
+    {
+        return $this->set('imprintCount', $value);
+    }
+
+    public function getContributors()
+    {
+        return $this->get('contributors');
+    }
+
+    public function setContributors($value): self
+    {
+        return $this->set('contributors', $value);
+    }
+
+    public function getContributor()
+    {
+        return $this->get('contributor');
+    }
+
+    public function setContributor($value): self
+    {
+        return $this->set('contributor', $value);
+    }
+
+    public function getContributorCount()
+    {
+        return $this->get('contributorCount');
+    }
+
+    public function setContributorCount($value): self
+    {
+        return $this->set('contributorCount', $value);
+    }
+
+    public function getContributions()
+    {
+        return $this->get('contributions');
+    }
+
+    public function setContributions($value): self
+    {
+        return $this->set('contributions', $value);
+    }
+
+    public function getContribution()
+    {
+        return $this->get('contribution');
+    }
+
+    public function setContribution($value): self
+    {
+        return $this->set('contribution', $value);
+    }
+
+    public function getContributionCount()
+    {
+        return $this->get('contributionCount');
+    }
+
+    public function setContributionCount($value): self
+    {
+        return $this->set('contributionCount', $value);
+    }
+
+    public function getSerieses()
+    {
+        return $this->get('serieses');
+    }
+
+    public function setSerieses($value): self
+    {
+        return $this->set('serieses', $value);
+    }
+
+    public function getSeries()
+    {
+        return $this->get('series');
+    }
+
+    public function setSeries($value): self
+    {
+        return $this->set('series', $value);
+    }
+
+    public function getSeriesCount()
+    {
+        return $this->get('seriesCount');
+    }
+
+    public function setSeriesCount($value): self
+    {
+        return $this->set('seriesCount', $value);
+    }
+
+    public function getIssues()
+    {
+        return $this->get('issues');
+    }
+
+    public function setIssues($value): self
+    {
+        return $this->set('issues', $value);
+    }
+
+    public function getIssue()
+    {
+        return $this->get('issue');
+    }
+
+    public function setIssue($value): self
+    {
+        return $this->set('issue', $value);
+    }
+
+    public function getIssueCount()
+    {
+        return $this->get('issueCount');
+    }
+
+    public function setIssueCount($value): self
+    {
+        return $this->set('issueCount', $value);
+    }
+
+    public function getLanguages()
+    {
+        return $this->get('languages');
+    }
+
+    public function setLanguages($value): self
+    {
+        return $this->set('languages', $value);
+    }
+
+    public function getLanguage()
+    {
+        return $this->get('language');
+    }
+
+    public function setLanguage($value): self
+    {
+        return $this->set('language', $value);
+    }
+
+    public function getLanguageCount()
+    {
+        return $this->get('languageCount');
+    }
+
+    public function setLanguageCount($value): self
+    {
+        return $this->set('languageCount', $value);
+    }
+
+    public function getLocations()
+    {
+        return $this->get('locations');
+    }
+
+    public function setLocations($value): self
+    {
+        return $this->set('locations', $value);
+    }
+
+    public function getLocation()
+    {
+        return $this->get('location');
+    }
+
+    public function setLocation($value): self
+    {
+        return $this->set('location', $value);
+    }
+
+    public function getLocationCount()
+    {
+        return $this->get('locationCount');
+    }
+
+    public function setLocationCount($value): self
+    {
+        return $this->set('locationCount', $value);
+    }
+
+    public function getPrices()
+    {
+        return $this->get('prices');
+    }
+
+    public function setPrices($value): self
+    {
+        return $this->set('prices', $value);
+    }
+
+    public function getPrice()
+    {
+        return $this->get('price');
+    }
+
+    public function setPrice($value): self
+    {
+        return $this->set('price', $value);
+    }
+
+    public function getPriceCount()
+    {
+        return $this->get('priceCount');
+    }
+
+    public function setPriceCount($value): self
+    {
+        return $this->set('priceCount', $value);
+    }
+
+    public function getSubjects()
+    {
+        return $this->get('subjects');
+    }
+
+    public function setSubjects($value): self
+    {
+        return $this->set('subjects', $value);
+    }
+
+    public function getSubject()
+    {
+        return $this->get('subject');
+    }
+
+    public function setSubject($value): self
+    {
+        return $this->set('subject', $value);
+    }
+
+    public function getSubjectCount()
+    {
+        return $this->get('subjectCount');
+    }
+
+    public function setSubjectCount($value): self
+    {
+        return $this->set('subjectCount', $value);
+    }
+
+    public function getInstitutions()
+    {
+        return $this->get('institutions');
+    }
+
+    public function setInstitutions($value): self
+    {
+        return $this->set('institutions', $value);
+    }
+
+    public function getInstitution()
+    {
+        return $this->get('institution');
+    }
+
+    public function setInstitution($value): self
+    {
+        return $this->set('institution', $value);
+    }
+
+    public function getInstitutionCount()
+    {
+        return $this->get('institutionCount');
+    }
+
+    public function setInstitutionCount($value): self
+    {
+        return $this->set('institutionCount', $value);
+    }
+
+    public function getFundings()
+    {
+        return $this->get('fundings');
+    }
+
+    public function setFundings($value): self
+    {
+        return $this->set('fundings', $value);
+    }
+
+    public function getFunding()
+    {
+        return $this->get('funding');
+    }
+
+    public function setFunding($value): self
+    {
+        return $this->set('funding', $value);
+    }
+
+    public function getFundingCount()
+    {
+        return $this->get('fundingCount');
+    }
+
+    public function setFundingCount($value): self
+    {
+        return $this->set('fundingCount', $value);
+    }
+
+    public function getAffiliations()
+    {
+        return $this->get('affiliations');
+    }
+
+    public function setAffiliations($value): self
+    {
+        return $this->set('affiliations', $value);
+    }
+
+    public function getAffiliation()
+    {
+        return $this->get('affiliation');
+    }
+
+    public function setAffiliation($value): self
+    {
+        return $this->set('affiliation', $value);
+    }
+
+    public function getAffiliationCount()
+    {
+        return $this->get('affiliationCount');
+    }
+
+    public function setAffiliationCount($value): self
+    {
+        return $this->set('affiliationCount', $value);
+    }
+
+    public function getReferences()
+    {
+        return $this->get('references');
+    }
+
+    public function setReferences($value): self
+    {
+        return $this->set('references', $value);
+    }
+
+    public function getReference()
+    {
+        return $this->get('reference');
+    }
+
+    public function setReference($value): self
+    {
+        return $this->set('reference', $value);
+    }
+
+    public function getReferenceCount()
+    {
+        return $this->get('referenceCount');
+    }
+
+    public function setReferenceCount($value): self
+    {
+        return $this->set('referenceCount', $value);
+    }
+
+    public function getAdditionalResources()
+    {
+        return $this->get('additionalResources');
+    }
+
+    public function setAdditionalResources($value): self
+    {
+        return $this->set('additionalResources', $value);
+    }
+
+    public function getAdditionalResource()
+    {
+        return $this->get('additionalResource');
+    }
+
+    public function setAdditionalResource($value): self
+    {
+        return $this->set('additionalResource', $value);
+    }
+
+    public function getAdditionalResourceCount()
+    {
+        return $this->get('additionalResourceCount');
+    }
+
+    public function setAdditionalResourceCount($value): self
+    {
+        return $this->set('additionalResourceCount', $value);
+    }
+
+    public function getAwards()
+    {
+        return $this->get('awards');
+    }
+
+    public function setAwards($value): self
+    {
+        return $this->set('awards', $value);
+    }
+
+    public function getAward()
+    {
+        return $this->get('award');
+    }
+
+    public function setAward($value): self
+    {
+        return $this->set('award', $value);
+    }
+
+    public function getAwardCount()
+    {
+        return $this->get('awardCount');
+    }
+
+    public function setAwardCount($value): self
+    {
+        return $this->set('awardCount', $value);
+    }
+
+    public function getEndorsements()
+    {
+        return $this->get('endorsements');
+    }
+
+    public function setEndorsements($value): self
+    {
+        return $this->set('endorsements', $value);
+    }
+
+    public function getEndorsement()
+    {
+        return $this->get('endorsement');
+    }
+
+    public function setEndorsement($value): self
+    {
+        return $this->set('endorsement', $value);
+    }
+
+    public function getEndorsementCount()
+    {
+        return $this->get('endorsementCount');
+    }
+
+    public function setEndorsementCount($value): self
+    {
+        return $this->set('endorsementCount', $value);
+    }
+
+    public function getBookReviews()
+    {
+        return $this->get('bookReviews');
+    }
+
+    public function setBookReviews($value): self
+    {
+        return $this->set('bookReviews', $value);
+    }
+
+    public function getBookReview()
+    {
+        return $this->get('bookReview');
+    }
+
+    public function setBookReview($value): self
+    {
+        return $this->set('bookReview', $value);
+    }
+
+    public function getBookReviewCount()
+    {
+        return $this->get('bookReviewCount');
+    }
+
+    public function setBookReviewCount($value): self
+    {
+        return $this->set('bookReviewCount', $value);
+    }
+
+    public function getWorkFeaturedVideos()
+    {
+        return $this->get('workFeaturedVideos');
+    }
+
+    public function setWorkFeaturedVideos($value): self
+    {
+        return $this->set('workFeaturedVideos', $value);
+    }
+
+    public function getWorkFeaturedVideo()
+    {
+        return $this->get('workFeaturedVideo');
+    }
+
+    public function setWorkFeaturedVideo($value): self
+    {
+        return $this->set('workFeaturedVideo', $value);
+    }
+
+    public function getWorkFeaturedVideoCount()
+    {
+        return $this->get('workFeaturedVideoCount');
+    }
+
+    public function setWorkFeaturedVideoCount($value): self
+    {
+        return $this->set('workFeaturedVideoCount', $value);
+    }
+
+    public function getTitle()
+    {
+        return $this->get('title');
+    }
+
+    public function setTitle($value): self
+    {
+        return $this->set('title', $value);
+    }
+
+    public function getTitles()
+    {
+        return $this->get('titles');
+    }
+
+    public function setTitles($value): self
+    {
+        return $this->set('titles', $value);
+    }
+
+    public function getAbstract()
+    {
+        return $this->get('abstract');
+    }
+
+    public function setAbstract($value): self
+    {
+        return $this->set('abstract', $value);
+    }
+
+    public function getAbstracts()
+    {
+        return $this->get('abstracts');
+    }
+
+    public function setAbstracts($value): self
+    {
+        return $this->set('abstracts', $value);
+    }
+
+    public function getBiography()
+    {
+        return $this->get('biography');
+    }
+
+    public function setBiography($value): self
+    {
+        return $this->set('biography', $value);
+    }
+
+    public function getBiographies()
+    {
+        return $this->get('biographies');
+    }
+
+    public function setBiographies($value): self
+    {
+        return $this->set('biographies', $value);
+    }
+
+    public function getContacts()
+    {
+        return $this->get('contacts');
+    }
+
+    public function setContacts($value): self
+    {
+        return $this->set('contacts', $value);
+    }
+
+    public function getContact()
+    {
+        return $this->get('contact');
+    }
+
+    public function setContact($value): self
+    {
+        return $this->set('contact', $value);
+    }
+
+    public function getContactCount()
+    {
+        return $this->get('contactCount');
+    }
+
+    public function setContactCount($value): self
+    {
+        return $this->set('contactCount', $value);
+    }
+
+    public function getMe()
+    {
+        return $this->get('me');
+    }
+
+    public function setMe($value): self
+    {
+        return $this->set('me', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('QueryRoot', [

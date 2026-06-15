@@ -3,9 +3,160 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Imprint
+final class Imprint extends ObjectData
 {
+    public function getImprintId()
+    {
+        return $this->get('imprintId');
+    }
+
+    public function setImprintId($value): self
+    {
+        return $this->set('imprintId', $value);
+    }
+
+    public function getPublisherId()
+    {
+        return $this->get('publisherId');
+    }
+
+    public function setPublisherId($value): self
+    {
+        return $this->set('publisherId', $value);
+    }
+
+    public function getImprintName()
+    {
+        return $this->get('imprintName');
+    }
+
+    public function setImprintName($value): self
+    {
+        return $this->set('imprintName', $value);
+    }
+
+    public function getImprintUrl()
+    {
+        return $this->get('imprintUrl');
+    }
+
+    public function setImprintUrl($value): self
+    {
+        return $this->set('imprintUrl', $value);
+    }
+
+    public function getCrossmarkDoi()
+    {
+        return $this->get('crossmarkDoi');
+    }
+
+    public function setCrossmarkDoi($value): self
+    {
+        return $this->set('crossmarkDoi', $value);
+    }
+
+    public function getS3Bucket()
+    {
+        return $this->get('s3Bucket');
+    }
+
+    public function setS3Bucket($value): self
+    {
+        return $this->set('s3Bucket', $value);
+    }
+
+    public function getCdnDomain()
+    {
+        return $this->get('cdnDomain');
+    }
+
+    public function setCdnDomain($value): self
+    {
+        return $this->set('cdnDomain', $value);
+    }
+
+    public function getCloudfrontDistId()
+    {
+        return $this->get('cloudfrontDistId');
+    }
+
+    public function setCloudfrontDistId($value): self
+    {
+        return $this->set('cloudfrontDistId', $value);
+    }
+
+    public function getDefaultCurrency()
+    {
+        return $this->get('defaultCurrency');
+    }
+
+    public function setDefaultCurrency($value): self
+    {
+        return $this->set('defaultCurrency', $value);
+    }
+
+    public function getDefaultPlace()
+    {
+        return $this->get('defaultPlace');
+    }
+
+    public function setDefaultPlace($value): self
+    {
+        return $this->set('defaultPlace', $value);
+    }
+
+    public function getDefaultLocale()
+    {
+        return $this->get('defaultLocale');
+    }
+
+    public function setDefaultLocale($value): self
+    {
+        return $this->set('defaultLocale', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getPublisher()
+    {
+        return $this->get('publisher');
+    }
+
+    public function setPublisher($value): self
+    {
+        return $this->set('publisher', $value);
+    }
+
+    public function getWorks()
+    {
+        return $this->get('works');
+    }
+
+    public function setWorks($value): self
+    {
+        return $this->set('works', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Imprint', [

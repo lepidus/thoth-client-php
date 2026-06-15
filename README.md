@@ -75,6 +75,27 @@ $subjectId = $client->createSubject(new NewSubject([
 ]));
 ```
 
+Generated schema classes can also be hydrated from explicit selections and expose getters, setters and
+`toArray()`.
+
+```php
+$work = $client->createWork($newWork, [
+    'workId',
+    'fullTitle',
+    'imprint' => [
+        'imprintId',
+        'publisher' => [
+            'publisherId',
+            'publisherName',
+        ],
+    ],
+]);
+
+echo $work->getWorkId();
+echo $work->getImprint()->getPublisher()->getPublisherName();
+print_r($work->toArray());
+```
+
 Regenerate the GraphQL classes from the current Thoth GraphQL schema:
 
 ```bash

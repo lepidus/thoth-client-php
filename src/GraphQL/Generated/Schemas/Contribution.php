@@ -3,9 +3,170 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Contribution
+final class Contribution extends ObjectData
 {
+    public function getContributionId()
+    {
+        return $this->get('contributionId');
+    }
+
+    public function setContributionId($value): self
+    {
+        return $this->set('contributionId', $value);
+    }
+
+    public function getContributorId()
+    {
+        return $this->get('contributorId');
+    }
+
+    public function setContributorId($value): self
+    {
+        return $this->set('contributorId', $value);
+    }
+
+    public function getWorkId()
+    {
+        return $this->get('workId');
+    }
+
+    public function setWorkId($value): self
+    {
+        return $this->set('workId', $value);
+    }
+
+    public function getContributionType()
+    {
+        return $this->get('contributionType');
+    }
+
+    public function setContributionType($value): self
+    {
+        return $this->set('contributionType', $value);
+    }
+
+    public function getMainContribution()
+    {
+        return $this->get('mainContribution');
+    }
+
+    public function setMainContribution($value): self
+    {
+        return $this->set('mainContribution', $value);
+    }
+
+    public function getBiographies()
+    {
+        return $this->get('biographies');
+    }
+
+    public function setBiographies($value): self
+    {
+        return $this->set('biographies', $value);
+    }
+
+    public function getBiography()
+    {
+        return $this->get('biography');
+    }
+
+    public function setBiography($value): self
+    {
+        return $this->set('biography', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getFirstName()
+    {
+        return $this->get('firstName');
+    }
+
+    public function setFirstName($value): self
+    {
+        return $this->set('firstName', $value);
+    }
+
+    public function getLastName()
+    {
+        return $this->get('lastName');
+    }
+
+    public function setLastName($value): self
+    {
+        return $this->set('lastName', $value);
+    }
+
+    public function getFullName()
+    {
+        return $this->get('fullName');
+    }
+
+    public function setFullName($value): self
+    {
+        return $this->set('fullName', $value);
+    }
+
+    public function getContributionOrdinal()
+    {
+        return $this->get('contributionOrdinal');
+    }
+
+    public function setContributionOrdinal($value): self
+    {
+        return $this->set('contributionOrdinal', $value);
+    }
+
+    public function getWork()
+    {
+        return $this->get('work');
+    }
+
+    public function setWork($value): self
+    {
+        return $this->set('work', $value);
+    }
+
+    public function getContributor()
+    {
+        return $this->get('contributor');
+    }
+
+    public function setContributor($value): self
+    {
+        return $this->set('contributor', $value);
+    }
+
+    public function getAffiliations()
+    {
+        return $this->get('affiliations');
+    }
+
+    public function setAffiliations($value): self
+    {
+        return $this->set('affiliations', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Contribution', [

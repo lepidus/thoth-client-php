@@ -3,9 +3,190 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Publication
+final class Publication extends ObjectData
 {
+    public function getPublicationId()
+    {
+        return $this->get('publicationId');
+    }
+
+    public function setPublicationId($value): self
+    {
+        return $this->set('publicationId', $value);
+    }
+
+    public function getPublicationType()
+    {
+        return $this->get('publicationType');
+    }
+
+    public function setPublicationType($value): self
+    {
+        return $this->set('publicationType', $value);
+    }
+
+    public function getWorkId()
+    {
+        return $this->get('workId');
+    }
+
+    public function setWorkId($value): self
+    {
+        return $this->set('workId', $value);
+    }
+
+    public function getIsbn()
+    {
+        return $this->get('isbn');
+    }
+
+    public function setIsbn($value): self
+    {
+        return $this->set('isbn', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getWidth()
+    {
+        return $this->get('width');
+    }
+
+    public function setWidth($value): self
+    {
+        return $this->set('width', $value);
+    }
+
+    public function getHeight()
+    {
+        return $this->get('height');
+    }
+
+    public function setHeight($value): self
+    {
+        return $this->set('height', $value);
+    }
+
+    public function getDepth()
+    {
+        return $this->get('depth');
+    }
+
+    public function setDepth($value): self
+    {
+        return $this->set('depth', $value);
+    }
+
+    public function getWeight()
+    {
+        return $this->get('weight');
+    }
+
+    public function setWeight($value): self
+    {
+        return $this->set('weight', $value);
+    }
+
+    public function getAccessibilityStandard()
+    {
+        return $this->get('accessibilityStandard');
+    }
+
+    public function setAccessibilityStandard($value): self
+    {
+        return $this->set('accessibilityStandard', $value);
+    }
+
+    public function getAccessibilityAdditionalStandard()
+    {
+        return $this->get('accessibilityAdditionalStandard');
+    }
+
+    public function setAccessibilityAdditionalStandard($value): self
+    {
+        return $this->set('accessibilityAdditionalStandard', $value);
+    }
+
+    public function getAccessibilityException()
+    {
+        return $this->get('accessibilityException');
+    }
+
+    public function setAccessibilityException($value): self
+    {
+        return $this->set('accessibilityException', $value);
+    }
+
+    public function getAccessibilityReportUrl()
+    {
+        return $this->get('accessibilityReportUrl');
+    }
+
+    public function setAccessibilityReportUrl($value): self
+    {
+        return $this->set('accessibilityReportUrl', $value);
+    }
+
+    public function getPrices()
+    {
+        return $this->get('prices');
+    }
+
+    public function setPrices($value): self
+    {
+        return $this->set('prices', $value);
+    }
+
+    public function getLocations()
+    {
+        return $this->get('locations');
+    }
+
+    public function setLocations($value): self
+    {
+        return $this->set('locations', $value);
+    }
+
+    public function getFile()
+    {
+        return $this->get('file');
+    }
+
+    public function setFile($value): self
+    {
+        return $this->set('file', $value);
+    }
+
+    public function getWork()
+    {
+        return $this->get('work');
+    }
+
+    public function setWork($value): self
+    {
+        return $this->set('work', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Publication', [

@@ -3,9 +3,90 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class WorkRelation
+final class WorkRelation extends ObjectData
 {
+    public function getWorkRelationId()
+    {
+        return $this->get('workRelationId');
+    }
+
+    public function setWorkRelationId($value): self
+    {
+        return $this->set('workRelationId', $value);
+    }
+
+    public function getRelatorWorkId()
+    {
+        return $this->get('relatorWorkId');
+    }
+
+    public function setRelatorWorkId($value): self
+    {
+        return $this->set('relatorWorkId', $value);
+    }
+
+    public function getRelatedWorkId()
+    {
+        return $this->get('relatedWorkId');
+    }
+
+    public function setRelatedWorkId($value): self
+    {
+        return $this->set('relatedWorkId', $value);
+    }
+
+    public function getRelationType()
+    {
+        return $this->get('relationType');
+    }
+
+    public function setRelationType($value): self
+    {
+        return $this->set('relationType', $value);
+    }
+
+    public function getRelationOrdinal()
+    {
+        return $this->get('relationOrdinal');
+    }
+
+    public function setRelationOrdinal($value): self
+    {
+        return $this->set('relationOrdinal', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getRelatedWork()
+    {
+        return $this->get('relatedWork');
+    }
+
+    public function setRelatedWork($value): self
+    {
+        return $this->set('relatedWork', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('WorkRelation', [

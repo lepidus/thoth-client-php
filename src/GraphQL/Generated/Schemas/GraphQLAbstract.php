@@ -3,9 +3,80 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class GraphQLAbstract
+final class GraphQLAbstract extends ObjectData
 {
+    public function getAbstractId()
+    {
+        return $this->get('abstractId');
+    }
+
+    public function setAbstractId($value): self
+    {
+        return $this->set('abstractId', $value);
+    }
+
+    public function getWorkId()
+    {
+        return $this->get('workId');
+    }
+
+    public function setWorkId($value): self
+    {
+        return $this->set('workId', $value);
+    }
+
+    public function getLocaleCode()
+    {
+        return $this->get('localeCode');
+    }
+
+    public function setLocaleCode($value): self
+    {
+        return $this->set('localeCode', $value);
+    }
+
+    public function getContent()
+    {
+        return $this->get('content');
+    }
+
+    public function setContent($value): self
+    {
+        return $this->set('content', $value);
+    }
+
+    public function getCanonical()
+    {
+        return $this->get('canonical');
+    }
+
+    public function setCanonical($value): self
+    {
+        return $this->set('canonical', $value);
+    }
+
+    public function getAbstractType()
+    {
+        return $this->get('abstractType');
+    }
+
+    public function setAbstractType($value): self
+    {
+        return $this->set('abstractType', $value);
+    }
+
+    public function getWork()
+    {
+        return $this->get('work');
+    }
+
+    public function setWork($value): self
+    {
+        return $this->set('work', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Abstract', [

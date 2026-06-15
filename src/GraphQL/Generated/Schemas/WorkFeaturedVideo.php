@@ -3,9 +3,110 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class WorkFeaturedVideo
+final class WorkFeaturedVideo extends ObjectData
 {
+    public function getWorkFeaturedVideoId()
+    {
+        return $this->get('workFeaturedVideoId');
+    }
+
+    public function setWorkFeaturedVideoId($value): self
+    {
+        return $this->set('workFeaturedVideoId', $value);
+    }
+
+    public function getWorkId()
+    {
+        return $this->get('workId');
+    }
+
+    public function setWorkId($value): self
+    {
+        return $this->set('workId', $value);
+    }
+
+    public function getTitle()
+    {
+        return $this->get('title');
+    }
+
+    public function setTitle($value): self
+    {
+        return $this->set('title', $value);
+    }
+
+    public function getUrl()
+    {
+        return $this->get('url');
+    }
+
+    public function setUrl($value): self
+    {
+        return $this->set('url', $value);
+    }
+
+    public function getWidth()
+    {
+        return $this->get('width');
+    }
+
+    public function setWidth($value): self
+    {
+        return $this->set('width', $value);
+    }
+
+    public function getHeight()
+    {
+        return $this->get('height');
+    }
+
+    public function setHeight($value): self
+    {
+        return $this->set('height', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getWork()
+    {
+        return $this->get('work');
+    }
+
+    public function setWork($value): self
+    {
+        return $this->set('work', $value);
+    }
+
+    public function getFile()
+    {
+        return $this->get('file');
+    }
+
+    public function setFile($value): self
+    {
+        return $this->set('file', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('WorkFeaturedVideo', [

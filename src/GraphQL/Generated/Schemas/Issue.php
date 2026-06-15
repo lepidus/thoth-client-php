@@ -3,9 +3,100 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Issue
+final class Issue extends ObjectData
 {
+    public function getIssueId()
+    {
+        return $this->get('issueId');
+    }
+
+    public function setIssueId($value): self
+    {
+        return $this->set('issueId', $value);
+    }
+
+    public function getWorkId()
+    {
+        return $this->get('workId');
+    }
+
+    public function setWorkId($value): self
+    {
+        return $this->set('workId', $value);
+    }
+
+    public function getSeriesId()
+    {
+        return $this->get('seriesId');
+    }
+
+    public function setSeriesId($value): self
+    {
+        return $this->set('seriesId', $value);
+    }
+
+    public function getIssueOrdinal()
+    {
+        return $this->get('issueOrdinal');
+    }
+
+    public function setIssueOrdinal($value): self
+    {
+        return $this->set('issueOrdinal', $value);
+    }
+
+    public function getIssueNumber()
+    {
+        return $this->get('issueNumber');
+    }
+
+    public function setIssueNumber($value): self
+    {
+        return $this->set('issueNumber', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getSeries()
+    {
+        return $this->get('series');
+    }
+
+    public function setSeries($value): self
+    {
+        return $this->set('series', $value);
+    }
+
+    public function getWork()
+    {
+        return $this->get('work');
+    }
+
+    public function setWork($value): self
+    {
+        return $this->set('work', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Issue', [

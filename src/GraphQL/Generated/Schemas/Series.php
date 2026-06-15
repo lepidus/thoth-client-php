@@ -3,9 +3,140 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Series
+final class Series extends ObjectData
 {
+    public function getSeriesId()
+    {
+        return $this->get('seriesId');
+    }
+
+    public function setSeriesId($value): self
+    {
+        return $this->set('seriesId', $value);
+    }
+
+    public function getSeriesType()
+    {
+        return $this->get('seriesType');
+    }
+
+    public function setSeriesType($value): self
+    {
+        return $this->set('seriesType', $value);
+    }
+
+    public function getSeriesName()
+    {
+        return $this->get('seriesName');
+    }
+
+    public function setSeriesName($value): self
+    {
+        return $this->set('seriesName', $value);
+    }
+
+    public function getIssnPrint()
+    {
+        return $this->get('issnPrint');
+    }
+
+    public function setIssnPrint($value): self
+    {
+        return $this->set('issnPrint', $value);
+    }
+
+    public function getIssnDigital()
+    {
+        return $this->get('issnDigital');
+    }
+
+    public function setIssnDigital($value): self
+    {
+        return $this->set('issnDigital', $value);
+    }
+
+    public function getSeriesUrl()
+    {
+        return $this->get('seriesUrl');
+    }
+
+    public function setSeriesUrl($value): self
+    {
+        return $this->set('seriesUrl', $value);
+    }
+
+    public function getSeriesDescription()
+    {
+        return $this->get('seriesDescription');
+    }
+
+    public function setSeriesDescription($value): self
+    {
+        return $this->set('seriesDescription', $value);
+    }
+
+    public function getSeriesCfpUrl()
+    {
+        return $this->get('seriesCfpUrl');
+    }
+
+    public function setSeriesCfpUrl($value): self
+    {
+        return $this->set('seriesCfpUrl', $value);
+    }
+
+    public function getImprintId()
+    {
+        return $this->get('imprintId');
+    }
+
+    public function setImprintId($value): self
+    {
+        return $this->set('imprintId', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getImprint()
+    {
+        return $this->get('imprint');
+    }
+
+    public function setImprint($value): self
+    {
+        return $this->set('imprint', $value);
+    }
+
+    public function getIssues()
+    {
+        return $this->get('issues');
+    }
+
+    public function setIssues($value): self
+    {
+        return $this->set('issues', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Series', [

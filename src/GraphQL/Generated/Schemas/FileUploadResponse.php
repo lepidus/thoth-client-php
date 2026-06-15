@@ -3,9 +3,50 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class FileUploadResponse
+final class FileUploadResponse extends ObjectData
 {
+    public function getFileUploadId()
+    {
+        return $this->get('fileUploadId');
+    }
+
+    public function setFileUploadId($value): self
+    {
+        return $this->set('fileUploadId', $value);
+    }
+
+    public function getUploadUrl()
+    {
+        return $this->get('uploadUrl');
+    }
+
+    public function setUploadUrl($value): self
+    {
+        return $this->set('uploadUrl', $value);
+    }
+
+    public function getUploadHeaders()
+    {
+        return $this->get('uploadHeaders');
+    }
+
+    public function setUploadHeaders($value): self
+    {
+        return $this->set('uploadHeaders', $value);
+    }
+
+    public function getExpiresAt()
+    {
+        return $this->get('expiresAt');
+    }
+
+    public function setExpiresAt($value): self
+    {
+        return $this->set('expiresAt', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('FileUploadResponse', [

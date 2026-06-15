@@ -3,9 +3,150 @@
 namespace ThothApi\GraphQL\Generated\Schemas;
 
 use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
+use ThothApi\GraphQL\ObjectData;
 
-final class Award
+final class Award extends ObjectData
 {
+    public function getAwardId()
+    {
+        return $this->get('awardId');
+    }
+
+    public function setAwardId($value): self
+    {
+        return $this->set('awardId', $value);
+    }
+
+    public function getWorkId()
+    {
+        return $this->get('workId');
+    }
+
+    public function setWorkId($value): self
+    {
+        return $this->set('workId', $value);
+    }
+
+    public function getTitle()
+    {
+        return $this->get('title');
+    }
+
+    public function setTitle($value): self
+    {
+        return $this->set('title', $value);
+    }
+
+    public function getUrl()
+    {
+        return $this->get('url');
+    }
+
+    public function setUrl($value): self
+    {
+        return $this->set('url', $value);
+    }
+
+    public function getCategory()
+    {
+        return $this->get('category');
+    }
+
+    public function setCategory($value): self
+    {
+        return $this->set('category', $value);
+    }
+
+    public function getYear()
+    {
+        return $this->get('year');
+    }
+
+    public function setYear($value): self
+    {
+        return $this->set('year', $value);
+    }
+
+    public function getJury()
+    {
+        return $this->get('jury');
+    }
+
+    public function setJury($value): self
+    {
+        return $this->set('jury', $value);
+    }
+
+    public function getCountry()
+    {
+        return $this->get('country');
+    }
+
+    public function setCountry($value): self
+    {
+        return $this->set('country', $value);
+    }
+
+    public function getRole()
+    {
+        return $this->get('role');
+    }
+
+    public function setRole($value): self
+    {
+        return $this->set('role', $value);
+    }
+
+    public function getPrizeStatement()
+    {
+        return $this->get('prizeStatement');
+    }
+
+    public function setPrizeStatement($value): self
+    {
+        return $this->set('prizeStatement', $value);
+    }
+
+    public function getAwardOrdinal()
+    {
+        return $this->get('awardOrdinal');
+    }
+
+    public function setAwardOrdinal($value): self
+    {
+        return $this->set('awardOrdinal', $value);
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->get('createdAt');
+    }
+
+    public function setCreatedAt($value): self
+    {
+        return $this->set('createdAt', $value);
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->get('updatedAt');
+    }
+
+    public function setUpdatedAt($value): self
+    {
+        return $this->set('updatedAt', $value);
+    }
+
+    public function getWork()
+    {
+        return $this->get('work');
+    }
+
+    public function setWork($value): self
+    {
+        return $this->set('work', $value);
+    }
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('Award', [

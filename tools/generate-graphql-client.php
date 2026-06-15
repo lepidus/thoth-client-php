@@ -110,12 +110,19 @@ PHP;
 function generateObjectType(array $type, string $directory, string $namespacePart): void
 {
     $className = safeClassName(studly($type['name']));
+    $methods = array_map(
+        static function (array $field): string {
+            return objectFieldMethods($field);
+        },
+        $type['fields'] ?? []
+    );
     $fields = array_map(
         static function (array $field): string {
             return fieldCode($field, 3);
         },
         $type['fields'] ?? []
     );
+    $methodsCode = implode("\n\n", array_filter($methods));
     $fieldsCode = implode(",\n            ", $fields);
     $contents = <<<PHP
 <?php
@@ -123,9 +130,12 @@ function generateObjectType(array $type, string $directory, string $namespacePar
 namespace ThothApi\\GraphQL\\Generated\\{$namespacePart};
 
 use ThothApi\\GraphQL\\Definition\\ObjectTypeDefinition;
+use ThothApi\\GraphQL\\ObjectData;
 
-final class {$className}
+final class {$className} extends ObjectData
 {
+{$methodsCode}
+
     public static function definition(): ObjectTypeDefinition
     {
         return new ObjectTypeDefinition('{$type['name']}', [
@@ -135,6 +145,24 @@ final class {$className}
 }
 PHP;
     file_put_contents($directory . '/' . $className . '.php', $contents . "\n");
+}
+
+function objectFieldMethods(array $field): string
+{
+    $methodName = studly($field['name']);
+    $fieldName = exportPhpValue($field['name']);
+
+    return <<<PHP
+    public function get{$methodName}()
+    {
+        return \$this->get({$fieldName});
+    }
+
+    public function set{$methodName}(\$value): self
+    {
+        return \$this->set({$fieldName}, \$value);
+    }
+PHP;
 }
 
 function generateInputType(array $type, string $directory, string $namespacePart): void

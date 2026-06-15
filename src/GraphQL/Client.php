@@ -53,7 +53,14 @@ class Client
             $selection ?: $this->getDefaultSelection($field->getType()->baseName())
         );
 
-        return $this->unwrapSingleSelection($this->execute($operation), $operation->getSelection());
+        $result = $this->execute($operation);
+        $unwrappedResult = $this->unwrapSingleSelection($result, $operation->getSelection());
+
+        if ($unwrappedResult !== $result) {
+            return $unwrappedResult;
+        }
+
+        return $this->hydrateResult($result, $field->getType());
     }
 
     private function getOperationClass(string $name): string
@@ -195,6 +202,38 @@ class Client
         return array_key_exists($selection[0], $result) ? $result[$selection[0]] : $result;
     }
 
+    private function hydrateResult($result, $type)
+    {
+        if ($result === null) {
+            return null;
+        }
+
+        if ($type->getKind() === 'NON_NULL' && $type->getOfType() !== null) {
+            return $this->hydrateResult($result, $type->getOfType());
+        }
+
+        if ($type->getKind() === 'LIST' && $type->getOfType() !== null && is_array($result)) {
+            return array_map(
+                function ($item) use ($type) {
+                    return $this->hydrateResult($item, $type->getOfType());
+                },
+                $result
+            );
+        }
+
+        if (!is_array($result)) {
+            return $result;
+        }
+
+        $schemaClass = $this->getSchemaClass($type->baseName());
+
+        if (!class_exists($schemaClass)) {
+            return $result;
+        }
+
+        return $schemaClass::fromArray($result);
+    }
+
     private function studly(string $value): string
     {
         $value = preg_replace('/[^A-Za-z0-9]+/', ' ', $value);
@@ -258,5 +297,10 @@ class Client
         }
 
         return in_array($type->baseName(), self::SCALAR_TYPES, true);
+    }
+
+    private function getSchemaClass(?string $typeName): string
+    {
+        return '\\ThothApi\\GraphQL\\Generated\\Schemas\\' . ($typeName === 'Abstract' ? 'GraphQLAbstract' : $typeName);
     }
 }

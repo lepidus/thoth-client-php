@@ -12,6 +12,9 @@ use ThothApi\GraphQL\Definition\FieldDefinition;
 use ThothApi\GraphQL\Definition\TypeReference;
 use ThothApi\GraphQL\Generated\Inputs\NewPublicationFileUpload;
 use ThothApi\GraphQL\Generated\Inputs\NewWork;
+use ThothApi\GraphQL\Generated\Schemas\Imprint;
+use ThothApi\GraphQL\Generated\Schemas\Publisher;
+use ThothApi\GraphQL\Generated\Schemas\Work;
 use ThothApi\GraphQL\OperationRequest;
 
 final class GenericClientTest extends TestCase
@@ -117,7 +120,7 @@ final class GenericClientTest extends TestCase
         $this->assertSame('work-1', $client->createWork($newWork));
     }
 
-    public function testItKeepsExplicitSelectionForGeneratedMutationWithOneInput(): void
+    public function testItHydratesGeneratedSchemaForExplicitObjectSelection(): void
     {
         $history = [];
         $mockHandler = new MockHandler([
@@ -139,15 +142,71 @@ final class GenericClientTest extends TestCase
             'fullTitle' => 'Generated client',
         ]);
 
-        $this->assertSame([
-            'workId' => 'work-1',
-            'fullTitle' => 'Generated client',
-        ], $client->createWork($newWork, ['workId', 'fullTitle']));
+        $work = $client->createWork($newWork, ['workId', 'fullTitle']);
+
+        $this->assertInstanceOf(Work::class, $work);
+        $this->assertSame('work-1', $work->getWorkId());
+        $this->assertSame('Generated client', $work->getFullTitle());
 
         $body = json_decode((string) $history[0]['request']->getBody(), true);
 
         $this->assertStringContainsString('workId', $body['query']);
         $this->assertStringContainsString('fullTitle', $body['query']);
+    }
+
+    public function testItHydratesNestedGeneratedSchemas(): void
+    {
+        $mockHandler = new MockHandler([
+            new Response(200, [], json_encode([
+                'data' => [
+                    'createWork' => [
+                        'workId' => 'work-1',
+                        'imprint' => [
+                            'imprintId' => 'imprint-1',
+                            'publisher' => [
+                                'publisherId' => 'publisher-1',
+                                'publisherName' => 'ACME Press',
+                            ],
+                        ],
+                    ],
+                ],
+            ])),
+        ]);
+
+        $client = new Client(['handler' => HandlerStack::create($mockHandler)]);
+        $newWork = new NewWork([
+            'workType' => OperationRequest::enum('MONOGRAPH'),
+            'workStatus' => OperationRequest::enum('ACTIVE'),
+            'fullTitle' => 'Generated client',
+        ]);
+        $work = $client->createWork($newWork, [
+            'workId',
+            'imprint' => [
+                'imprintId',
+                'publisher' => [
+                    'publisherId',
+                    'publisherName',
+                ],
+            ],
+        ]);
+
+        $this->assertInstanceOf(Work::class, $work);
+        $this->assertInstanceOf(Imprint::class, $work->getImprint());
+        $this->assertInstanceOf(Publisher::class, $work->getImprint()->getPublisher());
+        $this->assertSame('ACME Press', $work->getImprint()->getPublisher()->getPublisherName());
+    }
+
+    public function testGeneratedSchemaObjectsExposeSettersAndArrayData(): void
+    {
+        $work = new Work();
+
+        $work->setWorkId('work-1')->setFullTitle('Generated client');
+
+        $this->assertSame('work-1', $work->getWorkId());
+        $this->assertSame([
+            'workId' => 'work-1',
+            'fullTitle' => 'Generated client',
+        ], $work->toArray());
     }
 
     public function testItUsesFirstIdFieldFromGeneratedSchemaAsDefaultSelection(): void
@@ -259,5 +318,27 @@ final class GenericClientTest extends TestCase
 
         $this->assertStringContainsString('works(limit: 5)', $body['query']);
         $this->assertStringContainsString('fullTitle', $body['query']);
+    }
+
+    public function testItHydratesGeneratedSchemasInListResults(): void
+    {
+        $mockHandler = new MockHandler([
+            new Response(200, [], json_encode([
+                'data' => [
+                    'works' => [
+                        [
+                            'workId' => 'work-1',
+                            'fullTitle' => 'Generated client',
+                        ],
+                    ],
+                ],
+            ])),
+        ]);
+        $client = new Client(['handler' => HandlerStack::create($mockHandler)]);
+
+        $works = $client->works(5, ['workId', 'fullTitle']);
+
+        $this->assertInstanceOf(Work::class, $works[0]);
+        $this->assertSame('Generated client', $works[0]->getFullTitle());
     }
 }
