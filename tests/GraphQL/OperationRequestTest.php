@@ -90,6 +90,21 @@ final class OperationRequestTest extends TestCase
         $operation->toGraphQL();
     }
 
+    public function testItRejectsInvalidOperationFields(): void
+    {
+        $operation = new OperationRequest(
+            'query',
+            new FieldDefinition('books } malicious {', TypeReference::named('Work')),
+            [],
+            ['workId']
+        );
+
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Invalid GraphQL identifier');
+
+        $operation->toGraphQL();
+    }
+
     public function testItRejectsInvalidInputFields(): void
     {
         $operation = new OperationRequest(

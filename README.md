@@ -110,6 +110,8 @@ try {
      *      )
      * )
     */
+    echo $exception->getQuery();
+    echo print_r($exception->getVariables(), true);
 }
 ```
 

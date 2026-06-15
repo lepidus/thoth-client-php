@@ -30,7 +30,7 @@ class Client
 
     public function rawQuery(string $rawQuery, array $args = []): array
     {
-        $response = $this->request->runQuery($rawQuery, $args);
+        $response = $this->request->runQuery($rawQuery, $args, $this->token ?: null);
         return $response->getData();
     }
 
@@ -83,6 +83,14 @@ class Client
         }
 
         if (count($arguments) > count($schemaArguments) && $this->isSelectionArray($arguments[$lastArgument])) {
+            return array_pop($arguments);
+        }
+
+        if (
+            isset($schemaArguments[$lastArgument])
+            && $this->isScalarType($schemaArguments[$lastArgument]->getType())
+            && $this->isSelectionArray($arguments[$lastArgument])
+        ) {
             return array_pop($arguments);
         }
 
@@ -237,5 +245,18 @@ class Client
         }
 
         return false;
+    }
+
+    private function isScalarType($type): bool
+    {
+        if ($type->getKind() === 'NON_NULL' && $type->getOfType() !== null) {
+            return $this->isScalarType($type->getOfType());
+        }
+
+        if ($type->getKind() === 'LIST') {
+            return false;
+        }
+
+        return in_array($type->baseName(), self::SCALAR_TYPES, true);
     }
 }

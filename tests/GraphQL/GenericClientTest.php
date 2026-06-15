@@ -188,6 +188,25 @@ final class GenericClientTest extends TestCase
         $this->assertSame(3, $client->workCount());
     }
 
+    public function testItUsesTokenWhenExecutingRawQueries(): void
+    {
+        $history = [];
+        $mockHandler = new MockHandler([
+            new Response(200, [], json_encode([
+                'data' => [
+                    'ping' => true,
+                ],
+            ])),
+        ]);
+        $handlerStack = HandlerStack::create($mockHandler);
+        $handlerStack->push(Middleware::history($history));
+        $client = new Client(['handler' => $handlerStack]);
+
+        $client->setToken('token-1')->rawQuery('query { ping }');
+
+        $this->assertSame('Bearer token-1', $history[0]['request']->getHeaderLine('Authorization'));
+    }
+
     public function testItKeepsArrayArgumentsWhenNoExplicitSelectionIsProvided(): void
     {
         $history = [];
@@ -213,5 +232,32 @@ final class GenericClientTest extends TestCase
 
         $this->assertStringContainsString('order: {field: FULL_TITLE, direction: ASC}', $body['query']);
         $this->assertStringContainsString('workId', $body['query']);
+    }
+
+    public function testItAcceptsExplicitSelectionAfterOptionalPositionalArguments(): void
+    {
+        $history = [];
+        $mockHandler = new MockHandler([
+            new Response(200, [], json_encode([
+                'data' => [
+                    'works' => [
+                        [
+                            'workId' => 'work-1',
+                            'fullTitle' => 'Generated client',
+                        ],
+                    ],
+                ],
+            ])),
+        ]);
+        $handlerStack = HandlerStack::create($mockHandler);
+        $handlerStack->push(Middleware::history($history));
+        $client = new Client(['handler' => $handlerStack]);
+
+        $client->works(5, ['workId', 'fullTitle']);
+
+        $body = json_decode((string) $history[0]['request']->getBody(), true);
+
+        $this->assertStringContainsString('works(limit: 5)', $body['query']);
+        $this->assertStringContainsString('fullTitle', $body['query']);
     }
 }

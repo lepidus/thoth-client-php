@@ -43,6 +43,7 @@ final class OperationRequest
 
     public function toGraphQL(): string
     {
+        $this->assertIdentifier($this->field->getName());
         $arguments = $this->formatArguments($this->arguments);
         $fieldLine = $this->field->getName() . ($arguments === '' ? '' : '(' . $arguments . ')');
         $selection = $this->formatSelection($this->selection);
