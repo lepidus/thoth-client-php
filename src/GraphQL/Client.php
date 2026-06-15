@@ -10,6 +10,8 @@ class Client
 
     private string $token = '';
 
+    private static array $defaultSelections = [];
+
     public const THOTH_BASE_URI = 'https://api.thoth.pub/';
 
     public function __construct(array $httpConfig = [])
@@ -32,7 +34,7 @@ class Client
         return $response->getData();
     }
 
-    public function execute(OperationRequest $operation): array
+    public function execute(OperationRequest $operation)
     {
         $response = $this->request->runQuery($operation->toGraphQL(), null, $this->token ?: null);
         $data = $response->getData();
@@ -43,10 +45,11 @@ class Client
     public function __call(string $name, array $arguments)
     {
         $operationClass = $this->getOperationClass($name);
-        $selection = $this->getSelectionArgument($arguments);
         $field = $operationClass::field();
+        $schemaArguments = $field->getArguments();
+        $selection = $this->getSelectionArgument($arguments, $schemaArguments);
         $operation = $operationClass::operation(
-            $this->getOperationArguments($field->getArguments(), $arguments),
+            $this->getOperationArguments($schemaArguments, $arguments),
             $selection ?: $this->getDefaultSelection($field->getType()->baseName())
         );
 
@@ -71,15 +74,28 @@ class Client
         throw new \BadMethodCallException("Operation '{$name}' not found.");
     }
 
-    private function getSelectionArgument(array &$arguments): array
+    private function getSelectionArgument(array &$arguments, array $schemaArguments): array
     {
         $lastArgument = count($arguments) - 1;
 
-        if ($lastArgument < 1 || !is_array($arguments[$lastArgument])) {
+        if ($lastArgument < 0 || !is_array($arguments[$lastArgument])) {
             return [];
         }
 
-        return array_pop($arguments);
+        if (count($arguments) > count($schemaArguments) && $this->isSelectionArray($arguments[$lastArgument])) {
+            return array_pop($arguments);
+        }
+
+        if (
+            count($arguments) === 2
+            && is_array($arguments[0])
+            && $this->hasSchemaNamedArguments($arguments[0], $schemaArguments)
+            && $this->isSelectionArray($arguments[$lastArgument])
+        ) {
+            return array_pop($arguments);
+        }
+
+        return [];
     }
 
     private function getOperationArguments(array $schemaArguments, array $arguments): array
@@ -140,19 +156,26 @@ class Client
             return [];
         }
 
+        if (array_key_exists($typeName, self::$defaultSelections)) {
+            return self::$defaultSelections[$typeName];
+        }
+
         $schemaClass = '\\ThothApi\\GraphQL\\Generated\\Schemas\\' . ($typeName === 'Abstract' ? 'GraphQLAbstract' : $typeName);
 
         if (!class_exists($schemaClass)) {
-            return [];
+            self::$defaultSelections[$typeName] = [];
+            return self::$defaultSelections[$typeName];
         }
 
         foreach ($schemaClass::definition()->getFields() as $field) {
             if (substr($field->getName(), -2) === 'Id') {
-                return [$field->getName()];
+                self::$defaultSelections[$typeName] = [$field->getName()];
+                return self::$defaultSelections[$typeName];
             }
         }
 
-        return [];
+        self::$defaultSelections[$typeName] = [];
+        return self::$defaultSelections[$typeName];
     }
 
     private function unwrapSingleSelection($result, array $selection)
@@ -180,5 +203,39 @@ class Client
     private function isAssociativeArray(array $value): bool
     {
         return $value !== [] && array_keys($value) !== range(0, count($value) - 1);
+    }
+
+    private function isSelectionArray(array $value): bool
+    {
+        foreach ($value as $field => $selection) {
+            if (is_array($selection)) {
+                if (!is_string($field) || !$this->isSelectionArray($selection)) {
+                    return false;
+                }
+
+                continue;
+            }
+
+            if (!is_string($selection)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private function hasSchemaNamedArguments(array $arguments, array $schemaArguments): bool
+    {
+        if (!$this->isAssociativeArray($arguments)) {
+            return false;
+        }
+
+        foreach ($schemaArguments as $schemaArgument) {
+            if (array_key_exists($schemaArgument->getName(), $arguments)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

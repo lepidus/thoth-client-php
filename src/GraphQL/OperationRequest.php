@@ -63,6 +63,7 @@ final class OperationRequest
                 continue;
             }
 
+            $this->assertIdentifier((string) $name);
             $formatted[] = $name . ': ' . $this->formatValue($value);
         }
 
@@ -75,10 +76,12 @@ final class OperationRequest
 
         foreach ($selection as $key => $value) {
             if (is_array($value)) {
+                $this->assertIdentifier((string) $key);
                 $lines[] = '        ' . $key . " {\n" . $this->indent($this->formatSelection($value), 8) . "\n        }";
                 continue;
             }
 
+            $this->assertIdentifier((string) $value);
             $lines[] = '        ' . $value;
         }
 
@@ -88,6 +91,7 @@ final class OperationRequest
     private function formatValue($value): string
     {
         if ($value instanceof EnumValue) {
+            $this->assertIdentifier((string) $value);
             return (string) $value;
         }
 
@@ -99,6 +103,7 @@ final class OperationRequest
             $fields = [];
             foreach ($value as $field => $fieldValue) {
                 if ($fieldValue !== null) {
+                    $this->assertIdentifier((string) $field);
                     $fields[] = $field . ': ' . $this->formatValue($fieldValue);
                 }
             }
@@ -129,5 +134,12 @@ final class OperationRequest
     private function indent(string $value, int $spaces): string
     {
         return str_replace("\n", "\n" . str_repeat(' ', $spaces), $value);
+    }
+
+    private function assertIdentifier(string $value): void
+    {
+        if (!preg_match('/^[_A-Za-z][_0-9A-Za-z]*$/', $value)) {
+            throw new \InvalidArgumentException("Invalid GraphQL identifier '{$value}'.");
+        }
     }
 }

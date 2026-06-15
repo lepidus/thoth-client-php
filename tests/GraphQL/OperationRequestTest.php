@@ -74,4 +74,69 @@ final class OperationRequestTest extends TestCase
 
         $this->assertSame($expected, $operation->toGraphQL());
     }
+
+    public function testItRejectsInvalidSelectionFields(): void
+    {
+        $operation = new OperationRequest(
+            'query',
+            new FieldDefinition('books', TypeReference::named('Work')),
+            [],
+            ['workId } malicious {']
+        );
+
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Invalid GraphQL identifier');
+
+        $operation->toGraphQL();
+    }
+
+    public function testItRejectsInvalidInputFields(): void
+    {
+        $operation = new OperationRequest(
+            'mutation',
+            new FieldDefinition(
+                'createPublisher',
+                TypeReference::named('Publisher'),
+                [
+                    new ArgumentDefinition('data', TypeReference::named('NewPublisher')),
+                ]
+            ),
+            [
+                'data' => [
+                    'publisherName } malicious {' => 'ACME Press',
+                ],
+            ],
+            ['publisherId']
+        );
+
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Invalid GraphQL identifier');
+
+        $operation->toGraphQL();
+    }
+
+    public function testItRejectsInvalidEnumValues(): void
+    {
+        $operation = new OperationRequest(
+            'query',
+            new FieldDefinition(
+                'books',
+                TypeReference::named('Work'),
+                [
+                    new ArgumentDefinition('order', TypeReference::named('WorkOrderBy')),
+                ]
+            ),
+            [
+                'order' => [
+                    'field' => OperationRequest::enum('FULL_TITLE) malicious'),
+                ],
+            ],
+            ['workId']
+        );
+
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Invalid GraphQL identifier');
+
+        $operation->toGraphQL();
+    }
 }
