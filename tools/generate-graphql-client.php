@@ -10,145 +10,223 @@ main($argv);
 function main(array $argv): void
 {
     $target = $argv[2] ?? dirname(__DIR__) . '/src/GraphQL';
-    $schema = loadIntrospectionSchema($argv[1] ?? null);
-    $types = indexTypesByName($schema['types'] ?? []);
 
-    assertSafeGeneratedTarget($target);
-    prepareGeneratedDirectories($target);
-    generateRootOperations($schema, $types, $target);
-    generateSchemaTypes($types, $target);
+    (new GraphQLClientGenerator())->generate($argv[1] ?? null, $target);
 }
 
-function assertSafeGeneratedTarget(string $target): void
+final class GraphQLClientGenerator
 {
-    if (basename($target) !== 'GraphQL') {
-        fwrite(STDERR, "Refusing to generate GraphQL client outside a GraphQL target directory.\n");
-        exit(1);
+    private SchemaLoader $schemaLoader;
+
+    private TypeIndexer $typeIndexer;
+
+    private TargetDirectoryGuard $targetDirectoryGuard;
+
+    private GeneratedDirectoryPreparer $directoryPreparer;
+
+    private RootOperationGenerator $rootOperationGenerator;
+
+    private SchemaTypeGenerator $schemaTypeGenerator;
+
+    public function __construct(
+        ?SchemaLoader $schemaLoader = null,
+        ?TypeIndexer $typeIndexer = null,
+        ?TargetDirectoryGuard $targetDirectoryGuard = null,
+        ?GeneratedDirectoryPreparer $directoryPreparer = null,
+        ?RootOperationGenerator $rootOperationGenerator = null,
+        ?SchemaTypeGenerator $schemaTypeGenerator = null
+    ) {
+        $this->schemaLoader = $schemaLoader ?: new SchemaLoader();
+        $this->typeIndexer = $typeIndexer ?: new TypeIndexer();
+        $this->targetDirectoryGuard = $targetDirectoryGuard ?: new TargetDirectoryGuard();
+        $this->directoryPreparer = $directoryPreparer ?: new GeneratedDirectoryPreparer();
+        $this->rootOperationGenerator = $rootOperationGenerator ?: new RootOperationGenerator();
+        $this->schemaTypeGenerator = $schemaTypeGenerator ?: new SchemaTypeGenerator();
+    }
+
+    public function generate(?string $schemaSource, string $target): void
+    {
+        $this->targetDirectoryGuard->assertSafe($target);
+
+        $schema = $this->schemaLoader->load($schemaSource);
+        $types = $this->typeIndexer->indexByName($schema['types'] ?? []);
+
+        $this->directoryPreparer->prepare($target);
+        $this->rootOperationGenerator->generate($schema, $types, $target);
+        $this->schemaTypeGenerator->generate($types, $target);
     }
 }
 
-function loadIntrospectionSchema(?string $schemaSource): array
+final class TargetDirectoryGuard
 {
-    $response = $schemaSource ? loadSchemaFromFile($schemaSource) : fetchSchema(THOTH_GRAPHQL_ENDPOINT);
+    public function assertSafe(string $target): void
+    {
+        if (basename($target) !== 'GraphQL') {
+            fwrite(STDERR, "Refusing to generate GraphQL client outside a GraphQL target directory.\n");
+            exit(1);
+        }
+    }
+}
 
-    if (!isset($response['data']['__schema']) || !is_array($response['data']['__schema'])) {
-        fwrite(STDERR, "Invalid GraphQL introspection schema.\n");
-        exit(1);
+final class SchemaLoader
+{
+    public function load(?string $schemaSource): array
+    {
+        $response = $schemaSource ? $this->loadFromFile($schemaSource) : $this->fetch(THOTH_GRAPHQL_ENDPOINT);
+
+        if (!isset($response['data']['__schema']) || !is_array($response['data']['__schema'])) {
+            fwrite(STDERR, "Invalid GraphQL introspection schema.\n");
+            exit(1);
+        }
+
+        return $response['data']['__schema'];
     }
 
-    return $response['data']['__schema'];
+    private function loadFromFile(string $schemaPath): array
+    {
+        $schema = json_decode((string) file_get_contents($schemaPath), true);
+
+        return is_array($schema) ? $schema : [];
+    }
+
+    private function fetch(string $endpoint): array
+    {
+        $payload = json_encode(['query' => introspectionQuery()]);
+        $context = stream_context_create([
+            'http' => [
+                'method' => 'POST',
+                'header' => "Content-Type: application/json\r\n",
+                'content' => $payload,
+            ],
+        ]);
+        $schema = json_decode((string) file_get_contents($endpoint, false, $context), true);
+
+        return is_array($schema) ? $schema : [];
+    }
 }
 
-function loadSchemaFromFile(string $schemaPath): array
+final class TypeIndexer
 {
-    $schema = json_decode((string) file_get_contents($schemaPath), true);
+    public function indexByName(array $schemaTypes): array
+    {
+        $types = [];
 
-    return is_array($schema) ? $schema : [];
+        foreach ($schemaTypes as $type) {
+            if (isset($type['name'])) {
+                $types[$type['name']] = $type;
+            }
+        }
+
+        return $types;
+    }
 }
 
-function fetchSchema(string $endpoint): array
+final class GeneratedDirectoryPreparer
 {
-    $payload = json_encode(['query' => introspectionQuery()]);
-    $context = stream_context_create([
-        'http' => [
-            'method' => 'POST',
-            'header' => "Content-Type: application/json\r\n",
-            'content' => $payload,
-        ],
-    ]);
-    $schema = json_decode((string) file_get_contents($endpoint, false, $context), true);
+    public function prepare(string $target): void
+    {
+        foreach (GENERATED_DIRECTORIES as $directory) {
+            $this->removeDirectory($target . '/' . $directory);
+            mkdir($target . '/' . $directory, 0777, true);
+        }
+    }
 
-    return is_array($schema) ? $schema : [];
+    private function removeDirectory(string $directory): void
+    {
+        if (!is_dir($directory)) {
+            return;
+        }
+
+        $iterator = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator($directory, FilesystemIterator::SKIP_DOTS),
+            RecursiveIteratorIterator::CHILD_FIRST
+        );
+
+        foreach ($iterator as $file) {
+            if ($file->isDir()) {
+                rmdir($file->getPathname());
+            } else {
+                unlink($file->getPathname());
+            }
+        }
+
+        rmdir($directory);
+    }
+}
+
+final class RootOperationGenerator
+{
+    public function generate(array $schema, array $types, string $target): void
+    {
+        $this->generateOperations(
+            $types[$schema['queryType']['name']] ?? [],
+            'query',
+            $target . '/Queries',
+            'Queries'
+        );
+        $this->generateOperations(
+            $types[$schema['mutationType']['name']] ?? [],
+            'mutation',
+            $target . '/Mutations',
+            'Mutations'
+        );
+    }
+
+    private function generateOperations(array $rootType, string $operationType, string $directory, string $namespacePart): void
+    {
+        foreach ($rootType['fields'] ?? [] as $field) {
+            $className = safeClassName(studly($field['name']) . operationClassSuffix($operationType));
+
+            writeGeneratedClass($directory, $className, operationClassCode(
+                $namespacePart,
+                $className,
+                $operationType,
+                fieldCode($field)
+            ));
+        }
+    }
+}
+
+final class SchemaTypeGenerator
+{
+    public function generate(array $types, string $target): void
+    {
+        foreach ($types as $type) {
+            if ($this->isInternalType($type)) {
+                continue;
+            }
+
+            $this->generateType($type, $target);
+        }
+    }
+
+    private function isInternalType(array $type): bool
+    {
+        return isset($type['name']) && strpos($type['name'], '__') === 0;
+    }
+
+    private function generateType(array $type, string $target): void
+    {
+        switch ($type['kind'] ?? '') {
+            case 'OBJECT':
+                generateObjectType($type, $target . '/Schemas', 'Schemas');
+                return;
+            case 'INPUT_OBJECT':
+                generateInputType($type, $target . '/Inputs', 'Inputs');
+                return;
+            case 'ENUM':
+                generateEnumType($type, $target . '/Enums', 'Enums');
+                return;
+            case 'SCALAR':
+                generateScalarType($type, $target . '/Scalars', 'Scalars');
+                return;
+        }
+    }
 }
 
 function introspectionQuery(): string
 {
     return 'query IntrospectionQuery { __schema { queryType { name } mutationType { name } subscriptionType { name } types { ...FullType } directives { name description locations args { ...InputValue } } } } fragment FullType on __Type { kind name description fields(includeDeprecated: true) { name description args { ...InputValue } type { ...TypeRef } isDeprecated deprecationReason } inputFields { ...InputValue } interfaces { ...TypeRef } enumValues(includeDeprecated: true) { name description isDeprecated deprecationReason } possibleTypes { ...TypeRef } } fragment InputValue on __InputValue { name description type { ...TypeRef } defaultValue } fragment TypeRef on __Type { kind name ofType { kind name ofType { kind name ofType { kind name ofType { kind name ofType { kind name ofType { kind name ofType { kind name } } } } } } } }';
-}
-
-function indexTypesByName(array $schemaTypes): array
-{
-    $types = [];
-
-    foreach ($schemaTypes as $type) {
-        if (isset($type['name'])) {
-            $types[$type['name']] = $type;
-        }
-    }
-
-    return $types;
-}
-
-function prepareGeneratedDirectories(string $target): void
-{
-    foreach (GENERATED_DIRECTORIES as $directory) {
-        removeDirectory($target . '/' . $directory);
-        mkdir($target . '/' . $directory, 0777, true);
-    }
-}
-
-function generateRootOperations(array $schema, array $types, string $target): void
-{
-    generateOperations(
-        $types[$schema['queryType']['name']] ?? [],
-        'query',
-        $target . '/Queries',
-        'Queries'
-    );
-    generateOperations(
-        $types[$schema['mutationType']['name']] ?? [],
-        'mutation',
-        $target . '/Mutations',
-        'Mutations'
-    );
-}
-
-function generateSchemaTypes(array $types, string $target): void
-{
-    foreach ($types as $type) {
-        if (isInternalType($type)) {
-            continue;
-        }
-
-        generateSchemaType($type, $target);
-    }
-}
-
-function isInternalType(array $type): bool
-{
-    return isset($type['name']) && strpos($type['name'], '__') === 0;
-}
-
-function generateSchemaType(array $type, string $target): void
-{
-    switch ($type['kind'] ?? '') {
-        case 'OBJECT':
-            generateObjectType($type, $target . '/Schemas', 'Schemas');
-            return;
-        case 'INPUT_OBJECT':
-            generateInputType($type, $target . '/Inputs', 'Inputs');
-            return;
-        case 'ENUM':
-            generateEnumType($type, $target . '/Enums', 'Enums');
-            return;
-        case 'SCALAR':
-            generateScalarType($type, $target . '/Scalars', 'Scalars');
-            return;
-    }
-}
-
-function generateOperations(array $rootType, string $operationType, string $directory, string $namespacePart): void
-{
-    foreach ($rootType['fields'] ?? [] as $field) {
-        $className = safeClassName(studly($field['name']) . operationClassSuffix($operationType));
-
-        writeGeneratedClass($directory, $className, operationClassCode(
-            $namespacePart,
-            $className,
-            $operationType,
-            fieldCode($field)
-        ));
-    }
 }
 
 function operationClassSuffix(string $operationType): string
@@ -636,26 +714,4 @@ function reservedWords(): array
         'return', 'static', 'switch', 'throw', 'trait', 'try', 'unset', 'use', 'var', 'while', 'xor',
         'yield',
     ];
-}
-
-function removeDirectory(string $directory): void
-{
-    if (!is_dir($directory)) {
-        return;
-    }
-
-    $iterator = new RecursiveIteratorIterator(
-        new RecursiveDirectoryIterator($directory, FilesystemIterator::SKIP_DOTS),
-        RecursiveIteratorIterator::CHILD_FIRST
-    );
-
-    foreach ($iterator as $file) {
-        if ($file->isDir()) {
-            rmdir($file->getPathname());
-        } else {
-            unlink($file->getPathname());
-        }
-    }
-
-    rmdir($directory);
 }
