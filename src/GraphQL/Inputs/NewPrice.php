@@ -20,7 +20,8 @@ final class NewPrice extends InputObject
      */
     public function setPublicationId($value): self
     {
-        return $this->set('publicationId', $value);
+        $this->set('publicationId', $value);
+        return $this;
     }
 
     public function hasPublicationId(): bool
@@ -30,7 +31,8 @@ final class NewPrice extends InputObject
 
     public function unsetPublicationId(): self
     {
-        return $this->remove('publicationId');
+        $this->remove('publicationId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class NewPrice extends InputObject
      */
     public function setCurrencyCode($value): self
     {
-        return $this->set('currencyCode', $value);
+        $this->set('currencyCode', $value);
+        return $this;
     }
 
     public function hasCurrencyCode(): bool
@@ -56,7 +59,8 @@ final class NewPrice extends InputObject
 
     public function unsetCurrencyCode(): self
     {
-        return $this->remove('currencyCode');
+        $this->remove('currencyCode');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class NewPrice extends InputObject
      */
     public function setUnitPrice($value): self
     {
-        return $this->set('unitPrice', $value);
+        $this->set('unitPrice', $value);
+        return $this;
     }
 
     public function hasUnitPrice(): bool
@@ -82,7 +87,8 @@ final class NewPrice extends InputObject
 
     public function unsetUnitPrice(): self
     {
-        return $this->remove('unitPrice');
+        $this->remove('unitPrice');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

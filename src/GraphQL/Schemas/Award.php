@@ -20,7 +20,8 @@ final class Award extends ObjectData
      */
     public function setAwardId($value): self
     {
-        return $this->set('awardId', $value);
+        $this->set('awardId', $value);
+        return $this;
     }
 
     public function hasAwardId(): bool
@@ -30,7 +31,8 @@ final class Award extends ObjectData
 
     public function unsetAwardId(): self
     {
-        return $this->remove('awardId');
+        $this->remove('awardId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class Award extends ObjectData
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -56,7 +59,8 @@ final class Award extends ObjectData
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class Award extends ObjectData
      */
     public function setTitle($value): self
     {
-        return $this->set('title', $value);
+        $this->set('title', $value);
+        return $this;
     }
 
     public function hasTitle(): bool
@@ -82,7 +87,8 @@ final class Award extends ObjectData
 
     public function unsetTitle(): self
     {
-        return $this->remove('title');
+        $this->remove('title');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class Award extends ObjectData
      */
     public function setUrl($value): self
     {
-        return $this->set('url', $value);
+        $this->set('url', $value);
+        return $this;
     }
 
     public function hasUrl(): bool
@@ -108,7 +115,8 @@ final class Award extends ObjectData
 
     public function unsetUrl(): self
     {
-        return $this->remove('url');
+        $this->remove('url');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class Award extends ObjectData
      */
     public function setCategory($value): self
     {
-        return $this->set('category', $value);
+        $this->set('category', $value);
+        return $this;
     }
 
     public function hasCategory(): bool
@@ -134,7 +143,8 @@ final class Award extends ObjectData
 
     public function unsetCategory(): self
     {
-        return $this->remove('category');
+        $this->remove('category');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class Award extends ObjectData
      */
     public function setYear($value): self
     {
-        return $this->set('year', $value);
+        $this->set('year', $value);
+        return $this;
     }
 
     public function hasYear(): bool
@@ -160,7 +171,8 @@ final class Award extends ObjectData
 
     public function unsetYear(): self
     {
-        return $this->remove('year');
+        $this->remove('year');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class Award extends ObjectData
      */
     public function setJury($value): self
     {
-        return $this->set('jury', $value);
+        $this->set('jury', $value);
+        return $this;
     }
 
     public function hasJury(): bool
@@ -186,7 +199,8 @@ final class Award extends ObjectData
 
     public function unsetJury(): self
     {
-        return $this->remove('jury');
+        $this->remove('jury');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class Award extends ObjectData
      */
     public function setCountry($value): self
     {
-        return $this->set('country', $value);
+        $this->set('country', $value);
+        return $this;
     }
 
     public function hasCountry(): bool
@@ -212,7 +227,8 @@ final class Award extends ObjectData
 
     public function unsetCountry(): self
     {
-        return $this->remove('country');
+        $this->remove('country');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class Award extends ObjectData
      */
     public function setRole($value): self
     {
-        return $this->set('role', $value);
+        $this->set('role', $value);
+        return $this;
     }
 
     public function hasRole(): bool
@@ -238,7 +255,8 @@ final class Award extends ObjectData
 
     public function unsetRole(): self
     {
-        return $this->remove('role');
+        $this->remove('role');
+        return $this;
     }
 
     /**
@@ -254,7 +272,8 @@ final class Award extends ObjectData
      */
     public function setPrizeStatement($value): self
     {
-        return $this->set('prizeStatement', $value);
+        $this->set('prizeStatement', $value);
+        return $this;
     }
 
     public function hasPrizeStatement(): bool
@@ -264,7 +283,8 @@ final class Award extends ObjectData
 
     public function unsetPrizeStatement(): self
     {
-        return $this->remove('prizeStatement');
+        $this->remove('prizeStatement');
+        return $this;
     }
 
     /**
@@ -280,7 +300,8 @@ final class Award extends ObjectData
      */
     public function setAwardOrdinal($value): self
     {
-        return $this->set('awardOrdinal', $value);
+        $this->set('awardOrdinal', $value);
+        return $this;
     }
 
     public function hasAwardOrdinal(): bool
@@ -290,7 +311,8 @@ final class Award extends ObjectData
 
     public function unsetAwardOrdinal(): self
     {
-        return $this->remove('awardOrdinal');
+        $this->remove('awardOrdinal');
+        return $this;
     }
 
     /**
@@ -306,7 +328,8 @@ final class Award extends ObjectData
      */
     public function setCreatedAt($value): self
     {
-        return $this->set('createdAt', $value);
+        $this->set('createdAt', $value);
+        return $this;
     }
 
     public function hasCreatedAt(): bool
@@ -316,7 +339,8 @@ final class Award extends ObjectData
 
     public function unsetCreatedAt(): self
     {
-        return $this->remove('createdAt');
+        $this->remove('createdAt');
+        return $this;
     }
 
     /**
@@ -332,7 +356,8 @@ final class Award extends ObjectData
      */
     public function setUpdatedAt($value): self
     {
-        return $this->set('updatedAt', $value);
+        $this->set('updatedAt', $value);
+        return $this;
     }
 
     public function hasUpdatedAt(): bool
@@ -342,7 +367,8 @@ final class Award extends ObjectData
 
     public function unsetUpdatedAt(): self
     {
-        return $this->remove('updatedAt');
+        $this->remove('updatedAt');
+        return $this;
     }
 
     /**
@@ -358,7 +384,8 @@ final class Award extends ObjectData
      */
     public function setWork($value): self
     {
-        return $this->set('work', $value);
+        $this->set('work', $value);
+        return $this;
     }
 
     public function hasWork(): bool
@@ -368,7 +395,8 @@ final class Award extends ObjectData
 
     public function unsetWork(): self
     {
-        return $this->remove('work');
+        $this->remove('work');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

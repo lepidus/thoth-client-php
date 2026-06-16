@@ -20,7 +20,8 @@ final class PatchLocation extends InputObject
      */
     public function setLocationId($value): self
     {
-        return $this->set('locationId', $value);
+        $this->set('locationId', $value);
+        return $this;
     }
 
     public function hasLocationId(): bool
@@ -30,7 +31,8 @@ final class PatchLocation extends InputObject
 
     public function unsetLocationId(): self
     {
-        return $this->remove('locationId');
+        $this->remove('locationId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class PatchLocation extends InputObject
      */
     public function setPublicationId($value): self
     {
-        return $this->set('publicationId', $value);
+        $this->set('publicationId', $value);
+        return $this;
     }
 
     public function hasPublicationId(): bool
@@ -56,7 +59,8 @@ final class PatchLocation extends InputObject
 
     public function unsetPublicationId(): self
     {
-        return $this->remove('publicationId');
+        $this->remove('publicationId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class PatchLocation extends InputObject
      */
     public function setLandingPage($value): self
     {
-        return $this->set('landingPage', $value);
+        $this->set('landingPage', $value);
+        return $this;
     }
 
     public function hasLandingPage(): bool
@@ -82,7 +87,8 @@ final class PatchLocation extends InputObject
 
     public function unsetLandingPage(): self
     {
-        return $this->remove('landingPage');
+        $this->remove('landingPage');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class PatchLocation extends InputObject
      */
     public function setFullTextUrl($value): self
     {
-        return $this->set('fullTextUrl', $value);
+        $this->set('fullTextUrl', $value);
+        return $this;
     }
 
     public function hasFullTextUrl(): bool
@@ -108,7 +115,8 @@ final class PatchLocation extends InputObject
 
     public function unsetFullTextUrl(): self
     {
-        return $this->remove('fullTextUrl');
+        $this->remove('fullTextUrl');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class PatchLocation extends InputObject
      */
     public function setLocationPlatform($value): self
     {
-        return $this->set('locationPlatform', $value);
+        $this->set('locationPlatform', $value);
+        return $this;
     }
 
     public function hasLocationPlatform(): bool
@@ -134,7 +143,8 @@ final class PatchLocation extends InputObject
 
     public function unsetLocationPlatform(): self
     {
-        return $this->remove('locationPlatform');
+        $this->remove('locationPlatform');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class PatchLocation extends InputObject
      */
     public function setCanonical($value): self
     {
-        return $this->set('canonical', $value);
+        $this->set('canonical', $value);
+        return $this;
     }
 
     public function hasCanonical(): bool
@@ -160,7 +171,8 @@ final class PatchLocation extends InputObject
 
     public function unsetCanonical(): self
     {
-        return $this->remove('canonical');
+        $this->remove('canonical');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class PatchLocation extends InputObject
      */
     public function setChecksum($value): self
     {
-        return $this->set('checksum', $value);
+        $this->set('checksum', $value);
+        return $this;
     }
 
     public function hasChecksum(): bool
@@ -186,7 +199,8 @@ final class PatchLocation extends InputObject
 
     public function unsetChecksum(): self
     {
-        return $this->remove('checksum');
+        $this->remove('checksum');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class PatchLocation extends InputObject
      */
     public function setChecksumAlgorithm($value): self
     {
-        return $this->set('checksumAlgorithm', $value);
+        $this->set('checksumAlgorithm', $value);
+        return $this;
     }
 
     public function hasChecksumAlgorithm(): bool
@@ -212,7 +227,8 @@ final class PatchLocation extends InputObject
 
     public function unsetChecksumAlgorithm(): self
     {
-        return $this->remove('checksumAlgorithm');
+        $this->remove('checksumAlgorithm');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

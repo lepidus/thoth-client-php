@@ -20,7 +20,8 @@ final class Publication extends ObjectData
      */
     public function setPublicationId($value): self
     {
-        return $this->set('publicationId', $value);
+        $this->set('publicationId', $value);
+        return $this;
     }
 
     public function hasPublicationId(): bool
@@ -30,7 +31,8 @@ final class Publication extends ObjectData
 
     public function unsetPublicationId(): self
     {
-        return $this->remove('publicationId');
+        $this->remove('publicationId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class Publication extends ObjectData
      */
     public function setPublicationType($value): self
     {
-        return $this->set('publicationType', $value);
+        $this->set('publicationType', $value);
+        return $this;
     }
 
     public function hasPublicationType(): bool
@@ -56,7 +59,8 @@ final class Publication extends ObjectData
 
     public function unsetPublicationType(): self
     {
-        return $this->remove('publicationType');
+        $this->remove('publicationType');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class Publication extends ObjectData
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -82,7 +87,8 @@ final class Publication extends ObjectData
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class Publication extends ObjectData
      */
     public function setIsbn($value): self
     {
-        return $this->set('isbn', $value);
+        $this->set('isbn', $value);
+        return $this;
     }
 
     public function hasIsbn(): bool
@@ -108,7 +115,8 @@ final class Publication extends ObjectData
 
     public function unsetIsbn(): self
     {
-        return $this->remove('isbn');
+        $this->remove('isbn');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class Publication extends ObjectData
      */
     public function setCreatedAt($value): self
     {
-        return $this->set('createdAt', $value);
+        $this->set('createdAt', $value);
+        return $this;
     }
 
     public function hasCreatedAt(): bool
@@ -134,7 +143,8 @@ final class Publication extends ObjectData
 
     public function unsetCreatedAt(): self
     {
-        return $this->remove('createdAt');
+        $this->remove('createdAt');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class Publication extends ObjectData
      */
     public function setUpdatedAt($value): self
     {
-        return $this->set('updatedAt', $value);
+        $this->set('updatedAt', $value);
+        return $this;
     }
 
     public function hasUpdatedAt(): bool
@@ -160,7 +171,8 @@ final class Publication extends ObjectData
 
     public function unsetUpdatedAt(): self
     {
-        return $this->remove('updatedAt');
+        $this->remove('updatedAt');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class Publication extends ObjectData
      */
     public function setWidth($value): self
     {
-        return $this->set('width', $value);
+        $this->set('width', $value);
+        return $this;
     }
 
     public function hasWidth(): bool
@@ -186,7 +199,8 @@ final class Publication extends ObjectData
 
     public function unsetWidth(): self
     {
-        return $this->remove('width');
+        $this->remove('width');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class Publication extends ObjectData
      */
     public function setHeight($value): self
     {
-        return $this->set('height', $value);
+        $this->set('height', $value);
+        return $this;
     }
 
     public function hasHeight(): bool
@@ -212,7 +227,8 @@ final class Publication extends ObjectData
 
     public function unsetHeight(): self
     {
-        return $this->remove('height');
+        $this->remove('height');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class Publication extends ObjectData
      */
     public function setDepth($value): self
     {
-        return $this->set('depth', $value);
+        $this->set('depth', $value);
+        return $this;
     }
 
     public function hasDepth(): bool
@@ -238,7 +255,8 @@ final class Publication extends ObjectData
 
     public function unsetDepth(): self
     {
-        return $this->remove('depth');
+        $this->remove('depth');
+        return $this;
     }
 
     /**
@@ -254,7 +272,8 @@ final class Publication extends ObjectData
      */
     public function setWeight($value): self
     {
-        return $this->set('weight', $value);
+        $this->set('weight', $value);
+        return $this;
     }
 
     public function hasWeight(): bool
@@ -264,7 +283,8 @@ final class Publication extends ObjectData
 
     public function unsetWeight(): self
     {
-        return $this->remove('weight');
+        $this->remove('weight');
+        return $this;
     }
 
     /**
@@ -280,7 +300,8 @@ final class Publication extends ObjectData
      */
     public function setAccessibilityStandard($value): self
     {
-        return $this->set('accessibilityStandard', $value);
+        $this->set('accessibilityStandard', $value);
+        return $this;
     }
 
     public function hasAccessibilityStandard(): bool
@@ -290,7 +311,8 @@ final class Publication extends ObjectData
 
     public function unsetAccessibilityStandard(): self
     {
-        return $this->remove('accessibilityStandard');
+        $this->remove('accessibilityStandard');
+        return $this;
     }
 
     /**
@@ -306,7 +328,8 @@ final class Publication extends ObjectData
      */
     public function setAccessibilityAdditionalStandard($value): self
     {
-        return $this->set('accessibilityAdditionalStandard', $value);
+        $this->set('accessibilityAdditionalStandard', $value);
+        return $this;
     }
 
     public function hasAccessibilityAdditionalStandard(): bool
@@ -316,7 +339,8 @@ final class Publication extends ObjectData
 
     public function unsetAccessibilityAdditionalStandard(): self
     {
-        return $this->remove('accessibilityAdditionalStandard');
+        $this->remove('accessibilityAdditionalStandard');
+        return $this;
     }
 
     /**
@@ -332,7 +356,8 @@ final class Publication extends ObjectData
      */
     public function setAccessibilityException($value): self
     {
-        return $this->set('accessibilityException', $value);
+        $this->set('accessibilityException', $value);
+        return $this;
     }
 
     public function hasAccessibilityException(): bool
@@ -342,7 +367,8 @@ final class Publication extends ObjectData
 
     public function unsetAccessibilityException(): self
     {
-        return $this->remove('accessibilityException');
+        $this->remove('accessibilityException');
+        return $this;
     }
 
     /**
@@ -358,7 +384,8 @@ final class Publication extends ObjectData
      */
     public function setAccessibilityReportUrl($value): self
     {
-        return $this->set('accessibilityReportUrl', $value);
+        $this->set('accessibilityReportUrl', $value);
+        return $this;
     }
 
     public function hasAccessibilityReportUrl(): bool
@@ -368,7 +395,8 @@ final class Publication extends ObjectData
 
     public function unsetAccessibilityReportUrl(): self
     {
-        return $this->remove('accessibilityReportUrl');
+        $this->remove('accessibilityReportUrl');
+        return $this;
     }
 
     /**
@@ -384,7 +412,8 @@ final class Publication extends ObjectData
      */
     public function setPrices($value): self
     {
-        return $this->set('prices', $value);
+        $this->set('prices', $value);
+        return $this;
     }
 
     public function hasPrices(): bool
@@ -394,7 +423,8 @@ final class Publication extends ObjectData
 
     public function unsetPrices(): self
     {
-        return $this->remove('prices');
+        $this->remove('prices');
+        return $this;
     }
 
     /**
@@ -410,7 +440,8 @@ final class Publication extends ObjectData
      */
     public function setLocations($value): self
     {
-        return $this->set('locations', $value);
+        $this->set('locations', $value);
+        return $this;
     }
 
     public function hasLocations(): bool
@@ -420,7 +451,8 @@ final class Publication extends ObjectData
 
     public function unsetLocations(): self
     {
-        return $this->remove('locations');
+        $this->remove('locations');
+        return $this;
     }
 
     /**
@@ -436,7 +468,8 @@ final class Publication extends ObjectData
      */
     public function setFile($value): self
     {
-        return $this->set('file', $value);
+        $this->set('file', $value);
+        return $this;
     }
 
     public function hasFile(): bool
@@ -446,7 +479,8 @@ final class Publication extends ObjectData
 
     public function unsetFile(): self
     {
-        return $this->remove('file');
+        $this->remove('file');
+        return $this;
     }
 
     /**
@@ -462,7 +496,8 @@ final class Publication extends ObjectData
      */
     public function setWork($value): self
     {
-        return $this->set('work', $value);
+        $this->set('work', $value);
+        return $this;
     }
 
     public function hasWork(): bool
@@ -472,7 +507,8 @@ final class Publication extends ObjectData
 
     public function unsetWork(): self
     {
-        return $this->remove('work');
+        $this->remove('work');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

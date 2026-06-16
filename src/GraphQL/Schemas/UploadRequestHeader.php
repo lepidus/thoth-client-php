@@ -20,7 +20,8 @@ final class UploadRequestHeader extends ObjectData
      */
     public function setName($value): self
     {
-        return $this->set('name', $value);
+        $this->set('name', $value);
+        return $this;
     }
 
     public function hasName(): bool
@@ -30,7 +31,8 @@ final class UploadRequestHeader extends ObjectData
 
     public function unsetName(): self
     {
-        return $this->remove('name');
+        $this->remove('name');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class UploadRequestHeader extends ObjectData
      */
     public function setValue($value): self
     {
-        return $this->set('value', $value);
+        $this->set('value', $value);
+        return $this;
     }
 
     public function hasValue(): bool
@@ -56,7 +59,8 @@ final class UploadRequestHeader extends ObjectData
 
     public function unsetValue(): self
     {
-        return $this->remove('value');
+        $this->remove('value');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

@@ -20,7 +20,8 @@ final class TimeExpression extends InputObject
      */
     public function setTimestamp($value): self
     {
-        return $this->set('timestamp', $value);
+        $this->set('timestamp', $value);
+        return $this;
     }
 
     public function hasTimestamp(): bool
@@ -30,7 +31,8 @@ final class TimeExpression extends InputObject
 
     public function unsetTimestamp(): self
     {
-        return $this->remove('timestamp');
+        $this->remove('timestamp');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class TimeExpression extends InputObject
      */
     public function setExpression($value): self
     {
-        return $this->set('expression', $value);
+        $this->set('expression', $value);
+        return $this;
     }
 
     public function hasExpression(): bool
@@ -56,7 +59,8 @@ final class TimeExpression extends InputObject
 
     public function unsetExpression(): self
     {
-        return $this->remove('expression');
+        $this->remove('expression');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

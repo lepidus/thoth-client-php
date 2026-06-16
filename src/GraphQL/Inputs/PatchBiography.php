@@ -20,7 +20,8 @@ final class PatchBiography extends InputObject
      */
     public function setBiographyId($value): self
     {
-        return $this->set('biographyId', $value);
+        $this->set('biographyId', $value);
+        return $this;
     }
 
     public function hasBiographyId(): bool
@@ -30,7 +31,8 @@ final class PatchBiography extends InputObject
 
     public function unsetBiographyId(): self
     {
-        return $this->remove('biographyId');
+        $this->remove('biographyId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class PatchBiography extends InputObject
      */
     public function setContributionId($value): self
     {
-        return $this->set('contributionId', $value);
+        $this->set('contributionId', $value);
+        return $this;
     }
 
     public function hasContributionId(): bool
@@ -56,7 +59,8 @@ final class PatchBiography extends InputObject
 
     public function unsetContributionId(): self
     {
-        return $this->remove('contributionId');
+        $this->remove('contributionId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class PatchBiography extends InputObject
      */
     public function setContent($value): self
     {
-        return $this->set('content', $value);
+        $this->set('content', $value);
+        return $this;
     }
 
     public function hasContent(): bool
@@ -82,7 +87,8 @@ final class PatchBiography extends InputObject
 
     public function unsetContent(): self
     {
-        return $this->remove('content');
+        $this->remove('content');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class PatchBiography extends InputObject
      */
     public function setCanonical($value): self
     {
-        return $this->set('canonical', $value);
+        $this->set('canonical', $value);
+        return $this;
     }
 
     public function hasCanonical(): bool
@@ -108,7 +115,8 @@ final class PatchBiography extends InputObject
 
     public function unsetCanonical(): self
     {
-        return $this->remove('canonical');
+        $this->remove('canonical');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class PatchBiography extends InputObject
      */
     public function setLocaleCode($value): self
     {
-        return $this->set('localeCode', $value);
+        $this->set('localeCode', $value);
+        return $this;
     }
 
     public function hasLocaleCode(): bool
@@ -134,7 +143,8 @@ final class PatchBiography extends InputObject
 
     public function unsetLocaleCode(): self
     {
-        return $this->remove('localeCode');
+        $this->remove('localeCode');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

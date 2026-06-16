@@ -20,7 +20,8 @@ final class NewPublicationFileUpload extends InputObject
      */
     public function setPublicationId($value): self
     {
-        return $this->set('publicationId', $value);
+        $this->set('publicationId', $value);
+        return $this;
     }
 
     public function hasPublicationId(): bool
@@ -30,7 +31,8 @@ final class NewPublicationFileUpload extends InputObject
 
     public function unsetPublicationId(): self
     {
-        return $this->remove('publicationId');
+        $this->remove('publicationId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class NewPublicationFileUpload extends InputObject
      */
     public function setDeclaredMimeType($value): self
     {
-        return $this->set('declaredMimeType', $value);
+        $this->set('declaredMimeType', $value);
+        return $this;
     }
 
     public function hasDeclaredMimeType(): bool
@@ -56,7 +59,8 @@ final class NewPublicationFileUpload extends InputObject
 
     public function unsetDeclaredMimeType(): self
     {
-        return $this->remove('declaredMimeType');
+        $this->remove('declaredMimeType');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class NewPublicationFileUpload extends InputObject
      */
     public function setDeclaredExtension($value): self
     {
-        return $this->set('declaredExtension', $value);
+        $this->set('declaredExtension', $value);
+        return $this;
     }
 
     public function hasDeclaredExtension(): bool
@@ -82,7 +87,8 @@ final class NewPublicationFileUpload extends InputObject
 
     public function unsetDeclaredExtension(): self
     {
-        return $this->remove('declaredExtension');
+        $this->remove('declaredExtension');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class NewPublicationFileUpload extends InputObject
      */
     public function setDeclaredSha256($value): self
     {
-        return $this->set('declaredSha256', $value);
+        $this->set('declaredSha256', $value);
+        return $this;
     }
 
     public function hasDeclaredSha256(): bool
@@ -108,7 +115,8 @@ final class NewPublicationFileUpload extends InputObject
 
     public function unsetDeclaredSha256(): self
     {
-        return $this->remove('declaredSha256');
+        $this->remove('declaredSha256');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

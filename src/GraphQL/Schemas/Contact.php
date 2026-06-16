@@ -20,7 +20,8 @@ final class Contact extends ObjectData
      */
     public function setContactId($value): self
     {
-        return $this->set('contactId', $value);
+        $this->set('contactId', $value);
+        return $this;
     }
 
     public function hasContactId(): bool
@@ -30,7 +31,8 @@ final class Contact extends ObjectData
 
     public function unsetContactId(): self
     {
-        return $this->remove('contactId');
+        $this->remove('contactId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class Contact extends ObjectData
      */
     public function setPublisherId($value): self
     {
-        return $this->set('publisherId', $value);
+        $this->set('publisherId', $value);
+        return $this;
     }
 
     public function hasPublisherId(): bool
@@ -56,7 +59,8 @@ final class Contact extends ObjectData
 
     public function unsetPublisherId(): self
     {
-        return $this->remove('publisherId');
+        $this->remove('publisherId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class Contact extends ObjectData
      */
     public function setContactType($value): self
     {
-        return $this->set('contactType', $value);
+        $this->set('contactType', $value);
+        return $this;
     }
 
     public function hasContactType(): bool
@@ -82,7 +87,8 @@ final class Contact extends ObjectData
 
     public function unsetContactType(): self
     {
-        return $this->remove('contactType');
+        $this->remove('contactType');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class Contact extends ObjectData
      */
     public function setEmail($value): self
     {
-        return $this->set('email', $value);
+        $this->set('email', $value);
+        return $this;
     }
 
     public function hasEmail(): bool
@@ -108,7 +115,8 @@ final class Contact extends ObjectData
 
     public function unsetEmail(): self
     {
-        return $this->remove('email');
+        $this->remove('email');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class Contact extends ObjectData
      */
     public function setCreatedAt($value): self
     {
-        return $this->set('createdAt', $value);
+        $this->set('createdAt', $value);
+        return $this;
     }
 
     public function hasCreatedAt(): bool
@@ -134,7 +143,8 @@ final class Contact extends ObjectData
 
     public function unsetCreatedAt(): self
     {
-        return $this->remove('createdAt');
+        $this->remove('createdAt');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class Contact extends ObjectData
      */
     public function setUpdatedAt($value): self
     {
-        return $this->set('updatedAt', $value);
+        $this->set('updatedAt', $value);
+        return $this;
     }
 
     public function hasUpdatedAt(): bool
@@ -160,7 +171,8 @@ final class Contact extends ObjectData
 
     public function unsetUpdatedAt(): self
     {
-        return $this->remove('updatedAt');
+        $this->remove('updatedAt');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class Contact extends ObjectData
      */
     public function setPublisher($value): self
     {
-        return $this->set('publisher', $value);
+        $this->set('publisher', $value);
+        return $this;
     }
 
     public function hasPublisher(): bool
@@ -186,7 +199,8 @@ final class Contact extends ObjectData
 
     public function unsetPublisher(): self
     {
-        return $this->remove('publisher');
+        $this->remove('publisher');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

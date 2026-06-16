@@ -20,7 +20,8 @@ final class WorkResource extends ObjectData
      */
     public function setWorkResourceId($value): self
     {
-        return $this->set('workResourceId', $value);
+        $this->set('workResourceId', $value);
+        return $this;
     }
 
     public function hasWorkResourceId(): bool
@@ -30,7 +31,8 @@ final class WorkResource extends ObjectData
 
     public function unsetWorkResourceId(): self
     {
-        return $this->remove('workResourceId');
+        $this->remove('workResourceId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class WorkResource extends ObjectData
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -56,7 +59,8 @@ final class WorkResource extends ObjectData
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class WorkResource extends ObjectData
      */
     public function setTitle($value): self
     {
-        return $this->set('title', $value);
+        $this->set('title', $value);
+        return $this;
     }
 
     public function hasTitle(): bool
@@ -82,7 +87,8 @@ final class WorkResource extends ObjectData
 
     public function unsetTitle(): self
     {
-        return $this->remove('title');
+        $this->remove('title');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class WorkResource extends ObjectData
      */
     public function setDescription($value): self
     {
-        return $this->set('description', $value);
+        $this->set('description', $value);
+        return $this;
     }
 
     public function hasDescription(): bool
@@ -108,7 +115,8 @@ final class WorkResource extends ObjectData
 
     public function unsetDescription(): self
     {
-        return $this->remove('description');
+        $this->remove('description');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class WorkResource extends ObjectData
      */
     public function setAttribution($value): self
     {
-        return $this->set('attribution', $value);
+        $this->set('attribution', $value);
+        return $this;
     }
 
     public function hasAttribution(): bool
@@ -134,7 +143,8 @@ final class WorkResource extends ObjectData
 
     public function unsetAttribution(): self
     {
-        return $this->remove('attribution');
+        $this->remove('attribution');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class WorkResource extends ObjectData
      */
     public function setResourceType($value): self
     {
-        return $this->set('resourceType', $value);
+        $this->set('resourceType', $value);
+        return $this;
     }
 
     public function hasResourceType(): bool
@@ -160,7 +171,8 @@ final class WorkResource extends ObjectData
 
     public function unsetResourceType(): self
     {
-        return $this->remove('resourceType');
+        $this->remove('resourceType');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class WorkResource extends ObjectData
      */
     public function setDoi($value): self
     {
-        return $this->set('doi', $value);
+        $this->set('doi', $value);
+        return $this;
     }
 
     public function hasDoi(): bool
@@ -186,7 +199,8 @@ final class WorkResource extends ObjectData
 
     public function unsetDoi(): self
     {
-        return $this->remove('doi');
+        $this->remove('doi');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class WorkResource extends ObjectData
      */
     public function setHandle($value): self
     {
-        return $this->set('handle', $value);
+        $this->set('handle', $value);
+        return $this;
     }
 
     public function hasHandle(): bool
@@ -212,7 +227,8 @@ final class WorkResource extends ObjectData
 
     public function unsetHandle(): self
     {
-        return $this->remove('handle');
+        $this->remove('handle');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class WorkResource extends ObjectData
      */
     public function setUrl($value): self
     {
-        return $this->set('url', $value);
+        $this->set('url', $value);
+        return $this;
     }
 
     public function hasUrl(): bool
@@ -238,7 +255,8 @@ final class WorkResource extends ObjectData
 
     public function unsetUrl(): self
     {
-        return $this->remove('url');
+        $this->remove('url');
+        return $this;
     }
 
     /**
@@ -254,7 +272,8 @@ final class WorkResource extends ObjectData
      */
     public function setDate($value): self
     {
-        return $this->set('date', $value);
+        $this->set('date', $value);
+        return $this;
     }
 
     public function hasDate(): bool
@@ -264,7 +283,8 @@ final class WorkResource extends ObjectData
 
     public function unsetDate(): self
     {
-        return $this->remove('date');
+        $this->remove('date');
+        return $this;
     }
 
     /**
@@ -280,7 +300,8 @@ final class WorkResource extends ObjectData
      */
     public function setResourceOrdinal($value): self
     {
-        return $this->set('resourceOrdinal', $value);
+        $this->set('resourceOrdinal', $value);
+        return $this;
     }
 
     public function hasResourceOrdinal(): bool
@@ -290,7 +311,8 @@ final class WorkResource extends ObjectData
 
     public function unsetResourceOrdinal(): self
     {
-        return $this->remove('resourceOrdinal');
+        $this->remove('resourceOrdinal');
+        return $this;
     }
 
     /**
@@ -306,7 +328,8 @@ final class WorkResource extends ObjectData
      */
     public function setCreatedAt($value): self
     {
-        return $this->set('createdAt', $value);
+        $this->set('createdAt', $value);
+        return $this;
     }
 
     public function hasCreatedAt(): bool
@@ -316,7 +339,8 @@ final class WorkResource extends ObjectData
 
     public function unsetCreatedAt(): self
     {
-        return $this->remove('createdAt');
+        $this->remove('createdAt');
+        return $this;
     }
 
     /**
@@ -332,7 +356,8 @@ final class WorkResource extends ObjectData
      */
     public function setUpdatedAt($value): self
     {
-        return $this->set('updatedAt', $value);
+        $this->set('updatedAt', $value);
+        return $this;
     }
 
     public function hasUpdatedAt(): bool
@@ -342,7 +367,8 @@ final class WorkResource extends ObjectData
 
     public function unsetUpdatedAt(): self
     {
-        return $this->remove('updatedAt');
+        $this->remove('updatedAt');
+        return $this;
     }
 
     /**
@@ -358,7 +384,8 @@ final class WorkResource extends ObjectData
      */
     public function setWork($value): self
     {
-        return $this->set('work', $value);
+        $this->set('work', $value);
+        return $this;
     }
 
     public function hasWork(): bool
@@ -368,7 +395,8 @@ final class WorkResource extends ObjectData
 
     public function unsetWork(): self
     {
-        return $this->remove('work');
+        $this->remove('work');
+        return $this;
     }
 
     /**
@@ -384,7 +412,8 @@ final class WorkResource extends ObjectData
      */
     public function setFile($value): self
     {
-        return $this->set('file', $value);
+        $this->set('file', $value);
+        return $this;
     }
 
     public function hasFile(): bool
@@ -394,7 +423,8 @@ final class WorkResource extends ObjectData
 
     public function unsetFile(): self
     {
-        return $this->remove('file');
+        $this->remove('file');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

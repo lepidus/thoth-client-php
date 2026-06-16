@@ -29,7 +29,8 @@ final class AccessorMethodsBuilder
      */
     public function set{$methodName}(\$value): self
     {
-        return \$this->set({$fieldName}, \$value);
+        \$this->set({$fieldName}, \$value);
+        return \$this;
     }
 
     public function has{$methodName}(): bool
@@ -39,7 +40,8 @@ final class AccessorMethodsBuilder
 
     public function unset{$methodName}(): self
     {
-        return \$this->remove({$fieldName});
+        \$this->remove({$fieldName});
+        return \$this;
     }
 PHP;
     }

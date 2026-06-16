@@ -3,12 +3,13 @@
 namespace ThothApi\GraphQL;
 
 use ThothApi\GraphQL\Definition\FieldDefinition;
+use ThothApi\GraphQL\Definition\ObjectTypeDefinition;
 
-class ObjectData
+abstract class ObjectData
 {
     private array $data;
 
-    public function __construct(array $data = [])
+    final public function __construct(array $data = [])
     {
         $this->data = [];
 
@@ -17,6 +18,9 @@ class ObjectData
         }
     }
 
+    /**
+     * @return static
+     */
     public static function fromArray(array $data): self
     {
         return new static($data);
@@ -49,7 +53,9 @@ class ObjectData
         return $this;
     }
 
-    private static function hydrateFieldValue(string $fieldName, $value)
+    abstract public static function definition(): ObjectTypeDefinition;
+
+    protected static function hydrateFieldValue(string $fieldName, $value)
     {
         $field = static::getFieldDefinition($fieldName);
 
@@ -60,7 +66,7 @@ class ObjectData
         return (new ValueHydrator())->hydrate($value, $field->getType());
     }
 
-    private static function getFieldDefinition(string $fieldName): ?FieldDefinition
+    protected static function getFieldDefinition(string $fieldName): ?FieldDefinition
     {
         foreach (static::definition()->getFields() as $field) {
             if ($field->getName() === $fieldName) {

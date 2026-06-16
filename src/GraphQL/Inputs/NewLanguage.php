@@ -20,7 +20,8 @@ final class NewLanguage extends InputObject
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -30,7 +31,8 @@ final class NewLanguage extends InputObject
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class NewLanguage extends InputObject
      */
     public function setLanguageCode($value): self
     {
-        return $this->set('languageCode', $value);
+        $this->set('languageCode', $value);
+        return $this;
     }
 
     public function hasLanguageCode(): bool
@@ -56,7 +59,8 @@ final class NewLanguage extends InputObject
 
     public function unsetLanguageCode(): self
     {
-        return $this->remove('languageCode');
+        $this->remove('languageCode');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class NewLanguage extends InputObject
      */
     public function setLanguageRelation($value): self
     {
-        return $this->set('languageRelation', $value);
+        $this->set('languageRelation', $value);
+        return $this;
     }
 
     public function hasLanguageRelation(): bool
@@ -82,7 +87,8 @@ final class NewLanguage extends InputObject
 
     public function unsetLanguageRelation(): self
     {
-        return $this->remove('languageRelation');
+        $this->remove('languageRelation');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

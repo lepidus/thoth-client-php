@@ -20,7 +20,8 @@ final class PatchSeries extends InputObject
      */
     public function setSeriesId($value): self
     {
-        return $this->set('seriesId', $value);
+        $this->set('seriesId', $value);
+        return $this;
     }
 
     public function hasSeriesId(): bool
@@ -30,7 +31,8 @@ final class PatchSeries extends InputObject
 
     public function unsetSeriesId(): self
     {
-        return $this->remove('seriesId');
+        $this->remove('seriesId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class PatchSeries extends InputObject
      */
     public function setSeriesType($value): self
     {
-        return $this->set('seriesType', $value);
+        $this->set('seriesType', $value);
+        return $this;
     }
 
     public function hasSeriesType(): bool
@@ -56,7 +59,8 @@ final class PatchSeries extends InputObject
 
     public function unsetSeriesType(): self
     {
-        return $this->remove('seriesType');
+        $this->remove('seriesType');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class PatchSeries extends InputObject
      */
     public function setSeriesName($value): self
     {
-        return $this->set('seriesName', $value);
+        $this->set('seriesName', $value);
+        return $this;
     }
 
     public function hasSeriesName(): bool
@@ -82,7 +87,8 @@ final class PatchSeries extends InputObject
 
     public function unsetSeriesName(): self
     {
-        return $this->remove('seriesName');
+        $this->remove('seriesName');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class PatchSeries extends InputObject
      */
     public function setIssnPrint($value): self
     {
-        return $this->set('issnPrint', $value);
+        $this->set('issnPrint', $value);
+        return $this;
     }
 
     public function hasIssnPrint(): bool
@@ -108,7 +115,8 @@ final class PatchSeries extends InputObject
 
     public function unsetIssnPrint(): self
     {
-        return $this->remove('issnPrint');
+        $this->remove('issnPrint');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class PatchSeries extends InputObject
      */
     public function setIssnDigital($value): self
     {
-        return $this->set('issnDigital', $value);
+        $this->set('issnDigital', $value);
+        return $this;
     }
 
     public function hasIssnDigital(): bool
@@ -134,7 +143,8 @@ final class PatchSeries extends InputObject
 
     public function unsetIssnDigital(): self
     {
-        return $this->remove('issnDigital');
+        $this->remove('issnDigital');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class PatchSeries extends InputObject
      */
     public function setSeriesUrl($value): self
     {
-        return $this->set('seriesUrl', $value);
+        $this->set('seriesUrl', $value);
+        return $this;
     }
 
     public function hasSeriesUrl(): bool
@@ -160,7 +171,8 @@ final class PatchSeries extends InputObject
 
     public function unsetSeriesUrl(): self
     {
-        return $this->remove('seriesUrl');
+        $this->remove('seriesUrl');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class PatchSeries extends InputObject
      */
     public function setSeriesDescription($value): self
     {
-        return $this->set('seriesDescription', $value);
+        $this->set('seriesDescription', $value);
+        return $this;
     }
 
     public function hasSeriesDescription(): bool
@@ -186,7 +199,8 @@ final class PatchSeries extends InputObject
 
     public function unsetSeriesDescription(): self
     {
-        return $this->remove('seriesDescription');
+        $this->remove('seriesDescription');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class PatchSeries extends InputObject
      */
     public function setSeriesCfpUrl($value): self
     {
-        return $this->set('seriesCfpUrl', $value);
+        $this->set('seriesCfpUrl', $value);
+        return $this;
     }
 
     public function hasSeriesCfpUrl(): bool
@@ -212,7 +227,8 @@ final class PatchSeries extends InputObject
 
     public function unsetSeriesCfpUrl(): self
     {
-        return $this->remove('seriesCfpUrl');
+        $this->remove('seriesCfpUrl');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class PatchSeries extends InputObject
      */
     public function setImprintId($value): self
     {
-        return $this->set('imprintId', $value);
+        $this->set('imprintId', $value);
+        return $this;
     }
 
     public function hasImprintId(): bool
@@ -238,7 +255,8 @@ final class PatchSeries extends InputObject
 
     public function unsetImprintId(): self
     {
-        return $this->remove('imprintId');
+        $this->remove('imprintId');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

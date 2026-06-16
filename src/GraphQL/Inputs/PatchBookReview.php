@@ -20,7 +20,8 @@ final class PatchBookReview extends InputObject
      */
     public function setBookReviewId($value): self
     {
-        return $this->set('bookReviewId', $value);
+        $this->set('bookReviewId', $value);
+        return $this;
     }
 
     public function hasBookReviewId(): bool
@@ -30,7 +31,8 @@ final class PatchBookReview extends InputObject
 
     public function unsetBookReviewId(): self
     {
-        return $this->remove('bookReviewId');
+        $this->remove('bookReviewId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class PatchBookReview extends InputObject
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -56,7 +59,8 @@ final class PatchBookReview extends InputObject
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class PatchBookReview extends InputObject
      */
     public function setTitle($value): self
     {
-        return $this->set('title', $value);
+        $this->set('title', $value);
+        return $this;
     }
 
     public function hasTitle(): bool
@@ -82,7 +87,8 @@ final class PatchBookReview extends InputObject
 
     public function unsetTitle(): self
     {
-        return $this->remove('title');
+        $this->remove('title');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class PatchBookReview extends InputObject
      */
     public function setAuthorName($value): self
     {
-        return $this->set('authorName', $value);
+        $this->set('authorName', $value);
+        return $this;
     }
 
     public function hasAuthorName(): bool
@@ -108,7 +115,8 @@ final class PatchBookReview extends InputObject
 
     public function unsetAuthorName(): self
     {
-        return $this->remove('authorName');
+        $this->remove('authorName');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class PatchBookReview extends InputObject
      */
     public function setReviewerOrcid($value): self
     {
-        return $this->set('reviewerOrcid', $value);
+        $this->set('reviewerOrcid', $value);
+        return $this;
     }
 
     public function hasReviewerOrcid(): bool
@@ -134,7 +143,8 @@ final class PatchBookReview extends InputObject
 
     public function unsetReviewerOrcid(): self
     {
-        return $this->remove('reviewerOrcid');
+        $this->remove('reviewerOrcid');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class PatchBookReview extends InputObject
      */
     public function setReviewerInstitutionId($value): self
     {
-        return $this->set('reviewerInstitutionId', $value);
+        $this->set('reviewerInstitutionId', $value);
+        return $this;
     }
 
     public function hasReviewerInstitutionId(): bool
@@ -160,7 +171,8 @@ final class PatchBookReview extends InputObject
 
     public function unsetReviewerInstitutionId(): self
     {
-        return $this->remove('reviewerInstitutionId');
+        $this->remove('reviewerInstitutionId');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class PatchBookReview extends InputObject
      */
     public function setUrl($value): self
     {
-        return $this->set('url', $value);
+        $this->set('url', $value);
+        return $this;
     }
 
     public function hasUrl(): bool
@@ -186,7 +199,8 @@ final class PatchBookReview extends InputObject
 
     public function unsetUrl(): self
     {
-        return $this->remove('url');
+        $this->remove('url');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class PatchBookReview extends InputObject
      */
     public function setDoi($value): self
     {
-        return $this->set('doi', $value);
+        $this->set('doi', $value);
+        return $this;
     }
 
     public function hasDoi(): bool
@@ -212,7 +227,8 @@ final class PatchBookReview extends InputObject
 
     public function unsetDoi(): self
     {
-        return $this->remove('doi');
+        $this->remove('doi');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class PatchBookReview extends InputObject
      */
     public function setReviewDate($value): self
     {
-        return $this->set('reviewDate', $value);
+        $this->set('reviewDate', $value);
+        return $this;
     }
 
     public function hasReviewDate(): bool
@@ -238,7 +255,8 @@ final class PatchBookReview extends InputObject
 
     public function unsetReviewDate(): self
     {
-        return $this->remove('reviewDate');
+        $this->remove('reviewDate');
+        return $this;
     }
 
     /**
@@ -254,7 +272,8 @@ final class PatchBookReview extends InputObject
      */
     public function setJournalName($value): self
     {
-        return $this->set('journalName', $value);
+        $this->set('journalName', $value);
+        return $this;
     }
 
     public function hasJournalName(): bool
@@ -264,7 +283,8 @@ final class PatchBookReview extends InputObject
 
     public function unsetJournalName(): self
     {
-        return $this->remove('journalName');
+        $this->remove('journalName');
+        return $this;
     }
 
     /**
@@ -280,7 +300,8 @@ final class PatchBookReview extends InputObject
      */
     public function setJournalVolume($value): self
     {
-        return $this->set('journalVolume', $value);
+        $this->set('journalVolume', $value);
+        return $this;
     }
 
     public function hasJournalVolume(): bool
@@ -290,7 +311,8 @@ final class PatchBookReview extends InputObject
 
     public function unsetJournalVolume(): self
     {
-        return $this->remove('journalVolume');
+        $this->remove('journalVolume');
+        return $this;
     }
 
     /**
@@ -306,7 +328,8 @@ final class PatchBookReview extends InputObject
      */
     public function setJournalNumber($value): self
     {
-        return $this->set('journalNumber', $value);
+        $this->set('journalNumber', $value);
+        return $this;
     }
 
     public function hasJournalNumber(): bool
@@ -316,7 +339,8 @@ final class PatchBookReview extends InputObject
 
     public function unsetJournalNumber(): self
     {
-        return $this->remove('journalNumber');
+        $this->remove('journalNumber');
+        return $this;
     }
 
     /**
@@ -332,7 +356,8 @@ final class PatchBookReview extends InputObject
      */
     public function setJournalIssn($value): self
     {
-        return $this->set('journalIssn', $value);
+        $this->set('journalIssn', $value);
+        return $this;
     }
 
     public function hasJournalIssn(): bool
@@ -342,7 +367,8 @@ final class PatchBookReview extends InputObject
 
     public function unsetJournalIssn(): self
     {
-        return $this->remove('journalIssn');
+        $this->remove('journalIssn');
+        return $this;
     }
 
     /**
@@ -358,7 +384,8 @@ final class PatchBookReview extends InputObject
      */
     public function setPageRange($value): self
     {
-        return $this->set('pageRange', $value);
+        $this->set('pageRange', $value);
+        return $this;
     }
 
     public function hasPageRange(): bool
@@ -368,7 +395,8 @@ final class PatchBookReview extends InputObject
 
     public function unsetPageRange(): self
     {
-        return $this->remove('pageRange');
+        $this->remove('pageRange');
+        return $this;
     }
 
     /**
@@ -384,7 +412,8 @@ final class PatchBookReview extends InputObject
      */
     public function setText($value): self
     {
-        return $this->set('text', $value);
+        $this->set('text', $value);
+        return $this;
     }
 
     public function hasText(): bool
@@ -394,7 +423,8 @@ final class PatchBookReview extends InputObject
 
     public function unsetText(): self
     {
-        return $this->remove('text');
+        $this->remove('text');
+        return $this;
     }
 
     /**
@@ -410,7 +440,8 @@ final class PatchBookReview extends InputObject
      */
     public function setReviewOrdinal($value): self
     {
-        return $this->set('reviewOrdinal', $value);
+        $this->set('reviewOrdinal', $value);
+        return $this;
     }
 
     public function hasReviewOrdinal(): bool
@@ -420,7 +451,8 @@ final class PatchBookReview extends InputObject
 
     public function unsetReviewOrdinal(): self
     {
-        return $this->remove('reviewOrdinal');
+        $this->remove('reviewOrdinal');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

@@ -20,7 +20,8 @@ final class PatchWorkRelation extends InputObject
      */
     public function setWorkRelationId($value): self
     {
-        return $this->set('workRelationId', $value);
+        $this->set('workRelationId', $value);
+        return $this;
     }
 
     public function hasWorkRelationId(): bool
@@ -30,7 +31,8 @@ final class PatchWorkRelation extends InputObject
 
     public function unsetWorkRelationId(): self
     {
-        return $this->remove('workRelationId');
+        $this->remove('workRelationId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class PatchWorkRelation extends InputObject
      */
     public function setRelatorWorkId($value): self
     {
-        return $this->set('relatorWorkId', $value);
+        $this->set('relatorWorkId', $value);
+        return $this;
     }
 
     public function hasRelatorWorkId(): bool
@@ -56,7 +59,8 @@ final class PatchWorkRelation extends InputObject
 
     public function unsetRelatorWorkId(): self
     {
-        return $this->remove('relatorWorkId');
+        $this->remove('relatorWorkId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class PatchWorkRelation extends InputObject
      */
     public function setRelatedWorkId($value): self
     {
-        return $this->set('relatedWorkId', $value);
+        $this->set('relatedWorkId', $value);
+        return $this;
     }
 
     public function hasRelatedWorkId(): bool
@@ -82,7 +87,8 @@ final class PatchWorkRelation extends InputObject
 
     public function unsetRelatedWorkId(): self
     {
-        return $this->remove('relatedWorkId');
+        $this->remove('relatedWorkId');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class PatchWorkRelation extends InputObject
      */
     public function setRelationType($value): self
     {
-        return $this->set('relationType', $value);
+        $this->set('relationType', $value);
+        return $this;
     }
 
     public function hasRelationType(): bool
@@ -108,7 +115,8 @@ final class PatchWorkRelation extends InputObject
 
     public function unsetRelationType(): self
     {
-        return $this->remove('relationType');
+        $this->remove('relationType');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class PatchWorkRelation extends InputObject
      */
     public function setRelationOrdinal($value): self
     {
-        return $this->set('relationOrdinal', $value);
+        $this->set('relationOrdinal', $value);
+        return $this;
     }
 
     public function hasRelationOrdinal(): bool
@@ -134,7 +143,8 @@ final class PatchWorkRelation extends InputObject
 
     public function unsetRelationOrdinal(): self
     {
-        return $this->remove('relationOrdinal');
+        $this->remove('relationOrdinal');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

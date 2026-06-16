@@ -20,7 +20,8 @@ final class NewContributor extends InputObject
      */
     public function setFirstName($value): self
     {
-        return $this->set('firstName', $value);
+        $this->set('firstName', $value);
+        return $this;
     }
 
     public function hasFirstName(): bool
@@ -30,7 +31,8 @@ final class NewContributor extends InputObject
 
     public function unsetFirstName(): self
     {
-        return $this->remove('firstName');
+        $this->remove('firstName');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class NewContributor extends InputObject
      */
     public function setLastName($value): self
     {
-        return $this->set('lastName', $value);
+        $this->set('lastName', $value);
+        return $this;
     }
 
     public function hasLastName(): bool
@@ -56,7 +59,8 @@ final class NewContributor extends InputObject
 
     public function unsetLastName(): self
     {
-        return $this->remove('lastName');
+        $this->remove('lastName');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class NewContributor extends InputObject
      */
     public function setFullName($value): self
     {
-        return $this->set('fullName', $value);
+        $this->set('fullName', $value);
+        return $this;
     }
 
     public function hasFullName(): bool
@@ -82,7 +87,8 @@ final class NewContributor extends InputObject
 
     public function unsetFullName(): self
     {
-        return $this->remove('fullName');
+        $this->remove('fullName');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class NewContributor extends InputObject
      */
     public function setOrcid($value): self
     {
-        return $this->set('orcid', $value);
+        $this->set('orcid', $value);
+        return $this;
     }
 
     public function hasOrcid(): bool
@@ -108,7 +115,8 @@ final class NewContributor extends InputObject
 
     public function unsetOrcid(): self
     {
-        return $this->remove('orcid');
+        $this->remove('orcid');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class NewContributor extends InputObject
      */
     public function setWebsite($value): self
     {
-        return $this->set('website', $value);
+        $this->set('website', $value);
+        return $this;
     }
 
     public function hasWebsite(): bool
@@ -134,7 +143,8 @@ final class NewContributor extends InputObject
 
     public function unsetWebsite(): self
     {
-        return $this->remove('website');
+        $this->remove('website');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

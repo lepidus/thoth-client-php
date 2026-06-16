@@ -20,7 +20,8 @@ final class Contribution extends ObjectData
      */
     public function setContributionId($value): self
     {
-        return $this->set('contributionId', $value);
+        $this->set('contributionId', $value);
+        return $this;
     }
 
     public function hasContributionId(): bool
@@ -30,7 +31,8 @@ final class Contribution extends ObjectData
 
     public function unsetContributionId(): self
     {
-        return $this->remove('contributionId');
+        $this->remove('contributionId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class Contribution extends ObjectData
      */
     public function setContributorId($value): self
     {
-        return $this->set('contributorId', $value);
+        $this->set('contributorId', $value);
+        return $this;
     }
 
     public function hasContributorId(): bool
@@ -56,7 +59,8 @@ final class Contribution extends ObjectData
 
     public function unsetContributorId(): self
     {
-        return $this->remove('contributorId');
+        $this->remove('contributorId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class Contribution extends ObjectData
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -82,7 +87,8 @@ final class Contribution extends ObjectData
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class Contribution extends ObjectData
      */
     public function setContributionType($value): self
     {
-        return $this->set('contributionType', $value);
+        $this->set('contributionType', $value);
+        return $this;
     }
 
     public function hasContributionType(): bool
@@ -108,7 +115,8 @@ final class Contribution extends ObjectData
 
     public function unsetContributionType(): self
     {
-        return $this->remove('contributionType');
+        $this->remove('contributionType');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class Contribution extends ObjectData
      */
     public function setMainContribution($value): self
     {
-        return $this->set('mainContribution', $value);
+        $this->set('mainContribution', $value);
+        return $this;
     }
 
     public function hasMainContribution(): bool
@@ -134,7 +143,8 @@ final class Contribution extends ObjectData
 
     public function unsetMainContribution(): self
     {
-        return $this->remove('mainContribution');
+        $this->remove('mainContribution');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class Contribution extends ObjectData
      */
     public function setBiographies($value): self
     {
-        return $this->set('biographies', $value);
+        $this->set('biographies', $value);
+        return $this;
     }
 
     public function hasBiographies(): bool
@@ -160,7 +171,8 @@ final class Contribution extends ObjectData
 
     public function unsetBiographies(): self
     {
-        return $this->remove('biographies');
+        $this->remove('biographies');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class Contribution extends ObjectData
      */
     public function setBiography($value): self
     {
-        return $this->set('biography', $value);
+        $this->set('biography', $value);
+        return $this;
     }
 
     public function hasBiography(): bool
@@ -186,7 +199,8 @@ final class Contribution extends ObjectData
 
     public function unsetBiography(): self
     {
-        return $this->remove('biography');
+        $this->remove('biography');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class Contribution extends ObjectData
      */
     public function setCreatedAt($value): self
     {
-        return $this->set('createdAt', $value);
+        $this->set('createdAt', $value);
+        return $this;
     }
 
     public function hasCreatedAt(): bool
@@ -212,7 +227,8 @@ final class Contribution extends ObjectData
 
     public function unsetCreatedAt(): self
     {
-        return $this->remove('createdAt');
+        $this->remove('createdAt');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class Contribution extends ObjectData
      */
     public function setUpdatedAt($value): self
     {
-        return $this->set('updatedAt', $value);
+        $this->set('updatedAt', $value);
+        return $this;
     }
 
     public function hasUpdatedAt(): bool
@@ -238,7 +255,8 @@ final class Contribution extends ObjectData
 
     public function unsetUpdatedAt(): self
     {
-        return $this->remove('updatedAt');
+        $this->remove('updatedAt');
+        return $this;
     }
 
     /**
@@ -254,7 +272,8 @@ final class Contribution extends ObjectData
      */
     public function setFirstName($value): self
     {
-        return $this->set('firstName', $value);
+        $this->set('firstName', $value);
+        return $this;
     }
 
     public function hasFirstName(): bool
@@ -264,7 +283,8 @@ final class Contribution extends ObjectData
 
     public function unsetFirstName(): self
     {
-        return $this->remove('firstName');
+        $this->remove('firstName');
+        return $this;
     }
 
     /**
@@ -280,7 +300,8 @@ final class Contribution extends ObjectData
      */
     public function setLastName($value): self
     {
-        return $this->set('lastName', $value);
+        $this->set('lastName', $value);
+        return $this;
     }
 
     public function hasLastName(): bool
@@ -290,7 +311,8 @@ final class Contribution extends ObjectData
 
     public function unsetLastName(): self
     {
-        return $this->remove('lastName');
+        $this->remove('lastName');
+        return $this;
     }
 
     /**
@@ -306,7 +328,8 @@ final class Contribution extends ObjectData
      */
     public function setFullName($value): self
     {
-        return $this->set('fullName', $value);
+        $this->set('fullName', $value);
+        return $this;
     }
 
     public function hasFullName(): bool
@@ -316,7 +339,8 @@ final class Contribution extends ObjectData
 
     public function unsetFullName(): self
     {
-        return $this->remove('fullName');
+        $this->remove('fullName');
+        return $this;
     }
 
     /**
@@ -332,7 +356,8 @@ final class Contribution extends ObjectData
      */
     public function setContributionOrdinal($value): self
     {
-        return $this->set('contributionOrdinal', $value);
+        $this->set('contributionOrdinal', $value);
+        return $this;
     }
 
     public function hasContributionOrdinal(): bool
@@ -342,7 +367,8 @@ final class Contribution extends ObjectData
 
     public function unsetContributionOrdinal(): self
     {
-        return $this->remove('contributionOrdinal');
+        $this->remove('contributionOrdinal');
+        return $this;
     }
 
     /**
@@ -358,7 +384,8 @@ final class Contribution extends ObjectData
      */
     public function setWork($value): self
     {
-        return $this->set('work', $value);
+        $this->set('work', $value);
+        return $this;
     }
 
     public function hasWork(): bool
@@ -368,7 +395,8 @@ final class Contribution extends ObjectData
 
     public function unsetWork(): self
     {
-        return $this->remove('work');
+        $this->remove('work');
+        return $this;
     }
 
     /**
@@ -384,7 +412,8 @@ final class Contribution extends ObjectData
      */
     public function setContributor($value): self
     {
-        return $this->set('contributor', $value);
+        $this->set('contributor', $value);
+        return $this;
     }
 
     public function hasContributor(): bool
@@ -394,7 +423,8 @@ final class Contribution extends ObjectData
 
     public function unsetContributor(): self
     {
-        return $this->remove('contributor');
+        $this->remove('contributor');
+        return $this;
     }
 
     /**
@@ -410,7 +440,8 @@ final class Contribution extends ObjectData
      */
     public function setAffiliations($value): self
     {
-        return $this->set('affiliations', $value);
+        $this->set('affiliations', $value);
+        return $this;
     }
 
     public function hasAffiliations(): bool
@@ -420,7 +451,8 @@ final class Contribution extends ObjectData
 
     public function unsetAffiliations(): self
     {
-        return $this->remove('affiliations');
+        $this->remove('affiliations');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

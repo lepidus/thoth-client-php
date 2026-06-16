@@ -20,7 +20,8 @@ final class Location extends ObjectData
      */
     public function setLocationId($value): self
     {
-        return $this->set('locationId', $value);
+        $this->set('locationId', $value);
+        return $this;
     }
 
     public function hasLocationId(): bool
@@ -30,7 +31,8 @@ final class Location extends ObjectData
 
     public function unsetLocationId(): self
     {
-        return $this->remove('locationId');
+        $this->remove('locationId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class Location extends ObjectData
      */
     public function setPublicationId($value): self
     {
-        return $this->set('publicationId', $value);
+        $this->set('publicationId', $value);
+        return $this;
     }
 
     public function hasPublicationId(): bool
@@ -56,7 +59,8 @@ final class Location extends ObjectData
 
     public function unsetPublicationId(): self
     {
-        return $this->remove('publicationId');
+        $this->remove('publicationId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class Location extends ObjectData
      */
     public function setLandingPage($value): self
     {
-        return $this->set('landingPage', $value);
+        $this->set('landingPage', $value);
+        return $this;
     }
 
     public function hasLandingPage(): bool
@@ -82,7 +87,8 @@ final class Location extends ObjectData
 
     public function unsetLandingPage(): self
     {
-        return $this->remove('landingPage');
+        $this->remove('landingPage');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class Location extends ObjectData
      */
     public function setFullTextUrl($value): self
     {
-        return $this->set('fullTextUrl', $value);
+        $this->set('fullTextUrl', $value);
+        return $this;
     }
 
     public function hasFullTextUrl(): bool
@@ -108,7 +115,8 @@ final class Location extends ObjectData
 
     public function unsetFullTextUrl(): self
     {
-        return $this->remove('fullTextUrl');
+        $this->remove('fullTextUrl');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class Location extends ObjectData
      */
     public function setLocationPlatform($value): self
     {
-        return $this->set('locationPlatform', $value);
+        $this->set('locationPlatform', $value);
+        return $this;
     }
 
     public function hasLocationPlatform(): bool
@@ -134,7 +143,8 @@ final class Location extends ObjectData
 
     public function unsetLocationPlatform(): self
     {
-        return $this->remove('locationPlatform');
+        $this->remove('locationPlatform');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class Location extends ObjectData
      */
     public function setCanonical($value): self
     {
-        return $this->set('canonical', $value);
+        $this->set('canonical', $value);
+        return $this;
     }
 
     public function hasCanonical(): bool
@@ -160,7 +171,8 @@ final class Location extends ObjectData
 
     public function unsetCanonical(): self
     {
-        return $this->remove('canonical');
+        $this->remove('canonical');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class Location extends ObjectData
      */
     public function setChecksum($value): self
     {
-        return $this->set('checksum', $value);
+        $this->set('checksum', $value);
+        return $this;
     }
 
     public function hasChecksum(): bool
@@ -186,7 +199,8 @@ final class Location extends ObjectData
 
     public function unsetChecksum(): self
     {
-        return $this->remove('checksum');
+        $this->remove('checksum');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class Location extends ObjectData
      */
     public function setChecksumAlgorithm($value): self
     {
-        return $this->set('checksumAlgorithm', $value);
+        $this->set('checksumAlgorithm', $value);
+        return $this;
     }
 
     public function hasChecksumAlgorithm(): bool
@@ -212,7 +227,8 @@ final class Location extends ObjectData
 
     public function unsetChecksumAlgorithm(): self
     {
-        return $this->remove('checksumAlgorithm');
+        $this->remove('checksumAlgorithm');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class Location extends ObjectData
      */
     public function setCreatedAt($value): self
     {
-        return $this->set('createdAt', $value);
+        $this->set('createdAt', $value);
+        return $this;
     }
 
     public function hasCreatedAt(): bool
@@ -238,7 +255,8 @@ final class Location extends ObjectData
 
     public function unsetCreatedAt(): self
     {
-        return $this->remove('createdAt');
+        $this->remove('createdAt');
+        return $this;
     }
 
     /**
@@ -254,7 +272,8 @@ final class Location extends ObjectData
      */
     public function setUpdatedAt($value): self
     {
-        return $this->set('updatedAt', $value);
+        $this->set('updatedAt', $value);
+        return $this;
     }
 
     public function hasUpdatedAt(): bool
@@ -264,7 +283,8 @@ final class Location extends ObjectData
 
     public function unsetUpdatedAt(): self
     {
-        return $this->remove('updatedAt');
+        $this->remove('updatedAt');
+        return $this;
     }
 
     /**
@@ -280,7 +300,8 @@ final class Location extends ObjectData
      */
     public function setPublication($value): self
     {
-        return $this->set('publication', $value);
+        $this->set('publication', $value);
+        return $this;
     }
 
     public function hasPublication(): bool
@@ -290,7 +311,8 @@ final class Location extends ObjectData
 
     public function unsetPublication(): self
     {
-        return $this->remove('publication');
+        $this->remove('publication');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

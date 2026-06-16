@@ -20,7 +20,8 @@ final class FileUploadResponse extends ObjectData
      */
     public function setFileUploadId($value): self
     {
-        return $this->set('fileUploadId', $value);
+        $this->set('fileUploadId', $value);
+        return $this;
     }
 
     public function hasFileUploadId(): bool
@@ -30,7 +31,8 @@ final class FileUploadResponse extends ObjectData
 
     public function unsetFileUploadId(): self
     {
-        return $this->remove('fileUploadId');
+        $this->remove('fileUploadId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class FileUploadResponse extends ObjectData
      */
     public function setUploadUrl($value): self
     {
-        return $this->set('uploadUrl', $value);
+        $this->set('uploadUrl', $value);
+        return $this;
     }
 
     public function hasUploadUrl(): bool
@@ -56,7 +59,8 @@ final class FileUploadResponse extends ObjectData
 
     public function unsetUploadUrl(): self
     {
-        return $this->remove('uploadUrl');
+        $this->remove('uploadUrl');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class FileUploadResponse extends ObjectData
      */
     public function setUploadHeaders($value): self
     {
-        return $this->set('uploadHeaders', $value);
+        $this->set('uploadHeaders', $value);
+        return $this;
     }
 
     public function hasUploadHeaders(): bool
@@ -82,7 +87,8 @@ final class FileUploadResponse extends ObjectData
 
     public function unsetUploadHeaders(): self
     {
-        return $this->remove('uploadHeaders');
+        $this->remove('uploadHeaders');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class FileUploadResponse extends ObjectData
      */
     public function setExpiresAt($value): self
     {
-        return $this->set('expiresAt', $value);
+        $this->set('expiresAt', $value);
+        return $this;
     }
 
     public function hasExpiresAt(): bool
@@ -108,7 +115,8 @@ final class FileUploadResponse extends ObjectData
 
     public function unsetExpiresAt(): self
     {
-        return $this->remove('expiresAt');
+        $this->remove('expiresAt');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

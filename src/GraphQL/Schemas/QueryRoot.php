@@ -20,7 +20,8 @@ final class QueryRoot extends ObjectData
      */
     public function setWorks($value): self
     {
-        return $this->set('works', $value);
+        $this->set('works', $value);
+        return $this;
     }
 
     public function hasWorks(): bool
@@ -30,7 +31,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetWorks(): self
     {
-        return $this->remove('works');
+        $this->remove('works');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class QueryRoot extends ObjectData
      */
     public function setWork($value): self
     {
-        return $this->set('work', $value);
+        $this->set('work', $value);
+        return $this;
     }
 
     public function hasWork(): bool
@@ -56,7 +59,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetWork(): self
     {
-        return $this->remove('work');
+        $this->remove('work');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class QueryRoot extends ObjectData
      */
     public function setWorkByDoi($value): self
     {
-        return $this->set('workByDoi', $value);
+        $this->set('workByDoi', $value);
+        return $this;
     }
 
     public function hasWorkByDoi(): bool
@@ -82,7 +87,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetWorkByDoi(): self
     {
-        return $this->remove('workByDoi');
+        $this->remove('workByDoi');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class QueryRoot extends ObjectData
      */
     public function setWorkCount($value): self
     {
-        return $this->set('workCount', $value);
+        $this->set('workCount', $value);
+        return $this;
     }
 
     public function hasWorkCount(): bool
@@ -108,7 +115,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetWorkCount(): self
     {
-        return $this->remove('workCount');
+        $this->remove('workCount');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class QueryRoot extends ObjectData
      */
     public function setBooks($value): self
     {
-        return $this->set('books', $value);
+        $this->set('books', $value);
+        return $this;
     }
 
     public function hasBooks(): bool
@@ -134,7 +143,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetBooks(): self
     {
-        return $this->remove('books');
+        $this->remove('books');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class QueryRoot extends ObjectData
      */
     public function setBookByDoi($value): self
     {
-        return $this->set('bookByDoi', $value);
+        $this->set('bookByDoi', $value);
+        return $this;
     }
 
     public function hasBookByDoi(): bool
@@ -160,7 +171,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetBookByDoi(): self
     {
-        return $this->remove('bookByDoi');
+        $this->remove('bookByDoi');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class QueryRoot extends ObjectData
      */
     public function setBookCount($value): self
     {
-        return $this->set('bookCount', $value);
+        $this->set('bookCount', $value);
+        return $this;
     }
 
     public function hasBookCount(): bool
@@ -186,7 +199,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetBookCount(): self
     {
-        return $this->remove('bookCount');
+        $this->remove('bookCount');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class QueryRoot extends ObjectData
      */
     public function setChapters($value): self
     {
-        return $this->set('chapters', $value);
+        $this->set('chapters', $value);
+        return $this;
     }
 
     public function hasChapters(): bool
@@ -212,7 +227,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetChapters(): self
     {
-        return $this->remove('chapters');
+        $this->remove('chapters');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class QueryRoot extends ObjectData
      */
     public function setChapterByDoi($value): self
     {
-        return $this->set('chapterByDoi', $value);
+        $this->set('chapterByDoi', $value);
+        return $this;
     }
 
     public function hasChapterByDoi(): bool
@@ -238,7 +255,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetChapterByDoi(): self
     {
-        return $this->remove('chapterByDoi');
+        $this->remove('chapterByDoi');
+        return $this;
     }
 
     /**
@@ -254,7 +272,8 @@ final class QueryRoot extends ObjectData
      */
     public function setChapterCount($value): self
     {
-        return $this->set('chapterCount', $value);
+        $this->set('chapterCount', $value);
+        return $this;
     }
 
     public function hasChapterCount(): bool
@@ -264,7 +283,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetChapterCount(): self
     {
-        return $this->remove('chapterCount');
+        $this->remove('chapterCount');
+        return $this;
     }
 
     /**
@@ -280,7 +300,8 @@ final class QueryRoot extends ObjectData
      */
     public function setPublications($value): self
     {
-        return $this->set('publications', $value);
+        $this->set('publications', $value);
+        return $this;
     }
 
     public function hasPublications(): bool
@@ -290,7 +311,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetPublications(): self
     {
-        return $this->remove('publications');
+        $this->remove('publications');
+        return $this;
     }
 
     /**
@@ -306,7 +328,8 @@ final class QueryRoot extends ObjectData
      */
     public function setPublication($value): self
     {
-        return $this->set('publication', $value);
+        $this->set('publication', $value);
+        return $this;
     }
 
     public function hasPublication(): bool
@@ -316,7 +339,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetPublication(): self
     {
-        return $this->remove('publication');
+        $this->remove('publication');
+        return $this;
     }
 
     /**
@@ -332,7 +356,8 @@ final class QueryRoot extends ObjectData
      */
     public function setFile($value): self
     {
-        return $this->set('file', $value);
+        $this->set('file', $value);
+        return $this;
     }
 
     public function hasFile(): bool
@@ -342,7 +367,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetFile(): self
     {
-        return $this->remove('file');
+        $this->remove('file');
+        return $this;
     }
 
     /**
@@ -358,7 +384,8 @@ final class QueryRoot extends ObjectData
      */
     public function setPublicationCount($value): self
     {
-        return $this->set('publicationCount', $value);
+        $this->set('publicationCount', $value);
+        return $this;
     }
 
     public function hasPublicationCount(): bool
@@ -368,7 +395,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetPublicationCount(): self
     {
-        return $this->remove('publicationCount');
+        $this->remove('publicationCount');
+        return $this;
     }
 
     /**
@@ -384,7 +412,8 @@ final class QueryRoot extends ObjectData
      */
     public function setPublishers($value): self
     {
-        return $this->set('publishers', $value);
+        $this->set('publishers', $value);
+        return $this;
     }
 
     public function hasPublishers(): bool
@@ -394,7 +423,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetPublishers(): self
     {
-        return $this->remove('publishers');
+        $this->remove('publishers');
+        return $this;
     }
 
     /**
@@ -410,7 +440,8 @@ final class QueryRoot extends ObjectData
      */
     public function setPublisher($value): self
     {
-        return $this->set('publisher', $value);
+        $this->set('publisher', $value);
+        return $this;
     }
 
     public function hasPublisher(): bool
@@ -420,7 +451,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetPublisher(): self
     {
-        return $this->remove('publisher');
+        $this->remove('publisher');
+        return $this;
     }
 
     /**
@@ -436,7 +468,8 @@ final class QueryRoot extends ObjectData
      */
     public function setPublisherCount($value): self
     {
-        return $this->set('publisherCount', $value);
+        $this->set('publisherCount', $value);
+        return $this;
     }
 
     public function hasPublisherCount(): bool
@@ -446,7 +479,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetPublisherCount(): self
     {
-        return $this->remove('publisherCount');
+        $this->remove('publisherCount');
+        return $this;
     }
 
     /**
@@ -462,7 +496,8 @@ final class QueryRoot extends ObjectData
      */
     public function setImprints($value): self
     {
-        return $this->set('imprints', $value);
+        $this->set('imprints', $value);
+        return $this;
     }
 
     public function hasImprints(): bool
@@ -472,7 +507,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetImprints(): self
     {
-        return $this->remove('imprints');
+        $this->remove('imprints');
+        return $this;
     }
 
     /**
@@ -488,7 +524,8 @@ final class QueryRoot extends ObjectData
      */
     public function setImprint($value): self
     {
-        return $this->set('imprint', $value);
+        $this->set('imprint', $value);
+        return $this;
     }
 
     public function hasImprint(): bool
@@ -498,7 +535,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetImprint(): self
     {
-        return $this->remove('imprint');
+        $this->remove('imprint');
+        return $this;
     }
 
     /**
@@ -514,7 +552,8 @@ final class QueryRoot extends ObjectData
      */
     public function setImprintCount($value): self
     {
-        return $this->set('imprintCount', $value);
+        $this->set('imprintCount', $value);
+        return $this;
     }
 
     public function hasImprintCount(): bool
@@ -524,7 +563,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetImprintCount(): self
     {
-        return $this->remove('imprintCount');
+        $this->remove('imprintCount');
+        return $this;
     }
 
     /**
@@ -540,7 +580,8 @@ final class QueryRoot extends ObjectData
      */
     public function setContributors($value): self
     {
-        return $this->set('contributors', $value);
+        $this->set('contributors', $value);
+        return $this;
     }
 
     public function hasContributors(): bool
@@ -550,7 +591,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetContributors(): self
     {
-        return $this->remove('contributors');
+        $this->remove('contributors');
+        return $this;
     }
 
     /**
@@ -566,7 +608,8 @@ final class QueryRoot extends ObjectData
      */
     public function setContributor($value): self
     {
-        return $this->set('contributor', $value);
+        $this->set('contributor', $value);
+        return $this;
     }
 
     public function hasContributor(): bool
@@ -576,7 +619,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetContributor(): self
     {
-        return $this->remove('contributor');
+        $this->remove('contributor');
+        return $this;
     }
 
     /**
@@ -592,7 +636,8 @@ final class QueryRoot extends ObjectData
      */
     public function setContributorCount($value): self
     {
-        return $this->set('contributorCount', $value);
+        $this->set('contributorCount', $value);
+        return $this;
     }
 
     public function hasContributorCount(): bool
@@ -602,7 +647,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetContributorCount(): self
     {
-        return $this->remove('contributorCount');
+        $this->remove('contributorCount');
+        return $this;
     }
 
     /**
@@ -618,7 +664,8 @@ final class QueryRoot extends ObjectData
      */
     public function setContributions($value): self
     {
-        return $this->set('contributions', $value);
+        $this->set('contributions', $value);
+        return $this;
     }
 
     public function hasContributions(): bool
@@ -628,7 +675,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetContributions(): self
     {
-        return $this->remove('contributions');
+        $this->remove('contributions');
+        return $this;
     }
 
     /**
@@ -644,7 +692,8 @@ final class QueryRoot extends ObjectData
      */
     public function setContribution($value): self
     {
-        return $this->set('contribution', $value);
+        $this->set('contribution', $value);
+        return $this;
     }
 
     public function hasContribution(): bool
@@ -654,7 +703,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetContribution(): self
     {
-        return $this->remove('contribution');
+        $this->remove('contribution');
+        return $this;
     }
 
     /**
@@ -670,7 +720,8 @@ final class QueryRoot extends ObjectData
      */
     public function setContributionCount($value): self
     {
-        return $this->set('contributionCount', $value);
+        $this->set('contributionCount', $value);
+        return $this;
     }
 
     public function hasContributionCount(): bool
@@ -680,7 +731,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetContributionCount(): self
     {
-        return $this->remove('contributionCount');
+        $this->remove('contributionCount');
+        return $this;
     }
 
     /**
@@ -696,7 +748,8 @@ final class QueryRoot extends ObjectData
      */
     public function setSerieses($value): self
     {
-        return $this->set('serieses', $value);
+        $this->set('serieses', $value);
+        return $this;
     }
 
     public function hasSerieses(): bool
@@ -706,7 +759,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetSerieses(): self
     {
-        return $this->remove('serieses');
+        $this->remove('serieses');
+        return $this;
     }
 
     /**
@@ -722,7 +776,8 @@ final class QueryRoot extends ObjectData
      */
     public function setSeries($value): self
     {
-        return $this->set('series', $value);
+        $this->set('series', $value);
+        return $this;
     }
 
     public function hasSeries(): bool
@@ -732,7 +787,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetSeries(): self
     {
-        return $this->remove('series');
+        $this->remove('series');
+        return $this;
     }
 
     /**
@@ -748,7 +804,8 @@ final class QueryRoot extends ObjectData
      */
     public function setSeriesCount($value): self
     {
-        return $this->set('seriesCount', $value);
+        $this->set('seriesCount', $value);
+        return $this;
     }
 
     public function hasSeriesCount(): bool
@@ -758,7 +815,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetSeriesCount(): self
     {
-        return $this->remove('seriesCount');
+        $this->remove('seriesCount');
+        return $this;
     }
 
     /**
@@ -774,7 +832,8 @@ final class QueryRoot extends ObjectData
      */
     public function setIssues($value): self
     {
-        return $this->set('issues', $value);
+        $this->set('issues', $value);
+        return $this;
     }
 
     public function hasIssues(): bool
@@ -784,7 +843,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetIssues(): self
     {
-        return $this->remove('issues');
+        $this->remove('issues');
+        return $this;
     }
 
     /**
@@ -800,7 +860,8 @@ final class QueryRoot extends ObjectData
      */
     public function setIssue($value): self
     {
-        return $this->set('issue', $value);
+        $this->set('issue', $value);
+        return $this;
     }
 
     public function hasIssue(): bool
@@ -810,7 +871,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetIssue(): self
     {
-        return $this->remove('issue');
+        $this->remove('issue');
+        return $this;
     }
 
     /**
@@ -826,7 +888,8 @@ final class QueryRoot extends ObjectData
      */
     public function setIssueCount($value): self
     {
-        return $this->set('issueCount', $value);
+        $this->set('issueCount', $value);
+        return $this;
     }
 
     public function hasIssueCount(): bool
@@ -836,7 +899,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetIssueCount(): self
     {
-        return $this->remove('issueCount');
+        $this->remove('issueCount');
+        return $this;
     }
 
     /**
@@ -852,7 +916,8 @@ final class QueryRoot extends ObjectData
      */
     public function setLanguages($value): self
     {
-        return $this->set('languages', $value);
+        $this->set('languages', $value);
+        return $this;
     }
 
     public function hasLanguages(): bool
@@ -862,7 +927,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetLanguages(): self
     {
-        return $this->remove('languages');
+        $this->remove('languages');
+        return $this;
     }
 
     /**
@@ -878,7 +944,8 @@ final class QueryRoot extends ObjectData
      */
     public function setLanguage($value): self
     {
-        return $this->set('language', $value);
+        $this->set('language', $value);
+        return $this;
     }
 
     public function hasLanguage(): bool
@@ -888,7 +955,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetLanguage(): self
     {
-        return $this->remove('language');
+        $this->remove('language');
+        return $this;
     }
 
     /**
@@ -904,7 +972,8 @@ final class QueryRoot extends ObjectData
      */
     public function setLanguageCount($value): self
     {
-        return $this->set('languageCount', $value);
+        $this->set('languageCount', $value);
+        return $this;
     }
 
     public function hasLanguageCount(): bool
@@ -914,7 +983,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetLanguageCount(): self
     {
-        return $this->remove('languageCount');
+        $this->remove('languageCount');
+        return $this;
     }
 
     /**
@@ -930,7 +1000,8 @@ final class QueryRoot extends ObjectData
      */
     public function setLocations($value): self
     {
-        return $this->set('locations', $value);
+        $this->set('locations', $value);
+        return $this;
     }
 
     public function hasLocations(): bool
@@ -940,7 +1011,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetLocations(): self
     {
-        return $this->remove('locations');
+        $this->remove('locations');
+        return $this;
     }
 
     /**
@@ -956,7 +1028,8 @@ final class QueryRoot extends ObjectData
      */
     public function setLocation($value): self
     {
-        return $this->set('location', $value);
+        $this->set('location', $value);
+        return $this;
     }
 
     public function hasLocation(): bool
@@ -966,7 +1039,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetLocation(): self
     {
-        return $this->remove('location');
+        $this->remove('location');
+        return $this;
     }
 
     /**
@@ -982,7 +1056,8 @@ final class QueryRoot extends ObjectData
      */
     public function setLocationCount($value): self
     {
-        return $this->set('locationCount', $value);
+        $this->set('locationCount', $value);
+        return $this;
     }
 
     public function hasLocationCount(): bool
@@ -992,7 +1067,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetLocationCount(): self
     {
-        return $this->remove('locationCount');
+        $this->remove('locationCount');
+        return $this;
     }
 
     /**
@@ -1008,7 +1084,8 @@ final class QueryRoot extends ObjectData
      */
     public function setPrices($value): self
     {
-        return $this->set('prices', $value);
+        $this->set('prices', $value);
+        return $this;
     }
 
     public function hasPrices(): bool
@@ -1018,7 +1095,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetPrices(): self
     {
-        return $this->remove('prices');
+        $this->remove('prices');
+        return $this;
     }
 
     /**
@@ -1034,7 +1112,8 @@ final class QueryRoot extends ObjectData
      */
     public function setPrice($value): self
     {
-        return $this->set('price', $value);
+        $this->set('price', $value);
+        return $this;
     }
 
     public function hasPrice(): bool
@@ -1044,7 +1123,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetPrice(): self
     {
-        return $this->remove('price');
+        $this->remove('price');
+        return $this;
     }
 
     /**
@@ -1060,7 +1140,8 @@ final class QueryRoot extends ObjectData
      */
     public function setPriceCount($value): self
     {
-        return $this->set('priceCount', $value);
+        $this->set('priceCount', $value);
+        return $this;
     }
 
     public function hasPriceCount(): bool
@@ -1070,7 +1151,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetPriceCount(): self
     {
-        return $this->remove('priceCount');
+        $this->remove('priceCount');
+        return $this;
     }
 
     /**
@@ -1086,7 +1168,8 @@ final class QueryRoot extends ObjectData
      */
     public function setSubjects($value): self
     {
-        return $this->set('subjects', $value);
+        $this->set('subjects', $value);
+        return $this;
     }
 
     public function hasSubjects(): bool
@@ -1096,7 +1179,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetSubjects(): self
     {
-        return $this->remove('subjects');
+        $this->remove('subjects');
+        return $this;
     }
 
     /**
@@ -1112,7 +1196,8 @@ final class QueryRoot extends ObjectData
      */
     public function setSubject($value): self
     {
-        return $this->set('subject', $value);
+        $this->set('subject', $value);
+        return $this;
     }
 
     public function hasSubject(): bool
@@ -1122,7 +1207,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetSubject(): self
     {
-        return $this->remove('subject');
+        $this->remove('subject');
+        return $this;
     }
 
     /**
@@ -1138,7 +1224,8 @@ final class QueryRoot extends ObjectData
      */
     public function setSubjectCount($value): self
     {
-        return $this->set('subjectCount', $value);
+        $this->set('subjectCount', $value);
+        return $this;
     }
 
     public function hasSubjectCount(): bool
@@ -1148,7 +1235,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetSubjectCount(): self
     {
-        return $this->remove('subjectCount');
+        $this->remove('subjectCount');
+        return $this;
     }
 
     /**
@@ -1164,7 +1252,8 @@ final class QueryRoot extends ObjectData
      */
     public function setInstitutions($value): self
     {
-        return $this->set('institutions', $value);
+        $this->set('institutions', $value);
+        return $this;
     }
 
     public function hasInstitutions(): bool
@@ -1174,7 +1263,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetInstitutions(): self
     {
-        return $this->remove('institutions');
+        $this->remove('institutions');
+        return $this;
     }
 
     /**
@@ -1190,7 +1280,8 @@ final class QueryRoot extends ObjectData
      */
     public function setInstitution($value): self
     {
-        return $this->set('institution', $value);
+        $this->set('institution', $value);
+        return $this;
     }
 
     public function hasInstitution(): bool
@@ -1200,7 +1291,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetInstitution(): self
     {
-        return $this->remove('institution');
+        $this->remove('institution');
+        return $this;
     }
 
     /**
@@ -1216,7 +1308,8 @@ final class QueryRoot extends ObjectData
      */
     public function setInstitutionCount($value): self
     {
-        return $this->set('institutionCount', $value);
+        $this->set('institutionCount', $value);
+        return $this;
     }
 
     public function hasInstitutionCount(): bool
@@ -1226,7 +1319,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetInstitutionCount(): self
     {
-        return $this->remove('institutionCount');
+        $this->remove('institutionCount');
+        return $this;
     }
 
     /**
@@ -1242,7 +1336,8 @@ final class QueryRoot extends ObjectData
      */
     public function setFundings($value): self
     {
-        return $this->set('fundings', $value);
+        $this->set('fundings', $value);
+        return $this;
     }
 
     public function hasFundings(): bool
@@ -1252,7 +1347,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetFundings(): self
     {
-        return $this->remove('fundings');
+        $this->remove('fundings');
+        return $this;
     }
 
     /**
@@ -1268,7 +1364,8 @@ final class QueryRoot extends ObjectData
      */
     public function setFunding($value): self
     {
-        return $this->set('funding', $value);
+        $this->set('funding', $value);
+        return $this;
     }
 
     public function hasFunding(): bool
@@ -1278,7 +1375,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetFunding(): self
     {
-        return $this->remove('funding');
+        $this->remove('funding');
+        return $this;
     }
 
     /**
@@ -1294,7 +1392,8 @@ final class QueryRoot extends ObjectData
      */
     public function setFundingCount($value): self
     {
-        return $this->set('fundingCount', $value);
+        $this->set('fundingCount', $value);
+        return $this;
     }
 
     public function hasFundingCount(): bool
@@ -1304,7 +1403,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetFundingCount(): self
     {
-        return $this->remove('fundingCount');
+        $this->remove('fundingCount');
+        return $this;
     }
 
     /**
@@ -1320,7 +1420,8 @@ final class QueryRoot extends ObjectData
      */
     public function setAffiliations($value): self
     {
-        return $this->set('affiliations', $value);
+        $this->set('affiliations', $value);
+        return $this;
     }
 
     public function hasAffiliations(): bool
@@ -1330,7 +1431,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetAffiliations(): self
     {
-        return $this->remove('affiliations');
+        $this->remove('affiliations');
+        return $this;
     }
 
     /**
@@ -1346,7 +1448,8 @@ final class QueryRoot extends ObjectData
      */
     public function setAffiliation($value): self
     {
-        return $this->set('affiliation', $value);
+        $this->set('affiliation', $value);
+        return $this;
     }
 
     public function hasAffiliation(): bool
@@ -1356,7 +1459,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetAffiliation(): self
     {
-        return $this->remove('affiliation');
+        $this->remove('affiliation');
+        return $this;
     }
 
     /**
@@ -1372,7 +1476,8 @@ final class QueryRoot extends ObjectData
      */
     public function setAffiliationCount($value): self
     {
-        return $this->set('affiliationCount', $value);
+        $this->set('affiliationCount', $value);
+        return $this;
     }
 
     public function hasAffiliationCount(): bool
@@ -1382,7 +1487,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetAffiliationCount(): self
     {
-        return $this->remove('affiliationCount');
+        $this->remove('affiliationCount');
+        return $this;
     }
 
     /**
@@ -1398,7 +1504,8 @@ final class QueryRoot extends ObjectData
      */
     public function setReferences($value): self
     {
-        return $this->set('references', $value);
+        $this->set('references', $value);
+        return $this;
     }
 
     public function hasReferences(): bool
@@ -1408,7 +1515,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetReferences(): self
     {
-        return $this->remove('references');
+        $this->remove('references');
+        return $this;
     }
 
     /**
@@ -1424,7 +1532,8 @@ final class QueryRoot extends ObjectData
      */
     public function setReference($value): self
     {
-        return $this->set('reference', $value);
+        $this->set('reference', $value);
+        return $this;
     }
 
     public function hasReference(): bool
@@ -1434,7 +1543,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetReference(): self
     {
-        return $this->remove('reference');
+        $this->remove('reference');
+        return $this;
     }
 
     /**
@@ -1450,7 +1560,8 @@ final class QueryRoot extends ObjectData
      */
     public function setReferenceCount($value): self
     {
-        return $this->set('referenceCount', $value);
+        $this->set('referenceCount', $value);
+        return $this;
     }
 
     public function hasReferenceCount(): bool
@@ -1460,7 +1571,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetReferenceCount(): self
     {
-        return $this->remove('referenceCount');
+        $this->remove('referenceCount');
+        return $this;
     }
 
     /**
@@ -1476,7 +1588,8 @@ final class QueryRoot extends ObjectData
      */
     public function setAdditionalResources($value): self
     {
-        return $this->set('additionalResources', $value);
+        $this->set('additionalResources', $value);
+        return $this;
     }
 
     public function hasAdditionalResources(): bool
@@ -1486,7 +1599,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetAdditionalResources(): self
     {
-        return $this->remove('additionalResources');
+        $this->remove('additionalResources');
+        return $this;
     }
 
     /**
@@ -1502,7 +1616,8 @@ final class QueryRoot extends ObjectData
      */
     public function setAdditionalResource($value): self
     {
-        return $this->set('additionalResource', $value);
+        $this->set('additionalResource', $value);
+        return $this;
     }
 
     public function hasAdditionalResource(): bool
@@ -1512,7 +1627,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetAdditionalResource(): self
     {
-        return $this->remove('additionalResource');
+        $this->remove('additionalResource');
+        return $this;
     }
 
     /**
@@ -1528,7 +1644,8 @@ final class QueryRoot extends ObjectData
      */
     public function setAdditionalResourceCount($value): self
     {
-        return $this->set('additionalResourceCount', $value);
+        $this->set('additionalResourceCount', $value);
+        return $this;
     }
 
     public function hasAdditionalResourceCount(): bool
@@ -1538,7 +1655,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetAdditionalResourceCount(): self
     {
-        return $this->remove('additionalResourceCount');
+        $this->remove('additionalResourceCount');
+        return $this;
     }
 
     /**
@@ -1554,7 +1672,8 @@ final class QueryRoot extends ObjectData
      */
     public function setAwards($value): self
     {
-        return $this->set('awards', $value);
+        $this->set('awards', $value);
+        return $this;
     }
 
     public function hasAwards(): bool
@@ -1564,7 +1683,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetAwards(): self
     {
-        return $this->remove('awards');
+        $this->remove('awards');
+        return $this;
     }
 
     /**
@@ -1580,7 +1700,8 @@ final class QueryRoot extends ObjectData
      */
     public function setAward($value): self
     {
-        return $this->set('award', $value);
+        $this->set('award', $value);
+        return $this;
     }
 
     public function hasAward(): bool
@@ -1590,7 +1711,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetAward(): self
     {
-        return $this->remove('award');
+        $this->remove('award');
+        return $this;
     }
 
     /**
@@ -1606,7 +1728,8 @@ final class QueryRoot extends ObjectData
      */
     public function setAwardCount($value): self
     {
-        return $this->set('awardCount', $value);
+        $this->set('awardCount', $value);
+        return $this;
     }
 
     public function hasAwardCount(): bool
@@ -1616,7 +1739,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetAwardCount(): self
     {
-        return $this->remove('awardCount');
+        $this->remove('awardCount');
+        return $this;
     }
 
     /**
@@ -1632,7 +1756,8 @@ final class QueryRoot extends ObjectData
      */
     public function setEndorsements($value): self
     {
-        return $this->set('endorsements', $value);
+        $this->set('endorsements', $value);
+        return $this;
     }
 
     public function hasEndorsements(): bool
@@ -1642,7 +1767,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetEndorsements(): self
     {
-        return $this->remove('endorsements');
+        $this->remove('endorsements');
+        return $this;
     }
 
     /**
@@ -1658,7 +1784,8 @@ final class QueryRoot extends ObjectData
      */
     public function setEndorsement($value): self
     {
-        return $this->set('endorsement', $value);
+        $this->set('endorsement', $value);
+        return $this;
     }
 
     public function hasEndorsement(): bool
@@ -1668,7 +1795,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetEndorsement(): self
     {
-        return $this->remove('endorsement');
+        $this->remove('endorsement');
+        return $this;
     }
 
     /**
@@ -1684,7 +1812,8 @@ final class QueryRoot extends ObjectData
      */
     public function setEndorsementCount($value): self
     {
-        return $this->set('endorsementCount', $value);
+        $this->set('endorsementCount', $value);
+        return $this;
     }
 
     public function hasEndorsementCount(): bool
@@ -1694,7 +1823,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetEndorsementCount(): self
     {
-        return $this->remove('endorsementCount');
+        $this->remove('endorsementCount');
+        return $this;
     }
 
     /**
@@ -1710,7 +1840,8 @@ final class QueryRoot extends ObjectData
      */
     public function setBookReviews($value): self
     {
-        return $this->set('bookReviews', $value);
+        $this->set('bookReviews', $value);
+        return $this;
     }
 
     public function hasBookReviews(): bool
@@ -1720,7 +1851,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetBookReviews(): self
     {
-        return $this->remove('bookReviews');
+        $this->remove('bookReviews');
+        return $this;
     }
 
     /**
@@ -1736,7 +1868,8 @@ final class QueryRoot extends ObjectData
      */
     public function setBookReview($value): self
     {
-        return $this->set('bookReview', $value);
+        $this->set('bookReview', $value);
+        return $this;
     }
 
     public function hasBookReview(): bool
@@ -1746,7 +1879,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetBookReview(): self
     {
-        return $this->remove('bookReview');
+        $this->remove('bookReview');
+        return $this;
     }
 
     /**
@@ -1762,7 +1896,8 @@ final class QueryRoot extends ObjectData
      */
     public function setBookReviewCount($value): self
     {
-        return $this->set('bookReviewCount', $value);
+        $this->set('bookReviewCount', $value);
+        return $this;
     }
 
     public function hasBookReviewCount(): bool
@@ -1772,7 +1907,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetBookReviewCount(): self
     {
-        return $this->remove('bookReviewCount');
+        $this->remove('bookReviewCount');
+        return $this;
     }
 
     /**
@@ -1788,7 +1924,8 @@ final class QueryRoot extends ObjectData
      */
     public function setWorkFeaturedVideos($value): self
     {
-        return $this->set('workFeaturedVideos', $value);
+        $this->set('workFeaturedVideos', $value);
+        return $this;
     }
 
     public function hasWorkFeaturedVideos(): bool
@@ -1798,7 +1935,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetWorkFeaturedVideos(): self
     {
-        return $this->remove('workFeaturedVideos');
+        $this->remove('workFeaturedVideos');
+        return $this;
     }
 
     /**
@@ -1814,7 +1952,8 @@ final class QueryRoot extends ObjectData
      */
     public function setWorkFeaturedVideo($value): self
     {
-        return $this->set('workFeaturedVideo', $value);
+        $this->set('workFeaturedVideo', $value);
+        return $this;
     }
 
     public function hasWorkFeaturedVideo(): bool
@@ -1824,7 +1963,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetWorkFeaturedVideo(): self
     {
-        return $this->remove('workFeaturedVideo');
+        $this->remove('workFeaturedVideo');
+        return $this;
     }
 
     /**
@@ -1840,7 +1980,8 @@ final class QueryRoot extends ObjectData
      */
     public function setWorkFeaturedVideoCount($value): self
     {
-        return $this->set('workFeaturedVideoCount', $value);
+        $this->set('workFeaturedVideoCount', $value);
+        return $this;
     }
 
     public function hasWorkFeaturedVideoCount(): bool
@@ -1850,7 +1991,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetWorkFeaturedVideoCount(): self
     {
-        return $this->remove('workFeaturedVideoCount');
+        $this->remove('workFeaturedVideoCount');
+        return $this;
     }
 
     /**
@@ -1866,7 +2008,8 @@ final class QueryRoot extends ObjectData
      */
     public function setTitle($value): self
     {
-        return $this->set('title', $value);
+        $this->set('title', $value);
+        return $this;
     }
 
     public function hasTitle(): bool
@@ -1876,7 +2019,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetTitle(): self
     {
-        return $this->remove('title');
+        $this->remove('title');
+        return $this;
     }
 
     /**
@@ -1892,7 +2036,8 @@ final class QueryRoot extends ObjectData
      */
     public function setTitles($value): self
     {
-        return $this->set('titles', $value);
+        $this->set('titles', $value);
+        return $this;
     }
 
     public function hasTitles(): bool
@@ -1902,7 +2047,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetTitles(): self
     {
-        return $this->remove('titles');
+        $this->remove('titles');
+        return $this;
     }
 
     /**
@@ -1918,7 +2064,8 @@ final class QueryRoot extends ObjectData
      */
     public function setAbstract($value): self
     {
-        return $this->set('abstract', $value);
+        $this->set('abstract', $value);
+        return $this;
     }
 
     public function hasAbstract(): bool
@@ -1928,7 +2075,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetAbstract(): self
     {
-        return $this->remove('abstract');
+        $this->remove('abstract');
+        return $this;
     }
 
     /**
@@ -1944,7 +2092,8 @@ final class QueryRoot extends ObjectData
      */
     public function setAbstracts($value): self
     {
-        return $this->set('abstracts', $value);
+        $this->set('abstracts', $value);
+        return $this;
     }
 
     public function hasAbstracts(): bool
@@ -1954,7 +2103,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetAbstracts(): self
     {
-        return $this->remove('abstracts');
+        $this->remove('abstracts');
+        return $this;
     }
 
     /**
@@ -1970,7 +2120,8 @@ final class QueryRoot extends ObjectData
      */
     public function setBiography($value): self
     {
-        return $this->set('biography', $value);
+        $this->set('biography', $value);
+        return $this;
     }
 
     public function hasBiography(): bool
@@ -1980,7 +2131,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetBiography(): self
     {
-        return $this->remove('biography');
+        $this->remove('biography');
+        return $this;
     }
 
     /**
@@ -1996,7 +2148,8 @@ final class QueryRoot extends ObjectData
      */
     public function setBiographies($value): self
     {
-        return $this->set('biographies', $value);
+        $this->set('biographies', $value);
+        return $this;
     }
 
     public function hasBiographies(): bool
@@ -2006,7 +2159,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetBiographies(): self
     {
-        return $this->remove('biographies');
+        $this->remove('biographies');
+        return $this;
     }
 
     /**
@@ -2022,7 +2176,8 @@ final class QueryRoot extends ObjectData
      */
     public function setContacts($value): self
     {
-        return $this->set('contacts', $value);
+        $this->set('contacts', $value);
+        return $this;
     }
 
     public function hasContacts(): bool
@@ -2032,7 +2187,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetContacts(): self
     {
-        return $this->remove('contacts');
+        $this->remove('contacts');
+        return $this;
     }
 
     /**
@@ -2048,7 +2204,8 @@ final class QueryRoot extends ObjectData
      */
     public function setContact($value): self
     {
-        return $this->set('contact', $value);
+        $this->set('contact', $value);
+        return $this;
     }
 
     public function hasContact(): bool
@@ -2058,7 +2215,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetContact(): self
     {
-        return $this->remove('contact');
+        $this->remove('contact');
+        return $this;
     }
 
     /**
@@ -2074,7 +2232,8 @@ final class QueryRoot extends ObjectData
      */
     public function setContactCount($value): self
     {
-        return $this->set('contactCount', $value);
+        $this->set('contactCount', $value);
+        return $this;
     }
 
     public function hasContactCount(): bool
@@ -2084,7 +2243,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetContactCount(): self
     {
-        return $this->remove('contactCount');
+        $this->remove('contactCount');
+        return $this;
     }
 
     /**
@@ -2100,7 +2260,8 @@ final class QueryRoot extends ObjectData
      */
     public function setMe($value): self
     {
-        return $this->set('me', $value);
+        $this->set('me', $value);
+        return $this;
     }
 
     public function hasMe(): bool
@@ -2110,7 +2271,8 @@ final class QueryRoot extends ObjectData
 
     public function unsetMe(): self
     {
-        return $this->remove('me');
+        $this->remove('me');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

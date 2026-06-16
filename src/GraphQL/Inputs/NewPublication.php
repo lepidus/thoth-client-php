@@ -20,7 +20,8 @@ final class NewPublication extends InputObject
      */
     public function setPublicationType($value): self
     {
-        return $this->set('publicationType', $value);
+        $this->set('publicationType', $value);
+        return $this;
     }
 
     public function hasPublicationType(): bool
@@ -30,7 +31,8 @@ final class NewPublication extends InputObject
 
     public function unsetPublicationType(): self
     {
-        return $this->remove('publicationType');
+        $this->remove('publicationType');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class NewPublication extends InputObject
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -56,7 +59,8 @@ final class NewPublication extends InputObject
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class NewPublication extends InputObject
      */
     public function setIsbn($value): self
     {
-        return $this->set('isbn', $value);
+        $this->set('isbn', $value);
+        return $this;
     }
 
     public function hasIsbn(): bool
@@ -82,7 +87,8 @@ final class NewPublication extends InputObject
 
     public function unsetIsbn(): self
     {
-        return $this->remove('isbn');
+        $this->remove('isbn');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class NewPublication extends InputObject
      */
     public function setWidthMm($value): self
     {
-        return $this->set('widthMm', $value);
+        $this->set('widthMm', $value);
+        return $this;
     }
 
     public function hasWidthMm(): bool
@@ -108,7 +115,8 @@ final class NewPublication extends InputObject
 
     public function unsetWidthMm(): self
     {
-        return $this->remove('widthMm');
+        $this->remove('widthMm');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class NewPublication extends InputObject
      */
     public function setWidthIn($value): self
     {
-        return $this->set('widthIn', $value);
+        $this->set('widthIn', $value);
+        return $this;
     }
 
     public function hasWidthIn(): bool
@@ -134,7 +143,8 @@ final class NewPublication extends InputObject
 
     public function unsetWidthIn(): self
     {
-        return $this->remove('widthIn');
+        $this->remove('widthIn');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class NewPublication extends InputObject
      */
     public function setHeightMm($value): self
     {
-        return $this->set('heightMm', $value);
+        $this->set('heightMm', $value);
+        return $this;
     }
 
     public function hasHeightMm(): bool
@@ -160,7 +171,8 @@ final class NewPublication extends InputObject
 
     public function unsetHeightMm(): self
     {
-        return $this->remove('heightMm');
+        $this->remove('heightMm');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class NewPublication extends InputObject
      */
     public function setHeightIn($value): self
     {
-        return $this->set('heightIn', $value);
+        $this->set('heightIn', $value);
+        return $this;
     }
 
     public function hasHeightIn(): bool
@@ -186,7 +199,8 @@ final class NewPublication extends InputObject
 
     public function unsetHeightIn(): self
     {
-        return $this->remove('heightIn');
+        $this->remove('heightIn');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class NewPublication extends InputObject
      */
     public function setDepthMm($value): self
     {
-        return $this->set('depthMm', $value);
+        $this->set('depthMm', $value);
+        return $this;
     }
 
     public function hasDepthMm(): bool
@@ -212,7 +227,8 @@ final class NewPublication extends InputObject
 
     public function unsetDepthMm(): self
     {
-        return $this->remove('depthMm');
+        $this->remove('depthMm');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class NewPublication extends InputObject
      */
     public function setDepthIn($value): self
     {
-        return $this->set('depthIn', $value);
+        $this->set('depthIn', $value);
+        return $this;
     }
 
     public function hasDepthIn(): bool
@@ -238,7 +255,8 @@ final class NewPublication extends InputObject
 
     public function unsetDepthIn(): self
     {
-        return $this->remove('depthIn');
+        $this->remove('depthIn');
+        return $this;
     }
 
     /**
@@ -254,7 +272,8 @@ final class NewPublication extends InputObject
      */
     public function setWeightG($value): self
     {
-        return $this->set('weightG', $value);
+        $this->set('weightG', $value);
+        return $this;
     }
 
     public function hasWeightG(): bool
@@ -264,7 +283,8 @@ final class NewPublication extends InputObject
 
     public function unsetWeightG(): self
     {
-        return $this->remove('weightG');
+        $this->remove('weightG');
+        return $this;
     }
 
     /**
@@ -280,7 +300,8 @@ final class NewPublication extends InputObject
      */
     public function setWeightOz($value): self
     {
-        return $this->set('weightOz', $value);
+        $this->set('weightOz', $value);
+        return $this;
     }
 
     public function hasWeightOz(): bool
@@ -290,7 +311,8 @@ final class NewPublication extends InputObject
 
     public function unsetWeightOz(): self
     {
-        return $this->remove('weightOz');
+        $this->remove('weightOz');
+        return $this;
     }
 
     /**
@@ -306,7 +328,8 @@ final class NewPublication extends InputObject
      */
     public function setAccessibilityStandard($value): self
     {
-        return $this->set('accessibilityStandard', $value);
+        $this->set('accessibilityStandard', $value);
+        return $this;
     }
 
     public function hasAccessibilityStandard(): bool
@@ -316,7 +339,8 @@ final class NewPublication extends InputObject
 
     public function unsetAccessibilityStandard(): self
     {
-        return $this->remove('accessibilityStandard');
+        $this->remove('accessibilityStandard');
+        return $this;
     }
 
     /**
@@ -332,7 +356,8 @@ final class NewPublication extends InputObject
      */
     public function setAccessibilityAdditionalStandard($value): self
     {
-        return $this->set('accessibilityAdditionalStandard', $value);
+        $this->set('accessibilityAdditionalStandard', $value);
+        return $this;
     }
 
     public function hasAccessibilityAdditionalStandard(): bool
@@ -342,7 +367,8 @@ final class NewPublication extends InputObject
 
     public function unsetAccessibilityAdditionalStandard(): self
     {
-        return $this->remove('accessibilityAdditionalStandard');
+        $this->remove('accessibilityAdditionalStandard');
+        return $this;
     }
 
     /**
@@ -358,7 +384,8 @@ final class NewPublication extends InputObject
      */
     public function setAccessibilityException($value): self
     {
-        return $this->set('accessibilityException', $value);
+        $this->set('accessibilityException', $value);
+        return $this;
     }
 
     public function hasAccessibilityException(): bool
@@ -368,7 +395,8 @@ final class NewPublication extends InputObject
 
     public function unsetAccessibilityException(): self
     {
-        return $this->remove('accessibilityException');
+        $this->remove('accessibilityException');
+        return $this;
     }
 
     /**
@@ -384,7 +412,8 @@ final class NewPublication extends InputObject
      */
     public function setAccessibilityReportUrl($value): self
     {
-        return $this->set('accessibilityReportUrl', $value);
+        $this->set('accessibilityReportUrl', $value);
+        return $this;
     }
 
     public function hasAccessibilityReportUrl(): bool
@@ -394,7 +423,8 @@ final class NewPublication extends InputObject
 
     public function unsetAccessibilityReportUrl(): self
     {
-        return $this->remove('accessibilityReportUrl');
+        $this->remove('accessibilityReportUrl');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

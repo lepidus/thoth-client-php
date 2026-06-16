@@ -20,7 +20,8 @@ final class PatchContact extends InputObject
      */
     public function setContactId($value): self
     {
-        return $this->set('contactId', $value);
+        $this->set('contactId', $value);
+        return $this;
     }
 
     public function hasContactId(): bool
@@ -30,7 +31,8 @@ final class PatchContact extends InputObject
 
     public function unsetContactId(): self
     {
-        return $this->remove('contactId');
+        $this->remove('contactId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class PatchContact extends InputObject
      */
     public function setPublisherId($value): self
     {
-        return $this->set('publisherId', $value);
+        $this->set('publisherId', $value);
+        return $this;
     }
 
     public function hasPublisherId(): bool
@@ -56,7 +59,8 @@ final class PatchContact extends InputObject
 
     public function unsetPublisherId(): self
     {
-        return $this->remove('publisherId');
+        $this->remove('publisherId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class PatchContact extends InputObject
      */
     public function setContactType($value): self
     {
-        return $this->set('contactType', $value);
+        $this->set('contactType', $value);
+        return $this;
     }
 
     public function hasContactType(): bool
@@ -82,7 +87,8 @@ final class PatchContact extends InputObject
 
     public function unsetContactType(): self
     {
-        return $this->remove('contactType');
+        $this->remove('contactType');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class PatchContact extends InputObject
      */
     public function setEmail($value): self
     {
-        return $this->set('email', $value);
+        $this->set('email', $value);
+        return $this;
     }
 
     public function hasEmail(): bool
@@ -108,7 +115,8 @@ final class PatchContact extends InputObject
 
     public function unsetEmail(): self
     {
-        return $this->remove('email');
+        $this->remove('email');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

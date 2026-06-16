@@ -20,7 +20,8 @@ final class PatchFunding extends InputObject
      */
     public function setFundingId($value): self
     {
-        return $this->set('fundingId', $value);
+        $this->set('fundingId', $value);
+        return $this;
     }
 
     public function hasFundingId(): bool
@@ -30,7 +31,8 @@ final class PatchFunding extends InputObject
 
     public function unsetFundingId(): self
     {
-        return $this->remove('fundingId');
+        $this->remove('fundingId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class PatchFunding extends InputObject
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -56,7 +59,8 @@ final class PatchFunding extends InputObject
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class PatchFunding extends InputObject
      */
     public function setInstitutionId($value): self
     {
-        return $this->set('institutionId', $value);
+        $this->set('institutionId', $value);
+        return $this;
     }
 
     public function hasInstitutionId(): bool
@@ -82,7 +87,8 @@ final class PatchFunding extends InputObject
 
     public function unsetInstitutionId(): self
     {
-        return $this->remove('institutionId');
+        $this->remove('institutionId');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class PatchFunding extends InputObject
      */
     public function setProgram($value): self
     {
-        return $this->set('program', $value);
+        $this->set('program', $value);
+        return $this;
     }
 
     public function hasProgram(): bool
@@ -108,7 +115,8 @@ final class PatchFunding extends InputObject
 
     public function unsetProgram(): self
     {
-        return $this->remove('program');
+        $this->remove('program');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class PatchFunding extends InputObject
      */
     public function setProjectName($value): self
     {
-        return $this->set('projectName', $value);
+        $this->set('projectName', $value);
+        return $this;
     }
 
     public function hasProjectName(): bool
@@ -134,7 +143,8 @@ final class PatchFunding extends InputObject
 
     public function unsetProjectName(): self
     {
-        return $this->remove('projectName');
+        $this->remove('projectName');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class PatchFunding extends InputObject
      */
     public function setProjectShortname($value): self
     {
-        return $this->set('projectShortname', $value);
+        $this->set('projectShortname', $value);
+        return $this;
     }
 
     public function hasProjectShortname(): bool
@@ -160,7 +171,8 @@ final class PatchFunding extends InputObject
 
     public function unsetProjectShortname(): self
     {
-        return $this->remove('projectShortname');
+        $this->remove('projectShortname');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class PatchFunding extends InputObject
      */
     public function setGrantNumber($value): self
     {
-        return $this->set('grantNumber', $value);
+        $this->set('grantNumber', $value);
+        return $this;
     }
 
     public function hasGrantNumber(): bool
@@ -186,7 +199,8 @@ final class PatchFunding extends InputObject
 
     public function unsetGrantNumber(): self
     {
-        return $this->remove('grantNumber');
+        $this->remove('grantNumber');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

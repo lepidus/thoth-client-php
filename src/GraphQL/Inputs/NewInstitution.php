@@ -20,7 +20,8 @@ final class NewInstitution extends InputObject
      */
     public function setInstitutionName($value): self
     {
-        return $this->set('institutionName', $value);
+        $this->set('institutionName', $value);
+        return $this;
     }
 
     public function hasInstitutionName(): bool
@@ -30,7 +31,8 @@ final class NewInstitution extends InputObject
 
     public function unsetInstitutionName(): self
     {
-        return $this->remove('institutionName');
+        $this->remove('institutionName');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class NewInstitution extends InputObject
      */
     public function setInstitutionDoi($value): self
     {
-        return $this->set('institutionDoi', $value);
+        $this->set('institutionDoi', $value);
+        return $this;
     }
 
     public function hasInstitutionDoi(): bool
@@ -56,7 +59,8 @@ final class NewInstitution extends InputObject
 
     public function unsetInstitutionDoi(): self
     {
-        return $this->remove('institutionDoi');
+        $this->remove('institutionDoi');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class NewInstitution extends InputObject
      */
     public function setRor($value): self
     {
-        return $this->set('ror', $value);
+        $this->set('ror', $value);
+        return $this;
     }
 
     public function hasRor(): bool
@@ -82,7 +87,8 @@ final class NewInstitution extends InputObject
 
     public function unsetRor(): self
     {
-        return $this->remove('ror');
+        $this->remove('ror');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class NewInstitution extends InputObject
      */
     public function setCountryCode($value): self
     {
-        return $this->set('countryCode', $value);
+        $this->set('countryCode', $value);
+        return $this;
     }
 
     public function hasCountryCode(): bool
@@ -108,7 +115,8 @@ final class NewInstitution extends InputObject
 
     public function unsetCountryCode(): self
     {
-        return $this->remove('countryCode');
+        $this->remove('countryCode');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

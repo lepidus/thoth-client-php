@@ -20,7 +20,8 @@ final class CompleteFileUpload extends InputObject
      */
     public function setFileUploadId($value): self
     {
-        return $this->set('fileUploadId', $value);
+        $this->set('fileUploadId', $value);
+        return $this;
     }
 
     public function hasFileUploadId(): bool
@@ -30,7 +31,8 @@ final class CompleteFileUpload extends InputObject
 
     public function unsetFileUploadId(): self
     {
-        return $this->remove('fileUploadId');
+        $this->remove('fileUploadId');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

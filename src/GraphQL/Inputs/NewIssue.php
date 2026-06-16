@@ -20,7 +20,8 @@ final class NewIssue extends InputObject
      */
     public function setSeriesId($value): self
     {
-        return $this->set('seriesId', $value);
+        $this->set('seriesId', $value);
+        return $this;
     }
 
     public function hasSeriesId(): bool
@@ -30,7 +31,8 @@ final class NewIssue extends InputObject
 
     public function unsetSeriesId(): self
     {
-        return $this->remove('seriesId');
+        $this->remove('seriesId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class NewIssue extends InputObject
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -56,7 +59,8 @@ final class NewIssue extends InputObject
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class NewIssue extends InputObject
      */
     public function setIssueOrdinal($value): self
     {
-        return $this->set('issueOrdinal', $value);
+        $this->set('issueOrdinal', $value);
+        return $this;
     }
 
     public function hasIssueOrdinal(): bool
@@ -82,7 +87,8 @@ final class NewIssue extends InputObject
 
     public function unsetIssueOrdinal(): self
     {
-        return $this->remove('issueOrdinal');
+        $this->remove('issueOrdinal');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class NewIssue extends InputObject
      */
     public function setIssueNumber($value): self
     {
-        return $this->set('issueNumber', $value);
+        $this->set('issueNumber', $value);
+        return $this;
     }
 
     public function hasIssueNumber(): bool
@@ -108,7 +115,8 @@ final class NewIssue extends InputObject
 
     public function unsetIssueNumber(): self
     {
-        return $this->remove('issueNumber');
+        $this->remove('issueNumber');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

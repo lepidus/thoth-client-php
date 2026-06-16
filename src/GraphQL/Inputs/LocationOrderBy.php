@@ -20,7 +20,8 @@ final class LocationOrderBy extends InputObject
      */
     public function setField($value): self
     {
-        return $this->set('field', $value);
+        $this->set('field', $value);
+        return $this;
     }
 
     public function hasField(): bool
@@ -30,7 +31,8 @@ final class LocationOrderBy extends InputObject
 
     public function unsetField(): self
     {
-        return $this->remove('field');
+        $this->remove('field');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class LocationOrderBy extends InputObject
      */
     public function setDirection($value): self
     {
-        return $this->set('direction', $value);
+        $this->set('direction', $value);
+        return $this;
     }
 
     public function hasDirection(): bool
@@ -56,7 +59,8 @@ final class LocationOrderBy extends InputObject
 
     public function unsetDirection(): self
     {
-        return $this->remove('direction');
+        $this->remove('direction');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

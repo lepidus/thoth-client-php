@@ -20,7 +20,8 @@ final class NewTitle extends InputObject
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -30,7 +31,8 @@ final class NewTitle extends InputObject
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class NewTitle extends InputObject
      */
     public function setLocaleCode($value): self
     {
-        return $this->set('localeCode', $value);
+        $this->set('localeCode', $value);
+        return $this;
     }
 
     public function hasLocaleCode(): bool
@@ -56,7 +59,8 @@ final class NewTitle extends InputObject
 
     public function unsetLocaleCode(): self
     {
-        return $this->remove('localeCode');
+        $this->remove('localeCode');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class NewTitle extends InputObject
      */
     public function setFullTitle($value): self
     {
-        return $this->set('fullTitle', $value);
+        $this->set('fullTitle', $value);
+        return $this;
     }
 
     public function hasFullTitle(): bool
@@ -82,7 +87,8 @@ final class NewTitle extends InputObject
 
     public function unsetFullTitle(): self
     {
-        return $this->remove('fullTitle');
+        $this->remove('fullTitle');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class NewTitle extends InputObject
      */
     public function setTitle($value): self
     {
-        return $this->set('title', $value);
+        $this->set('title', $value);
+        return $this;
     }
 
     public function hasTitle(): bool
@@ -108,7 +115,8 @@ final class NewTitle extends InputObject
 
     public function unsetTitle(): self
     {
-        return $this->remove('title');
+        $this->remove('title');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class NewTitle extends InputObject
      */
     public function setSubtitle($value): self
     {
-        return $this->set('subtitle', $value);
+        $this->set('subtitle', $value);
+        return $this;
     }
 
     public function hasSubtitle(): bool
@@ -134,7 +143,8 @@ final class NewTitle extends InputObject
 
     public function unsetSubtitle(): self
     {
-        return $this->remove('subtitle');
+        $this->remove('subtitle');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class NewTitle extends InputObject
      */
     public function setCanonical($value): self
     {
-        return $this->set('canonical', $value);
+        $this->set('canonical', $value);
+        return $this;
     }
 
     public function hasCanonical(): bool
@@ -160,7 +171,8 @@ final class NewTitle extends InputObject
 
     public function unsetCanonical(): self
     {
-        return $this->remove('canonical');
+        $this->remove('canonical');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

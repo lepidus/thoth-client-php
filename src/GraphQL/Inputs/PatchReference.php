@@ -20,7 +20,8 @@ final class PatchReference extends InputObject
      */
     public function setReferenceId($value): self
     {
-        return $this->set('referenceId', $value);
+        $this->set('referenceId', $value);
+        return $this;
     }
 
     public function hasReferenceId(): bool
@@ -30,7 +31,8 @@ final class PatchReference extends InputObject
 
     public function unsetReferenceId(): self
     {
-        return $this->remove('referenceId');
+        $this->remove('referenceId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class PatchReference extends InputObject
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -56,7 +59,8 @@ final class PatchReference extends InputObject
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class PatchReference extends InputObject
      */
     public function setReferenceOrdinal($value): self
     {
-        return $this->set('referenceOrdinal', $value);
+        $this->set('referenceOrdinal', $value);
+        return $this;
     }
 
     public function hasReferenceOrdinal(): bool
@@ -82,7 +87,8 @@ final class PatchReference extends InputObject
 
     public function unsetReferenceOrdinal(): self
     {
-        return $this->remove('referenceOrdinal');
+        $this->remove('referenceOrdinal');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class PatchReference extends InputObject
      */
     public function setDoi($value): self
     {
-        return $this->set('doi', $value);
+        $this->set('doi', $value);
+        return $this;
     }
 
     public function hasDoi(): bool
@@ -108,7 +115,8 @@ final class PatchReference extends InputObject
 
     public function unsetDoi(): self
     {
-        return $this->remove('doi');
+        $this->remove('doi');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class PatchReference extends InputObject
      */
     public function setUnstructuredCitation($value): self
     {
-        return $this->set('unstructuredCitation', $value);
+        $this->set('unstructuredCitation', $value);
+        return $this;
     }
 
     public function hasUnstructuredCitation(): bool
@@ -134,7 +143,8 @@ final class PatchReference extends InputObject
 
     public function unsetUnstructuredCitation(): self
     {
-        return $this->remove('unstructuredCitation');
+        $this->remove('unstructuredCitation');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class PatchReference extends InputObject
      */
     public function setIssn($value): self
     {
-        return $this->set('issn', $value);
+        $this->set('issn', $value);
+        return $this;
     }
 
     public function hasIssn(): bool
@@ -160,7 +171,8 @@ final class PatchReference extends InputObject
 
     public function unsetIssn(): self
     {
-        return $this->remove('issn');
+        $this->remove('issn');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class PatchReference extends InputObject
      */
     public function setIsbn($value): self
     {
-        return $this->set('isbn', $value);
+        $this->set('isbn', $value);
+        return $this;
     }
 
     public function hasIsbn(): bool
@@ -186,7 +199,8 @@ final class PatchReference extends InputObject
 
     public function unsetIsbn(): self
     {
-        return $this->remove('isbn');
+        $this->remove('isbn');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class PatchReference extends InputObject
      */
     public function setJournalTitle($value): self
     {
-        return $this->set('journalTitle', $value);
+        $this->set('journalTitle', $value);
+        return $this;
     }
 
     public function hasJournalTitle(): bool
@@ -212,7 +227,8 @@ final class PatchReference extends InputObject
 
     public function unsetJournalTitle(): self
     {
-        return $this->remove('journalTitle');
+        $this->remove('journalTitle');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class PatchReference extends InputObject
      */
     public function setArticleTitle($value): self
     {
-        return $this->set('articleTitle', $value);
+        $this->set('articleTitle', $value);
+        return $this;
     }
 
     public function hasArticleTitle(): bool
@@ -238,7 +255,8 @@ final class PatchReference extends InputObject
 
     public function unsetArticleTitle(): self
     {
-        return $this->remove('articleTitle');
+        $this->remove('articleTitle');
+        return $this;
     }
 
     /**
@@ -254,7 +272,8 @@ final class PatchReference extends InputObject
      */
     public function setSeriesTitle($value): self
     {
-        return $this->set('seriesTitle', $value);
+        $this->set('seriesTitle', $value);
+        return $this;
     }
 
     public function hasSeriesTitle(): bool
@@ -264,7 +283,8 @@ final class PatchReference extends InputObject
 
     public function unsetSeriesTitle(): self
     {
-        return $this->remove('seriesTitle');
+        $this->remove('seriesTitle');
+        return $this;
     }
 
     /**
@@ -280,7 +300,8 @@ final class PatchReference extends InputObject
      */
     public function setVolumeTitle($value): self
     {
-        return $this->set('volumeTitle', $value);
+        $this->set('volumeTitle', $value);
+        return $this;
     }
 
     public function hasVolumeTitle(): bool
@@ -290,7 +311,8 @@ final class PatchReference extends InputObject
 
     public function unsetVolumeTitle(): self
     {
-        return $this->remove('volumeTitle');
+        $this->remove('volumeTitle');
+        return $this;
     }
 
     /**
@@ -306,7 +328,8 @@ final class PatchReference extends InputObject
      */
     public function setEdition($value): self
     {
-        return $this->set('edition', $value);
+        $this->set('edition', $value);
+        return $this;
     }
 
     public function hasEdition(): bool
@@ -316,7 +339,8 @@ final class PatchReference extends InputObject
 
     public function unsetEdition(): self
     {
-        return $this->remove('edition');
+        $this->remove('edition');
+        return $this;
     }
 
     /**
@@ -332,7 +356,8 @@ final class PatchReference extends InputObject
      */
     public function setAuthor($value): self
     {
-        return $this->set('author', $value);
+        $this->set('author', $value);
+        return $this;
     }
 
     public function hasAuthor(): bool
@@ -342,7 +367,8 @@ final class PatchReference extends InputObject
 
     public function unsetAuthor(): self
     {
-        return $this->remove('author');
+        $this->remove('author');
+        return $this;
     }
 
     /**
@@ -358,7 +384,8 @@ final class PatchReference extends InputObject
      */
     public function setVolume($value): self
     {
-        return $this->set('volume', $value);
+        $this->set('volume', $value);
+        return $this;
     }
 
     public function hasVolume(): bool
@@ -368,7 +395,8 @@ final class PatchReference extends InputObject
 
     public function unsetVolume(): self
     {
-        return $this->remove('volume');
+        $this->remove('volume');
+        return $this;
     }
 
     /**
@@ -384,7 +412,8 @@ final class PatchReference extends InputObject
      */
     public function setIssue($value): self
     {
-        return $this->set('issue', $value);
+        $this->set('issue', $value);
+        return $this;
     }
 
     public function hasIssue(): bool
@@ -394,7 +423,8 @@ final class PatchReference extends InputObject
 
     public function unsetIssue(): self
     {
-        return $this->remove('issue');
+        $this->remove('issue');
+        return $this;
     }
 
     /**
@@ -410,7 +440,8 @@ final class PatchReference extends InputObject
      */
     public function setFirstPage($value): self
     {
-        return $this->set('firstPage', $value);
+        $this->set('firstPage', $value);
+        return $this;
     }
 
     public function hasFirstPage(): bool
@@ -420,7 +451,8 @@ final class PatchReference extends InputObject
 
     public function unsetFirstPage(): self
     {
-        return $this->remove('firstPage');
+        $this->remove('firstPage');
+        return $this;
     }
 
     /**
@@ -436,7 +468,8 @@ final class PatchReference extends InputObject
      */
     public function setComponentNumber($value): self
     {
-        return $this->set('componentNumber', $value);
+        $this->set('componentNumber', $value);
+        return $this;
     }
 
     public function hasComponentNumber(): bool
@@ -446,7 +479,8 @@ final class PatchReference extends InputObject
 
     public function unsetComponentNumber(): self
     {
-        return $this->remove('componentNumber');
+        $this->remove('componentNumber');
+        return $this;
     }
 
     /**
@@ -462,7 +496,8 @@ final class PatchReference extends InputObject
      */
     public function setStandardDesignator($value): self
     {
-        return $this->set('standardDesignator', $value);
+        $this->set('standardDesignator', $value);
+        return $this;
     }
 
     public function hasStandardDesignator(): bool
@@ -472,7 +507,8 @@ final class PatchReference extends InputObject
 
     public function unsetStandardDesignator(): self
     {
-        return $this->remove('standardDesignator');
+        $this->remove('standardDesignator');
+        return $this;
     }
 
     /**
@@ -488,7 +524,8 @@ final class PatchReference extends InputObject
      */
     public function setStandardsBodyName($value): self
     {
-        return $this->set('standardsBodyName', $value);
+        $this->set('standardsBodyName', $value);
+        return $this;
     }
 
     public function hasStandardsBodyName(): bool
@@ -498,7 +535,8 @@ final class PatchReference extends InputObject
 
     public function unsetStandardsBodyName(): self
     {
-        return $this->remove('standardsBodyName');
+        $this->remove('standardsBodyName');
+        return $this;
     }
 
     /**
@@ -514,7 +552,8 @@ final class PatchReference extends InputObject
      */
     public function setStandardsBodyAcronym($value): self
     {
-        return $this->set('standardsBodyAcronym', $value);
+        $this->set('standardsBodyAcronym', $value);
+        return $this;
     }
 
     public function hasStandardsBodyAcronym(): bool
@@ -524,7 +563,8 @@ final class PatchReference extends InputObject
 
     public function unsetStandardsBodyAcronym(): self
     {
-        return $this->remove('standardsBodyAcronym');
+        $this->remove('standardsBodyAcronym');
+        return $this;
     }
 
     /**
@@ -540,7 +580,8 @@ final class PatchReference extends InputObject
      */
     public function setUrl($value): self
     {
-        return $this->set('url', $value);
+        $this->set('url', $value);
+        return $this;
     }
 
     public function hasUrl(): bool
@@ -550,7 +591,8 @@ final class PatchReference extends InputObject
 
     public function unsetUrl(): self
     {
-        return $this->remove('url');
+        $this->remove('url');
+        return $this;
     }
 
     /**
@@ -566,7 +608,8 @@ final class PatchReference extends InputObject
      */
     public function setPublicationDate($value): self
     {
-        return $this->set('publicationDate', $value);
+        $this->set('publicationDate', $value);
+        return $this;
     }
 
     public function hasPublicationDate(): bool
@@ -576,7 +619,8 @@ final class PatchReference extends InputObject
 
     public function unsetPublicationDate(): self
     {
-        return $this->remove('publicationDate');
+        $this->remove('publicationDate');
+        return $this;
     }
 
     /**
@@ -592,7 +636,8 @@ final class PatchReference extends InputObject
      */
     public function setRetrievalDate($value): self
     {
-        return $this->set('retrievalDate', $value);
+        $this->set('retrievalDate', $value);
+        return $this;
     }
 
     public function hasRetrievalDate(): bool
@@ -602,7 +647,8 @@ final class PatchReference extends InputObject
 
     public function unsetRetrievalDate(): self
     {
-        return $this->remove('retrievalDate');
+        $this->remove('retrievalDate');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

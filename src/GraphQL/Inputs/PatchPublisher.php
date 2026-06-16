@@ -20,7 +20,8 @@ final class PatchPublisher extends InputObject
      */
     public function setPublisherId($value): self
     {
-        return $this->set('publisherId', $value);
+        $this->set('publisherId', $value);
+        return $this;
     }
 
     public function hasPublisherId(): bool
@@ -30,7 +31,8 @@ final class PatchPublisher extends InputObject
 
     public function unsetPublisherId(): self
     {
-        return $this->remove('publisherId');
+        $this->remove('publisherId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class PatchPublisher extends InputObject
      */
     public function setPublisherName($value): self
     {
-        return $this->set('publisherName', $value);
+        $this->set('publisherName', $value);
+        return $this;
     }
 
     public function hasPublisherName(): bool
@@ -56,7 +59,8 @@ final class PatchPublisher extends InputObject
 
     public function unsetPublisherName(): self
     {
-        return $this->remove('publisherName');
+        $this->remove('publisherName');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class PatchPublisher extends InputObject
      */
     public function setPublisherShortname($value): self
     {
-        return $this->set('publisherShortname', $value);
+        $this->set('publisherShortname', $value);
+        return $this;
     }
 
     public function hasPublisherShortname(): bool
@@ -82,7 +87,8 @@ final class PatchPublisher extends InputObject
 
     public function unsetPublisherShortname(): self
     {
-        return $this->remove('publisherShortname');
+        $this->remove('publisherShortname');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class PatchPublisher extends InputObject
      */
     public function setPublisherUrl($value): self
     {
-        return $this->set('publisherUrl', $value);
+        $this->set('publisherUrl', $value);
+        return $this;
     }
 
     public function hasPublisherUrl(): bool
@@ -108,7 +115,8 @@ final class PatchPublisher extends InputObject
 
     public function unsetPublisherUrl(): self
     {
-        return $this->remove('publisherUrl');
+        $this->remove('publisherUrl');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class PatchPublisher extends InputObject
      */
     public function setZitadelId($value): self
     {
-        return $this->set('zitadelId', $value);
+        $this->set('zitadelId', $value);
+        return $this;
     }
 
     public function hasZitadelId(): bool
@@ -134,7 +143,8 @@ final class PatchPublisher extends InputObject
 
     public function unsetZitadelId(): self
     {
-        return $this->remove('zitadelId');
+        $this->remove('zitadelId');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class PatchPublisher extends InputObject
      */
     public function setAccessibilityStatement($value): self
     {
-        return $this->set('accessibilityStatement', $value);
+        $this->set('accessibilityStatement', $value);
+        return $this;
     }
 
     public function hasAccessibilityStatement(): bool
@@ -160,7 +171,8 @@ final class PatchPublisher extends InputObject
 
     public function unsetAccessibilityStatement(): self
     {
-        return $this->remove('accessibilityStatement');
+        $this->remove('accessibilityStatement');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class PatchPublisher extends InputObject
      */
     public function setAccessibilityReportUrl($value): self
     {
-        return $this->set('accessibilityReportUrl', $value);
+        $this->set('accessibilityReportUrl', $value);
+        return $this;
     }
 
     public function hasAccessibilityReportUrl(): bool
@@ -186,7 +199,8 @@ final class PatchPublisher extends InputObject
 
     public function unsetAccessibilityReportUrl(): self
     {
-        return $this->remove('accessibilityReportUrl');
+        $this->remove('accessibilityReportUrl');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

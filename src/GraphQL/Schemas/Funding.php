@@ -20,7 +20,8 @@ final class Funding extends ObjectData
      */
     public function setFundingId($value): self
     {
-        return $this->set('fundingId', $value);
+        $this->set('fundingId', $value);
+        return $this;
     }
 
     public function hasFundingId(): bool
@@ -30,7 +31,8 @@ final class Funding extends ObjectData
 
     public function unsetFundingId(): self
     {
-        return $this->remove('fundingId');
+        $this->remove('fundingId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class Funding extends ObjectData
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -56,7 +59,8 @@ final class Funding extends ObjectData
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class Funding extends ObjectData
      */
     public function setInstitutionId($value): self
     {
-        return $this->set('institutionId', $value);
+        $this->set('institutionId', $value);
+        return $this;
     }
 
     public function hasInstitutionId(): bool
@@ -82,7 +87,8 @@ final class Funding extends ObjectData
 
     public function unsetInstitutionId(): self
     {
-        return $this->remove('institutionId');
+        $this->remove('institutionId');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class Funding extends ObjectData
      */
     public function setProgram($value): self
     {
-        return $this->set('program', $value);
+        $this->set('program', $value);
+        return $this;
     }
 
     public function hasProgram(): bool
@@ -108,7 +115,8 @@ final class Funding extends ObjectData
 
     public function unsetProgram(): self
     {
-        return $this->remove('program');
+        $this->remove('program');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class Funding extends ObjectData
      */
     public function setProjectName($value): self
     {
-        return $this->set('projectName', $value);
+        $this->set('projectName', $value);
+        return $this;
     }
 
     public function hasProjectName(): bool
@@ -134,7 +143,8 @@ final class Funding extends ObjectData
 
     public function unsetProjectName(): self
     {
-        return $this->remove('projectName');
+        $this->remove('projectName');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class Funding extends ObjectData
      */
     public function setProjectShortname($value): self
     {
-        return $this->set('projectShortname', $value);
+        $this->set('projectShortname', $value);
+        return $this;
     }
 
     public function hasProjectShortname(): bool
@@ -160,7 +171,8 @@ final class Funding extends ObjectData
 
     public function unsetProjectShortname(): self
     {
-        return $this->remove('projectShortname');
+        $this->remove('projectShortname');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class Funding extends ObjectData
      */
     public function setGrantNumber($value): self
     {
-        return $this->set('grantNumber', $value);
+        $this->set('grantNumber', $value);
+        return $this;
     }
 
     public function hasGrantNumber(): bool
@@ -186,7 +199,8 @@ final class Funding extends ObjectData
 
     public function unsetGrantNumber(): self
     {
-        return $this->remove('grantNumber');
+        $this->remove('grantNumber');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class Funding extends ObjectData
      */
     public function setCreatedAt($value): self
     {
-        return $this->set('createdAt', $value);
+        $this->set('createdAt', $value);
+        return $this;
     }
 
     public function hasCreatedAt(): bool
@@ -212,7 +227,8 @@ final class Funding extends ObjectData
 
     public function unsetCreatedAt(): self
     {
-        return $this->remove('createdAt');
+        $this->remove('createdAt');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class Funding extends ObjectData
      */
     public function setUpdatedAt($value): self
     {
-        return $this->set('updatedAt', $value);
+        $this->set('updatedAt', $value);
+        return $this;
     }
 
     public function hasUpdatedAt(): bool
@@ -238,7 +255,8 @@ final class Funding extends ObjectData
 
     public function unsetUpdatedAt(): self
     {
-        return $this->remove('updatedAt');
+        $this->remove('updatedAt');
+        return $this;
     }
 
     /**
@@ -254,7 +272,8 @@ final class Funding extends ObjectData
      */
     public function setWork($value): self
     {
-        return $this->set('work', $value);
+        $this->set('work', $value);
+        return $this;
     }
 
     public function hasWork(): bool
@@ -264,7 +283,8 @@ final class Funding extends ObjectData
 
     public function unsetWork(): self
     {
-        return $this->remove('work');
+        $this->remove('work');
+        return $this;
     }
 
     /**
@@ -280,7 +300,8 @@ final class Funding extends ObjectData
      */
     public function setInstitution($value): self
     {
-        return $this->set('institution', $value);
+        $this->set('institution', $value);
+        return $this;
     }
 
     public function hasInstitution(): bool
@@ -290,7 +311,8 @@ final class Funding extends ObjectData
 
     public function unsetInstitution(): self
     {
-        return $this->remove('institution');
+        $this->remove('institution');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

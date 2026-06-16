@@ -20,7 +20,8 @@ final class Me extends ObjectData
      */
     public function setUserId($value): self
     {
-        return $this->set('userId', $value);
+        $this->set('userId', $value);
+        return $this;
     }
 
     public function hasUserId(): bool
@@ -30,7 +31,8 @@ final class Me extends ObjectData
 
     public function unsetUserId(): self
     {
-        return $this->remove('userId');
+        $this->remove('userId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class Me extends ObjectData
      */
     public function setEmail($value): self
     {
-        return $this->set('email', $value);
+        $this->set('email', $value);
+        return $this;
     }
 
     public function hasEmail(): bool
@@ -56,7 +59,8 @@ final class Me extends ObjectData
 
     public function unsetEmail(): self
     {
-        return $this->remove('email');
+        $this->remove('email');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class Me extends ObjectData
      */
     public function setFirstName($value): self
     {
-        return $this->set('firstName', $value);
+        $this->set('firstName', $value);
+        return $this;
     }
 
     public function hasFirstName(): bool
@@ -82,7 +87,8 @@ final class Me extends ObjectData
 
     public function unsetFirstName(): self
     {
-        return $this->remove('firstName');
+        $this->remove('firstName');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class Me extends ObjectData
      */
     public function setLastName($value): self
     {
-        return $this->set('lastName', $value);
+        $this->set('lastName', $value);
+        return $this;
     }
 
     public function hasLastName(): bool
@@ -108,7 +115,8 @@ final class Me extends ObjectData
 
     public function unsetLastName(): self
     {
-        return $this->remove('lastName');
+        $this->remove('lastName');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class Me extends ObjectData
      */
     public function setIsSuperuser($value): self
     {
-        return $this->set('isSuperuser', $value);
+        $this->set('isSuperuser', $value);
+        return $this;
     }
 
     public function hasIsSuperuser(): bool
@@ -134,7 +143,8 @@ final class Me extends ObjectData
 
     public function unsetIsSuperuser(): self
     {
-        return $this->remove('isSuperuser');
+        $this->remove('isSuperuser');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class Me extends ObjectData
      */
     public function setPublisherContexts($value): self
     {
-        return $this->set('publisherContexts', $value);
+        $this->set('publisherContexts', $value);
+        return $this;
     }
 
     public function hasPublisherContexts(): bool
@@ -160,7 +171,8 @@ final class Me extends ObjectData
 
     public function unsetPublisherContexts(): self
     {
-        return $this->remove('publisherContexts');
+        $this->remove('publisherContexts');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

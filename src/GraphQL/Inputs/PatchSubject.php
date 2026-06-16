@@ -20,7 +20,8 @@ final class PatchSubject extends InputObject
      */
     public function setSubjectId($value): self
     {
-        return $this->set('subjectId', $value);
+        $this->set('subjectId', $value);
+        return $this;
     }
 
     public function hasSubjectId(): bool
@@ -30,7 +31,8 @@ final class PatchSubject extends InputObject
 
     public function unsetSubjectId(): self
     {
-        return $this->remove('subjectId');
+        $this->remove('subjectId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class PatchSubject extends InputObject
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -56,7 +59,8 @@ final class PatchSubject extends InputObject
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class PatchSubject extends InputObject
      */
     public function setSubjectType($value): self
     {
-        return $this->set('subjectType', $value);
+        $this->set('subjectType', $value);
+        return $this;
     }
 
     public function hasSubjectType(): bool
@@ -82,7 +87,8 @@ final class PatchSubject extends InputObject
 
     public function unsetSubjectType(): self
     {
-        return $this->remove('subjectType');
+        $this->remove('subjectType');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class PatchSubject extends InputObject
      */
     public function setSubjectCode($value): self
     {
-        return $this->set('subjectCode', $value);
+        $this->set('subjectCode', $value);
+        return $this;
     }
 
     public function hasSubjectCode(): bool
@@ -108,7 +115,8 @@ final class PatchSubject extends InputObject
 
     public function unsetSubjectCode(): self
     {
-        return $this->remove('subjectCode');
+        $this->remove('subjectCode');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class PatchSubject extends InputObject
      */
     public function setSubjectOrdinal($value): self
     {
-        return $this->set('subjectOrdinal', $value);
+        $this->set('subjectOrdinal', $value);
+        return $this;
     }
 
     public function hasSubjectOrdinal(): bool
@@ -134,7 +143,8 @@ final class PatchSubject extends InputObject
 
     public function unsetSubjectOrdinal(): self
     {
-        return $this->remove('subjectOrdinal');
+        $this->remove('subjectOrdinal');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

@@ -20,7 +20,8 @@ final class PatchWork extends InputObject
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -30,7 +31,8 @@ final class PatchWork extends InputObject
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class PatchWork extends InputObject
      */
     public function setWorkType($value): self
     {
-        return $this->set('workType', $value);
+        $this->set('workType', $value);
+        return $this;
     }
 
     public function hasWorkType(): bool
@@ -56,7 +59,8 @@ final class PatchWork extends InputObject
 
     public function unsetWorkType(): self
     {
-        return $this->remove('workType');
+        $this->remove('workType');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class PatchWork extends InputObject
      */
     public function setWorkStatus($value): self
     {
-        return $this->set('workStatus', $value);
+        $this->set('workStatus', $value);
+        return $this;
     }
 
     public function hasWorkStatus(): bool
@@ -82,7 +87,8 @@ final class PatchWork extends InputObject
 
     public function unsetWorkStatus(): self
     {
-        return $this->remove('workStatus');
+        $this->remove('workStatus');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class PatchWork extends InputObject
      */
     public function setReference($value): self
     {
-        return $this->set('reference', $value);
+        $this->set('reference', $value);
+        return $this;
     }
 
     public function hasReference(): bool
@@ -108,7 +115,8 @@ final class PatchWork extends InputObject
 
     public function unsetReference(): self
     {
-        return $this->remove('reference');
+        $this->remove('reference');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class PatchWork extends InputObject
      */
     public function setEdition($value): self
     {
-        return $this->set('edition', $value);
+        $this->set('edition', $value);
+        return $this;
     }
 
     public function hasEdition(): bool
@@ -134,7 +143,8 @@ final class PatchWork extends InputObject
 
     public function unsetEdition(): self
     {
-        return $this->remove('edition');
+        $this->remove('edition');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class PatchWork extends InputObject
      */
     public function setImprintId($value): self
     {
-        return $this->set('imprintId', $value);
+        $this->set('imprintId', $value);
+        return $this;
     }
 
     public function hasImprintId(): bool
@@ -160,7 +171,8 @@ final class PatchWork extends InputObject
 
     public function unsetImprintId(): self
     {
-        return $this->remove('imprintId');
+        $this->remove('imprintId');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class PatchWork extends InputObject
      */
     public function setDoi($value): self
     {
-        return $this->set('doi', $value);
+        $this->set('doi', $value);
+        return $this;
     }
 
     public function hasDoi(): bool
@@ -186,7 +199,8 @@ final class PatchWork extends InputObject
 
     public function unsetDoi(): self
     {
-        return $this->remove('doi');
+        $this->remove('doi');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class PatchWork extends InputObject
      */
     public function setPublicationDate($value): self
     {
-        return $this->set('publicationDate', $value);
+        $this->set('publicationDate', $value);
+        return $this;
     }
 
     public function hasPublicationDate(): bool
@@ -212,7 +227,8 @@ final class PatchWork extends InputObject
 
     public function unsetPublicationDate(): self
     {
-        return $this->remove('publicationDate');
+        $this->remove('publicationDate');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class PatchWork extends InputObject
      */
     public function setWithdrawnDate($value): self
     {
-        return $this->set('withdrawnDate', $value);
+        $this->set('withdrawnDate', $value);
+        return $this;
     }
 
     public function hasWithdrawnDate(): bool
@@ -238,7 +255,8 @@ final class PatchWork extends InputObject
 
     public function unsetWithdrawnDate(): self
     {
-        return $this->remove('withdrawnDate');
+        $this->remove('withdrawnDate');
+        return $this;
     }
 
     /**
@@ -254,7 +272,8 @@ final class PatchWork extends InputObject
      */
     public function setPlace($value): self
     {
-        return $this->set('place', $value);
+        $this->set('place', $value);
+        return $this;
     }
 
     public function hasPlace(): bool
@@ -264,7 +283,8 @@ final class PatchWork extends InputObject
 
     public function unsetPlace(): self
     {
-        return $this->remove('place');
+        $this->remove('place');
+        return $this;
     }
 
     /**
@@ -280,7 +300,8 @@ final class PatchWork extends InputObject
      */
     public function setPageCount($value): self
     {
-        return $this->set('pageCount', $value);
+        $this->set('pageCount', $value);
+        return $this;
     }
 
     public function hasPageCount(): bool
@@ -290,7 +311,8 @@ final class PatchWork extends InputObject
 
     public function unsetPageCount(): self
     {
-        return $this->remove('pageCount');
+        $this->remove('pageCount');
+        return $this;
     }
 
     /**
@@ -306,7 +328,8 @@ final class PatchWork extends InputObject
      */
     public function setPageBreakdown($value): self
     {
-        return $this->set('pageBreakdown', $value);
+        $this->set('pageBreakdown', $value);
+        return $this;
     }
 
     public function hasPageBreakdown(): bool
@@ -316,7 +339,8 @@ final class PatchWork extends InputObject
 
     public function unsetPageBreakdown(): self
     {
-        return $this->remove('pageBreakdown');
+        $this->remove('pageBreakdown');
+        return $this;
     }
 
     /**
@@ -332,7 +356,8 @@ final class PatchWork extends InputObject
      */
     public function setImageCount($value): self
     {
-        return $this->set('imageCount', $value);
+        $this->set('imageCount', $value);
+        return $this;
     }
 
     public function hasImageCount(): bool
@@ -342,7 +367,8 @@ final class PatchWork extends InputObject
 
     public function unsetImageCount(): self
     {
-        return $this->remove('imageCount');
+        $this->remove('imageCount');
+        return $this;
     }
 
     /**
@@ -358,7 +384,8 @@ final class PatchWork extends InputObject
      */
     public function setTableCount($value): self
     {
-        return $this->set('tableCount', $value);
+        $this->set('tableCount', $value);
+        return $this;
     }
 
     public function hasTableCount(): bool
@@ -368,7 +395,8 @@ final class PatchWork extends InputObject
 
     public function unsetTableCount(): self
     {
-        return $this->remove('tableCount');
+        $this->remove('tableCount');
+        return $this;
     }
 
     /**
@@ -384,7 +412,8 @@ final class PatchWork extends InputObject
      */
     public function setAudioCount($value): self
     {
-        return $this->set('audioCount', $value);
+        $this->set('audioCount', $value);
+        return $this;
     }
 
     public function hasAudioCount(): bool
@@ -394,7 +423,8 @@ final class PatchWork extends InputObject
 
     public function unsetAudioCount(): self
     {
-        return $this->remove('audioCount');
+        $this->remove('audioCount');
+        return $this;
     }
 
     /**
@@ -410,7 +440,8 @@ final class PatchWork extends InputObject
      */
     public function setVideoCount($value): self
     {
-        return $this->set('videoCount', $value);
+        $this->set('videoCount', $value);
+        return $this;
     }
 
     public function hasVideoCount(): bool
@@ -420,7 +451,8 @@ final class PatchWork extends InputObject
 
     public function unsetVideoCount(): self
     {
-        return $this->remove('videoCount');
+        $this->remove('videoCount');
+        return $this;
     }
 
     /**
@@ -436,7 +468,8 @@ final class PatchWork extends InputObject
      */
     public function setLicense($value): self
     {
-        return $this->set('license', $value);
+        $this->set('license', $value);
+        return $this;
     }
 
     public function hasLicense(): bool
@@ -446,7 +479,8 @@ final class PatchWork extends InputObject
 
     public function unsetLicense(): self
     {
-        return $this->remove('license');
+        $this->remove('license');
+        return $this;
     }
 
     /**
@@ -462,7 +496,8 @@ final class PatchWork extends InputObject
      */
     public function setCopyrightHolder($value): self
     {
-        return $this->set('copyrightHolder', $value);
+        $this->set('copyrightHolder', $value);
+        return $this;
     }
 
     public function hasCopyrightHolder(): bool
@@ -472,7 +507,8 @@ final class PatchWork extends InputObject
 
     public function unsetCopyrightHolder(): self
     {
-        return $this->remove('copyrightHolder');
+        $this->remove('copyrightHolder');
+        return $this;
     }
 
     /**
@@ -488,7 +524,8 @@ final class PatchWork extends InputObject
      */
     public function setLandingPage($value): self
     {
-        return $this->set('landingPage', $value);
+        $this->set('landingPage', $value);
+        return $this;
     }
 
     public function hasLandingPage(): bool
@@ -498,7 +535,8 @@ final class PatchWork extends InputObject
 
     public function unsetLandingPage(): self
     {
-        return $this->remove('landingPage');
+        $this->remove('landingPage');
+        return $this;
     }
 
     /**
@@ -514,7 +552,8 @@ final class PatchWork extends InputObject
      */
     public function setLccn($value): self
     {
-        return $this->set('lccn', $value);
+        $this->set('lccn', $value);
+        return $this;
     }
 
     public function hasLccn(): bool
@@ -524,7 +563,8 @@ final class PatchWork extends InputObject
 
     public function unsetLccn(): self
     {
-        return $this->remove('lccn');
+        $this->remove('lccn');
+        return $this;
     }
 
     /**
@@ -540,7 +580,8 @@ final class PatchWork extends InputObject
      */
     public function setOclc($value): self
     {
-        return $this->set('oclc', $value);
+        $this->set('oclc', $value);
+        return $this;
     }
 
     public function hasOclc(): bool
@@ -550,7 +591,8 @@ final class PatchWork extends InputObject
 
     public function unsetOclc(): self
     {
-        return $this->remove('oclc');
+        $this->remove('oclc');
+        return $this;
     }
 
     /**
@@ -566,7 +608,8 @@ final class PatchWork extends InputObject
      */
     public function setGeneralNote($value): self
     {
-        return $this->set('generalNote', $value);
+        $this->set('generalNote', $value);
+        return $this;
     }
 
     public function hasGeneralNote(): bool
@@ -576,7 +619,8 @@ final class PatchWork extends InputObject
 
     public function unsetGeneralNote(): self
     {
-        return $this->remove('generalNote');
+        $this->remove('generalNote');
+        return $this;
     }
 
     /**
@@ -592,7 +636,8 @@ final class PatchWork extends InputObject
      */
     public function setBibliographyNote($value): self
     {
-        return $this->set('bibliographyNote', $value);
+        $this->set('bibliographyNote', $value);
+        return $this;
     }
 
     public function hasBibliographyNote(): bool
@@ -602,7 +647,8 @@ final class PatchWork extends InputObject
 
     public function unsetBibliographyNote(): self
     {
-        return $this->remove('bibliographyNote');
+        $this->remove('bibliographyNote');
+        return $this;
     }
 
     /**
@@ -618,7 +664,8 @@ final class PatchWork extends InputObject
      */
     public function setToc($value): self
     {
-        return $this->set('toc', $value);
+        $this->set('toc', $value);
+        return $this;
     }
 
     public function hasToc(): bool
@@ -628,7 +675,8 @@ final class PatchWork extends InputObject
 
     public function unsetToc(): self
     {
-        return $this->remove('toc');
+        $this->remove('toc');
+        return $this;
     }
 
     /**
@@ -644,7 +692,8 @@ final class PatchWork extends InputObject
      */
     public function setResourcesDescription($value): self
     {
-        return $this->set('resourcesDescription', $value);
+        $this->set('resourcesDescription', $value);
+        return $this;
     }
 
     public function hasResourcesDescription(): bool
@@ -654,7 +703,8 @@ final class PatchWork extends InputObject
 
     public function unsetResourcesDescription(): self
     {
-        return $this->remove('resourcesDescription');
+        $this->remove('resourcesDescription');
+        return $this;
     }
 
     /**
@@ -670,7 +720,8 @@ final class PatchWork extends InputObject
      */
     public function setCoverUrl($value): self
     {
-        return $this->set('coverUrl', $value);
+        $this->set('coverUrl', $value);
+        return $this;
     }
 
     public function hasCoverUrl(): bool
@@ -680,7 +731,8 @@ final class PatchWork extends InputObject
 
     public function unsetCoverUrl(): self
     {
-        return $this->remove('coverUrl');
+        $this->remove('coverUrl');
+        return $this;
     }
 
     /**
@@ -696,7 +748,8 @@ final class PatchWork extends InputObject
      */
     public function setCoverCaption($value): self
     {
-        return $this->set('coverCaption', $value);
+        $this->set('coverCaption', $value);
+        return $this;
     }
 
     public function hasCoverCaption(): bool
@@ -706,7 +759,8 @@ final class PatchWork extends InputObject
 
     public function unsetCoverCaption(): self
     {
-        return $this->remove('coverCaption');
+        $this->remove('coverCaption');
+        return $this;
     }
 
     /**
@@ -722,7 +776,8 @@ final class PatchWork extends InputObject
      */
     public function setFirstPage($value): self
     {
-        return $this->set('firstPage', $value);
+        $this->set('firstPage', $value);
+        return $this;
     }
 
     public function hasFirstPage(): bool
@@ -732,7 +787,8 @@ final class PatchWork extends InputObject
 
     public function unsetFirstPage(): self
     {
-        return $this->remove('firstPage');
+        $this->remove('firstPage');
+        return $this;
     }
 
     /**
@@ -748,7 +804,8 @@ final class PatchWork extends InputObject
      */
     public function setLastPage($value): self
     {
-        return $this->set('lastPage', $value);
+        $this->set('lastPage', $value);
+        return $this;
     }
 
     public function hasLastPage(): bool
@@ -758,7 +815,8 @@ final class PatchWork extends InputObject
 
     public function unsetLastPage(): self
     {
-        return $this->remove('lastPage');
+        $this->remove('lastPage');
+        return $this;
     }
 
     /**
@@ -774,7 +832,8 @@ final class PatchWork extends InputObject
      */
     public function setPageInterval($value): self
     {
-        return $this->set('pageInterval', $value);
+        $this->set('pageInterval', $value);
+        return $this;
     }
 
     public function hasPageInterval(): bool
@@ -784,7 +843,8 @@ final class PatchWork extends InputObject
 
     public function unsetPageInterval(): self
     {
-        return $this->remove('pageInterval');
+        $this->remove('pageInterval');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

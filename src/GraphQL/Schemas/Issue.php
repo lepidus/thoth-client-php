@@ -20,7 +20,8 @@ final class Issue extends ObjectData
      */
     public function setIssueId($value): self
     {
-        return $this->set('issueId', $value);
+        $this->set('issueId', $value);
+        return $this;
     }
 
     public function hasIssueId(): bool
@@ -30,7 +31,8 @@ final class Issue extends ObjectData
 
     public function unsetIssueId(): self
     {
-        return $this->remove('issueId');
+        $this->remove('issueId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class Issue extends ObjectData
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -56,7 +59,8 @@ final class Issue extends ObjectData
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class Issue extends ObjectData
      */
     public function setSeriesId($value): self
     {
-        return $this->set('seriesId', $value);
+        $this->set('seriesId', $value);
+        return $this;
     }
 
     public function hasSeriesId(): bool
@@ -82,7 +87,8 @@ final class Issue extends ObjectData
 
     public function unsetSeriesId(): self
     {
-        return $this->remove('seriesId');
+        $this->remove('seriesId');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class Issue extends ObjectData
      */
     public function setIssueOrdinal($value): self
     {
-        return $this->set('issueOrdinal', $value);
+        $this->set('issueOrdinal', $value);
+        return $this;
     }
 
     public function hasIssueOrdinal(): bool
@@ -108,7 +115,8 @@ final class Issue extends ObjectData
 
     public function unsetIssueOrdinal(): self
     {
-        return $this->remove('issueOrdinal');
+        $this->remove('issueOrdinal');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class Issue extends ObjectData
      */
     public function setIssueNumber($value): self
     {
-        return $this->set('issueNumber', $value);
+        $this->set('issueNumber', $value);
+        return $this;
     }
 
     public function hasIssueNumber(): bool
@@ -134,7 +143,8 @@ final class Issue extends ObjectData
 
     public function unsetIssueNumber(): self
     {
-        return $this->remove('issueNumber');
+        $this->remove('issueNumber');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class Issue extends ObjectData
      */
     public function setCreatedAt($value): self
     {
-        return $this->set('createdAt', $value);
+        $this->set('createdAt', $value);
+        return $this;
     }
 
     public function hasCreatedAt(): bool
@@ -160,7 +171,8 @@ final class Issue extends ObjectData
 
     public function unsetCreatedAt(): self
     {
-        return $this->remove('createdAt');
+        $this->remove('createdAt');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class Issue extends ObjectData
      */
     public function setUpdatedAt($value): self
     {
-        return $this->set('updatedAt', $value);
+        $this->set('updatedAt', $value);
+        return $this;
     }
 
     public function hasUpdatedAt(): bool
@@ -186,7 +199,8 @@ final class Issue extends ObjectData
 
     public function unsetUpdatedAt(): self
     {
-        return $this->remove('updatedAt');
+        $this->remove('updatedAt');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class Issue extends ObjectData
      */
     public function setSeries($value): self
     {
-        return $this->set('series', $value);
+        $this->set('series', $value);
+        return $this;
     }
 
     public function hasSeries(): bool
@@ -212,7 +227,8 @@ final class Issue extends ObjectData
 
     public function unsetSeries(): self
     {
-        return $this->remove('series');
+        $this->remove('series');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class Issue extends ObjectData
      */
     public function setWork($value): self
     {
-        return $this->set('work', $value);
+        $this->set('work', $value);
+        return $this;
     }
 
     public function hasWork(): bool
@@ -238,7 +255,8 @@ final class Issue extends ObjectData
 
     public function unsetWork(): self
     {
-        return $this->remove('work');
+        $this->remove('work');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

@@ -20,7 +20,8 @@ final class PatchEndorsement extends InputObject
      */
     public function setEndorsementId($value): self
     {
-        return $this->set('endorsementId', $value);
+        $this->set('endorsementId', $value);
+        return $this;
     }
 
     public function hasEndorsementId(): bool
@@ -30,7 +31,8 @@ final class PatchEndorsement extends InputObject
 
     public function unsetEndorsementId(): self
     {
-        return $this->remove('endorsementId');
+        $this->remove('endorsementId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class PatchEndorsement extends InputObject
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -56,7 +59,8 @@ final class PatchEndorsement extends InputObject
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class PatchEndorsement extends InputObject
      */
     public function setAuthorName($value): self
     {
-        return $this->set('authorName', $value);
+        $this->set('authorName', $value);
+        return $this;
     }
 
     public function hasAuthorName(): bool
@@ -82,7 +87,8 @@ final class PatchEndorsement extends InputObject
 
     public function unsetAuthorName(): self
     {
-        return $this->remove('authorName');
+        $this->remove('authorName');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class PatchEndorsement extends InputObject
      */
     public function setAuthorRole($value): self
     {
-        return $this->set('authorRole', $value);
+        $this->set('authorRole', $value);
+        return $this;
     }
 
     public function hasAuthorRole(): bool
@@ -108,7 +115,8 @@ final class PatchEndorsement extends InputObject
 
     public function unsetAuthorRole(): self
     {
-        return $this->remove('authorRole');
+        $this->remove('authorRole');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class PatchEndorsement extends InputObject
      */
     public function setAuthorOrcid($value): self
     {
-        return $this->set('authorOrcid', $value);
+        $this->set('authorOrcid', $value);
+        return $this;
     }
 
     public function hasAuthorOrcid(): bool
@@ -134,7 +143,8 @@ final class PatchEndorsement extends InputObject
 
     public function unsetAuthorOrcid(): self
     {
-        return $this->remove('authorOrcid');
+        $this->remove('authorOrcid');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class PatchEndorsement extends InputObject
      */
     public function setAuthorInstitutionId($value): self
     {
-        return $this->set('authorInstitutionId', $value);
+        $this->set('authorInstitutionId', $value);
+        return $this;
     }
 
     public function hasAuthorInstitutionId(): bool
@@ -160,7 +171,8 @@ final class PatchEndorsement extends InputObject
 
     public function unsetAuthorInstitutionId(): self
     {
-        return $this->remove('authorInstitutionId');
+        $this->remove('authorInstitutionId');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class PatchEndorsement extends InputObject
      */
     public function setUrl($value): self
     {
-        return $this->set('url', $value);
+        $this->set('url', $value);
+        return $this;
     }
 
     public function hasUrl(): bool
@@ -186,7 +199,8 @@ final class PatchEndorsement extends InputObject
 
     public function unsetUrl(): self
     {
-        return $this->remove('url');
+        $this->remove('url');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class PatchEndorsement extends InputObject
      */
     public function setText($value): self
     {
-        return $this->set('text', $value);
+        $this->set('text', $value);
+        return $this;
     }
 
     public function hasText(): bool
@@ -212,7 +227,8 @@ final class PatchEndorsement extends InputObject
 
     public function unsetText(): self
     {
-        return $this->remove('text');
+        $this->remove('text');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class PatchEndorsement extends InputObject
      */
     public function setEndorsementOrdinal($value): self
     {
-        return $this->set('endorsementOrdinal', $value);
+        $this->set('endorsementOrdinal', $value);
+        return $this;
     }
 
     public function hasEndorsementOrdinal(): bool
@@ -238,7 +255,8 @@ final class PatchEndorsement extends InputObject
 
     public function unsetEndorsementOrdinal(): self
     {
-        return $this->remove('endorsementOrdinal');
+        $this->remove('endorsementOrdinal');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

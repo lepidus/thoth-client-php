@@ -20,7 +20,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateWork($value): self
     {
-        return $this->set('createWork', $value);
+        $this->set('createWork', $value);
+        return $this;
     }
 
     public function hasCreateWork(): bool
@@ -30,7 +31,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateWork(): self
     {
-        return $this->remove('createWork');
+        $this->remove('createWork');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreatePublisher($value): self
     {
-        return $this->set('createPublisher', $value);
+        $this->set('createPublisher', $value);
+        return $this;
     }
 
     public function hasCreatePublisher(): bool
@@ -56,7 +59,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreatePublisher(): self
     {
-        return $this->remove('createPublisher');
+        $this->remove('createPublisher');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateImprint($value): self
     {
-        return $this->set('createImprint', $value);
+        $this->set('createImprint', $value);
+        return $this;
     }
 
     public function hasCreateImprint(): bool
@@ -82,7 +87,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateImprint(): self
     {
-        return $this->remove('createImprint');
+        $this->remove('createImprint');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateContributor($value): self
     {
-        return $this->set('createContributor', $value);
+        $this->set('createContributor', $value);
+        return $this;
     }
 
     public function hasCreateContributor(): bool
@@ -108,7 +115,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateContributor(): self
     {
-        return $this->remove('createContributor');
+        $this->remove('createContributor');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateContribution($value): self
     {
-        return $this->set('createContribution', $value);
+        $this->set('createContribution', $value);
+        return $this;
     }
 
     public function hasCreateContribution(): bool
@@ -134,7 +143,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateContribution(): self
     {
-        return $this->remove('createContribution');
+        $this->remove('createContribution');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreatePublication($value): self
     {
-        return $this->set('createPublication', $value);
+        $this->set('createPublication', $value);
+        return $this;
     }
 
     public function hasCreatePublication(): bool
@@ -160,7 +171,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreatePublication(): self
     {
-        return $this->remove('createPublication');
+        $this->remove('createPublication');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateSeries($value): self
     {
-        return $this->set('createSeries', $value);
+        $this->set('createSeries', $value);
+        return $this;
     }
 
     public function hasCreateSeries(): bool
@@ -186,7 +199,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateSeries(): self
     {
-        return $this->remove('createSeries');
+        $this->remove('createSeries');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateIssue($value): self
     {
-        return $this->set('createIssue', $value);
+        $this->set('createIssue', $value);
+        return $this;
     }
 
     public function hasCreateIssue(): bool
@@ -212,7 +227,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateIssue(): self
     {
-        return $this->remove('createIssue');
+        $this->remove('createIssue');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateLanguage($value): self
     {
-        return $this->set('createLanguage', $value);
+        $this->set('createLanguage', $value);
+        return $this;
     }
 
     public function hasCreateLanguage(): bool
@@ -238,7 +255,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateLanguage(): self
     {
-        return $this->remove('createLanguage');
+        $this->remove('createLanguage');
+        return $this;
     }
 
     /**
@@ -254,7 +272,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateTitle($value): self
     {
-        return $this->set('createTitle', $value);
+        $this->set('createTitle', $value);
+        return $this;
     }
 
     public function hasCreateTitle(): bool
@@ -264,7 +283,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateTitle(): self
     {
-        return $this->remove('createTitle');
+        $this->remove('createTitle');
+        return $this;
     }
 
     /**
@@ -280,7 +300,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateAbstract($value): self
     {
-        return $this->set('createAbstract', $value);
+        $this->set('createAbstract', $value);
+        return $this;
     }
 
     public function hasCreateAbstract(): bool
@@ -290,7 +311,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateAbstract(): self
     {
-        return $this->remove('createAbstract');
+        $this->remove('createAbstract');
+        return $this;
     }
 
     /**
@@ -306,7 +328,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateBiography($value): self
     {
-        return $this->set('createBiography', $value);
+        $this->set('createBiography', $value);
+        return $this;
     }
 
     public function hasCreateBiography(): bool
@@ -316,7 +339,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateBiography(): self
     {
-        return $this->remove('createBiography');
+        $this->remove('createBiography');
+        return $this;
     }
 
     /**
@@ -332,7 +356,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateInstitution($value): self
     {
-        return $this->set('createInstitution', $value);
+        $this->set('createInstitution', $value);
+        return $this;
     }
 
     public function hasCreateInstitution(): bool
@@ -342,7 +367,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateInstitution(): self
     {
-        return $this->remove('createInstitution');
+        $this->remove('createInstitution');
+        return $this;
     }
 
     /**
@@ -358,7 +384,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateFunding($value): self
     {
-        return $this->set('createFunding', $value);
+        $this->set('createFunding', $value);
+        return $this;
     }
 
     public function hasCreateFunding(): bool
@@ -368,7 +395,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateFunding(): self
     {
-        return $this->remove('createFunding');
+        $this->remove('createFunding');
+        return $this;
     }
 
     /**
@@ -384,7 +412,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateLocation($value): self
     {
-        return $this->set('createLocation', $value);
+        $this->set('createLocation', $value);
+        return $this;
     }
 
     public function hasCreateLocation(): bool
@@ -394,7 +423,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateLocation(): self
     {
-        return $this->remove('createLocation');
+        $this->remove('createLocation');
+        return $this;
     }
 
     /**
@@ -410,7 +440,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreatePrice($value): self
     {
-        return $this->set('createPrice', $value);
+        $this->set('createPrice', $value);
+        return $this;
     }
 
     public function hasCreatePrice(): bool
@@ -420,7 +451,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreatePrice(): self
     {
-        return $this->remove('createPrice');
+        $this->remove('createPrice');
+        return $this;
     }
 
     /**
@@ -436,7 +468,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateSubject($value): self
     {
-        return $this->set('createSubject', $value);
+        $this->set('createSubject', $value);
+        return $this;
     }
 
     public function hasCreateSubject(): bool
@@ -446,7 +479,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateSubject(): self
     {
-        return $this->remove('createSubject');
+        $this->remove('createSubject');
+        return $this;
     }
 
     /**
@@ -462,7 +496,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateAffiliation($value): self
     {
-        return $this->set('createAffiliation', $value);
+        $this->set('createAffiliation', $value);
+        return $this;
     }
 
     public function hasCreateAffiliation(): bool
@@ -472,7 +507,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateAffiliation(): self
     {
-        return $this->remove('createAffiliation');
+        $this->remove('createAffiliation');
+        return $this;
     }
 
     /**
@@ -488,7 +524,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateWorkRelation($value): self
     {
-        return $this->set('createWorkRelation', $value);
+        $this->set('createWorkRelation', $value);
+        return $this;
     }
 
     public function hasCreateWorkRelation(): bool
@@ -498,7 +535,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateWorkRelation(): self
     {
-        return $this->remove('createWorkRelation');
+        $this->remove('createWorkRelation');
+        return $this;
     }
 
     /**
@@ -514,7 +552,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateReference($value): self
     {
-        return $this->set('createReference', $value);
+        $this->set('createReference', $value);
+        return $this;
     }
 
     public function hasCreateReference(): bool
@@ -524,7 +563,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateReference(): self
     {
-        return $this->remove('createReference');
+        $this->remove('createReference');
+        return $this;
     }
 
     /**
@@ -540,7 +580,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateAdditionalResource($value): self
     {
-        return $this->set('createAdditionalResource', $value);
+        $this->set('createAdditionalResource', $value);
+        return $this;
     }
 
     public function hasCreateAdditionalResource(): bool
@@ -550,7 +591,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateAdditionalResource(): self
     {
-        return $this->remove('createAdditionalResource');
+        $this->remove('createAdditionalResource');
+        return $this;
     }
 
     /**
@@ -566,7 +608,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateAward($value): self
     {
-        return $this->set('createAward', $value);
+        $this->set('createAward', $value);
+        return $this;
     }
 
     public function hasCreateAward(): bool
@@ -576,7 +619,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateAward(): self
     {
-        return $this->remove('createAward');
+        $this->remove('createAward');
+        return $this;
     }
 
     /**
@@ -592,7 +636,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateEndorsement($value): self
     {
-        return $this->set('createEndorsement', $value);
+        $this->set('createEndorsement', $value);
+        return $this;
     }
 
     public function hasCreateEndorsement(): bool
@@ -602,7 +647,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateEndorsement(): self
     {
-        return $this->remove('createEndorsement');
+        $this->remove('createEndorsement');
+        return $this;
     }
 
     /**
@@ -618,7 +664,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateBookReview($value): self
     {
-        return $this->set('createBookReview', $value);
+        $this->set('createBookReview', $value);
+        return $this;
     }
 
     public function hasCreateBookReview(): bool
@@ -628,7 +675,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateBookReview(): self
     {
-        return $this->remove('createBookReview');
+        $this->remove('createBookReview');
+        return $this;
     }
 
     /**
@@ -644,7 +692,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateWorkFeaturedVideo($value): self
     {
-        return $this->set('createWorkFeaturedVideo', $value);
+        $this->set('createWorkFeaturedVideo', $value);
+        return $this;
     }
 
     public function hasCreateWorkFeaturedVideo(): bool
@@ -654,7 +703,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateWorkFeaturedVideo(): self
     {
-        return $this->remove('createWorkFeaturedVideo');
+        $this->remove('createWorkFeaturedVideo');
+        return $this;
     }
 
     /**
@@ -670,7 +720,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCreateContact($value): self
     {
-        return $this->set('createContact', $value);
+        $this->set('createContact', $value);
+        return $this;
     }
 
     public function hasCreateContact(): bool
@@ -680,7 +731,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCreateContact(): self
     {
-        return $this->remove('createContact');
+        $this->remove('createContact');
+        return $this;
     }
 
     /**
@@ -696,7 +748,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateWork($value): self
     {
-        return $this->set('updateWork', $value);
+        $this->set('updateWork', $value);
+        return $this;
     }
 
     public function hasUpdateWork(): bool
@@ -706,7 +759,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateWork(): self
     {
-        return $this->remove('updateWork');
+        $this->remove('updateWork');
+        return $this;
     }
 
     /**
@@ -722,7 +776,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdatePublisher($value): self
     {
-        return $this->set('updatePublisher', $value);
+        $this->set('updatePublisher', $value);
+        return $this;
     }
 
     public function hasUpdatePublisher(): bool
@@ -732,7 +787,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdatePublisher(): self
     {
-        return $this->remove('updatePublisher');
+        $this->remove('updatePublisher');
+        return $this;
     }
 
     /**
@@ -748,7 +804,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateImprint($value): self
     {
-        return $this->set('updateImprint', $value);
+        $this->set('updateImprint', $value);
+        return $this;
     }
 
     public function hasUpdateImprint(): bool
@@ -758,7 +815,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateImprint(): self
     {
-        return $this->remove('updateImprint');
+        $this->remove('updateImprint');
+        return $this;
     }
 
     /**
@@ -774,7 +832,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateContributor($value): self
     {
-        return $this->set('updateContributor', $value);
+        $this->set('updateContributor', $value);
+        return $this;
     }
 
     public function hasUpdateContributor(): bool
@@ -784,7 +843,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateContributor(): self
     {
-        return $this->remove('updateContributor');
+        $this->remove('updateContributor');
+        return $this;
     }
 
     /**
@@ -800,7 +860,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateContribution($value): self
     {
-        return $this->set('updateContribution', $value);
+        $this->set('updateContribution', $value);
+        return $this;
     }
 
     public function hasUpdateContribution(): bool
@@ -810,7 +871,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateContribution(): self
     {
-        return $this->remove('updateContribution');
+        $this->remove('updateContribution');
+        return $this;
     }
 
     /**
@@ -826,7 +888,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdatePublication($value): self
     {
-        return $this->set('updatePublication', $value);
+        $this->set('updatePublication', $value);
+        return $this;
     }
 
     public function hasUpdatePublication(): bool
@@ -836,7 +899,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdatePublication(): self
     {
-        return $this->remove('updatePublication');
+        $this->remove('updatePublication');
+        return $this;
     }
 
     /**
@@ -852,7 +916,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateSeries($value): self
     {
-        return $this->set('updateSeries', $value);
+        $this->set('updateSeries', $value);
+        return $this;
     }
 
     public function hasUpdateSeries(): bool
@@ -862,7 +927,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateSeries(): self
     {
-        return $this->remove('updateSeries');
+        $this->remove('updateSeries');
+        return $this;
     }
 
     /**
@@ -878,7 +944,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateIssue($value): self
     {
-        return $this->set('updateIssue', $value);
+        $this->set('updateIssue', $value);
+        return $this;
     }
 
     public function hasUpdateIssue(): bool
@@ -888,7 +955,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateIssue(): self
     {
-        return $this->remove('updateIssue');
+        $this->remove('updateIssue');
+        return $this;
     }
 
     /**
@@ -904,7 +972,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateLanguage($value): self
     {
-        return $this->set('updateLanguage', $value);
+        $this->set('updateLanguage', $value);
+        return $this;
     }
 
     public function hasUpdateLanguage(): bool
@@ -914,7 +983,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateLanguage(): self
     {
-        return $this->remove('updateLanguage');
+        $this->remove('updateLanguage');
+        return $this;
     }
 
     /**
@@ -930,7 +1000,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateInstitution($value): self
     {
-        return $this->set('updateInstitution', $value);
+        $this->set('updateInstitution', $value);
+        return $this;
     }
 
     public function hasUpdateInstitution(): bool
@@ -940,7 +1011,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateInstitution(): self
     {
-        return $this->remove('updateInstitution');
+        $this->remove('updateInstitution');
+        return $this;
     }
 
     /**
@@ -956,7 +1028,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateFunding($value): self
     {
-        return $this->set('updateFunding', $value);
+        $this->set('updateFunding', $value);
+        return $this;
     }
 
     public function hasUpdateFunding(): bool
@@ -966,7 +1039,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateFunding(): self
     {
-        return $this->remove('updateFunding');
+        $this->remove('updateFunding');
+        return $this;
     }
 
     /**
@@ -982,7 +1056,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateLocation($value): self
     {
-        return $this->set('updateLocation', $value);
+        $this->set('updateLocation', $value);
+        return $this;
     }
 
     public function hasUpdateLocation(): bool
@@ -992,7 +1067,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateLocation(): self
     {
-        return $this->remove('updateLocation');
+        $this->remove('updateLocation');
+        return $this;
     }
 
     /**
@@ -1008,7 +1084,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdatePrice($value): self
     {
-        return $this->set('updatePrice', $value);
+        $this->set('updatePrice', $value);
+        return $this;
     }
 
     public function hasUpdatePrice(): bool
@@ -1018,7 +1095,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdatePrice(): self
     {
-        return $this->remove('updatePrice');
+        $this->remove('updatePrice');
+        return $this;
     }
 
     /**
@@ -1034,7 +1112,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateSubject($value): self
     {
-        return $this->set('updateSubject', $value);
+        $this->set('updateSubject', $value);
+        return $this;
     }
 
     public function hasUpdateSubject(): bool
@@ -1044,7 +1123,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateSubject(): self
     {
-        return $this->remove('updateSubject');
+        $this->remove('updateSubject');
+        return $this;
     }
 
     /**
@@ -1060,7 +1140,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateAffiliation($value): self
     {
-        return $this->set('updateAffiliation', $value);
+        $this->set('updateAffiliation', $value);
+        return $this;
     }
 
     public function hasUpdateAffiliation(): bool
@@ -1070,7 +1151,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateAffiliation(): self
     {
-        return $this->remove('updateAffiliation');
+        $this->remove('updateAffiliation');
+        return $this;
     }
 
     /**
@@ -1086,7 +1168,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateWorkRelation($value): self
     {
-        return $this->set('updateWorkRelation', $value);
+        $this->set('updateWorkRelation', $value);
+        return $this;
     }
 
     public function hasUpdateWorkRelation(): bool
@@ -1096,7 +1179,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateWorkRelation(): self
     {
-        return $this->remove('updateWorkRelation');
+        $this->remove('updateWorkRelation');
+        return $this;
     }
 
     /**
@@ -1112,7 +1196,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateReference($value): self
     {
-        return $this->set('updateReference', $value);
+        $this->set('updateReference', $value);
+        return $this;
     }
 
     public function hasUpdateReference(): bool
@@ -1122,7 +1207,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateReference(): self
     {
-        return $this->remove('updateReference');
+        $this->remove('updateReference');
+        return $this;
     }
 
     /**
@@ -1138,7 +1224,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateAdditionalResource($value): self
     {
-        return $this->set('updateAdditionalResource', $value);
+        $this->set('updateAdditionalResource', $value);
+        return $this;
     }
 
     public function hasUpdateAdditionalResource(): bool
@@ -1148,7 +1235,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateAdditionalResource(): self
     {
-        return $this->remove('updateAdditionalResource');
+        $this->remove('updateAdditionalResource');
+        return $this;
     }
 
     /**
@@ -1164,7 +1252,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateAward($value): self
     {
-        return $this->set('updateAward', $value);
+        $this->set('updateAward', $value);
+        return $this;
     }
 
     public function hasUpdateAward(): bool
@@ -1174,7 +1263,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateAward(): self
     {
-        return $this->remove('updateAward');
+        $this->remove('updateAward');
+        return $this;
     }
 
     /**
@@ -1190,7 +1280,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateEndorsement($value): self
     {
-        return $this->set('updateEndorsement', $value);
+        $this->set('updateEndorsement', $value);
+        return $this;
     }
 
     public function hasUpdateEndorsement(): bool
@@ -1200,7 +1291,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateEndorsement(): self
     {
-        return $this->remove('updateEndorsement');
+        $this->remove('updateEndorsement');
+        return $this;
     }
 
     /**
@@ -1216,7 +1308,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateBookReview($value): self
     {
-        return $this->set('updateBookReview', $value);
+        $this->set('updateBookReview', $value);
+        return $this;
     }
 
     public function hasUpdateBookReview(): bool
@@ -1226,7 +1319,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateBookReview(): self
     {
-        return $this->remove('updateBookReview');
+        $this->remove('updateBookReview');
+        return $this;
     }
 
     /**
@@ -1242,7 +1336,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateWorkFeaturedVideo($value): self
     {
-        return $this->set('updateWorkFeaturedVideo', $value);
+        $this->set('updateWorkFeaturedVideo', $value);
+        return $this;
     }
 
     public function hasUpdateWorkFeaturedVideo(): bool
@@ -1252,7 +1347,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateWorkFeaturedVideo(): self
     {
-        return $this->remove('updateWorkFeaturedVideo');
+        $this->remove('updateWorkFeaturedVideo');
+        return $this;
     }
 
     /**
@@ -1268,7 +1364,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateContact($value): self
     {
-        return $this->set('updateContact', $value);
+        $this->set('updateContact', $value);
+        return $this;
     }
 
     public function hasUpdateContact(): bool
@@ -1278,7 +1375,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateContact(): self
     {
-        return $this->remove('updateContact');
+        $this->remove('updateContact');
+        return $this;
     }
 
     /**
@@ -1294,7 +1392,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateTitle($value): self
     {
-        return $this->set('updateTitle', $value);
+        $this->set('updateTitle', $value);
+        return $this;
     }
 
     public function hasUpdateTitle(): bool
@@ -1304,7 +1403,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateTitle(): self
     {
-        return $this->remove('updateTitle');
+        $this->remove('updateTitle');
+        return $this;
     }
 
     /**
@@ -1320,7 +1420,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateAbstract($value): self
     {
-        return $this->set('updateAbstract', $value);
+        $this->set('updateAbstract', $value);
+        return $this;
     }
 
     public function hasUpdateAbstract(): bool
@@ -1330,7 +1431,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateAbstract(): self
     {
-        return $this->remove('updateAbstract');
+        $this->remove('updateAbstract');
+        return $this;
     }
 
     /**
@@ -1346,7 +1448,8 @@ final class MutationRoot extends ObjectData
      */
     public function setUpdateBiography($value): self
     {
-        return $this->set('updateBiography', $value);
+        $this->set('updateBiography', $value);
+        return $this;
     }
 
     public function hasUpdateBiography(): bool
@@ -1356,7 +1459,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetUpdateBiography(): self
     {
-        return $this->remove('updateBiography');
+        $this->remove('updateBiography');
+        return $this;
     }
 
     /**
@@ -1372,7 +1476,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteWork($value): self
     {
-        return $this->set('deleteWork', $value);
+        $this->set('deleteWork', $value);
+        return $this;
     }
 
     public function hasDeleteWork(): bool
@@ -1382,7 +1487,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteWork(): self
     {
-        return $this->remove('deleteWork');
+        $this->remove('deleteWork');
+        return $this;
     }
 
     /**
@@ -1398,7 +1504,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeletePublisher($value): self
     {
-        return $this->set('deletePublisher', $value);
+        $this->set('deletePublisher', $value);
+        return $this;
     }
 
     public function hasDeletePublisher(): bool
@@ -1408,7 +1515,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeletePublisher(): self
     {
-        return $this->remove('deletePublisher');
+        $this->remove('deletePublisher');
+        return $this;
     }
 
     /**
@@ -1424,7 +1532,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteImprint($value): self
     {
-        return $this->set('deleteImprint', $value);
+        $this->set('deleteImprint', $value);
+        return $this;
     }
 
     public function hasDeleteImprint(): bool
@@ -1434,7 +1543,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteImprint(): self
     {
-        return $this->remove('deleteImprint');
+        $this->remove('deleteImprint');
+        return $this;
     }
 
     /**
@@ -1450,7 +1560,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteContributor($value): self
     {
-        return $this->set('deleteContributor', $value);
+        $this->set('deleteContributor', $value);
+        return $this;
     }
 
     public function hasDeleteContributor(): bool
@@ -1460,7 +1571,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteContributor(): self
     {
-        return $this->remove('deleteContributor');
+        $this->remove('deleteContributor');
+        return $this;
     }
 
     /**
@@ -1476,7 +1588,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteContribution($value): self
     {
-        return $this->set('deleteContribution', $value);
+        $this->set('deleteContribution', $value);
+        return $this;
     }
 
     public function hasDeleteContribution(): bool
@@ -1486,7 +1599,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteContribution(): self
     {
-        return $this->remove('deleteContribution');
+        $this->remove('deleteContribution');
+        return $this;
     }
 
     /**
@@ -1502,7 +1616,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeletePublication($value): self
     {
-        return $this->set('deletePublication', $value);
+        $this->set('deletePublication', $value);
+        return $this;
     }
 
     public function hasDeletePublication(): bool
@@ -1512,7 +1627,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeletePublication(): self
     {
-        return $this->remove('deletePublication');
+        $this->remove('deletePublication');
+        return $this;
     }
 
     /**
@@ -1528,7 +1644,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteSeries($value): self
     {
-        return $this->set('deleteSeries', $value);
+        $this->set('deleteSeries', $value);
+        return $this;
     }
 
     public function hasDeleteSeries(): bool
@@ -1538,7 +1655,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteSeries(): self
     {
-        return $this->remove('deleteSeries');
+        $this->remove('deleteSeries');
+        return $this;
     }
 
     /**
@@ -1554,7 +1672,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteIssue($value): self
     {
-        return $this->set('deleteIssue', $value);
+        $this->set('deleteIssue', $value);
+        return $this;
     }
 
     public function hasDeleteIssue(): bool
@@ -1564,7 +1683,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteIssue(): self
     {
-        return $this->remove('deleteIssue');
+        $this->remove('deleteIssue');
+        return $this;
     }
 
     /**
@@ -1580,7 +1700,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteLanguage($value): self
     {
-        return $this->set('deleteLanguage', $value);
+        $this->set('deleteLanguage', $value);
+        return $this;
     }
 
     public function hasDeleteLanguage(): bool
@@ -1590,7 +1711,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteLanguage(): self
     {
-        return $this->remove('deleteLanguage');
+        $this->remove('deleteLanguage');
+        return $this;
     }
 
     /**
@@ -1606,7 +1728,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteTitle($value): self
     {
-        return $this->set('deleteTitle', $value);
+        $this->set('deleteTitle', $value);
+        return $this;
     }
 
     public function hasDeleteTitle(): bool
@@ -1616,7 +1739,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteTitle(): self
     {
-        return $this->remove('deleteTitle');
+        $this->remove('deleteTitle');
+        return $this;
     }
 
     /**
@@ -1632,7 +1756,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteInstitution($value): self
     {
-        return $this->set('deleteInstitution', $value);
+        $this->set('deleteInstitution', $value);
+        return $this;
     }
 
     public function hasDeleteInstitution(): bool
@@ -1642,7 +1767,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteInstitution(): self
     {
-        return $this->remove('deleteInstitution');
+        $this->remove('deleteInstitution');
+        return $this;
     }
 
     /**
@@ -1658,7 +1784,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteFunding($value): self
     {
-        return $this->set('deleteFunding', $value);
+        $this->set('deleteFunding', $value);
+        return $this;
     }
 
     public function hasDeleteFunding(): bool
@@ -1668,7 +1795,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteFunding(): self
     {
-        return $this->remove('deleteFunding');
+        $this->remove('deleteFunding');
+        return $this;
     }
 
     /**
@@ -1684,7 +1812,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteLocation($value): self
     {
-        return $this->set('deleteLocation', $value);
+        $this->set('deleteLocation', $value);
+        return $this;
     }
 
     public function hasDeleteLocation(): bool
@@ -1694,7 +1823,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteLocation(): self
     {
-        return $this->remove('deleteLocation');
+        $this->remove('deleteLocation');
+        return $this;
     }
 
     /**
@@ -1710,7 +1840,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeletePrice($value): self
     {
-        return $this->set('deletePrice', $value);
+        $this->set('deletePrice', $value);
+        return $this;
     }
 
     public function hasDeletePrice(): bool
@@ -1720,7 +1851,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeletePrice(): self
     {
-        return $this->remove('deletePrice');
+        $this->remove('deletePrice');
+        return $this;
     }
 
     /**
@@ -1736,7 +1868,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteSubject($value): self
     {
-        return $this->set('deleteSubject', $value);
+        $this->set('deleteSubject', $value);
+        return $this;
     }
 
     public function hasDeleteSubject(): bool
@@ -1746,7 +1879,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteSubject(): self
     {
-        return $this->remove('deleteSubject');
+        $this->remove('deleteSubject');
+        return $this;
     }
 
     /**
@@ -1762,7 +1896,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteAffiliation($value): self
     {
-        return $this->set('deleteAffiliation', $value);
+        $this->set('deleteAffiliation', $value);
+        return $this;
     }
 
     public function hasDeleteAffiliation(): bool
@@ -1772,7 +1907,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteAffiliation(): self
     {
-        return $this->remove('deleteAffiliation');
+        $this->remove('deleteAffiliation');
+        return $this;
     }
 
     /**
@@ -1788,7 +1924,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteWorkRelation($value): self
     {
-        return $this->set('deleteWorkRelation', $value);
+        $this->set('deleteWorkRelation', $value);
+        return $this;
     }
 
     public function hasDeleteWorkRelation(): bool
@@ -1798,7 +1935,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteWorkRelation(): self
     {
-        return $this->remove('deleteWorkRelation');
+        $this->remove('deleteWorkRelation');
+        return $this;
     }
 
     /**
@@ -1814,7 +1952,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteReference($value): self
     {
-        return $this->set('deleteReference', $value);
+        $this->set('deleteReference', $value);
+        return $this;
     }
 
     public function hasDeleteReference(): bool
@@ -1824,7 +1963,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteReference(): self
     {
-        return $this->remove('deleteReference');
+        $this->remove('deleteReference');
+        return $this;
     }
 
     /**
@@ -1840,7 +1980,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteAdditionalResource($value): self
     {
-        return $this->set('deleteAdditionalResource', $value);
+        $this->set('deleteAdditionalResource', $value);
+        return $this;
     }
 
     public function hasDeleteAdditionalResource(): bool
@@ -1850,7 +1991,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteAdditionalResource(): self
     {
-        return $this->remove('deleteAdditionalResource');
+        $this->remove('deleteAdditionalResource');
+        return $this;
     }
 
     /**
@@ -1866,7 +2008,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteAward($value): self
     {
-        return $this->set('deleteAward', $value);
+        $this->set('deleteAward', $value);
+        return $this;
     }
 
     public function hasDeleteAward(): bool
@@ -1876,7 +2019,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteAward(): self
     {
-        return $this->remove('deleteAward');
+        $this->remove('deleteAward');
+        return $this;
     }
 
     /**
@@ -1892,7 +2036,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteEndorsement($value): self
     {
-        return $this->set('deleteEndorsement', $value);
+        $this->set('deleteEndorsement', $value);
+        return $this;
     }
 
     public function hasDeleteEndorsement(): bool
@@ -1902,7 +2047,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteEndorsement(): self
     {
-        return $this->remove('deleteEndorsement');
+        $this->remove('deleteEndorsement');
+        return $this;
     }
 
     /**
@@ -1918,7 +2064,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteBookReview($value): self
     {
-        return $this->set('deleteBookReview', $value);
+        $this->set('deleteBookReview', $value);
+        return $this;
     }
 
     public function hasDeleteBookReview(): bool
@@ -1928,7 +2075,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteBookReview(): self
     {
-        return $this->remove('deleteBookReview');
+        $this->remove('deleteBookReview');
+        return $this;
     }
 
     /**
@@ -1944,7 +2092,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteWorkFeaturedVideo($value): self
     {
-        return $this->set('deleteWorkFeaturedVideo', $value);
+        $this->set('deleteWorkFeaturedVideo', $value);
+        return $this;
     }
 
     public function hasDeleteWorkFeaturedVideo(): bool
@@ -1954,7 +2103,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteWorkFeaturedVideo(): self
     {
-        return $this->remove('deleteWorkFeaturedVideo');
+        $this->remove('deleteWorkFeaturedVideo');
+        return $this;
     }
 
     /**
@@ -1970,7 +2120,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteAbstract($value): self
     {
-        return $this->set('deleteAbstract', $value);
+        $this->set('deleteAbstract', $value);
+        return $this;
     }
 
     public function hasDeleteAbstract(): bool
@@ -1980,7 +2131,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteAbstract(): self
     {
-        return $this->remove('deleteAbstract');
+        $this->remove('deleteAbstract');
+        return $this;
     }
 
     /**
@@ -1996,7 +2148,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteBiography($value): self
     {
-        return $this->set('deleteBiography', $value);
+        $this->set('deleteBiography', $value);
+        return $this;
     }
 
     public function hasDeleteBiography(): bool
@@ -2006,7 +2159,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteBiography(): self
     {
-        return $this->remove('deleteBiography');
+        $this->remove('deleteBiography');
+        return $this;
     }
 
     /**
@@ -2022,7 +2176,8 @@ final class MutationRoot extends ObjectData
      */
     public function setMoveAffiliation($value): self
     {
-        return $this->set('moveAffiliation', $value);
+        $this->set('moveAffiliation', $value);
+        return $this;
     }
 
     public function hasMoveAffiliation(): bool
@@ -2032,7 +2187,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetMoveAffiliation(): self
     {
-        return $this->remove('moveAffiliation');
+        $this->remove('moveAffiliation');
+        return $this;
     }
 
     /**
@@ -2048,7 +2204,8 @@ final class MutationRoot extends ObjectData
      */
     public function setMoveContribution($value): self
     {
-        return $this->set('moveContribution', $value);
+        $this->set('moveContribution', $value);
+        return $this;
     }
 
     public function hasMoveContribution(): bool
@@ -2058,7 +2215,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetMoveContribution(): self
     {
-        return $this->remove('moveContribution');
+        $this->remove('moveContribution');
+        return $this;
     }
 
     /**
@@ -2074,7 +2232,8 @@ final class MutationRoot extends ObjectData
      */
     public function setMoveIssue($value): self
     {
-        return $this->set('moveIssue', $value);
+        $this->set('moveIssue', $value);
+        return $this;
     }
 
     public function hasMoveIssue(): bool
@@ -2084,7 +2243,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetMoveIssue(): self
     {
-        return $this->remove('moveIssue');
+        $this->remove('moveIssue');
+        return $this;
     }
 
     /**
@@ -2100,7 +2260,8 @@ final class MutationRoot extends ObjectData
      */
     public function setMoveReference($value): self
     {
-        return $this->set('moveReference', $value);
+        $this->set('moveReference', $value);
+        return $this;
     }
 
     public function hasMoveReference(): bool
@@ -2110,7 +2271,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetMoveReference(): self
     {
-        return $this->remove('moveReference');
+        $this->remove('moveReference');
+        return $this;
     }
 
     /**
@@ -2126,7 +2288,8 @@ final class MutationRoot extends ObjectData
      */
     public function setMoveAdditionalResource($value): self
     {
-        return $this->set('moveAdditionalResource', $value);
+        $this->set('moveAdditionalResource', $value);
+        return $this;
     }
 
     public function hasMoveAdditionalResource(): bool
@@ -2136,7 +2299,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetMoveAdditionalResource(): self
     {
-        return $this->remove('moveAdditionalResource');
+        $this->remove('moveAdditionalResource');
+        return $this;
     }
 
     /**
@@ -2152,7 +2316,8 @@ final class MutationRoot extends ObjectData
      */
     public function setMoveAward($value): self
     {
-        return $this->set('moveAward', $value);
+        $this->set('moveAward', $value);
+        return $this;
     }
 
     public function hasMoveAward(): bool
@@ -2162,7 +2327,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetMoveAward(): self
     {
-        return $this->remove('moveAward');
+        $this->remove('moveAward');
+        return $this;
     }
 
     /**
@@ -2178,7 +2344,8 @@ final class MutationRoot extends ObjectData
      */
     public function setMoveEndorsement($value): self
     {
-        return $this->set('moveEndorsement', $value);
+        $this->set('moveEndorsement', $value);
+        return $this;
     }
 
     public function hasMoveEndorsement(): bool
@@ -2188,7 +2355,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetMoveEndorsement(): self
     {
-        return $this->remove('moveEndorsement');
+        $this->remove('moveEndorsement');
+        return $this;
     }
 
     /**
@@ -2204,7 +2372,8 @@ final class MutationRoot extends ObjectData
      */
     public function setMoveBookReview($value): self
     {
-        return $this->set('moveBookReview', $value);
+        $this->set('moveBookReview', $value);
+        return $this;
     }
 
     public function hasMoveBookReview(): bool
@@ -2214,7 +2383,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetMoveBookReview(): self
     {
-        return $this->remove('moveBookReview');
+        $this->remove('moveBookReview');
+        return $this;
     }
 
     /**
@@ -2230,7 +2400,8 @@ final class MutationRoot extends ObjectData
      */
     public function setMoveSubject($value): self
     {
-        return $this->set('moveSubject', $value);
+        $this->set('moveSubject', $value);
+        return $this;
     }
 
     public function hasMoveSubject(): bool
@@ -2240,7 +2411,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetMoveSubject(): self
     {
-        return $this->remove('moveSubject');
+        $this->remove('moveSubject');
+        return $this;
     }
 
     /**
@@ -2256,7 +2428,8 @@ final class MutationRoot extends ObjectData
      */
     public function setMoveWorkRelation($value): self
     {
-        return $this->set('moveWorkRelation', $value);
+        $this->set('moveWorkRelation', $value);
+        return $this;
     }
 
     public function hasMoveWorkRelation(): bool
@@ -2266,7 +2439,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetMoveWorkRelation(): self
     {
-        return $this->remove('moveWorkRelation');
+        $this->remove('moveWorkRelation');
+        return $this;
     }
 
     /**
@@ -2282,7 +2456,8 @@ final class MutationRoot extends ObjectData
      */
     public function setInitPublicationFileUpload($value): self
     {
-        return $this->set('initPublicationFileUpload', $value);
+        $this->set('initPublicationFileUpload', $value);
+        return $this;
     }
 
     public function hasInitPublicationFileUpload(): bool
@@ -2292,7 +2467,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetInitPublicationFileUpload(): self
     {
-        return $this->remove('initPublicationFileUpload');
+        $this->remove('initPublicationFileUpload');
+        return $this;
     }
 
     /**
@@ -2308,7 +2484,8 @@ final class MutationRoot extends ObjectData
      */
     public function setInitFrontcoverFileUpload($value): self
     {
-        return $this->set('initFrontcoverFileUpload', $value);
+        $this->set('initFrontcoverFileUpload', $value);
+        return $this;
     }
 
     public function hasInitFrontcoverFileUpload(): bool
@@ -2318,7 +2495,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetInitFrontcoverFileUpload(): self
     {
-        return $this->remove('initFrontcoverFileUpload');
+        $this->remove('initFrontcoverFileUpload');
+        return $this;
     }
 
     /**
@@ -2334,7 +2512,8 @@ final class MutationRoot extends ObjectData
      */
     public function setInitAdditionalResourceFileUpload($value): self
     {
-        return $this->set('initAdditionalResourceFileUpload', $value);
+        $this->set('initAdditionalResourceFileUpload', $value);
+        return $this;
     }
 
     public function hasInitAdditionalResourceFileUpload(): bool
@@ -2344,7 +2523,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetInitAdditionalResourceFileUpload(): self
     {
-        return $this->remove('initAdditionalResourceFileUpload');
+        $this->remove('initAdditionalResourceFileUpload');
+        return $this;
     }
 
     /**
@@ -2360,7 +2540,8 @@ final class MutationRoot extends ObjectData
      */
     public function setInitWorkFeaturedVideoFileUpload($value): self
     {
-        return $this->set('initWorkFeaturedVideoFileUpload', $value);
+        $this->set('initWorkFeaturedVideoFileUpload', $value);
+        return $this;
     }
 
     public function hasInitWorkFeaturedVideoFileUpload(): bool
@@ -2370,7 +2551,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetInitWorkFeaturedVideoFileUpload(): self
     {
-        return $this->remove('initWorkFeaturedVideoFileUpload');
+        $this->remove('initWorkFeaturedVideoFileUpload');
+        return $this;
     }
 
     /**
@@ -2386,7 +2568,8 @@ final class MutationRoot extends ObjectData
      */
     public function setCompleteFileUpload($value): self
     {
-        return $this->set('completeFileUpload', $value);
+        $this->set('completeFileUpload', $value);
+        return $this;
     }
 
     public function hasCompleteFileUpload(): bool
@@ -2396,7 +2579,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetCompleteFileUpload(): self
     {
-        return $this->remove('completeFileUpload');
+        $this->remove('completeFileUpload');
+        return $this;
     }
 
     /**
@@ -2412,7 +2596,8 @@ final class MutationRoot extends ObjectData
      */
     public function setDeleteContact($value): self
     {
-        return $this->set('deleteContact', $value);
+        $this->set('deleteContact', $value);
+        return $this;
     }
 
     public function hasDeleteContact(): bool
@@ -2422,7 +2607,8 @@ final class MutationRoot extends ObjectData
 
     public function unsetDeleteContact(): self
     {
-        return $this->remove('deleteContact');
+        $this->remove('deleteContact');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

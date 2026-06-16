@@ -20,7 +20,8 @@ final class PatchWorkFeaturedVideo extends InputObject
      */
     public function setWorkFeaturedVideoId($value): self
     {
-        return $this->set('workFeaturedVideoId', $value);
+        $this->set('workFeaturedVideoId', $value);
+        return $this;
     }
 
     public function hasWorkFeaturedVideoId(): bool
@@ -30,7 +31,8 @@ final class PatchWorkFeaturedVideo extends InputObject
 
     public function unsetWorkFeaturedVideoId(): self
     {
-        return $this->remove('workFeaturedVideoId');
+        $this->remove('workFeaturedVideoId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class PatchWorkFeaturedVideo extends InputObject
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -56,7 +59,8 @@ final class PatchWorkFeaturedVideo extends InputObject
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class PatchWorkFeaturedVideo extends InputObject
      */
     public function setTitle($value): self
     {
-        return $this->set('title', $value);
+        $this->set('title', $value);
+        return $this;
     }
 
     public function hasTitle(): bool
@@ -82,7 +87,8 @@ final class PatchWorkFeaturedVideo extends InputObject
 
     public function unsetTitle(): self
     {
-        return $this->remove('title');
+        $this->remove('title');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class PatchWorkFeaturedVideo extends InputObject
      */
     public function setUrl($value): self
     {
-        return $this->set('url', $value);
+        $this->set('url', $value);
+        return $this;
     }
 
     public function hasUrl(): bool
@@ -108,7 +115,8 @@ final class PatchWorkFeaturedVideo extends InputObject
 
     public function unsetUrl(): self
     {
-        return $this->remove('url');
+        $this->remove('url');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class PatchWorkFeaturedVideo extends InputObject
      */
     public function setWidth($value): self
     {
-        return $this->set('width', $value);
+        $this->set('width', $value);
+        return $this;
     }
 
     public function hasWidth(): bool
@@ -134,7 +143,8 @@ final class PatchWorkFeaturedVideo extends InputObject
 
     public function unsetWidth(): self
     {
-        return $this->remove('width');
+        $this->remove('width');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class PatchWorkFeaturedVideo extends InputObject
      */
     public function setHeight($value): self
     {
-        return $this->set('height', $value);
+        $this->set('height', $value);
+        return $this;
     }
 
     public function hasHeight(): bool
@@ -160,7 +171,8 @@ final class PatchWorkFeaturedVideo extends InputObject
 
     public function unsetHeight(): self
     {
-        return $this->remove('height');
+        $this->remove('height');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

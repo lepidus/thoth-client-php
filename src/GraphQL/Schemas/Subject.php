@@ -20,7 +20,8 @@ final class Subject extends ObjectData
      */
     public function setSubjectId($value): self
     {
-        return $this->set('subjectId', $value);
+        $this->set('subjectId', $value);
+        return $this;
     }
 
     public function hasSubjectId(): bool
@@ -30,7 +31,8 @@ final class Subject extends ObjectData
 
     public function unsetSubjectId(): self
     {
-        return $this->remove('subjectId');
+        $this->remove('subjectId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class Subject extends ObjectData
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -56,7 +59,8 @@ final class Subject extends ObjectData
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class Subject extends ObjectData
      */
     public function setSubjectType($value): self
     {
-        return $this->set('subjectType', $value);
+        $this->set('subjectType', $value);
+        return $this;
     }
 
     public function hasSubjectType(): bool
@@ -82,7 +87,8 @@ final class Subject extends ObjectData
 
     public function unsetSubjectType(): self
     {
-        return $this->remove('subjectType');
+        $this->remove('subjectType');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class Subject extends ObjectData
      */
     public function setSubjectCode($value): self
     {
-        return $this->set('subjectCode', $value);
+        $this->set('subjectCode', $value);
+        return $this;
     }
 
     public function hasSubjectCode(): bool
@@ -108,7 +115,8 @@ final class Subject extends ObjectData
 
     public function unsetSubjectCode(): self
     {
-        return $this->remove('subjectCode');
+        $this->remove('subjectCode');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class Subject extends ObjectData
      */
     public function setSubjectOrdinal($value): self
     {
-        return $this->set('subjectOrdinal', $value);
+        $this->set('subjectOrdinal', $value);
+        return $this;
     }
 
     public function hasSubjectOrdinal(): bool
@@ -134,7 +143,8 @@ final class Subject extends ObjectData
 
     public function unsetSubjectOrdinal(): self
     {
-        return $this->remove('subjectOrdinal');
+        $this->remove('subjectOrdinal');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class Subject extends ObjectData
      */
     public function setCreatedAt($value): self
     {
-        return $this->set('createdAt', $value);
+        $this->set('createdAt', $value);
+        return $this;
     }
 
     public function hasCreatedAt(): bool
@@ -160,7 +171,8 @@ final class Subject extends ObjectData
 
     public function unsetCreatedAt(): self
     {
-        return $this->remove('createdAt');
+        $this->remove('createdAt');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class Subject extends ObjectData
      */
     public function setUpdatedAt($value): self
     {
-        return $this->set('updatedAt', $value);
+        $this->set('updatedAt', $value);
+        return $this;
     }
 
     public function hasUpdatedAt(): bool
@@ -186,7 +199,8 @@ final class Subject extends ObjectData
 
     public function unsetUpdatedAt(): self
     {
-        return $this->remove('updatedAt');
+        $this->remove('updatedAt');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class Subject extends ObjectData
      */
     public function setWork($value): self
     {
-        return $this->set('work', $value);
+        $this->set('work', $value);
+        return $this;
     }
 
     public function hasWork(): bool
@@ -212,7 +227,8 @@ final class Subject extends ObjectData
 
     public function unsetWork(): self
     {
-        return $this->remove('work');
+        $this->remove('work');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

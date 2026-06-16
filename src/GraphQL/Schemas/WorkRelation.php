@@ -20,7 +20,8 @@ final class WorkRelation extends ObjectData
      */
     public function setWorkRelationId($value): self
     {
-        return $this->set('workRelationId', $value);
+        $this->set('workRelationId', $value);
+        return $this;
     }
 
     public function hasWorkRelationId(): bool
@@ -30,7 +31,8 @@ final class WorkRelation extends ObjectData
 
     public function unsetWorkRelationId(): self
     {
-        return $this->remove('workRelationId');
+        $this->remove('workRelationId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class WorkRelation extends ObjectData
      */
     public function setRelatorWorkId($value): self
     {
-        return $this->set('relatorWorkId', $value);
+        $this->set('relatorWorkId', $value);
+        return $this;
     }
 
     public function hasRelatorWorkId(): bool
@@ -56,7 +59,8 @@ final class WorkRelation extends ObjectData
 
     public function unsetRelatorWorkId(): self
     {
-        return $this->remove('relatorWorkId');
+        $this->remove('relatorWorkId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class WorkRelation extends ObjectData
      */
     public function setRelatedWorkId($value): self
     {
-        return $this->set('relatedWorkId', $value);
+        $this->set('relatedWorkId', $value);
+        return $this;
     }
 
     public function hasRelatedWorkId(): bool
@@ -82,7 +87,8 @@ final class WorkRelation extends ObjectData
 
     public function unsetRelatedWorkId(): self
     {
-        return $this->remove('relatedWorkId');
+        $this->remove('relatedWorkId');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class WorkRelation extends ObjectData
      */
     public function setRelationType($value): self
     {
-        return $this->set('relationType', $value);
+        $this->set('relationType', $value);
+        return $this;
     }
 
     public function hasRelationType(): bool
@@ -108,7 +115,8 @@ final class WorkRelation extends ObjectData
 
     public function unsetRelationType(): self
     {
-        return $this->remove('relationType');
+        $this->remove('relationType');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class WorkRelation extends ObjectData
      */
     public function setRelationOrdinal($value): self
     {
-        return $this->set('relationOrdinal', $value);
+        $this->set('relationOrdinal', $value);
+        return $this;
     }
 
     public function hasRelationOrdinal(): bool
@@ -134,7 +143,8 @@ final class WorkRelation extends ObjectData
 
     public function unsetRelationOrdinal(): self
     {
-        return $this->remove('relationOrdinal');
+        $this->remove('relationOrdinal');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class WorkRelation extends ObjectData
      */
     public function setCreatedAt($value): self
     {
-        return $this->set('createdAt', $value);
+        $this->set('createdAt', $value);
+        return $this;
     }
 
     public function hasCreatedAt(): bool
@@ -160,7 +171,8 @@ final class WorkRelation extends ObjectData
 
     public function unsetCreatedAt(): self
     {
-        return $this->remove('createdAt');
+        $this->remove('createdAt');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class WorkRelation extends ObjectData
      */
     public function setUpdatedAt($value): self
     {
-        return $this->set('updatedAt', $value);
+        $this->set('updatedAt', $value);
+        return $this;
     }
 
     public function hasUpdatedAt(): bool
@@ -186,7 +199,8 @@ final class WorkRelation extends ObjectData
 
     public function unsetUpdatedAt(): self
     {
-        return $this->remove('updatedAt');
+        $this->remove('updatedAt');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class WorkRelation extends ObjectData
      */
     public function setRelatedWork($value): self
     {
-        return $this->set('relatedWork', $value);
+        $this->set('relatedWork', $value);
+        return $this;
     }
 
     public function hasRelatedWork(): bool
@@ -212,7 +227,8 @@ final class WorkRelation extends ObjectData
 
     public function unsetRelatedWork(): self
     {
-        return $this->remove('relatedWork');
+        $this->remove('relatedWork');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

@@ -20,7 +20,8 @@ final class Work extends ObjectData
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -30,7 +31,8 @@ final class Work extends ObjectData
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class Work extends ObjectData
      */
     public function setWorkType($value): self
     {
-        return $this->set('workType', $value);
+        $this->set('workType', $value);
+        return $this;
     }
 
     public function hasWorkType(): bool
@@ -56,7 +59,8 @@ final class Work extends ObjectData
 
     public function unsetWorkType(): self
     {
-        return $this->remove('workType');
+        $this->remove('workType');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class Work extends ObjectData
      */
     public function setWorkStatus($value): self
     {
-        return $this->set('workStatus', $value);
+        $this->set('workStatus', $value);
+        return $this;
     }
 
     public function hasWorkStatus(): bool
@@ -82,7 +87,8 @@ final class Work extends ObjectData
 
     public function unsetWorkStatus(): self
     {
-        return $this->remove('workStatus');
+        $this->remove('workStatus');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class Work extends ObjectData
      */
     public function setFullTitle($value): self
     {
-        return $this->set('fullTitle', $value);
+        $this->set('fullTitle', $value);
+        return $this;
     }
 
     public function hasFullTitle(): bool
@@ -108,7 +115,8 @@ final class Work extends ObjectData
 
     public function unsetFullTitle(): self
     {
-        return $this->remove('fullTitle');
+        $this->remove('fullTitle');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class Work extends ObjectData
      */
     public function setTitle($value): self
     {
-        return $this->set('title', $value);
+        $this->set('title', $value);
+        return $this;
     }
 
     public function hasTitle(): bool
@@ -134,7 +143,8 @@ final class Work extends ObjectData
 
     public function unsetTitle(): self
     {
-        return $this->remove('title');
+        $this->remove('title');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class Work extends ObjectData
      */
     public function setSubtitle($value): self
     {
-        return $this->set('subtitle', $value);
+        $this->set('subtitle', $value);
+        return $this;
     }
 
     public function hasSubtitle(): bool
@@ -160,7 +171,8 @@ final class Work extends ObjectData
 
     public function unsetSubtitle(): self
     {
-        return $this->remove('subtitle');
+        $this->remove('subtitle');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class Work extends ObjectData
      */
     public function setShortAbstract($value): self
     {
-        return $this->set('shortAbstract', $value);
+        $this->set('shortAbstract', $value);
+        return $this;
     }
 
     public function hasShortAbstract(): bool
@@ -186,7 +199,8 @@ final class Work extends ObjectData
 
     public function unsetShortAbstract(): self
     {
-        return $this->remove('shortAbstract');
+        $this->remove('shortAbstract');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class Work extends ObjectData
      */
     public function setLongAbstract($value): self
     {
-        return $this->set('longAbstract', $value);
+        $this->set('longAbstract', $value);
+        return $this;
     }
 
     public function hasLongAbstract(): bool
@@ -212,7 +227,8 @@ final class Work extends ObjectData
 
     public function unsetLongAbstract(): self
     {
-        return $this->remove('longAbstract');
+        $this->remove('longAbstract');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class Work extends ObjectData
      */
     public function setTitles($value): self
     {
-        return $this->set('titles', $value);
+        $this->set('titles', $value);
+        return $this;
     }
 
     public function hasTitles(): bool
@@ -238,7 +255,8 @@ final class Work extends ObjectData
 
     public function unsetTitles(): self
     {
-        return $this->remove('titles');
+        $this->remove('titles');
+        return $this;
     }
 
     /**
@@ -254,7 +272,8 @@ final class Work extends ObjectData
      */
     public function setAbstracts($value): self
     {
-        return $this->set('abstracts', $value);
+        $this->set('abstracts', $value);
+        return $this;
     }
 
     public function hasAbstracts(): bool
@@ -264,7 +283,8 @@ final class Work extends ObjectData
 
     public function unsetAbstracts(): self
     {
-        return $this->remove('abstracts');
+        $this->remove('abstracts');
+        return $this;
     }
 
     /**
@@ -280,7 +300,8 @@ final class Work extends ObjectData
      */
     public function setReference($value): self
     {
-        return $this->set('reference', $value);
+        $this->set('reference', $value);
+        return $this;
     }
 
     public function hasReference(): bool
@@ -290,7 +311,8 @@ final class Work extends ObjectData
 
     public function unsetReference(): self
     {
-        return $this->remove('reference');
+        $this->remove('reference');
+        return $this;
     }
 
     /**
@@ -306,7 +328,8 @@ final class Work extends ObjectData
      */
     public function setEdition($value): self
     {
-        return $this->set('edition', $value);
+        $this->set('edition', $value);
+        return $this;
     }
 
     public function hasEdition(): bool
@@ -316,7 +339,8 @@ final class Work extends ObjectData
 
     public function unsetEdition(): self
     {
-        return $this->remove('edition');
+        $this->remove('edition');
+        return $this;
     }
 
     /**
@@ -332,7 +356,8 @@ final class Work extends ObjectData
      */
     public function setImprintId($value): self
     {
-        return $this->set('imprintId', $value);
+        $this->set('imprintId', $value);
+        return $this;
     }
 
     public function hasImprintId(): bool
@@ -342,7 +367,8 @@ final class Work extends ObjectData
 
     public function unsetImprintId(): self
     {
-        return $this->remove('imprintId');
+        $this->remove('imprintId');
+        return $this;
     }
 
     /**
@@ -358,7 +384,8 @@ final class Work extends ObjectData
      */
     public function setDoi($value): self
     {
-        return $this->set('doi', $value);
+        $this->set('doi', $value);
+        return $this;
     }
 
     public function hasDoi(): bool
@@ -368,7 +395,8 @@ final class Work extends ObjectData
 
     public function unsetDoi(): self
     {
-        return $this->remove('doi');
+        $this->remove('doi');
+        return $this;
     }
 
     /**
@@ -384,7 +412,8 @@ final class Work extends ObjectData
      */
     public function setPublicationDate($value): self
     {
-        return $this->set('publicationDate', $value);
+        $this->set('publicationDate', $value);
+        return $this;
     }
 
     public function hasPublicationDate(): bool
@@ -394,7 +423,8 @@ final class Work extends ObjectData
 
     public function unsetPublicationDate(): self
     {
-        return $this->remove('publicationDate');
+        $this->remove('publicationDate');
+        return $this;
     }
 
     /**
@@ -410,7 +440,8 @@ final class Work extends ObjectData
      */
     public function setWithdrawnDate($value): self
     {
-        return $this->set('withdrawnDate', $value);
+        $this->set('withdrawnDate', $value);
+        return $this;
     }
 
     public function hasWithdrawnDate(): bool
@@ -420,7 +451,8 @@ final class Work extends ObjectData
 
     public function unsetWithdrawnDate(): self
     {
-        return $this->remove('withdrawnDate');
+        $this->remove('withdrawnDate');
+        return $this;
     }
 
     /**
@@ -436,7 +468,8 @@ final class Work extends ObjectData
      */
     public function setPlace($value): self
     {
-        return $this->set('place', $value);
+        $this->set('place', $value);
+        return $this;
     }
 
     public function hasPlace(): bool
@@ -446,7 +479,8 @@ final class Work extends ObjectData
 
     public function unsetPlace(): self
     {
-        return $this->remove('place');
+        $this->remove('place');
+        return $this;
     }
 
     /**
@@ -462,7 +496,8 @@ final class Work extends ObjectData
      */
     public function setPageCount($value): self
     {
-        return $this->set('pageCount', $value);
+        $this->set('pageCount', $value);
+        return $this;
     }
 
     public function hasPageCount(): bool
@@ -472,7 +507,8 @@ final class Work extends ObjectData
 
     public function unsetPageCount(): self
     {
-        return $this->remove('pageCount');
+        $this->remove('pageCount');
+        return $this;
     }
 
     /**
@@ -488,7 +524,8 @@ final class Work extends ObjectData
      */
     public function setPageBreakdown($value): self
     {
-        return $this->set('pageBreakdown', $value);
+        $this->set('pageBreakdown', $value);
+        return $this;
     }
 
     public function hasPageBreakdown(): bool
@@ -498,7 +535,8 @@ final class Work extends ObjectData
 
     public function unsetPageBreakdown(): self
     {
-        return $this->remove('pageBreakdown');
+        $this->remove('pageBreakdown');
+        return $this;
     }
 
     /**
@@ -514,7 +552,8 @@ final class Work extends ObjectData
      */
     public function setImageCount($value): self
     {
-        return $this->set('imageCount', $value);
+        $this->set('imageCount', $value);
+        return $this;
     }
 
     public function hasImageCount(): bool
@@ -524,7 +563,8 @@ final class Work extends ObjectData
 
     public function unsetImageCount(): self
     {
-        return $this->remove('imageCount');
+        $this->remove('imageCount');
+        return $this;
     }
 
     /**
@@ -540,7 +580,8 @@ final class Work extends ObjectData
      */
     public function setTableCount($value): self
     {
-        return $this->set('tableCount', $value);
+        $this->set('tableCount', $value);
+        return $this;
     }
 
     public function hasTableCount(): bool
@@ -550,7 +591,8 @@ final class Work extends ObjectData
 
     public function unsetTableCount(): self
     {
-        return $this->remove('tableCount');
+        $this->remove('tableCount');
+        return $this;
     }
 
     /**
@@ -566,7 +608,8 @@ final class Work extends ObjectData
      */
     public function setAudioCount($value): self
     {
-        return $this->set('audioCount', $value);
+        $this->set('audioCount', $value);
+        return $this;
     }
 
     public function hasAudioCount(): bool
@@ -576,7 +619,8 @@ final class Work extends ObjectData
 
     public function unsetAudioCount(): self
     {
-        return $this->remove('audioCount');
+        $this->remove('audioCount');
+        return $this;
     }
 
     /**
@@ -592,7 +636,8 @@ final class Work extends ObjectData
      */
     public function setVideoCount($value): self
     {
-        return $this->set('videoCount', $value);
+        $this->set('videoCount', $value);
+        return $this;
     }
 
     public function hasVideoCount(): bool
@@ -602,7 +647,8 @@ final class Work extends ObjectData
 
     public function unsetVideoCount(): self
     {
-        return $this->remove('videoCount');
+        $this->remove('videoCount');
+        return $this;
     }
 
     /**
@@ -618,7 +664,8 @@ final class Work extends ObjectData
      */
     public function setLicense($value): self
     {
-        return $this->set('license', $value);
+        $this->set('license', $value);
+        return $this;
     }
 
     public function hasLicense(): bool
@@ -628,7 +675,8 @@ final class Work extends ObjectData
 
     public function unsetLicense(): self
     {
-        return $this->remove('license');
+        $this->remove('license');
+        return $this;
     }
 
     /**
@@ -644,7 +692,8 @@ final class Work extends ObjectData
      */
     public function setCopyrightHolder($value): self
     {
-        return $this->set('copyrightHolder', $value);
+        $this->set('copyrightHolder', $value);
+        return $this;
     }
 
     public function hasCopyrightHolder(): bool
@@ -654,7 +703,8 @@ final class Work extends ObjectData
 
     public function unsetCopyrightHolder(): self
     {
-        return $this->remove('copyrightHolder');
+        $this->remove('copyrightHolder');
+        return $this;
     }
 
     /**
@@ -670,7 +720,8 @@ final class Work extends ObjectData
      */
     public function setLandingPage($value): self
     {
-        return $this->set('landingPage', $value);
+        $this->set('landingPage', $value);
+        return $this;
     }
 
     public function hasLandingPage(): bool
@@ -680,7 +731,8 @@ final class Work extends ObjectData
 
     public function unsetLandingPage(): self
     {
-        return $this->remove('landingPage');
+        $this->remove('landingPage');
+        return $this;
     }
 
     /**
@@ -696,7 +748,8 @@ final class Work extends ObjectData
      */
     public function setLccn($value): self
     {
-        return $this->set('lccn', $value);
+        $this->set('lccn', $value);
+        return $this;
     }
 
     public function hasLccn(): bool
@@ -706,7 +759,8 @@ final class Work extends ObjectData
 
     public function unsetLccn(): self
     {
-        return $this->remove('lccn');
+        $this->remove('lccn');
+        return $this;
     }
 
     /**
@@ -722,7 +776,8 @@ final class Work extends ObjectData
      */
     public function setOclc($value): self
     {
-        return $this->set('oclc', $value);
+        $this->set('oclc', $value);
+        return $this;
     }
 
     public function hasOclc(): bool
@@ -732,7 +787,8 @@ final class Work extends ObjectData
 
     public function unsetOclc(): self
     {
-        return $this->remove('oclc');
+        $this->remove('oclc');
+        return $this;
     }
 
     /**
@@ -748,7 +804,8 @@ final class Work extends ObjectData
      */
     public function setGeneralNote($value): self
     {
-        return $this->set('generalNote', $value);
+        $this->set('generalNote', $value);
+        return $this;
     }
 
     public function hasGeneralNote(): bool
@@ -758,7 +815,8 @@ final class Work extends ObjectData
 
     public function unsetGeneralNote(): self
     {
-        return $this->remove('generalNote');
+        $this->remove('generalNote');
+        return $this;
     }
 
     /**
@@ -774,7 +832,8 @@ final class Work extends ObjectData
      */
     public function setBibliographyNote($value): self
     {
-        return $this->set('bibliographyNote', $value);
+        $this->set('bibliographyNote', $value);
+        return $this;
     }
 
     public function hasBibliographyNote(): bool
@@ -784,7 +843,8 @@ final class Work extends ObjectData
 
     public function unsetBibliographyNote(): self
     {
-        return $this->remove('bibliographyNote');
+        $this->remove('bibliographyNote');
+        return $this;
     }
 
     /**
@@ -800,7 +860,8 @@ final class Work extends ObjectData
      */
     public function setToc($value): self
     {
-        return $this->set('toc', $value);
+        $this->set('toc', $value);
+        return $this;
     }
 
     public function hasToc(): bool
@@ -810,7 +871,8 @@ final class Work extends ObjectData
 
     public function unsetToc(): self
     {
-        return $this->remove('toc');
+        $this->remove('toc');
+        return $this;
     }
 
     /**
@@ -826,7 +888,8 @@ final class Work extends ObjectData
      */
     public function setResourcesDescription($value): self
     {
-        return $this->set('resourcesDescription', $value);
+        $this->set('resourcesDescription', $value);
+        return $this;
     }
 
     public function hasResourcesDescription(): bool
@@ -836,7 +899,8 @@ final class Work extends ObjectData
 
     public function unsetResourcesDescription(): self
     {
-        return $this->remove('resourcesDescription');
+        $this->remove('resourcesDescription');
+        return $this;
     }
 
     /**
@@ -852,7 +916,8 @@ final class Work extends ObjectData
      */
     public function setCoverUrl($value): self
     {
-        return $this->set('coverUrl', $value);
+        $this->set('coverUrl', $value);
+        return $this;
     }
 
     public function hasCoverUrl(): bool
@@ -862,7 +927,8 @@ final class Work extends ObjectData
 
     public function unsetCoverUrl(): self
     {
-        return $this->remove('coverUrl');
+        $this->remove('coverUrl');
+        return $this;
     }
 
     /**
@@ -878,7 +944,8 @@ final class Work extends ObjectData
      */
     public function setCoverCaption($value): self
     {
-        return $this->set('coverCaption', $value);
+        $this->set('coverCaption', $value);
+        return $this;
     }
 
     public function hasCoverCaption(): bool
@@ -888,7 +955,8 @@ final class Work extends ObjectData
 
     public function unsetCoverCaption(): self
     {
-        return $this->remove('coverCaption');
+        $this->remove('coverCaption');
+        return $this;
     }
 
     /**
@@ -904,7 +972,8 @@ final class Work extends ObjectData
      */
     public function setCreatedAt($value): self
     {
-        return $this->set('createdAt', $value);
+        $this->set('createdAt', $value);
+        return $this;
     }
 
     public function hasCreatedAt(): bool
@@ -914,7 +983,8 @@ final class Work extends ObjectData
 
     public function unsetCreatedAt(): self
     {
-        return $this->remove('createdAt');
+        $this->remove('createdAt');
+        return $this;
     }
 
     /**
@@ -930,7 +1000,8 @@ final class Work extends ObjectData
      */
     public function setUpdatedAt($value): self
     {
-        return $this->set('updatedAt', $value);
+        $this->set('updatedAt', $value);
+        return $this;
     }
 
     public function hasUpdatedAt(): bool
@@ -940,7 +1011,8 @@ final class Work extends ObjectData
 
     public function unsetUpdatedAt(): self
     {
-        return $this->remove('updatedAt');
+        $this->remove('updatedAt');
+        return $this;
     }
 
     /**
@@ -956,7 +1028,8 @@ final class Work extends ObjectData
      */
     public function setFirstPage($value): self
     {
-        return $this->set('firstPage', $value);
+        $this->set('firstPage', $value);
+        return $this;
     }
 
     public function hasFirstPage(): bool
@@ -966,7 +1039,8 @@ final class Work extends ObjectData
 
     public function unsetFirstPage(): self
     {
-        return $this->remove('firstPage');
+        $this->remove('firstPage');
+        return $this;
     }
 
     /**
@@ -982,7 +1056,8 @@ final class Work extends ObjectData
      */
     public function setLastPage($value): self
     {
-        return $this->set('lastPage', $value);
+        $this->set('lastPage', $value);
+        return $this;
     }
 
     public function hasLastPage(): bool
@@ -992,7 +1067,8 @@ final class Work extends ObjectData
 
     public function unsetLastPage(): self
     {
-        return $this->remove('lastPage');
+        $this->remove('lastPage');
+        return $this;
     }
 
     /**
@@ -1008,7 +1084,8 @@ final class Work extends ObjectData
      */
     public function setPageInterval($value): self
     {
-        return $this->set('pageInterval', $value);
+        $this->set('pageInterval', $value);
+        return $this;
     }
 
     public function hasPageInterval(): bool
@@ -1018,7 +1095,8 @@ final class Work extends ObjectData
 
     public function unsetPageInterval(): self
     {
-        return $this->remove('pageInterval');
+        $this->remove('pageInterval');
+        return $this;
     }
 
     /**
@@ -1034,7 +1112,8 @@ final class Work extends ObjectData
      */
     public function setUpdatedAtWithRelations($value): self
     {
-        return $this->set('updatedAtWithRelations', $value);
+        $this->set('updatedAtWithRelations', $value);
+        return $this;
     }
 
     public function hasUpdatedAtWithRelations(): bool
@@ -1044,7 +1123,8 @@ final class Work extends ObjectData
 
     public function unsetUpdatedAtWithRelations(): self
     {
-        return $this->remove('updatedAtWithRelations');
+        $this->remove('updatedAtWithRelations');
+        return $this;
     }
 
     /**
@@ -1060,7 +1140,8 @@ final class Work extends ObjectData
      */
     public function setImprint($value): self
     {
-        return $this->set('imprint', $value);
+        $this->set('imprint', $value);
+        return $this;
     }
 
     public function hasImprint(): bool
@@ -1070,7 +1151,8 @@ final class Work extends ObjectData
 
     public function unsetImprint(): self
     {
-        return $this->remove('imprint');
+        $this->remove('imprint');
+        return $this;
     }
 
     /**
@@ -1086,7 +1168,8 @@ final class Work extends ObjectData
      */
     public function setContributions($value): self
     {
-        return $this->set('contributions', $value);
+        $this->set('contributions', $value);
+        return $this;
     }
 
     public function hasContributions(): bool
@@ -1096,7 +1179,8 @@ final class Work extends ObjectData
 
     public function unsetContributions(): self
     {
-        return $this->remove('contributions');
+        $this->remove('contributions');
+        return $this;
     }
 
     /**
@@ -1112,7 +1196,8 @@ final class Work extends ObjectData
      */
     public function setLanguages($value): self
     {
-        return $this->set('languages', $value);
+        $this->set('languages', $value);
+        return $this;
     }
 
     public function hasLanguages(): bool
@@ -1122,7 +1207,8 @@ final class Work extends ObjectData
 
     public function unsetLanguages(): self
     {
-        return $this->remove('languages');
+        $this->remove('languages');
+        return $this;
     }
 
     /**
@@ -1138,7 +1224,8 @@ final class Work extends ObjectData
      */
     public function setPublications($value): self
     {
-        return $this->set('publications', $value);
+        $this->set('publications', $value);
+        return $this;
     }
 
     public function hasPublications(): bool
@@ -1148,7 +1235,8 @@ final class Work extends ObjectData
 
     public function unsetPublications(): self
     {
-        return $this->remove('publications');
+        $this->remove('publications');
+        return $this;
     }
 
     /**
@@ -1164,7 +1252,8 @@ final class Work extends ObjectData
      */
     public function setSubjects($value): self
     {
-        return $this->set('subjects', $value);
+        $this->set('subjects', $value);
+        return $this;
     }
 
     public function hasSubjects(): bool
@@ -1174,7 +1263,8 @@ final class Work extends ObjectData
 
     public function unsetSubjects(): self
     {
-        return $this->remove('subjects');
+        $this->remove('subjects');
+        return $this;
     }
 
     /**
@@ -1190,7 +1280,8 @@ final class Work extends ObjectData
      */
     public function setFundings($value): self
     {
-        return $this->set('fundings', $value);
+        $this->set('fundings', $value);
+        return $this;
     }
 
     public function hasFundings(): bool
@@ -1200,7 +1291,8 @@ final class Work extends ObjectData
 
     public function unsetFundings(): self
     {
-        return $this->remove('fundings');
+        $this->remove('fundings');
+        return $this;
     }
 
     /**
@@ -1216,7 +1308,8 @@ final class Work extends ObjectData
      */
     public function setIssues($value): self
     {
-        return $this->set('issues', $value);
+        $this->set('issues', $value);
+        return $this;
     }
 
     public function hasIssues(): bool
@@ -1226,7 +1319,8 @@ final class Work extends ObjectData
 
     public function unsetIssues(): self
     {
-        return $this->remove('issues');
+        $this->remove('issues');
+        return $this;
     }
 
     /**
@@ -1242,7 +1336,8 @@ final class Work extends ObjectData
      */
     public function setRelations($value): self
     {
-        return $this->set('relations', $value);
+        $this->set('relations', $value);
+        return $this;
     }
 
     public function hasRelations(): bool
@@ -1252,7 +1347,8 @@ final class Work extends ObjectData
 
     public function unsetRelations(): self
     {
-        return $this->remove('relations');
+        $this->remove('relations');
+        return $this;
     }
 
     /**
@@ -1268,7 +1364,8 @@ final class Work extends ObjectData
      */
     public function setFrontcover($value): self
     {
-        return $this->set('frontcover', $value);
+        $this->set('frontcover', $value);
+        return $this;
     }
 
     public function hasFrontcover(): bool
@@ -1278,7 +1375,8 @@ final class Work extends ObjectData
 
     public function unsetFrontcover(): self
     {
-        return $this->remove('frontcover');
+        $this->remove('frontcover');
+        return $this;
     }
 
     /**
@@ -1294,7 +1392,8 @@ final class Work extends ObjectData
      */
     public function setReferences($value): self
     {
-        return $this->set('references', $value);
+        $this->set('references', $value);
+        return $this;
     }
 
     public function hasReferences(): bool
@@ -1304,7 +1403,8 @@ final class Work extends ObjectData
 
     public function unsetReferences(): self
     {
-        return $this->remove('references');
+        $this->remove('references');
+        return $this;
     }
 
     /**
@@ -1320,7 +1420,8 @@ final class Work extends ObjectData
      */
     public function setAdditionalResources($value): self
     {
-        return $this->set('additionalResources', $value);
+        $this->set('additionalResources', $value);
+        return $this;
     }
 
     public function hasAdditionalResources(): bool
@@ -1330,7 +1431,8 @@ final class Work extends ObjectData
 
     public function unsetAdditionalResources(): self
     {
-        return $this->remove('additionalResources');
+        $this->remove('additionalResources');
+        return $this;
     }
 
     /**
@@ -1346,7 +1448,8 @@ final class Work extends ObjectData
      */
     public function setAwards($value): self
     {
-        return $this->set('awards', $value);
+        $this->set('awards', $value);
+        return $this;
     }
 
     public function hasAwards(): bool
@@ -1356,7 +1459,8 @@ final class Work extends ObjectData
 
     public function unsetAwards(): self
     {
-        return $this->remove('awards');
+        $this->remove('awards');
+        return $this;
     }
 
     /**
@@ -1372,7 +1476,8 @@ final class Work extends ObjectData
      */
     public function setEndorsements($value): self
     {
-        return $this->set('endorsements', $value);
+        $this->set('endorsements', $value);
+        return $this;
     }
 
     public function hasEndorsements(): bool
@@ -1382,7 +1487,8 @@ final class Work extends ObjectData
 
     public function unsetEndorsements(): self
     {
-        return $this->remove('endorsements');
+        $this->remove('endorsements');
+        return $this;
     }
 
     /**
@@ -1398,7 +1504,8 @@ final class Work extends ObjectData
      */
     public function setBookReviews($value): self
     {
-        return $this->set('bookReviews', $value);
+        $this->set('bookReviews', $value);
+        return $this;
     }
 
     public function hasBookReviews(): bool
@@ -1408,7 +1515,8 @@ final class Work extends ObjectData
 
     public function unsetBookReviews(): self
     {
-        return $this->remove('bookReviews');
+        $this->remove('bookReviews');
+        return $this;
     }
 
     /**
@@ -1424,7 +1532,8 @@ final class Work extends ObjectData
      */
     public function setFeaturedVideo($value): self
     {
-        return $this->set('featuredVideo', $value);
+        $this->set('featuredVideo', $value);
+        return $this;
     }
 
     public function hasFeaturedVideo(): bool
@@ -1434,7 +1543,8 @@ final class Work extends ObjectData
 
     public function unsetFeaturedVideo(): self
     {
-        return $this->remove('featuredVideo');
+        $this->remove('featuredVideo');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

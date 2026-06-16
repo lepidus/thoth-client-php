@@ -20,7 +20,8 @@ final class Language extends ObjectData
      */
     public function setLanguageId($value): self
     {
-        return $this->set('languageId', $value);
+        $this->set('languageId', $value);
+        return $this;
     }
 
     public function hasLanguageId(): bool
@@ -30,7 +31,8 @@ final class Language extends ObjectData
 
     public function unsetLanguageId(): self
     {
-        return $this->remove('languageId');
+        $this->remove('languageId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class Language extends ObjectData
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -56,7 +59,8 @@ final class Language extends ObjectData
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class Language extends ObjectData
      */
     public function setLanguageCode($value): self
     {
-        return $this->set('languageCode', $value);
+        $this->set('languageCode', $value);
+        return $this;
     }
 
     public function hasLanguageCode(): bool
@@ -82,7 +87,8 @@ final class Language extends ObjectData
 
     public function unsetLanguageCode(): self
     {
-        return $this->remove('languageCode');
+        $this->remove('languageCode');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class Language extends ObjectData
      */
     public function setLanguageRelation($value): self
     {
-        return $this->set('languageRelation', $value);
+        $this->set('languageRelation', $value);
+        return $this;
     }
 
     public function hasLanguageRelation(): bool
@@ -108,7 +115,8 @@ final class Language extends ObjectData
 
     public function unsetLanguageRelation(): self
     {
-        return $this->remove('languageRelation');
+        $this->remove('languageRelation');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class Language extends ObjectData
      */
     public function setCreatedAt($value): self
     {
-        return $this->set('createdAt', $value);
+        $this->set('createdAt', $value);
+        return $this;
     }
 
     public function hasCreatedAt(): bool
@@ -134,7 +143,8 @@ final class Language extends ObjectData
 
     public function unsetCreatedAt(): self
     {
-        return $this->remove('createdAt');
+        $this->remove('createdAt');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class Language extends ObjectData
      */
     public function setUpdatedAt($value): self
     {
-        return $this->set('updatedAt', $value);
+        $this->set('updatedAt', $value);
+        return $this;
     }
 
     public function hasUpdatedAt(): bool
@@ -160,7 +171,8 @@ final class Language extends ObjectData
 
     public function unsetUpdatedAt(): self
     {
-        return $this->remove('updatedAt');
+        $this->remove('updatedAt');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class Language extends ObjectData
      */
     public function setWork($value): self
     {
-        return $this->set('work', $value);
+        $this->set('work', $value);
+        return $this;
     }
 
     public function hasWork(): bool
@@ -186,7 +199,8 @@ final class Language extends ObjectData
 
     public function unsetWork(): self
     {
-        return $this->remove('work');
+        $this->remove('work');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

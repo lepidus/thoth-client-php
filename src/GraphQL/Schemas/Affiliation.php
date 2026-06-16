@@ -20,7 +20,8 @@ final class Affiliation extends ObjectData
      */
     public function setAffiliationId($value): self
     {
-        return $this->set('affiliationId', $value);
+        $this->set('affiliationId', $value);
+        return $this;
     }
 
     public function hasAffiliationId(): bool
@@ -30,7 +31,8 @@ final class Affiliation extends ObjectData
 
     public function unsetAffiliationId(): self
     {
-        return $this->remove('affiliationId');
+        $this->remove('affiliationId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class Affiliation extends ObjectData
      */
     public function setContributionId($value): self
     {
-        return $this->set('contributionId', $value);
+        $this->set('contributionId', $value);
+        return $this;
     }
 
     public function hasContributionId(): bool
@@ -56,7 +59,8 @@ final class Affiliation extends ObjectData
 
     public function unsetContributionId(): self
     {
-        return $this->remove('contributionId');
+        $this->remove('contributionId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class Affiliation extends ObjectData
      */
     public function setInstitutionId($value): self
     {
-        return $this->set('institutionId', $value);
+        $this->set('institutionId', $value);
+        return $this;
     }
 
     public function hasInstitutionId(): bool
@@ -82,7 +87,8 @@ final class Affiliation extends ObjectData
 
     public function unsetInstitutionId(): self
     {
-        return $this->remove('institutionId');
+        $this->remove('institutionId');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class Affiliation extends ObjectData
      */
     public function setAffiliationOrdinal($value): self
     {
-        return $this->set('affiliationOrdinal', $value);
+        $this->set('affiliationOrdinal', $value);
+        return $this;
     }
 
     public function hasAffiliationOrdinal(): bool
@@ -108,7 +115,8 @@ final class Affiliation extends ObjectData
 
     public function unsetAffiliationOrdinal(): self
     {
-        return $this->remove('affiliationOrdinal');
+        $this->remove('affiliationOrdinal');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class Affiliation extends ObjectData
      */
     public function setPosition($value): self
     {
-        return $this->set('position', $value);
+        $this->set('position', $value);
+        return $this;
     }
 
     public function hasPosition(): bool
@@ -134,7 +143,8 @@ final class Affiliation extends ObjectData
 
     public function unsetPosition(): self
     {
-        return $this->remove('position');
+        $this->remove('position');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class Affiliation extends ObjectData
      */
     public function setCreatedAt($value): self
     {
-        return $this->set('createdAt', $value);
+        $this->set('createdAt', $value);
+        return $this;
     }
 
     public function hasCreatedAt(): bool
@@ -160,7 +171,8 @@ final class Affiliation extends ObjectData
 
     public function unsetCreatedAt(): self
     {
-        return $this->remove('createdAt');
+        $this->remove('createdAt');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class Affiliation extends ObjectData
      */
     public function setUpdatedAt($value): self
     {
-        return $this->set('updatedAt', $value);
+        $this->set('updatedAt', $value);
+        return $this;
     }
 
     public function hasUpdatedAt(): bool
@@ -186,7 +199,8 @@ final class Affiliation extends ObjectData
 
     public function unsetUpdatedAt(): self
     {
-        return $this->remove('updatedAt');
+        $this->remove('updatedAt');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class Affiliation extends ObjectData
      */
     public function setInstitution($value): self
     {
-        return $this->set('institution', $value);
+        $this->set('institution', $value);
+        return $this;
     }
 
     public function hasInstitution(): bool
@@ -212,7 +227,8 @@ final class Affiliation extends ObjectData
 
     public function unsetInstitution(): self
     {
-        return $this->remove('institution');
+        $this->remove('institution');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class Affiliation extends ObjectData
      */
     public function setContribution($value): self
     {
-        return $this->set('contribution', $value);
+        $this->set('contribution', $value);
+        return $this;
     }
 
     public function hasContribution(): bool
@@ -238,7 +255,8 @@ final class Affiliation extends ObjectData
 
     public function unsetContribution(): self
     {
-        return $this->remove('contribution');
+        $this->remove('contribution');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

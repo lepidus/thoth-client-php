@@ -20,7 +20,8 @@ final class PatchAffiliation extends InputObject
      */
     public function setAffiliationId($value): self
     {
-        return $this->set('affiliationId', $value);
+        $this->set('affiliationId', $value);
+        return $this;
     }
 
     public function hasAffiliationId(): bool
@@ -30,7 +31,8 @@ final class PatchAffiliation extends InputObject
 
     public function unsetAffiliationId(): self
     {
-        return $this->remove('affiliationId');
+        $this->remove('affiliationId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class PatchAffiliation extends InputObject
      */
     public function setContributionId($value): self
     {
-        return $this->set('contributionId', $value);
+        $this->set('contributionId', $value);
+        return $this;
     }
 
     public function hasContributionId(): bool
@@ -56,7 +59,8 @@ final class PatchAffiliation extends InputObject
 
     public function unsetContributionId(): self
     {
-        return $this->remove('contributionId');
+        $this->remove('contributionId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class PatchAffiliation extends InputObject
      */
     public function setInstitutionId($value): self
     {
-        return $this->set('institutionId', $value);
+        $this->set('institutionId', $value);
+        return $this;
     }
 
     public function hasInstitutionId(): bool
@@ -82,7 +87,8 @@ final class PatchAffiliation extends InputObject
 
     public function unsetInstitutionId(): self
     {
-        return $this->remove('institutionId');
+        $this->remove('institutionId');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class PatchAffiliation extends InputObject
      */
     public function setAffiliationOrdinal($value): self
     {
-        return $this->set('affiliationOrdinal', $value);
+        $this->set('affiliationOrdinal', $value);
+        return $this;
     }
 
     public function hasAffiliationOrdinal(): bool
@@ -108,7 +115,8 @@ final class PatchAffiliation extends InputObject
 
     public function unsetAffiliationOrdinal(): self
     {
-        return $this->remove('affiliationOrdinal');
+        $this->remove('affiliationOrdinal');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class PatchAffiliation extends InputObject
      */
     public function setPosition($value): self
     {
-        return $this->set('position', $value);
+        $this->set('position', $value);
+        return $this;
     }
 
     public function hasPosition(): bool
@@ -134,7 +143,8 @@ final class PatchAffiliation extends InputObject
 
     public function unsetPosition(): self
     {
-        return $this->remove('position');
+        $this->remove('position');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

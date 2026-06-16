@@ -20,7 +20,8 @@ final class Price extends ObjectData
      */
     public function setPriceId($value): self
     {
-        return $this->set('priceId', $value);
+        $this->set('priceId', $value);
+        return $this;
     }
 
     public function hasPriceId(): bool
@@ -30,7 +31,8 @@ final class Price extends ObjectData
 
     public function unsetPriceId(): self
     {
-        return $this->remove('priceId');
+        $this->remove('priceId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class Price extends ObjectData
      */
     public function setPublicationId($value): self
     {
-        return $this->set('publicationId', $value);
+        $this->set('publicationId', $value);
+        return $this;
     }
 
     public function hasPublicationId(): bool
@@ -56,7 +59,8 @@ final class Price extends ObjectData
 
     public function unsetPublicationId(): self
     {
-        return $this->remove('publicationId');
+        $this->remove('publicationId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class Price extends ObjectData
      */
     public function setCurrencyCode($value): self
     {
-        return $this->set('currencyCode', $value);
+        $this->set('currencyCode', $value);
+        return $this;
     }
 
     public function hasCurrencyCode(): bool
@@ -82,7 +87,8 @@ final class Price extends ObjectData
 
     public function unsetCurrencyCode(): self
     {
-        return $this->remove('currencyCode');
+        $this->remove('currencyCode');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class Price extends ObjectData
      */
     public function setUnitPrice($value): self
     {
-        return $this->set('unitPrice', $value);
+        $this->set('unitPrice', $value);
+        return $this;
     }
 
     public function hasUnitPrice(): bool
@@ -108,7 +115,8 @@ final class Price extends ObjectData
 
     public function unsetUnitPrice(): self
     {
-        return $this->remove('unitPrice');
+        $this->remove('unitPrice');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class Price extends ObjectData
      */
     public function setCreatedAt($value): self
     {
-        return $this->set('createdAt', $value);
+        $this->set('createdAt', $value);
+        return $this;
     }
 
     public function hasCreatedAt(): bool
@@ -134,7 +143,8 @@ final class Price extends ObjectData
 
     public function unsetCreatedAt(): self
     {
-        return $this->remove('createdAt');
+        $this->remove('createdAt');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class Price extends ObjectData
      */
     public function setUpdatedAt($value): self
     {
-        return $this->set('updatedAt', $value);
+        $this->set('updatedAt', $value);
+        return $this;
     }
 
     public function hasUpdatedAt(): bool
@@ -160,7 +171,8 @@ final class Price extends ObjectData
 
     public function unsetUpdatedAt(): self
     {
-        return $this->remove('updatedAt');
+        $this->remove('updatedAt');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class Price extends ObjectData
      */
     public function setPublication($value): self
     {
-        return $this->set('publication', $value);
+        $this->set('publication', $value);
+        return $this;
     }
 
     public function hasPublication(): bool
@@ -186,7 +199,8 @@ final class Price extends ObjectData
 
     public function unsetPublication(): self
     {
-        return $this->remove('publication');
+        $this->remove('publication');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

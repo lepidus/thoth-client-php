@@ -20,7 +20,8 @@ final class PatchImprint extends InputObject
      */
     public function setImprintId($value): self
     {
-        return $this->set('imprintId', $value);
+        $this->set('imprintId', $value);
+        return $this;
     }
 
     public function hasImprintId(): bool
@@ -30,7 +31,8 @@ final class PatchImprint extends InputObject
 
     public function unsetImprintId(): self
     {
-        return $this->remove('imprintId');
+        $this->remove('imprintId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class PatchImprint extends InputObject
      */
     public function setPublisherId($value): self
     {
-        return $this->set('publisherId', $value);
+        $this->set('publisherId', $value);
+        return $this;
     }
 
     public function hasPublisherId(): bool
@@ -56,7 +59,8 @@ final class PatchImprint extends InputObject
 
     public function unsetPublisherId(): self
     {
-        return $this->remove('publisherId');
+        $this->remove('publisherId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class PatchImprint extends InputObject
      */
     public function setImprintName($value): self
     {
-        return $this->set('imprintName', $value);
+        $this->set('imprintName', $value);
+        return $this;
     }
 
     public function hasImprintName(): bool
@@ -82,7 +87,8 @@ final class PatchImprint extends InputObject
 
     public function unsetImprintName(): self
     {
-        return $this->remove('imprintName');
+        $this->remove('imprintName');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class PatchImprint extends InputObject
      */
     public function setImprintUrl($value): self
     {
-        return $this->set('imprintUrl', $value);
+        $this->set('imprintUrl', $value);
+        return $this;
     }
 
     public function hasImprintUrl(): bool
@@ -108,7 +115,8 @@ final class PatchImprint extends InputObject
 
     public function unsetImprintUrl(): self
     {
-        return $this->remove('imprintUrl');
+        $this->remove('imprintUrl');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class PatchImprint extends InputObject
      */
     public function setCrossmarkDoi($value): self
     {
-        return $this->set('crossmarkDoi', $value);
+        $this->set('crossmarkDoi', $value);
+        return $this;
     }
 
     public function hasCrossmarkDoi(): bool
@@ -134,7 +143,8 @@ final class PatchImprint extends InputObject
 
     public function unsetCrossmarkDoi(): self
     {
-        return $this->remove('crossmarkDoi');
+        $this->remove('crossmarkDoi');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class PatchImprint extends InputObject
      */
     public function setS3Bucket($value): self
     {
-        return $this->set('s3Bucket', $value);
+        $this->set('s3Bucket', $value);
+        return $this;
     }
 
     public function hasS3Bucket(): bool
@@ -160,7 +171,8 @@ final class PatchImprint extends InputObject
 
     public function unsetS3Bucket(): self
     {
-        return $this->remove('s3Bucket');
+        $this->remove('s3Bucket');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class PatchImprint extends InputObject
      */
     public function setCdnDomain($value): self
     {
-        return $this->set('cdnDomain', $value);
+        $this->set('cdnDomain', $value);
+        return $this;
     }
 
     public function hasCdnDomain(): bool
@@ -186,7 +199,8 @@ final class PatchImprint extends InputObject
 
     public function unsetCdnDomain(): self
     {
-        return $this->remove('cdnDomain');
+        $this->remove('cdnDomain');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class PatchImprint extends InputObject
      */
     public function setCloudfrontDistId($value): self
     {
-        return $this->set('cloudfrontDistId', $value);
+        $this->set('cloudfrontDistId', $value);
+        return $this;
     }
 
     public function hasCloudfrontDistId(): bool
@@ -212,7 +227,8 @@ final class PatchImprint extends InputObject
 
     public function unsetCloudfrontDistId(): self
     {
-        return $this->remove('cloudfrontDistId');
+        $this->remove('cloudfrontDistId');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class PatchImprint extends InputObject
      */
     public function setDefaultCurrency($value): self
     {
-        return $this->set('defaultCurrency', $value);
+        $this->set('defaultCurrency', $value);
+        return $this;
     }
 
     public function hasDefaultCurrency(): bool
@@ -238,7 +255,8 @@ final class PatchImprint extends InputObject
 
     public function unsetDefaultCurrency(): self
     {
-        return $this->remove('defaultCurrency');
+        $this->remove('defaultCurrency');
+        return $this;
     }
 
     /**
@@ -254,7 +272,8 @@ final class PatchImprint extends InputObject
      */
     public function setDefaultPlace($value): self
     {
-        return $this->set('defaultPlace', $value);
+        $this->set('defaultPlace', $value);
+        return $this;
     }
 
     public function hasDefaultPlace(): bool
@@ -264,7 +283,8 @@ final class PatchImprint extends InputObject
 
     public function unsetDefaultPlace(): self
     {
-        return $this->remove('defaultPlace');
+        $this->remove('defaultPlace');
+        return $this;
     }
 
     /**
@@ -280,7 +300,8 @@ final class PatchImprint extends InputObject
      */
     public function setDefaultLocale($value): self
     {
-        return $this->set('defaultLocale', $value);
+        $this->set('defaultLocale', $value);
+        return $this;
     }
 
     public function hasDefaultLocale(): bool
@@ -290,7 +311,8 @@ final class PatchImprint extends InputObject
 
     public function unsetDefaultLocale(): self
     {
-        return $this->remove('defaultLocale');
+        $this->remove('defaultLocale');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition

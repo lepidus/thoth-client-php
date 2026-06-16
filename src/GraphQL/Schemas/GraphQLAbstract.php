@@ -20,7 +20,8 @@ final class GraphQLAbstract extends ObjectData
      */
     public function setAbstractId($value): self
     {
-        return $this->set('abstractId', $value);
+        $this->set('abstractId', $value);
+        return $this;
     }
 
     public function hasAbstractId(): bool
@@ -30,7 +31,8 @@ final class GraphQLAbstract extends ObjectData
 
     public function unsetAbstractId(): self
     {
-        return $this->remove('abstractId');
+        $this->remove('abstractId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class GraphQLAbstract extends ObjectData
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -56,7 +59,8 @@ final class GraphQLAbstract extends ObjectData
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class GraphQLAbstract extends ObjectData
      */
     public function setLocaleCode($value): self
     {
-        return $this->set('localeCode', $value);
+        $this->set('localeCode', $value);
+        return $this;
     }
 
     public function hasLocaleCode(): bool
@@ -82,7 +87,8 @@ final class GraphQLAbstract extends ObjectData
 
     public function unsetLocaleCode(): self
     {
-        return $this->remove('localeCode');
+        $this->remove('localeCode');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class GraphQLAbstract extends ObjectData
      */
     public function setContent($value): self
     {
-        return $this->set('content', $value);
+        $this->set('content', $value);
+        return $this;
     }
 
     public function hasContent(): bool
@@ -108,7 +115,8 @@ final class GraphQLAbstract extends ObjectData
 
     public function unsetContent(): self
     {
-        return $this->remove('content');
+        $this->remove('content');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class GraphQLAbstract extends ObjectData
      */
     public function setCanonical($value): self
     {
-        return $this->set('canonical', $value);
+        $this->set('canonical', $value);
+        return $this;
     }
 
     public function hasCanonical(): bool
@@ -134,7 +143,8 @@ final class GraphQLAbstract extends ObjectData
 
     public function unsetCanonical(): self
     {
-        return $this->remove('canonical');
+        $this->remove('canonical');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class GraphQLAbstract extends ObjectData
      */
     public function setAbstractType($value): self
     {
-        return $this->set('abstractType', $value);
+        $this->set('abstractType', $value);
+        return $this;
     }
 
     public function hasAbstractType(): bool
@@ -160,7 +171,8 @@ final class GraphQLAbstract extends ObjectData
 
     public function unsetAbstractType(): self
     {
-        return $this->remove('abstractType');
+        $this->remove('abstractType');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class GraphQLAbstract extends ObjectData
      */
     public function setWork($value): self
     {
-        return $this->set('work', $value);
+        $this->set('work', $value);
+        return $this;
     }
 
     public function hasWork(): bool
@@ -186,7 +199,8 @@ final class GraphQLAbstract extends ObjectData
 
     public function unsetWork(): self
     {
-        return $this->remove('work');
+        $this->remove('work');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

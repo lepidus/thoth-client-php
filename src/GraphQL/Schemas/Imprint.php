@@ -20,7 +20,8 @@ final class Imprint extends ObjectData
      */
     public function setImprintId($value): self
     {
-        return $this->set('imprintId', $value);
+        $this->set('imprintId', $value);
+        return $this;
     }
 
     public function hasImprintId(): bool
@@ -30,7 +31,8 @@ final class Imprint extends ObjectData
 
     public function unsetImprintId(): self
     {
-        return $this->remove('imprintId');
+        $this->remove('imprintId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class Imprint extends ObjectData
      */
     public function setPublisherId($value): self
     {
-        return $this->set('publisherId', $value);
+        $this->set('publisherId', $value);
+        return $this;
     }
 
     public function hasPublisherId(): bool
@@ -56,7 +59,8 @@ final class Imprint extends ObjectData
 
     public function unsetPublisherId(): self
     {
-        return $this->remove('publisherId');
+        $this->remove('publisherId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class Imprint extends ObjectData
      */
     public function setImprintName($value): self
     {
-        return $this->set('imprintName', $value);
+        $this->set('imprintName', $value);
+        return $this;
     }
 
     public function hasImprintName(): bool
@@ -82,7 +87,8 @@ final class Imprint extends ObjectData
 
     public function unsetImprintName(): self
     {
-        return $this->remove('imprintName');
+        $this->remove('imprintName');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class Imprint extends ObjectData
      */
     public function setImprintUrl($value): self
     {
-        return $this->set('imprintUrl', $value);
+        $this->set('imprintUrl', $value);
+        return $this;
     }
 
     public function hasImprintUrl(): bool
@@ -108,7 +115,8 @@ final class Imprint extends ObjectData
 
     public function unsetImprintUrl(): self
     {
-        return $this->remove('imprintUrl');
+        $this->remove('imprintUrl');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class Imprint extends ObjectData
      */
     public function setCrossmarkDoi($value): self
     {
-        return $this->set('crossmarkDoi', $value);
+        $this->set('crossmarkDoi', $value);
+        return $this;
     }
 
     public function hasCrossmarkDoi(): bool
@@ -134,7 +143,8 @@ final class Imprint extends ObjectData
 
     public function unsetCrossmarkDoi(): self
     {
-        return $this->remove('crossmarkDoi');
+        $this->remove('crossmarkDoi');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class Imprint extends ObjectData
      */
     public function setS3Bucket($value): self
     {
-        return $this->set('s3Bucket', $value);
+        $this->set('s3Bucket', $value);
+        return $this;
     }
 
     public function hasS3Bucket(): bool
@@ -160,7 +171,8 @@ final class Imprint extends ObjectData
 
     public function unsetS3Bucket(): self
     {
-        return $this->remove('s3Bucket');
+        $this->remove('s3Bucket');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class Imprint extends ObjectData
      */
     public function setCdnDomain($value): self
     {
-        return $this->set('cdnDomain', $value);
+        $this->set('cdnDomain', $value);
+        return $this;
     }
 
     public function hasCdnDomain(): bool
@@ -186,7 +199,8 @@ final class Imprint extends ObjectData
 
     public function unsetCdnDomain(): self
     {
-        return $this->remove('cdnDomain');
+        $this->remove('cdnDomain');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class Imprint extends ObjectData
      */
     public function setCloudfrontDistId($value): self
     {
-        return $this->set('cloudfrontDistId', $value);
+        $this->set('cloudfrontDistId', $value);
+        return $this;
     }
 
     public function hasCloudfrontDistId(): bool
@@ -212,7 +227,8 @@ final class Imprint extends ObjectData
 
     public function unsetCloudfrontDistId(): self
     {
-        return $this->remove('cloudfrontDistId');
+        $this->remove('cloudfrontDistId');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class Imprint extends ObjectData
      */
     public function setDefaultCurrency($value): self
     {
-        return $this->set('defaultCurrency', $value);
+        $this->set('defaultCurrency', $value);
+        return $this;
     }
 
     public function hasDefaultCurrency(): bool
@@ -238,7 +255,8 @@ final class Imprint extends ObjectData
 
     public function unsetDefaultCurrency(): self
     {
-        return $this->remove('defaultCurrency');
+        $this->remove('defaultCurrency');
+        return $this;
     }
 
     /**
@@ -254,7 +272,8 @@ final class Imprint extends ObjectData
      */
     public function setDefaultPlace($value): self
     {
-        return $this->set('defaultPlace', $value);
+        $this->set('defaultPlace', $value);
+        return $this;
     }
 
     public function hasDefaultPlace(): bool
@@ -264,7 +283,8 @@ final class Imprint extends ObjectData
 
     public function unsetDefaultPlace(): self
     {
-        return $this->remove('defaultPlace');
+        $this->remove('defaultPlace');
+        return $this;
     }
 
     /**
@@ -280,7 +300,8 @@ final class Imprint extends ObjectData
      */
     public function setDefaultLocale($value): self
     {
-        return $this->set('defaultLocale', $value);
+        $this->set('defaultLocale', $value);
+        return $this;
     }
 
     public function hasDefaultLocale(): bool
@@ -290,7 +311,8 @@ final class Imprint extends ObjectData
 
     public function unsetDefaultLocale(): self
     {
-        return $this->remove('defaultLocale');
+        $this->remove('defaultLocale');
+        return $this;
     }
 
     /**
@@ -306,7 +328,8 @@ final class Imprint extends ObjectData
      */
     public function setCreatedAt($value): self
     {
-        return $this->set('createdAt', $value);
+        $this->set('createdAt', $value);
+        return $this;
     }
 
     public function hasCreatedAt(): bool
@@ -316,7 +339,8 @@ final class Imprint extends ObjectData
 
     public function unsetCreatedAt(): self
     {
-        return $this->remove('createdAt');
+        $this->remove('createdAt');
+        return $this;
     }
 
     /**
@@ -332,7 +356,8 @@ final class Imprint extends ObjectData
      */
     public function setUpdatedAt($value): self
     {
-        return $this->set('updatedAt', $value);
+        $this->set('updatedAt', $value);
+        return $this;
     }
 
     public function hasUpdatedAt(): bool
@@ -342,7 +367,8 @@ final class Imprint extends ObjectData
 
     public function unsetUpdatedAt(): self
     {
-        return $this->remove('updatedAt');
+        $this->remove('updatedAt');
+        return $this;
     }
 
     /**
@@ -358,7 +384,8 @@ final class Imprint extends ObjectData
      */
     public function setPublisher($value): self
     {
-        return $this->set('publisher', $value);
+        $this->set('publisher', $value);
+        return $this;
     }
 
     public function hasPublisher(): bool
@@ -368,7 +395,8 @@ final class Imprint extends ObjectData
 
     public function unsetPublisher(): self
     {
-        return $this->remove('publisher');
+        $this->remove('publisher');
+        return $this;
     }
 
     /**
@@ -384,7 +412,8 @@ final class Imprint extends ObjectData
      */
     public function setWorks($value): self
     {
-        return $this->set('works', $value);
+        $this->set('works', $value);
+        return $this;
     }
 
     public function hasWorks(): bool
@@ -394,7 +423,8 @@ final class Imprint extends ObjectData
 
     public function unsetWorks(): self
     {
-        return $this->remove('works');
+        $this->remove('works');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

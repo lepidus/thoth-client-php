@@ -20,7 +20,8 @@ final class Institution extends ObjectData
      */
     public function setInstitutionId($value): self
     {
-        return $this->set('institutionId', $value);
+        $this->set('institutionId', $value);
+        return $this;
     }
 
     public function hasInstitutionId(): bool
@@ -30,7 +31,8 @@ final class Institution extends ObjectData
 
     public function unsetInstitutionId(): self
     {
-        return $this->remove('institutionId');
+        $this->remove('institutionId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class Institution extends ObjectData
      */
     public function setInstitutionName($value): self
     {
-        return $this->set('institutionName', $value);
+        $this->set('institutionName', $value);
+        return $this;
     }
 
     public function hasInstitutionName(): bool
@@ -56,7 +59,8 @@ final class Institution extends ObjectData
 
     public function unsetInstitutionName(): self
     {
-        return $this->remove('institutionName');
+        $this->remove('institutionName');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class Institution extends ObjectData
      */
     public function setInstitutionDoi($value): self
     {
-        return $this->set('institutionDoi', $value);
+        $this->set('institutionDoi', $value);
+        return $this;
     }
 
     public function hasInstitutionDoi(): bool
@@ -82,7 +87,8 @@ final class Institution extends ObjectData
 
     public function unsetInstitutionDoi(): self
     {
-        return $this->remove('institutionDoi');
+        $this->remove('institutionDoi');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class Institution extends ObjectData
      */
     public function setCountryCode($value): self
     {
-        return $this->set('countryCode', $value);
+        $this->set('countryCode', $value);
+        return $this;
     }
 
     public function hasCountryCode(): bool
@@ -108,7 +115,8 @@ final class Institution extends ObjectData
 
     public function unsetCountryCode(): self
     {
-        return $this->remove('countryCode');
+        $this->remove('countryCode');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class Institution extends ObjectData
      */
     public function setRor($value): self
     {
-        return $this->set('ror', $value);
+        $this->set('ror', $value);
+        return $this;
     }
 
     public function hasRor(): bool
@@ -134,7 +143,8 @@ final class Institution extends ObjectData
 
     public function unsetRor(): self
     {
-        return $this->remove('ror');
+        $this->remove('ror');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class Institution extends ObjectData
      */
     public function setCreatedAt($value): self
     {
-        return $this->set('createdAt', $value);
+        $this->set('createdAt', $value);
+        return $this;
     }
 
     public function hasCreatedAt(): bool
@@ -160,7 +171,8 @@ final class Institution extends ObjectData
 
     public function unsetCreatedAt(): self
     {
-        return $this->remove('createdAt');
+        $this->remove('createdAt');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class Institution extends ObjectData
      */
     public function setUpdatedAt($value): self
     {
-        return $this->set('updatedAt', $value);
+        $this->set('updatedAt', $value);
+        return $this;
     }
 
     public function hasUpdatedAt(): bool
@@ -186,7 +199,8 @@ final class Institution extends ObjectData
 
     public function unsetUpdatedAt(): self
     {
-        return $this->remove('updatedAt');
+        $this->remove('updatedAt');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class Institution extends ObjectData
      */
     public function setFundings($value): self
     {
-        return $this->set('fundings', $value);
+        $this->set('fundings', $value);
+        return $this;
     }
 
     public function hasFundings(): bool
@@ -212,7 +227,8 @@ final class Institution extends ObjectData
 
     public function unsetFundings(): self
     {
-        return $this->remove('fundings');
+        $this->remove('fundings');
+        return $this;
     }
 
     /**
@@ -228,7 +244,8 @@ final class Institution extends ObjectData
      */
     public function setAffiliations($value): self
     {
-        return $this->set('affiliations', $value);
+        $this->set('affiliations', $value);
+        return $this;
     }
 
     public function hasAffiliations(): bool
@@ -238,7 +255,8 @@ final class Institution extends ObjectData
 
     public function unsetAffiliations(): self
     {
-        return $this->remove('affiliations');
+        $this->remove('affiliations');
+        return $this;
     }
 
     public static function definition(): ObjectTypeDefinition

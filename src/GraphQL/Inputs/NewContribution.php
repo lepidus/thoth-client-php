@@ -20,7 +20,8 @@ final class NewContribution extends InputObject
      */
     public function setWorkId($value): self
     {
-        return $this->set('workId', $value);
+        $this->set('workId', $value);
+        return $this;
     }
 
     public function hasWorkId(): bool
@@ -30,7 +31,8 @@ final class NewContribution extends InputObject
 
     public function unsetWorkId(): self
     {
-        return $this->remove('workId');
+        $this->remove('workId');
+        return $this;
     }
 
     /**
@@ -46,7 +48,8 @@ final class NewContribution extends InputObject
      */
     public function setContributorId($value): self
     {
-        return $this->set('contributorId', $value);
+        $this->set('contributorId', $value);
+        return $this;
     }
 
     public function hasContributorId(): bool
@@ -56,7 +59,8 @@ final class NewContribution extends InputObject
 
     public function unsetContributorId(): self
     {
-        return $this->remove('contributorId');
+        $this->remove('contributorId');
+        return $this;
     }
 
     /**
@@ -72,7 +76,8 @@ final class NewContribution extends InputObject
      */
     public function setContributionType($value): self
     {
-        return $this->set('contributionType', $value);
+        $this->set('contributionType', $value);
+        return $this;
     }
 
     public function hasContributionType(): bool
@@ -82,7 +87,8 @@ final class NewContribution extends InputObject
 
     public function unsetContributionType(): self
     {
-        return $this->remove('contributionType');
+        $this->remove('contributionType');
+        return $this;
     }
 
     /**
@@ -98,7 +104,8 @@ final class NewContribution extends InputObject
      */
     public function setMainContribution($value): self
     {
-        return $this->set('mainContribution', $value);
+        $this->set('mainContribution', $value);
+        return $this;
     }
 
     public function hasMainContribution(): bool
@@ -108,7 +115,8 @@ final class NewContribution extends InputObject
 
     public function unsetMainContribution(): self
     {
-        return $this->remove('mainContribution');
+        $this->remove('mainContribution');
+        return $this;
     }
 
     /**
@@ -124,7 +132,8 @@ final class NewContribution extends InputObject
      */
     public function setFirstName($value): self
     {
-        return $this->set('firstName', $value);
+        $this->set('firstName', $value);
+        return $this;
     }
 
     public function hasFirstName(): bool
@@ -134,7 +143,8 @@ final class NewContribution extends InputObject
 
     public function unsetFirstName(): self
     {
-        return $this->remove('firstName');
+        $this->remove('firstName');
+        return $this;
     }
 
     /**
@@ -150,7 +160,8 @@ final class NewContribution extends InputObject
      */
     public function setLastName($value): self
     {
-        return $this->set('lastName', $value);
+        $this->set('lastName', $value);
+        return $this;
     }
 
     public function hasLastName(): bool
@@ -160,7 +171,8 @@ final class NewContribution extends InputObject
 
     public function unsetLastName(): self
     {
-        return $this->remove('lastName');
+        $this->remove('lastName');
+        return $this;
     }
 
     /**
@@ -176,7 +188,8 @@ final class NewContribution extends InputObject
      */
     public function setFullName($value): self
     {
-        return $this->set('fullName', $value);
+        $this->set('fullName', $value);
+        return $this;
     }
 
     public function hasFullName(): bool
@@ -186,7 +199,8 @@ final class NewContribution extends InputObject
 
     public function unsetFullName(): self
     {
-        return $this->remove('fullName');
+        $this->remove('fullName');
+        return $this;
     }
 
     /**
@@ -202,7 +216,8 @@ final class NewContribution extends InputObject
      */
     public function setContributionOrdinal($value): self
     {
-        return $this->set('contributionOrdinal', $value);
+        $this->set('contributionOrdinal', $value);
+        return $this;
     }
 
     public function hasContributionOrdinal(): bool
@@ -212,7 +227,8 @@ final class NewContribution extends InputObject
 
     public function unsetContributionOrdinal(): self
     {
-        return $this->remove('contributionOrdinal');
+        $this->remove('contributionOrdinal');
+        return $this;
     }
 
     public static function definition(): InputObjectTypeDefinition
