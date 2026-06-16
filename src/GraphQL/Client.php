@@ -36,7 +36,7 @@ class Client
 
     public function execute(OperationRequest $operation)
     {
-        $response = $this->request->runQuery($operation->toGraphQL(), null, $this->token ?: null);
+        $response = $this->request->runQuery($operation->toGraphQL(), $operation->getVariables(), $this->token ?: null);
         $data = $response->getData();
 
         return $data[$operation->getField()->getName()];

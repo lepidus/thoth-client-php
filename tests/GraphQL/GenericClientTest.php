@@ -293,8 +293,17 @@ final class GenericClientTest extends TestCase
 
         $body = json_decode((string) $history[0]['request']->getBody(), true);
 
-        $this->assertStringContainsString('order: {field: FULL_TITLE, direction: ASC}', $body['query']);
+        $this->assertStringContainsString('order: $order', $body['query']);
         $this->assertStringContainsString('workId', $body['query']);
+        $this->assertSame([
+            'limit' => 100,
+            'offset' => 0,
+            'filter' => '',
+            'order' => [
+                'field' => 'FULL_TITLE',
+                'direction' => 'ASC',
+            ],
+        ], $body['variables']);
     }
 
     public function testItAcceptsExplicitSelectionAfterOptionalPositionalArguments(): void
@@ -320,8 +329,9 @@ final class GenericClientTest extends TestCase
 
         $body = json_decode((string) $history[0]['request']->getBody(), true);
 
-        $this->assertStringContainsString('works(limit: 5)', $body['query']);
+        $this->assertStringContainsString('works(limit: $limit)', $body['query']);
         $this->assertStringContainsString('fullTitle', $body['query']);
+        $this->assertSame(['limit' => 5], $body['variables']);
     }
 
     public function testItHydratesGeneratedSchemasInListResults(): void

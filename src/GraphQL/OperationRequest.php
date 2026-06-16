@@ -42,10 +42,17 @@ final class OperationRequest
         return $this->selection;
     }
 
+    public function getVariables(): array
+    {
+        return $this->normalizeVariables($this->arguments, $this->getSchemaArgumentsByName());
+    }
+
     public function toGraphQL(): string
     {
         $this->assertIdentifier($this->field->getName());
-        $arguments = $this->formatArguments($this->arguments);
+        $this->getVariables();
+        $variableDefinitions = $this->formatVariableDefinitions($this->arguments);
+        $arguments = $this->formatVariableArguments($this->arguments);
         $fieldLine = $this->field->getName() . ($arguments === '' ? '' : '(' . $arguments . ')');
         $selection = $this->formatSelection($this->selection);
 
@@ -53,10 +60,11 @@ final class OperationRequest
             $fieldLine .= " {\n" . $selection . "\n    }";
         }
 
-        return $this->operationType . " {\n    " . $fieldLine . "\n}";
+        return $this->operationType . ($variableDefinitions === '' ? '' : ' (' . $variableDefinitions . ')')
+            . " {\n    " . $fieldLine . "\n}";
     }
 
-    private function formatArguments(array $arguments): string
+    private function formatVariableDefinitions(array $arguments): string
     {
         $formatted = [];
         $schemaArguments = $this->getSchemaArgumentsByName();
@@ -67,10 +75,82 @@ final class OperationRequest
             }
 
             $this->assertIdentifier((string) $name);
-            $formatted[] = $name . ': ' . $this->formatValue($value, $schemaArguments[$name] ?? null);
+            if (isset($schemaArguments[$name])) {
+                $formatted[] = '$' . $name . ': ' . $schemaArguments[$name]->toGraphQL();
+            }
         }
 
         return implode(', ', $formatted);
+    }
+
+    private function formatVariableArguments(array $arguments): string
+    {
+        $formatted = [];
+
+        foreach ($arguments as $name => $value) {
+            if ($value === null) {
+                continue;
+            }
+
+            $this->assertIdentifier((string) $name);
+            $formatted[] = $name . ': $' . $name;
+        }
+
+        return implode(', ', $formatted);
+    }
+
+    private function normalizeVariables(array $variables, array $schemaArguments): array
+    {
+        $normalized = [];
+
+        foreach ($variables as $name => $value) {
+            $this->assertIdentifier((string) $name);
+
+            if ($value !== null) {
+                $normalized[$name] = $this->normalizeVariableValue($value, $schemaArguments[$name] ?? null);
+            }
+        }
+
+        return $normalized;
+    }
+
+    private function normalizeVariableValue($value, ?TypeReference $type = null)
+    {
+        if ($value instanceof EnumValue) {
+            $this->assertIdentifier((string) $value);
+            return (string) $value;
+        }
+
+        if (is_array($value)) {
+            if ($this->isList($value)) {
+                $listType = $this->getListItemType($type);
+
+                return array_map(function ($item) use ($listType) {
+                    return $this->normalizeVariableValue($item, $listType);
+                }, $value);
+            }
+
+            $normalized = [];
+
+            foreach ($value as $field => $fieldValue) {
+                $this->assertIdentifier((string) $field);
+
+                if ($fieldValue !== null) {
+                    $normalized[$field] = $this->normalizeVariableValue(
+                        $fieldValue,
+                        $this->getInputFieldType($type, (string) $field)
+                    );
+                }
+            }
+
+            return $normalized;
+        }
+
+        if ($this->isEnumType($type)) {
+            $this->assertIdentifier((string) $value);
+        }
+
+        return $value;
     }
 
     private function formatSelection(array $selection): string

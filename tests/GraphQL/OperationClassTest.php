@@ -15,7 +15,8 @@ final class OperationClassTest extends TestCase
 
         $this->assertInstanceOf(OperationRequest::class, $operation);
         $this->assertSame('books', BooksQuery::field()->getName());
-        $this->assertStringContainsString('books(limit: 1)', $operation->toGraphQL());
+        $this->assertStringContainsString('books(limit: $limit)', $operation->toGraphQL());
+        $this->assertSame(['limit' => 1], $operation->getVariables());
     }
 
     public function testMutationClassCreatesOperationRequest(): void
@@ -28,6 +29,11 @@ final class OperationClassTest extends TestCase
 
         $this->assertInstanceOf(OperationRequest::class, $operation);
         $this->assertSame('createPublisher', CreatePublisherMutation::field()->getName());
-        $this->assertStringContainsString('createPublisher(data: {publisherName: "ACME Press"})', $operation->toGraphQL());
+        $this->assertStringContainsString('createPublisher(data: $data)', $operation->toGraphQL());
+        $this->assertSame([
+            'data' => [
+                'publisherName' => 'ACME Press',
+            ],
+        ], $operation->getVariables());
     }
 }

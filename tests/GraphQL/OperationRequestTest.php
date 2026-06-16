@@ -14,7 +14,7 @@ use ThothApi\GraphQL\OperationRequest;
 
 final class OperationRequestTest extends TestCase
 {
-    public function testItBuildsAQueryWithArgumentsAndSelection(): void
+    public function testItBuildsAQueryWithVariablesAndSelection(): void
     {
         $operation = new OperationRequest(
             'query',
@@ -37,8 +37,8 @@ final class OperationRequestTest extends TestCase
         );
 
         $expected = <<<GQL
-        query {
-            books(limit: 1, order: {field: PUBLICATION_DATE, direction: ASC}) {
+        query (\$limit: Int, \$order: WorkOrderBy) {
+            books(limit: \$limit, order: \$order) {
                 workId
                 fullTitle
             }
@@ -46,6 +46,13 @@ final class OperationRequestTest extends TestCase
         GQL;
 
         $this->assertSame($expected, $operation->toGraphQL());
+        $this->assertSame([
+            'limit' => 1,
+            'order' => [
+                'field' => 'PUBLICATION_DATE',
+                'direction' => 'ASC',
+            ],
+        ], $operation->getVariables());
     }
 
     public function testItBuildsAMutationWithInputDataAndSelection(): void
@@ -69,14 +76,20 @@ final class OperationRequestTest extends TestCase
         );
 
         $expected = <<<GQL
-        mutation {
-            createPublisher(data: {publisherName: "ACME Press", publisherUrl: "https:\/\/example.test"}) {
+        mutation (\$data: NewPublisher!) {
+            createPublisher(data: \$data) {
                 publisherId
             }
         }
         GQL;
 
         $this->assertSame($expected, $operation->toGraphQL());
+        $this->assertSame([
+            'data' => [
+                'publisherName' => 'ACME Press',
+                'publisherUrl' => 'https://example.test',
+            ],
+        ], $operation->getVariables());
     }
 
     public function testItRejectsInvalidSelectionFields(): void
@@ -179,10 +192,13 @@ final class OperationRequestTest extends TestCase
             ['workId']
         );
 
-        $this->assertStringContainsString(
-            'order: {field: PUBLICATION_DATE, direction: DESC}',
-            $operation->toGraphQL()
-        );
+        $this->assertStringContainsString('books(order: $order)', $operation->toGraphQL());
+        $this->assertSame([
+            'order' => [
+                'field' => 'PUBLICATION_DATE',
+                'direction' => 'DESC',
+            ],
+        ], $operation->getVariables());
     }
 
     public function testItFormatsGeneratedEnumConstantsFromInputLists(): void
@@ -208,10 +224,13 @@ final class OperationRequestTest extends TestCase
             ['workId']
         );
 
-        $this->assertStringContainsString(
-            'workTypes: [MONOGRAPH, EDITED_BOOK]',
-            $operation->toGraphQL()
-        );
+        $this->assertStringContainsString('books(workTypes: $workTypes)', $operation->toGraphQL());
+        $this->assertSame([
+            'workTypes' => [
+                'MONOGRAPH',
+                'EDITED_BOOK',
+            ],
+        ], $operation->getVariables());
     }
 
     public function testItKeepsStringValuesQuotedWhenSchemaTypeIsString(): void
@@ -235,9 +254,13 @@ final class OperationRequestTest extends TestCase
             ['workId']
         );
 
-        $this->assertStringContainsString(
-            'data: {workType: MONOGRAPH, workStatus: ACTIVE, fullTitle: "MONOGRAPH"}',
-            $operation->toGraphQL()
-        );
+        $this->assertStringContainsString('createWork(data: $data)', $operation->toGraphQL());
+        $this->assertSame([
+            'data' => [
+                'workType' => 'MONOGRAPH',
+                'workStatus' => 'ACTIVE',
+                'fullTitle' => 'MONOGRAPH',
+            ],
+        ], $operation->getVariables());
     }
 }
