@@ -223,13 +223,20 @@ function objectFieldMethods(array $field): string
 {
     $methodName = studly($field['name']);
     $fieldName = exportPhpValue($field['name']);
+    $phpDocType = phpDocType($field['type']);
 
     return <<<PHP
+    /**
+     * @return {$phpDocType}
+     */
     public function get{$methodName}()
     {
         return \$this->get({$fieldName});
     }
 
+    /**
+     * @param {$phpDocType} \$value
+     */
     public function set{$methodName}(\$value): self
     {
         return \$this->set({$fieldName}, \$value);
@@ -483,6 +490,62 @@ function sanitizeConstant(string $value): string
     }
 
     return $constant;
+}
+
+function phpDocType(array $type): string
+{
+    $nullable = ($type['kind'] ?? null) !== 'NON_NULL';
+    $baseType = phpDocBaseType($type);
+
+    return $nullable ? $baseType . '|null' : $baseType;
+}
+
+function phpDocBaseType(array $type): string
+{
+    if (($type['kind'] ?? null) === 'NON_NULL') {
+        return phpDocBaseType($type['ofType'] ?? []);
+    }
+
+    if (($type['kind'] ?? null) === 'LIST') {
+        return 'array';
+    }
+
+    if (($type['kind'] ?? null) === 'ENUM') {
+        return 'string';
+    }
+
+    if (($type['kind'] ?? null) === 'OBJECT' && isset($type['name'])) {
+        return safeClassName(studly($type['name']));
+    }
+
+    if (($type['kind'] ?? null) === 'SCALAR') {
+        return phpDocScalarType((string) ($type['name'] ?? ''));
+    }
+
+    return 'mixed';
+}
+
+function phpDocScalarType(string $typeName): string
+{
+    switch ($typeName) {
+        case 'Boolean':
+            return 'bool';
+        case 'Float':
+            return 'float';
+        case 'Int':
+            return 'int';
+        case 'String':
+        case 'Date':
+        case 'Doi':
+        case 'Isbn':
+        case 'Orcid':
+        case 'Ror':
+        case 'Timestamp':
+        case 'Uuid':
+            return 'string';
+    }
+
+    return 'mixed';
 }
 
 function safeClassName(string $className): string
