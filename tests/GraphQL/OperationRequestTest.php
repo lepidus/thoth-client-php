@@ -107,6 +107,41 @@ final class OperationRequestTest extends TestCase
         $operation->toGraphQL();
     }
 
+    public function testItRejectsUnknownSelectionFields(): void
+    {
+        $operation = new OperationRequest(
+            'query',
+            new FieldDefinition('books', TypeReference::named('Work')),
+            [],
+            ['workId', 'unknownField']
+        );
+
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage("Unknown GraphQL field 'unknownField' for 'Work'.");
+
+        $operation->toGraphQL();
+    }
+
+    public function testItRejectsUnknownNestedSelectionFields(): void
+    {
+        $operation = new OperationRequest(
+            'query',
+            new FieldDefinition('books', TypeReference::named('Work')),
+            [],
+            [
+                'workId',
+                'imprint' => [
+                    'unknownField',
+                ],
+            ]
+        );
+
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage("Unknown GraphQL field 'unknownField' for 'Imprint'.");
+
+        $operation->toGraphQL();
+    }
+
     public function testItRejectsInvalidOperationFields(): void
     {
         $operation = new OperationRequest(

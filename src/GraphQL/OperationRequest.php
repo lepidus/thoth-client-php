@@ -54,7 +54,7 @@ final class OperationRequest
         $variableDefinitions = $this->formatVariableDefinitions($this->arguments);
         $arguments = $this->formatVariableArguments($this->arguments);
         $fieldLine = $this->field->getName() . ($arguments === '' ? '' : '(' . $arguments . ')');
-        $selection = $this->formatSelection($this->selection);
+        $selection = $this->formatSelection($this->selection, $this->field->getType());
 
         if ($selection !== '') {
             $fieldLine .= " {\n" . $selection . "\n    }";
@@ -170,18 +170,23 @@ final class OperationRequest
         return $value;
     }
 
-    private function formatSelection(array $selection): string
+    private function formatSelection(array $selection, ?TypeReference $type = null): string
     {
         $lines = [];
+        $objectFields = $this->getObjectFieldDefinitions($type);
 
         foreach ($selection as $key => $value) {
             if (is_array($value)) {
                 $this->assertIdentifier((string) $key);
-                $lines[] = '        ' . $key . " {\n" . $this->indent($this->formatSelection($value), 8) . "\n        }";
+                $fieldType = $this->getSelectionFieldType($objectFields, (string) $key, $type);
+                $lines[] = '        ' . $key . " {\n"
+                    . $this->indent($this->formatSelection($value, $fieldType), 8)
+                    . "\n        }";
                 continue;
             }
 
             $this->assertIdentifier((string) $value);
+            $this->getSelectionFieldType($objectFields, (string) $value, $type);
             $lines[] = '        ' . $value;
         }
 
@@ -309,6 +314,38 @@ final class OperationRequest
     private function getSchemaClassName(string $namespacePart, ?string $typeName): string
     {
         return '\\ThothApi\\GraphQL\\' . $namespacePart . '\\' . ($typeName === 'Abstract' ? 'GraphQLAbstract' : $typeName);
+    }
+
+    private function getSelectionFieldType(?array $objectFields, string $fieldName, ?TypeReference $parentType): ?TypeReference
+    {
+        if ($objectFields === null) {
+            return null;
+        }
+
+        if (!array_key_exists($fieldName, $objectFields)) {
+            throw new \InvalidArgumentException(
+                "Unknown GraphQL field '{$fieldName}' for '{$parentType->baseName()}'."
+            );
+        }
+
+        return $objectFields[$fieldName];
+    }
+
+    private function getObjectFieldDefinitions(?TypeReference $type): ?array
+    {
+        $schemaClass = $this->getSchemaClassName('Schemas', $type ? $type->baseName() : null);
+
+        if (!class_exists($schemaClass)) {
+            return null;
+        }
+
+        $fields = [];
+
+        foreach ($schemaClass::definition()->getFields() as $field) {
+            $fields[$field->getName()] = $field->getType();
+        }
+
+        return $fields;
     }
 
     private function getInputFieldDefinitions(?TypeReference $type): ?array
