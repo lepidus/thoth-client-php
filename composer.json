@@ -11,6 +11,11 @@
         "friendsofphp/php-cs-fixer": "^3.64",
         "phpstan/phpstan": "^2.2"
     },
+    "config": {
+        "platform": {
+            "php": "7.4.33"
+        }
+    },
     "license": "Apache-2.0",
     "autoload": {
         "psr-4": {
