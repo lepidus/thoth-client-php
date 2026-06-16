@@ -3,7 +3,6 @@
 namespace ThothApi\GraphQL;
 
 use ThothApi\GraphQL\Definition\FieldDefinition;
-use ThothApi\GraphQL\Definition\TypeReference;
 
 class ObjectData
 {
@@ -47,7 +46,7 @@ class ObjectData
             return $value;
         }
 
-        return static::hydrateValue($field->getType(), $value);
+        return (new ValueHydrator())->hydrate($value, $field->getType());
     }
 
     private static function getFieldDefinition(string $fieldName): ?FieldDefinition
@@ -59,43 +58,6 @@ class ObjectData
         }
 
         return null;
-    }
-
-    private static function hydrateValue(TypeReference $type, $value)
-    {
-        if ($value === null) {
-            return null;
-        }
-
-        if ($type->getKind() === 'NON_NULL' && $type->getOfType() !== null) {
-            return static::hydrateValue($type->getOfType(), $value);
-        }
-
-        if ($type->getKind() === 'LIST' && $type->getOfType() !== null && is_array($value)) {
-            return array_map(
-                static function ($item) use ($type) {
-                    return static::hydrateValue($type->getOfType(), $item);
-                },
-                $value
-            );
-        }
-
-        if (!is_array($value)) {
-            return $value;
-        }
-
-        $schemaClass = static::schemaClassForType($type->baseName());
-
-        if (!class_exists($schemaClass)) {
-            return $value;
-        }
-
-        return $schemaClass::fromArray($value);
-    }
-
-    private static function schemaClassForType(?string $typeName): string
-    {
-        return '\\ThothApi\\GraphQL\\Schemas\\' . ($typeName === 'Abstract' ? 'GraphQLAbstract' : $typeName);
     }
 
     private function normalizeArray(array $data): array
