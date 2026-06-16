@@ -59,6 +59,42 @@ final class GeneratorTest extends TestCase
         $this->assertDirectoryDoesNotExist($target . '/Queries');
     }
 
+    public function testItReportsMissingSchemaFile(): void
+    {
+        $this->temporaryDirectory = sys_get_temp_dir() . '/thoth-graphql-generator-' . uniqid('', true);
+        $target = $this->temporaryDirectory . '/GraphQL';
+        mkdir($target, 0777, true);
+
+        $schema = $this->temporaryDirectory . '/missing-schema.json';
+        $script = dirname(__DIR__, 2) . '/tools/generate-graphql-client.php';
+        $command = PHP_BINARY . ' ' . escapeshellarg($script) . ' ' . escapeshellarg($schema) . ' '
+            . escapeshellarg($target) . ' 2>&1';
+
+        exec($command, $output, $exitCode);
+
+        $this->assertSame(1, $exitCode);
+        $this->assertSame('Unable to read GraphQL introspection schema file: ' . $schema, $output[0]);
+    }
+
+    public function testItReportsInvalidSchemaJson(): void
+    {
+        $this->temporaryDirectory = sys_get_temp_dir() . '/thoth-graphql-generator-' . uniqid('', true);
+        $target = $this->temporaryDirectory . '/GraphQL';
+        mkdir($target, 0777, true);
+
+        $schema = $this->temporaryDirectory . '/invalid-schema.json';
+        file_put_contents($schema, '{invalid json');
+
+        $script = dirname(__DIR__, 2) . '/tools/generate-graphql-client.php';
+        $command = PHP_BINARY . ' ' . escapeshellarg($script) . ' ' . escapeshellarg($schema) . ' '
+            . escapeshellarg($target) . ' 2>&1';
+
+        exec($command, $output, $exitCode);
+
+        $this->assertSame(1, $exitCode);
+        $this->assertSame('Invalid GraphQL introspection schema JSON: Syntax error', $output[0]);
+    }
+
     public function testGeneratorEntrypointLoadsSeparateComponents(): void
     {
         $projectRoot = dirname(__DIR__, 2);

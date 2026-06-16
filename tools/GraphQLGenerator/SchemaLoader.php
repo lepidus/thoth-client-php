@@ -17,7 +17,21 @@ final class SchemaLoader
 
     private function loadFromFile(string $schemaPath): array
     {
-        $schema = json_decode((string) file_get_contents($schemaPath), true);
+        if (!is_file($schemaPath) || !is_readable($schemaPath)) {
+            throw new GeneratorException('Unable to read GraphQL introspection schema file: ' . $schemaPath);
+        }
+
+        $contents = file_get_contents($schemaPath);
+
+        if ($contents === false) {
+            throw new GeneratorException('Unable to read GraphQL introspection schema file: ' . $schemaPath);
+        }
+
+        $schema = json_decode($contents, true);
+
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            throw new GeneratorException('Invalid GraphQL introspection schema JSON: ' . json_last_error_msg());
+        }
 
         return is_array($schema) ? $schema : [];
     }
