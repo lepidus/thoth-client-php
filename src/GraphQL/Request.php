@@ -3,7 +3,9 @@
 namespace ThothApi\GraphQL;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Exception\TransferException;
+use ThothApi\Exception\QueryException;
 
 class Request
 {
@@ -45,8 +47,14 @@ class Request
     ): Response {
         try {
             $httpResponse = $this->httpClient->request($method, $endpoint, $options);
-        } catch (ClientException $exception) {
+        } catch (RequestException $exception) {
             $httpResponse = $exception->getResponse();
+
+            if ($httpResponse === null) {
+                throw new QueryException(['message' => $exception->getMessage()], $query, $variables);
+            }
+        } catch (TransferException $exception) {
+            throw new QueryException(['message' => $exception->getMessage()], $query, $variables);
         }
 
         return new Response($httpResponse, $query, $variables);
