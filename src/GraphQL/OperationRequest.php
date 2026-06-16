@@ -116,10 +116,20 @@ final class OperationRequest
 
     private function normalizeVariableValue($value, ?TypeReference $type = null)
     {
+        if ($type !== null && $type->getKind() === 'NON_NULL' && $type->getOfType() !== null) {
+            return $this->normalizeVariableValue($value, $type->getOfType());
+        }
+
         if ($value instanceof EnumValue) {
             $this->assertIdentifier((string) $value);
             $this->assertEnumValue((string) $value, $type);
             return (string) $value;
+        }
+
+        if ($type !== null && $type->getKind() === 'LIST' && !$this->isListValue($value)) {
+            throw new \InvalidArgumentException(
+                "Invalid GraphQL value for '{$type->toGraphQL()}'; expected list."
+            );
         }
 
         if (is_array($value)) {
@@ -168,6 +178,8 @@ final class OperationRequest
             $this->assertIdentifier((string) $value);
             $this->assertEnumValue((string) $value, $type);
         }
+
+        $this->assertScalarValue($value, $type);
 
         return $value;
     }
@@ -313,6 +325,50 @@ final class OperationRequest
         return class_exists($this->getSchemaClassName('Enums', $type->baseName()));
     }
 
+    private function assertScalarValue($value, ?TypeReference $type): void
+    {
+        if ($type === null || $type->getKind() !== 'NAMED') {
+            return;
+        }
+
+        switch ($type->baseName()) {
+            case 'Boolean':
+                if (!is_bool($value)) {
+                    $this->throwInvalidScalarValue($type, 'bool');
+                }
+                return;
+            case 'Float':
+                if (!is_float($value) && !is_int($value)) {
+                    $this->throwInvalidScalarValue($type, 'float');
+                }
+                return;
+            case 'Int':
+                if (!is_int($value)) {
+                    $this->throwInvalidScalarValue($type, 'int');
+                }
+                return;
+            case 'String':
+            case 'Date':
+            case 'Doi':
+            case 'Isbn':
+            case 'Orcid':
+            case 'Ror':
+            case 'Timestamp':
+            case 'Uuid':
+                if (!is_string($value)) {
+                    $this->throwInvalidScalarValue($type, 'string');
+                }
+                return;
+        }
+    }
+
+    private function throwInvalidScalarValue(TypeReference $type, string $expectedType): void
+    {
+        throw new \InvalidArgumentException(
+            "Invalid GraphQL value for '{$type->toGraphQL()}'; expected {$expectedType}."
+        );
+    }
+
     private function assertEnumValue(string $value, ?TypeReference $type): void
     {
         if (!$this->isEnumType($type)) {
@@ -385,5 +441,10 @@ final class OperationRequest
     private function isNonNullType(TypeReference $type): bool
     {
         return $type->getKind() === 'NON_NULL';
+    }
+
+    private function isListValue($value): bool
+    {
+        return is_array($value) && $this->isList($value);
     }
 }

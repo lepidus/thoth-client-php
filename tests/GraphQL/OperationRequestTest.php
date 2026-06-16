@@ -286,6 +286,51 @@ final class OperationRequestTest extends TestCase
         $operation->toGraphQL();
     }
 
+    public function testItRejectsInvalidScalarVariableTypes(): void
+    {
+        $operation = new OperationRequest(
+            'query',
+            new FieldDefinition(
+                'books',
+                TypeReference::named('Work'),
+                [
+                    new ArgumentDefinition('limit', TypeReference::named('Int')),
+                ]
+            ),
+            ['limit' => '1'],
+            ['workId']
+        );
+
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage("Invalid GraphQL value for 'Int'; expected int.");
+
+        $operation->toGraphQL();
+    }
+
+    public function testItRejectsInvalidListVariableTypes(): void
+    {
+        $operation = new OperationRequest(
+            'query',
+            new FieldDefinition(
+                'books',
+                TypeReference::named('Work'),
+                [
+                    new ArgumentDefinition(
+                        'workTypes',
+                        TypeReference::listOf(TypeReference::nonNull(TypeReference::named('WorkType')))
+                    ),
+                ]
+            ),
+            ['workTypes' => WorkType::MONOGRAPH],
+            ['workId']
+        );
+
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage("Invalid GraphQL value for '[WorkType!]'; expected list.");
+
+        $operation->toGraphQL();
+    }
+
     public function testItFormatsGeneratedEnumConstantsFromInputSchema(): void
     {
         $operation = new OperationRequest(
