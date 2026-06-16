@@ -99,17 +99,20 @@ final class VariableNormalizer
                 );
             }
 
-            if ($fieldValue !== null) {
-                $normalized[$field] = $this->normalizeValue(
+            $normalized[$field] = $fieldValue === null
+                ? null
+                : $this->normalizeValue(
                     $fieldValue,
                     $inputFields[$field] ?? $this->schemaDefinitions->getInputFieldType($type, (string) $field)
                 );
-            }
         }
 
         if ($inputFields !== null) {
             foreach ($inputFields as $fieldName => $fieldType) {
-                if ($this->isNonNullType($fieldType) && !array_key_exists($fieldName, $normalized)) {
+                if (
+                    $this->isNonNullType($fieldType)
+                    && (!array_key_exists($fieldName, $normalized) || $normalized[$fieldName] === null)
+                ) {
                     throw new \InvalidArgumentException(
                         "Missing required GraphQL input field '{$fieldName}' for '{$type->baseName()}'."
                     );

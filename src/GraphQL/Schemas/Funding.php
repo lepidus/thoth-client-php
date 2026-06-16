@@ -23,6 +23,16 @@ final class Funding extends ObjectData
         return $this->set('fundingId', $value);
     }
 
+    public function hasFundingId(): bool
+    {
+        return $this->has('fundingId');
+    }
+
+    public function unsetFundingId(): self
+    {
+        return $this->remove('fundingId');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class Funding extends ObjectData
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
+    }
+
+    public function hasWorkId(): bool
+    {
+        return $this->has('workId');
+    }
+
+    public function unsetWorkId(): self
+    {
+        return $this->remove('workId');
     }
 
     /**
@@ -55,6 +75,16 @@ final class Funding extends ObjectData
         return $this->set('institutionId', $value);
     }
 
+    public function hasInstitutionId(): bool
+    {
+        return $this->has('institutionId');
+    }
+
+    public function unsetInstitutionId(): self
+    {
+        return $this->remove('institutionId');
+    }
+
     /**
      * @return string|null
      */
@@ -69,6 +99,16 @@ final class Funding extends ObjectData
     public function setProgram($value): self
     {
         return $this->set('program', $value);
+    }
+
+    public function hasProgram(): bool
+    {
+        return $this->has('program');
+    }
+
+    public function unsetProgram(): self
+    {
+        return $this->remove('program');
     }
 
     /**
@@ -87,6 +127,16 @@ final class Funding extends ObjectData
         return $this->set('projectName', $value);
     }
 
+    public function hasProjectName(): bool
+    {
+        return $this->has('projectName');
+    }
+
+    public function unsetProjectName(): self
+    {
+        return $this->remove('projectName');
+    }
+
     /**
      * @return string|null
      */
@@ -101,6 +151,16 @@ final class Funding extends ObjectData
     public function setProjectShortname($value): self
     {
         return $this->set('projectShortname', $value);
+    }
+
+    public function hasProjectShortname(): bool
+    {
+        return $this->has('projectShortname');
+    }
+
+    public function unsetProjectShortname(): self
+    {
+        return $this->remove('projectShortname');
     }
 
     /**
@@ -119,6 +179,16 @@ final class Funding extends ObjectData
         return $this->set('grantNumber', $value);
     }
 
+    public function hasGrantNumber(): bool
+    {
+        return $this->has('grantNumber');
+    }
+
+    public function unsetGrantNumber(): self
+    {
+        return $this->remove('grantNumber');
+    }
+
     /**
      * @return string
      */
@@ -133,6 +203,16 @@ final class Funding extends ObjectData
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
+    }
+
+    public function hasCreatedAt(): bool
+    {
+        return $this->has('createdAt');
+    }
+
+    public function unsetCreatedAt(): self
+    {
+        return $this->remove('createdAt');
     }
 
     /**
@@ -151,6 +231,16 @@ final class Funding extends ObjectData
         return $this->set('updatedAt', $value);
     }
 
+    public function hasUpdatedAt(): bool
+    {
+        return $this->has('updatedAt');
+    }
+
+    public function unsetUpdatedAt(): self
+    {
+        return $this->remove('updatedAt');
+    }
+
     /**
      * @return Work
      */
@@ -167,6 +257,16 @@ final class Funding extends ObjectData
         return $this->set('work', $value);
     }
 
+    public function hasWork(): bool
+    {
+        return $this->has('work');
+    }
+
+    public function unsetWork(): self
+    {
+        return $this->remove('work');
+    }
+
     /**
      * @return Institution
      */
@@ -181,6 +281,16 @@ final class Funding extends ObjectData
     public function setInstitution($value): self
     {
         return $this->set('institution', $value);
+    }
+
+    public function hasInstitution(): bool
+    {
+        return $this->has('institution');
+    }
+
+    public function unsetInstitution(): self
+    {
+        return $this->remove('institution');
     }
 
     public static function definition(): ObjectTypeDefinition

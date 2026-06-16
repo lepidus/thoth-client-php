@@ -23,6 +23,16 @@ final class Price extends ObjectData
         return $this->set('priceId', $value);
     }
 
+    public function hasPriceId(): bool
+    {
+        return $this->has('priceId');
+    }
+
+    public function unsetPriceId(): self
+    {
+        return $this->remove('priceId');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class Price extends ObjectData
     public function setPublicationId($value): self
     {
         return $this->set('publicationId', $value);
+    }
+
+    public function hasPublicationId(): bool
+    {
+        return $this->has('publicationId');
+    }
+
+    public function unsetPublicationId(): self
+    {
+        return $this->remove('publicationId');
     }
 
     /**
@@ -55,6 +75,16 @@ final class Price extends ObjectData
         return $this->set('currencyCode', $value);
     }
 
+    public function hasCurrencyCode(): bool
+    {
+        return $this->has('currencyCode');
+    }
+
+    public function unsetCurrencyCode(): self
+    {
+        return $this->remove('currencyCode');
+    }
+
     /**
      * @return float
      */
@@ -69,6 +99,16 @@ final class Price extends ObjectData
     public function setUnitPrice($value): self
     {
         return $this->set('unitPrice', $value);
+    }
+
+    public function hasUnitPrice(): bool
+    {
+        return $this->has('unitPrice');
+    }
+
+    public function unsetUnitPrice(): self
+    {
+        return $this->remove('unitPrice');
     }
 
     /**
@@ -87,6 +127,16 @@ final class Price extends ObjectData
         return $this->set('createdAt', $value);
     }
 
+    public function hasCreatedAt(): bool
+    {
+        return $this->has('createdAt');
+    }
+
+    public function unsetCreatedAt(): self
+    {
+        return $this->remove('createdAt');
+    }
+
     /**
      * @return string
      */
@@ -103,6 +153,16 @@ final class Price extends ObjectData
         return $this->set('updatedAt', $value);
     }
 
+    public function hasUpdatedAt(): bool
+    {
+        return $this->has('updatedAt');
+    }
+
+    public function unsetUpdatedAt(): self
+    {
+        return $this->remove('updatedAt');
+    }
+
     /**
      * @return Publication
      */
@@ -117,6 +177,16 @@ final class Price extends ObjectData
     public function setPublication($value): self
     {
         return $this->set('publication', $value);
+    }
+
+    public function hasPublication(): bool
+    {
+        return $this->has('publication');
+    }
+
+    public function unsetPublication(): self
+    {
+        return $this->remove('publication');
     }
 
     public static function definition(): ObjectTypeDefinition

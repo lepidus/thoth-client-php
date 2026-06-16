@@ -7,6 +7,110 @@ use ThothApi\GraphQL\InputObject;
 
 final class NewAffiliation extends InputObject
 {
+    /**
+     * @return string
+     */
+    public function getContributionId()
+    {
+        return $this->get('contributionId');
+    }
+
+    /**
+     * @param string $value
+     */
+    public function setContributionId($value): self
+    {
+        return $this->set('contributionId', $value);
+    }
+
+    public function hasContributionId(): bool
+    {
+        return $this->has('contributionId');
+    }
+
+    public function unsetContributionId(): self
+    {
+        return $this->remove('contributionId');
+    }
+
+    /**
+     * @return string
+     */
+    public function getInstitutionId()
+    {
+        return $this->get('institutionId');
+    }
+
+    /**
+     * @param string $value
+     */
+    public function setInstitutionId($value): self
+    {
+        return $this->set('institutionId', $value);
+    }
+
+    public function hasInstitutionId(): bool
+    {
+        return $this->has('institutionId');
+    }
+
+    public function unsetInstitutionId(): self
+    {
+        return $this->remove('institutionId');
+    }
+
+    /**
+     * @return int
+     */
+    public function getAffiliationOrdinal()
+    {
+        return $this->get('affiliationOrdinal');
+    }
+
+    /**
+     * @param int $value
+     */
+    public function setAffiliationOrdinal($value): self
+    {
+        return $this->set('affiliationOrdinal', $value);
+    }
+
+    public function hasAffiliationOrdinal(): bool
+    {
+        return $this->has('affiliationOrdinal');
+    }
+
+    public function unsetAffiliationOrdinal(): self
+    {
+        return $this->remove('affiliationOrdinal');
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getPosition()
+    {
+        return $this->get('position');
+    }
+
+    /**
+     * @param string|null $value
+     */
+    public function setPosition($value): self
+    {
+        return $this->set('position', $value);
+    }
+
+    public function hasPosition(): bool
+    {
+        return $this->has('position');
+    }
+
+    public function unsetPosition(): self
+    {
+        return $this->remove('position');
+    }
+
     public static function definition(): InputObjectTypeDefinition
     {
         return new InputObjectTypeDefinition('NewAffiliation', [

@@ -23,6 +23,16 @@ final class WorkFeaturedVideo extends ObjectData
         return $this->set('workFeaturedVideoId', $value);
     }
 
+    public function hasWorkFeaturedVideoId(): bool
+    {
+        return $this->has('workFeaturedVideoId');
+    }
+
+    public function unsetWorkFeaturedVideoId(): self
+    {
+        return $this->remove('workFeaturedVideoId');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class WorkFeaturedVideo extends ObjectData
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
+    }
+
+    public function hasWorkId(): bool
+    {
+        return $this->has('workId');
+    }
+
+    public function unsetWorkId(): self
+    {
+        return $this->remove('workId');
     }
 
     /**
@@ -55,6 +75,16 @@ final class WorkFeaturedVideo extends ObjectData
         return $this->set('title', $value);
     }
 
+    public function hasTitle(): bool
+    {
+        return $this->has('title');
+    }
+
+    public function unsetTitle(): self
+    {
+        return $this->remove('title');
+    }
+
     /**
      * @return string|null
      */
@@ -69,6 +99,16 @@ final class WorkFeaturedVideo extends ObjectData
     public function setUrl($value): self
     {
         return $this->set('url', $value);
+    }
+
+    public function hasUrl(): bool
+    {
+        return $this->has('url');
+    }
+
+    public function unsetUrl(): self
+    {
+        return $this->remove('url');
     }
 
     /**
@@ -87,6 +127,16 @@ final class WorkFeaturedVideo extends ObjectData
         return $this->set('width', $value);
     }
 
+    public function hasWidth(): bool
+    {
+        return $this->has('width');
+    }
+
+    public function unsetWidth(): self
+    {
+        return $this->remove('width');
+    }
+
     /**
      * @return int
      */
@@ -101,6 +151,16 @@ final class WorkFeaturedVideo extends ObjectData
     public function setHeight($value): self
     {
         return $this->set('height', $value);
+    }
+
+    public function hasHeight(): bool
+    {
+        return $this->has('height');
+    }
+
+    public function unsetHeight(): self
+    {
+        return $this->remove('height');
     }
 
     /**
@@ -119,6 +179,16 @@ final class WorkFeaturedVideo extends ObjectData
         return $this->set('createdAt', $value);
     }
 
+    public function hasCreatedAt(): bool
+    {
+        return $this->has('createdAt');
+    }
+
+    public function unsetCreatedAt(): self
+    {
+        return $this->remove('createdAt');
+    }
+
     /**
      * @return string
      */
@@ -133,6 +203,16 @@ final class WorkFeaturedVideo extends ObjectData
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
+    }
+
+    public function hasUpdatedAt(): bool
+    {
+        return $this->has('updatedAt');
+    }
+
+    public function unsetUpdatedAt(): self
+    {
+        return $this->remove('updatedAt');
     }
 
     /**
@@ -151,6 +231,16 @@ final class WorkFeaturedVideo extends ObjectData
         return $this->set('work', $value);
     }
 
+    public function hasWork(): bool
+    {
+        return $this->has('work');
+    }
+
+    public function unsetWork(): self
+    {
+        return $this->remove('work');
+    }
+
     /**
      * @return File|null
      */
@@ -165,6 +255,16 @@ final class WorkFeaturedVideo extends ObjectData
     public function setFile($value): self
     {
         return $this->set('file', $value);
+    }
+
+    public function hasFile(): bool
+    {
+        return $this->has('file');
+    }
+
+    public function unsetFile(): self
+    {
+        return $this->remove('file');
     }
 
     public static function definition(): ObjectTypeDefinition

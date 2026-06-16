@@ -23,6 +23,16 @@ final class PublisherPermissions extends ObjectData
         return $this->set('publisherAdmin', $value);
     }
 
+    public function hasPublisherAdmin(): bool
+    {
+        return $this->has('publisherAdmin');
+    }
+
+    public function unsetPublisherAdmin(): self
+    {
+        return $this->remove('publisherAdmin');
+    }
+
     /**
      * @return bool
      */
@@ -39,6 +49,16 @@ final class PublisherPermissions extends ObjectData
         return $this->set('workLifecycle', $value);
     }
 
+    public function hasWorkLifecycle(): bool
+    {
+        return $this->has('workLifecycle');
+    }
+
+    public function unsetWorkLifecycle(): self
+    {
+        return $this->remove('workLifecycle');
+    }
+
     /**
      * @return bool
      */
@@ -53,6 +73,16 @@ final class PublisherPermissions extends ObjectData
     public function setCdnWrite($value): self
     {
         return $this->set('cdnWrite', $value);
+    }
+
+    public function hasCdnWrite(): bool
+    {
+        return $this->has('cdnWrite');
+    }
+
+    public function unsetCdnWrite(): self
+    {
+        return $this->remove('cdnWrite');
     }
 
     public static function definition(): ObjectTypeDefinition

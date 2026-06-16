@@ -23,6 +23,16 @@ final class BookReview extends ObjectData
         return $this->set('bookReviewId', $value);
     }
 
+    public function hasBookReviewId(): bool
+    {
+        return $this->has('bookReviewId');
+    }
+
+    public function unsetBookReviewId(): self
+    {
+        return $this->remove('bookReviewId');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class BookReview extends ObjectData
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
+    }
+
+    public function hasWorkId(): bool
+    {
+        return $this->has('workId');
+    }
+
+    public function unsetWorkId(): self
+    {
+        return $this->remove('workId');
     }
 
     /**
@@ -55,6 +75,16 @@ final class BookReview extends ObjectData
         return $this->set('title', $value);
     }
 
+    public function hasTitle(): bool
+    {
+        return $this->has('title');
+    }
+
+    public function unsetTitle(): self
+    {
+        return $this->remove('title');
+    }
+
     /**
      * @return string|null
      */
@@ -69,6 +99,16 @@ final class BookReview extends ObjectData
     public function setAuthorName($value): self
     {
         return $this->set('authorName', $value);
+    }
+
+    public function hasAuthorName(): bool
+    {
+        return $this->has('authorName');
+    }
+
+    public function unsetAuthorName(): self
+    {
+        return $this->remove('authorName');
     }
 
     /**
@@ -87,6 +127,16 @@ final class BookReview extends ObjectData
         return $this->set('reviewerOrcid', $value);
     }
 
+    public function hasReviewerOrcid(): bool
+    {
+        return $this->has('reviewerOrcid');
+    }
+
+    public function unsetReviewerOrcid(): self
+    {
+        return $this->remove('reviewerOrcid');
+    }
+
     /**
      * @return string|null
      */
@@ -101,6 +151,16 @@ final class BookReview extends ObjectData
     public function setReviewerInstitutionId($value): self
     {
         return $this->set('reviewerInstitutionId', $value);
+    }
+
+    public function hasReviewerInstitutionId(): bool
+    {
+        return $this->has('reviewerInstitutionId');
+    }
+
+    public function unsetReviewerInstitutionId(): self
+    {
+        return $this->remove('reviewerInstitutionId');
     }
 
     /**
@@ -119,6 +179,16 @@ final class BookReview extends ObjectData
         return $this->set('url', $value);
     }
 
+    public function hasUrl(): bool
+    {
+        return $this->has('url');
+    }
+
+    public function unsetUrl(): self
+    {
+        return $this->remove('url');
+    }
+
     /**
      * @return string|null
      */
@@ -133,6 +203,16 @@ final class BookReview extends ObjectData
     public function setDoi($value): self
     {
         return $this->set('doi', $value);
+    }
+
+    public function hasDoi(): bool
+    {
+        return $this->has('doi');
+    }
+
+    public function unsetDoi(): self
+    {
+        return $this->remove('doi');
     }
 
     /**
@@ -151,6 +231,16 @@ final class BookReview extends ObjectData
         return $this->set('reviewDate', $value);
     }
 
+    public function hasReviewDate(): bool
+    {
+        return $this->has('reviewDate');
+    }
+
+    public function unsetReviewDate(): self
+    {
+        return $this->remove('reviewDate');
+    }
+
     /**
      * @return string|null
      */
@@ -165,6 +255,16 @@ final class BookReview extends ObjectData
     public function setJournalName($value): self
     {
         return $this->set('journalName', $value);
+    }
+
+    public function hasJournalName(): bool
+    {
+        return $this->has('journalName');
+    }
+
+    public function unsetJournalName(): self
+    {
+        return $this->remove('journalName');
     }
 
     /**
@@ -183,6 +283,16 @@ final class BookReview extends ObjectData
         return $this->set('journalVolume', $value);
     }
 
+    public function hasJournalVolume(): bool
+    {
+        return $this->has('journalVolume');
+    }
+
+    public function unsetJournalVolume(): self
+    {
+        return $this->remove('journalVolume');
+    }
+
     /**
      * @return string|null
      */
@@ -197,6 +307,16 @@ final class BookReview extends ObjectData
     public function setJournalNumber($value): self
     {
         return $this->set('journalNumber', $value);
+    }
+
+    public function hasJournalNumber(): bool
+    {
+        return $this->has('journalNumber');
+    }
+
+    public function unsetJournalNumber(): self
+    {
+        return $this->remove('journalNumber');
     }
 
     /**
@@ -215,6 +335,16 @@ final class BookReview extends ObjectData
         return $this->set('journalIssn', $value);
     }
 
+    public function hasJournalIssn(): bool
+    {
+        return $this->has('journalIssn');
+    }
+
+    public function unsetJournalIssn(): self
+    {
+        return $this->remove('journalIssn');
+    }
+
     /**
      * @return string|null
      */
@@ -229,6 +359,16 @@ final class BookReview extends ObjectData
     public function setPageRange($value): self
     {
         return $this->set('pageRange', $value);
+    }
+
+    public function hasPageRange(): bool
+    {
+        return $this->has('pageRange');
+    }
+
+    public function unsetPageRange(): self
+    {
+        return $this->remove('pageRange');
     }
 
     /**
@@ -247,6 +387,16 @@ final class BookReview extends ObjectData
         return $this->set('text', $value);
     }
 
+    public function hasText(): bool
+    {
+        return $this->has('text');
+    }
+
+    public function unsetText(): self
+    {
+        return $this->remove('text');
+    }
+
     /**
      * @return int
      */
@@ -261,6 +411,16 @@ final class BookReview extends ObjectData
     public function setReviewOrdinal($value): self
     {
         return $this->set('reviewOrdinal', $value);
+    }
+
+    public function hasReviewOrdinal(): bool
+    {
+        return $this->has('reviewOrdinal');
+    }
+
+    public function unsetReviewOrdinal(): self
+    {
+        return $this->remove('reviewOrdinal');
     }
 
     /**
@@ -279,6 +439,16 @@ final class BookReview extends ObjectData
         return $this->set('createdAt', $value);
     }
 
+    public function hasCreatedAt(): bool
+    {
+        return $this->has('createdAt');
+    }
+
+    public function unsetCreatedAt(): self
+    {
+        return $this->remove('createdAt');
+    }
+
     /**
      * @return string
      */
@@ -293,6 +463,16 @@ final class BookReview extends ObjectData
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
+    }
+
+    public function hasUpdatedAt(): bool
+    {
+        return $this->has('updatedAt');
+    }
+
+    public function unsetUpdatedAt(): self
+    {
+        return $this->remove('updatedAt');
     }
 
     /**
@@ -311,6 +491,16 @@ final class BookReview extends ObjectData
         return $this->set('work', $value);
     }
 
+    public function hasWork(): bool
+    {
+        return $this->has('work');
+    }
+
+    public function unsetWork(): self
+    {
+        return $this->remove('work');
+    }
+
     /**
      * @return Institution|null
      */
@@ -325,6 +515,16 @@ final class BookReview extends ObjectData
     public function setReviewerInstitution($value): self
     {
         return $this->set('reviewerInstitution', $value);
+    }
+
+    public function hasReviewerInstitution(): bool
+    {
+        return $this->has('reviewerInstitution');
+    }
+
+    public function unsetReviewerInstitution(): self
+    {
+        return $this->remove('reviewerInstitution');
     }
 
     public static function definition(): ObjectTypeDefinition

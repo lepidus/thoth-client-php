@@ -23,6 +23,16 @@ final class Endorsement extends ObjectData
         return $this->set('endorsementId', $value);
     }
 
+    public function hasEndorsementId(): bool
+    {
+        return $this->has('endorsementId');
+    }
+
+    public function unsetEndorsementId(): self
+    {
+        return $this->remove('endorsementId');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class Endorsement extends ObjectData
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
+    }
+
+    public function hasWorkId(): bool
+    {
+        return $this->has('workId');
+    }
+
+    public function unsetWorkId(): self
+    {
+        return $this->remove('workId');
     }
 
     /**
@@ -55,6 +75,16 @@ final class Endorsement extends ObjectData
         return $this->set('authorName', $value);
     }
 
+    public function hasAuthorName(): bool
+    {
+        return $this->has('authorName');
+    }
+
+    public function unsetAuthorName(): self
+    {
+        return $this->remove('authorName');
+    }
+
     /**
      * @return string|null
      */
@@ -69,6 +99,16 @@ final class Endorsement extends ObjectData
     public function setAuthorRole($value): self
     {
         return $this->set('authorRole', $value);
+    }
+
+    public function hasAuthorRole(): bool
+    {
+        return $this->has('authorRole');
+    }
+
+    public function unsetAuthorRole(): self
+    {
+        return $this->remove('authorRole');
     }
 
     /**
@@ -87,6 +127,16 @@ final class Endorsement extends ObjectData
         return $this->set('authorOrcid', $value);
     }
 
+    public function hasAuthorOrcid(): bool
+    {
+        return $this->has('authorOrcid');
+    }
+
+    public function unsetAuthorOrcid(): self
+    {
+        return $this->remove('authorOrcid');
+    }
+
     /**
      * @return string|null
      */
@@ -101,6 +151,16 @@ final class Endorsement extends ObjectData
     public function setAuthorInstitutionId($value): self
     {
         return $this->set('authorInstitutionId', $value);
+    }
+
+    public function hasAuthorInstitutionId(): bool
+    {
+        return $this->has('authorInstitutionId');
+    }
+
+    public function unsetAuthorInstitutionId(): self
+    {
+        return $this->remove('authorInstitutionId');
     }
 
     /**
@@ -119,6 +179,16 @@ final class Endorsement extends ObjectData
         return $this->set('url', $value);
     }
 
+    public function hasUrl(): bool
+    {
+        return $this->has('url');
+    }
+
+    public function unsetUrl(): self
+    {
+        return $this->remove('url');
+    }
+
     /**
      * @return string|null
      */
@@ -133,6 +203,16 @@ final class Endorsement extends ObjectData
     public function setText($value): self
     {
         return $this->set('text', $value);
+    }
+
+    public function hasText(): bool
+    {
+        return $this->has('text');
+    }
+
+    public function unsetText(): self
+    {
+        return $this->remove('text');
     }
 
     /**
@@ -151,6 +231,16 @@ final class Endorsement extends ObjectData
         return $this->set('endorsementOrdinal', $value);
     }
 
+    public function hasEndorsementOrdinal(): bool
+    {
+        return $this->has('endorsementOrdinal');
+    }
+
+    public function unsetEndorsementOrdinal(): self
+    {
+        return $this->remove('endorsementOrdinal');
+    }
+
     /**
      * @return string
      */
@@ -165,6 +255,16 @@ final class Endorsement extends ObjectData
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
+    }
+
+    public function hasCreatedAt(): bool
+    {
+        return $this->has('createdAt');
+    }
+
+    public function unsetCreatedAt(): self
+    {
+        return $this->remove('createdAt');
     }
 
     /**
@@ -183,6 +283,16 @@ final class Endorsement extends ObjectData
         return $this->set('updatedAt', $value);
     }
 
+    public function hasUpdatedAt(): bool
+    {
+        return $this->has('updatedAt');
+    }
+
+    public function unsetUpdatedAt(): self
+    {
+        return $this->remove('updatedAt');
+    }
+
     /**
      * @return Work
      */
@@ -199,6 +309,16 @@ final class Endorsement extends ObjectData
         return $this->set('work', $value);
     }
 
+    public function hasWork(): bool
+    {
+        return $this->has('work');
+    }
+
+    public function unsetWork(): self
+    {
+        return $this->remove('work');
+    }
+
     /**
      * @return Institution|null
      */
@@ -213,6 +333,16 @@ final class Endorsement extends ObjectData
     public function setAuthorInstitution($value): self
     {
         return $this->set('authorInstitution', $value);
+    }
+
+    public function hasAuthorInstitution(): bool
+    {
+        return $this->has('authorInstitution');
+    }
+
+    public function unsetAuthorInstitution(): self
+    {
+        return $this->remove('authorInstitution');
     }
 
     public static function definition(): ObjectTypeDefinition

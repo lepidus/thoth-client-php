@@ -7,6 +7,58 @@ use ThothApi\GraphQL\InputObject;
 
 final class ContactOrderBy extends InputObject
 {
+    /**
+     * @return string
+     */
+    public function getField()
+    {
+        return $this->get('field');
+    }
+
+    /**
+     * @param string $value
+     */
+    public function setField($value): self
+    {
+        return $this->set('field', $value);
+    }
+
+    public function hasField(): bool
+    {
+        return $this->has('field');
+    }
+
+    public function unsetField(): self
+    {
+        return $this->remove('field');
+    }
+
+    /**
+     * @return string
+     */
+    public function getDirection()
+    {
+        return $this->get('direction');
+    }
+
+    /**
+     * @param string $value
+     */
+    public function setDirection($value): self
+    {
+        return $this->set('direction', $value);
+    }
+
+    public function hasDirection(): bool
+    {
+        return $this->has('direction');
+    }
+
+    public function unsetDirection(): self
+    {
+        return $this->remove('direction');
+    }
+
     public static function definition(): InputObjectTypeDefinition
     {
         return new InputObjectTypeDefinition('ContactOrderBy', [

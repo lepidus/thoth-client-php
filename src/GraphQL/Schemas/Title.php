@@ -23,6 +23,16 @@ final class Title extends ObjectData
         return $this->set('titleId', $value);
     }
 
+    public function hasTitleId(): bool
+    {
+        return $this->has('titleId');
+    }
+
+    public function unsetTitleId(): self
+    {
+        return $this->remove('titleId');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class Title extends ObjectData
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
+    }
+
+    public function hasWorkId(): bool
+    {
+        return $this->has('workId');
+    }
+
+    public function unsetWorkId(): self
+    {
+        return $this->remove('workId');
     }
 
     /**
@@ -55,6 +75,16 @@ final class Title extends ObjectData
         return $this->set('localeCode', $value);
     }
 
+    public function hasLocaleCode(): bool
+    {
+        return $this->has('localeCode');
+    }
+
+    public function unsetLocaleCode(): self
+    {
+        return $this->remove('localeCode');
+    }
+
     /**
      * @return string
      */
@@ -69,6 +99,16 @@ final class Title extends ObjectData
     public function setFullTitle($value): self
     {
         return $this->set('fullTitle', $value);
+    }
+
+    public function hasFullTitle(): bool
+    {
+        return $this->has('fullTitle');
+    }
+
+    public function unsetFullTitle(): self
+    {
+        return $this->remove('fullTitle');
     }
 
     /**
@@ -87,6 +127,16 @@ final class Title extends ObjectData
         return $this->set('title', $value);
     }
 
+    public function hasTitle(): bool
+    {
+        return $this->has('title');
+    }
+
+    public function unsetTitle(): self
+    {
+        return $this->remove('title');
+    }
+
     /**
      * @return string|null
      */
@@ -101,6 +151,16 @@ final class Title extends ObjectData
     public function setSubtitle($value): self
     {
         return $this->set('subtitle', $value);
+    }
+
+    public function hasSubtitle(): bool
+    {
+        return $this->has('subtitle');
+    }
+
+    public function unsetSubtitle(): self
+    {
+        return $this->remove('subtitle');
     }
 
     /**
@@ -119,6 +179,16 @@ final class Title extends ObjectData
         return $this->set('canonical', $value);
     }
 
+    public function hasCanonical(): bool
+    {
+        return $this->has('canonical');
+    }
+
+    public function unsetCanonical(): self
+    {
+        return $this->remove('canonical');
+    }
+
     /**
      * @return Work
      */
@@ -133,6 +203,16 @@ final class Title extends ObjectData
     public function setWork($value): self
     {
         return $this->set('work', $value);
+    }
+
+    public function hasWork(): bool
+    {
+        return $this->has('work');
+    }
+
+    public function unsetWork(): self
+    {
+        return $this->remove('work');
     }
 
     public static function definition(): ObjectTypeDefinition

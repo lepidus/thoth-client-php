@@ -37,6 +37,8 @@ final class GeneratorTest extends TestCase
         $this->assertStringContainsString('@return Imprint|null', $workClass);
         $this->assertStringContainsString('@return string[]|null', $workClass);
         $this->assertStringContainsString('@param string $value', $workClass);
+        $this->assertStringContainsString('public function hasTitle(): bool', $workClass);
+        $this->assertStringContainsString('public function unsetTitle(): self', $workClass);
     }
 
     public function testItRejectsUnsafeTargets(): void

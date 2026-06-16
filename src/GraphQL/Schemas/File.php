@@ -23,6 +23,16 @@ final class File extends ObjectData
         return $this->set('fileId', $value);
     }
 
+    public function hasFileId(): bool
+    {
+        return $this->has('fileId');
+    }
+
+    public function unsetFileId(): self
+    {
+        return $this->remove('fileId');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class File extends ObjectData
     public function setFileType($value): self
     {
         return $this->set('fileType', $value);
+    }
+
+    public function hasFileType(): bool
+    {
+        return $this->has('fileType');
+    }
+
+    public function unsetFileType(): self
+    {
+        return $this->remove('fileType');
     }
 
     /**
@@ -55,6 +75,16 @@ final class File extends ObjectData
         return $this->set('workId', $value);
     }
 
+    public function hasWorkId(): bool
+    {
+        return $this->has('workId');
+    }
+
+    public function unsetWorkId(): self
+    {
+        return $this->remove('workId');
+    }
+
     /**
      * @return string|null
      */
@@ -69,6 +99,16 @@ final class File extends ObjectData
     public function setPublicationId($value): self
     {
         return $this->set('publicationId', $value);
+    }
+
+    public function hasPublicationId(): bool
+    {
+        return $this->has('publicationId');
+    }
+
+    public function unsetPublicationId(): self
+    {
+        return $this->remove('publicationId');
     }
 
     /**
@@ -87,6 +127,16 @@ final class File extends ObjectData
         return $this->set('additionalResourceId', $value);
     }
 
+    public function hasAdditionalResourceId(): bool
+    {
+        return $this->has('additionalResourceId');
+    }
+
+    public function unsetAdditionalResourceId(): self
+    {
+        return $this->remove('additionalResourceId');
+    }
+
     /**
      * @return string|null
      */
@@ -101,6 +151,16 @@ final class File extends ObjectData
     public function setWorkFeaturedVideoId($value): self
     {
         return $this->set('workFeaturedVideoId', $value);
+    }
+
+    public function hasWorkFeaturedVideoId(): bool
+    {
+        return $this->has('workFeaturedVideoId');
+    }
+
+    public function unsetWorkFeaturedVideoId(): self
+    {
+        return $this->remove('workFeaturedVideoId');
     }
 
     /**
@@ -119,6 +179,16 @@ final class File extends ObjectData
         return $this->set('objectKey', $value);
     }
 
+    public function hasObjectKey(): bool
+    {
+        return $this->has('objectKey');
+    }
+
+    public function unsetObjectKey(): self
+    {
+        return $this->remove('objectKey');
+    }
+
     /**
      * @return string
      */
@@ -133,6 +203,16 @@ final class File extends ObjectData
     public function setCdnUrl($value): self
     {
         return $this->set('cdnUrl', $value);
+    }
+
+    public function hasCdnUrl(): bool
+    {
+        return $this->has('cdnUrl');
+    }
+
+    public function unsetCdnUrl(): self
+    {
+        return $this->remove('cdnUrl');
     }
 
     /**
@@ -151,6 +231,16 @@ final class File extends ObjectData
         return $this->set('mimeType', $value);
     }
 
+    public function hasMimeType(): bool
+    {
+        return $this->has('mimeType');
+    }
+
+    public function unsetMimeType(): self
+    {
+        return $this->remove('mimeType');
+    }
+
     /**
      * @return int
      */
@@ -165,6 +255,16 @@ final class File extends ObjectData
     public function setBytes($value): self
     {
         return $this->set('bytes', $value);
+    }
+
+    public function hasBytes(): bool
+    {
+        return $this->has('bytes');
+    }
+
+    public function unsetBytes(): self
+    {
+        return $this->remove('bytes');
     }
 
     /**
@@ -183,6 +283,16 @@ final class File extends ObjectData
         return $this->set('sha256', $value);
     }
 
+    public function hasSha256(): bool
+    {
+        return $this->has('sha256');
+    }
+
+    public function unsetSha256(): self
+    {
+        return $this->remove('sha256');
+    }
+
     /**
      * @return string
      */
@@ -199,6 +309,16 @@ final class File extends ObjectData
         return $this->set('createdAt', $value);
     }
 
+    public function hasCreatedAt(): bool
+    {
+        return $this->has('createdAt');
+    }
+
+    public function unsetCreatedAt(): self
+    {
+        return $this->remove('createdAt');
+    }
+
     /**
      * @return string
      */
@@ -213,6 +333,16 @@ final class File extends ObjectData
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
+    }
+
+    public function hasUpdatedAt(): bool
+    {
+        return $this->has('updatedAt');
+    }
+
+    public function unsetUpdatedAt(): self
+    {
+        return $this->remove('updatedAt');
     }
 
     public static function definition(): ObjectTypeDefinition

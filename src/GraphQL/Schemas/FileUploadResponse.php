@@ -23,6 +23,16 @@ final class FileUploadResponse extends ObjectData
         return $this->set('fileUploadId', $value);
     }
 
+    public function hasFileUploadId(): bool
+    {
+        return $this->has('fileUploadId');
+    }
+
+    public function unsetFileUploadId(): self
+    {
+        return $this->remove('fileUploadId');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class FileUploadResponse extends ObjectData
     public function setUploadUrl($value): self
     {
         return $this->set('uploadUrl', $value);
+    }
+
+    public function hasUploadUrl(): bool
+    {
+        return $this->has('uploadUrl');
+    }
+
+    public function unsetUploadUrl(): self
+    {
+        return $this->remove('uploadUrl');
     }
 
     /**
@@ -55,6 +75,16 @@ final class FileUploadResponse extends ObjectData
         return $this->set('uploadHeaders', $value);
     }
 
+    public function hasUploadHeaders(): bool
+    {
+        return $this->has('uploadHeaders');
+    }
+
+    public function unsetUploadHeaders(): self
+    {
+        return $this->remove('uploadHeaders');
+    }
+
     /**
      * @return string
      */
@@ -69,6 +99,16 @@ final class FileUploadResponse extends ObjectData
     public function setExpiresAt($value): self
     {
         return $this->set('expiresAt', $value);
+    }
+
+    public function hasExpiresAt(): bool
+    {
+        return $this->has('expiresAt');
+    }
+
+    public function unsetExpiresAt(): self
+    {
+        return $this->remove('expiresAt');
     }
 
     public static function definition(): ObjectTypeDefinition

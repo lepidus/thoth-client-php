@@ -23,6 +23,16 @@ final class UploadRequestHeader extends ObjectData
         return $this->set('name', $value);
     }
 
+    public function hasName(): bool
+    {
+        return $this->has('name');
+    }
+
+    public function unsetName(): self
+    {
+        return $this->remove('name');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class UploadRequestHeader extends ObjectData
     public function setValue($value): self
     {
         return $this->set('value', $value);
+    }
+
+    public function hasValue(): bool
+    {
+        return $this->has('value');
+    }
+
+    public function unsetValue(): self
+    {
+        return $this->remove('value');
     }
 
     public static function definition(): ObjectTypeDefinition

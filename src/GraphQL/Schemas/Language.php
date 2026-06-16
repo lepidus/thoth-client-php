@@ -23,6 +23,16 @@ final class Language extends ObjectData
         return $this->set('languageId', $value);
     }
 
+    public function hasLanguageId(): bool
+    {
+        return $this->has('languageId');
+    }
+
+    public function unsetLanguageId(): self
+    {
+        return $this->remove('languageId');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class Language extends ObjectData
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
+    }
+
+    public function hasWorkId(): bool
+    {
+        return $this->has('workId');
+    }
+
+    public function unsetWorkId(): self
+    {
+        return $this->remove('workId');
     }
 
     /**
@@ -55,6 +75,16 @@ final class Language extends ObjectData
         return $this->set('languageCode', $value);
     }
 
+    public function hasLanguageCode(): bool
+    {
+        return $this->has('languageCode');
+    }
+
+    public function unsetLanguageCode(): self
+    {
+        return $this->remove('languageCode');
+    }
+
     /**
      * @return string
      */
@@ -69,6 +99,16 @@ final class Language extends ObjectData
     public function setLanguageRelation($value): self
     {
         return $this->set('languageRelation', $value);
+    }
+
+    public function hasLanguageRelation(): bool
+    {
+        return $this->has('languageRelation');
+    }
+
+    public function unsetLanguageRelation(): self
+    {
+        return $this->remove('languageRelation');
     }
 
     /**
@@ -87,6 +127,16 @@ final class Language extends ObjectData
         return $this->set('createdAt', $value);
     }
 
+    public function hasCreatedAt(): bool
+    {
+        return $this->has('createdAt');
+    }
+
+    public function unsetCreatedAt(): self
+    {
+        return $this->remove('createdAt');
+    }
+
     /**
      * @return string
      */
@@ -103,6 +153,16 @@ final class Language extends ObjectData
         return $this->set('updatedAt', $value);
     }
 
+    public function hasUpdatedAt(): bool
+    {
+        return $this->has('updatedAt');
+    }
+
+    public function unsetUpdatedAt(): self
+    {
+        return $this->remove('updatedAt');
+    }
+
     /**
      * @return Work
      */
@@ -117,6 +177,16 @@ final class Language extends ObjectData
     public function setWork($value): self
     {
         return $this->set('work', $value);
+    }
+
+    public function hasWork(): bool
+    {
+        return $this->has('work');
+    }
+
+    public function unsetWork(): self
+    {
+        return $this->remove('work');
     }
 
     public static function definition(): ObjectTypeDefinition

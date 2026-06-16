@@ -7,6 +7,110 @@ use ThothApi\GraphQL\InputObject;
 
 final class NewIssue extends InputObject
 {
+    /**
+     * @return string
+     */
+    public function getSeriesId()
+    {
+        return $this->get('seriesId');
+    }
+
+    /**
+     * @param string $value
+     */
+    public function setSeriesId($value): self
+    {
+        return $this->set('seriesId', $value);
+    }
+
+    public function hasSeriesId(): bool
+    {
+        return $this->has('seriesId');
+    }
+
+    public function unsetSeriesId(): self
+    {
+        return $this->remove('seriesId');
+    }
+
+    /**
+     * @return string
+     */
+    public function getWorkId()
+    {
+        return $this->get('workId');
+    }
+
+    /**
+     * @param string $value
+     */
+    public function setWorkId($value): self
+    {
+        return $this->set('workId', $value);
+    }
+
+    public function hasWorkId(): bool
+    {
+        return $this->has('workId');
+    }
+
+    public function unsetWorkId(): self
+    {
+        return $this->remove('workId');
+    }
+
+    /**
+     * @return int
+     */
+    public function getIssueOrdinal()
+    {
+        return $this->get('issueOrdinal');
+    }
+
+    /**
+     * @param int $value
+     */
+    public function setIssueOrdinal($value): self
+    {
+        return $this->set('issueOrdinal', $value);
+    }
+
+    public function hasIssueOrdinal(): bool
+    {
+        return $this->has('issueOrdinal');
+    }
+
+    public function unsetIssueOrdinal(): self
+    {
+        return $this->remove('issueOrdinal');
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getIssueNumber()
+    {
+        return $this->get('issueNumber');
+    }
+
+    /**
+     * @param int|null $value
+     */
+    public function setIssueNumber($value): self
+    {
+        return $this->set('issueNumber', $value);
+    }
+
+    public function hasIssueNumber(): bool
+    {
+        return $this->has('issueNumber');
+    }
+
+    public function unsetIssueNumber(): self
+    {
+        return $this->remove('issueNumber');
+    }
+
     public static function definition(): InputObjectTypeDefinition
     {
         return new InputObjectTypeDefinition('NewIssue', [

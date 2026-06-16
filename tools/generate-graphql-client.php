@@ -250,6 +250,16 @@ function objectFieldMethods(array $field): string
     {
         return \$this->set({$fieldName}, \$value);
     }
+
+    public function has{$methodName}(): bool
+    {
+        return \$this->has({$fieldName});
+    }
+
+    public function unset{$methodName}(): self
+    {
+        return \$this->remove({$fieldName});
+    }
 PHP;
 }
 
@@ -261,12 +271,18 @@ function generateInputType(array $type, string $directory, string $namespacePart
         $namespacePart,
         $className,
         $type['name'],
+        inputFieldMethodsCode($type['inputFields'] ?? []),
         argumentDefinitionListCode($type['inputFields'] ?? [], 3)
     ));
 }
 
-function inputClassCode(string $namespacePart, string $className, string $typeName, string $fieldsCode): string
-{
+function inputClassCode(
+    string $namespacePart,
+    string $className,
+    string $typeName,
+    string $methodsCode,
+    string $fieldsCode
+): string {
     return <<<PHP
 <?php
 
@@ -277,6 +293,8 @@ use ThothApi\\GraphQL\\InputObject;
 
 final class {$className} extends InputObject
 {
+{$methodsCode}
+
     public static function definition(): InputObjectTypeDefinition
     {
         return new InputObjectTypeDefinition('{$typeName}', [
@@ -284,6 +302,46 @@ final class {$className} extends InputObject
         ]);
     }
 }
+PHP;
+}
+
+function inputFieldMethodsCode(array $fields): string
+{
+    return implode("\n\n", array_map('inputFieldMethods', $fields));
+}
+
+function inputFieldMethods(array $field): string
+{
+    $methodName = studly($field['name']);
+    $fieldName = exportPhpValue($field['name']);
+    $phpDocType = phpDocType($field['type']);
+
+    return <<<PHP
+    /**
+     * @return {$phpDocType}
+     */
+    public function get{$methodName}()
+    {
+        return \$this->get({$fieldName});
+    }
+
+    /**
+     * @param {$phpDocType} \$value
+     */
+    public function set{$methodName}(\$value): self
+    {
+        return \$this->set({$fieldName}, \$value);
+    }
+
+    public function has{$methodName}(): bool
+    {
+        return \$this->has({$fieldName});
+    }
+
+    public function unset{$methodName}(): self
+    {
+        return \$this->remove({$fieldName});
+    }
 PHP;
 }
 

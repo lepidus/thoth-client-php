@@ -23,6 +23,16 @@ final class Publisher extends ObjectData
         return $this->set('publisherId', $value);
     }
 
+    public function hasPublisherId(): bool
+    {
+        return $this->has('publisherId');
+    }
+
+    public function unsetPublisherId(): self
+    {
+        return $this->remove('publisherId');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class Publisher extends ObjectData
     public function setPublisherName($value): self
     {
         return $this->set('publisherName', $value);
+    }
+
+    public function hasPublisherName(): bool
+    {
+        return $this->has('publisherName');
+    }
+
+    public function unsetPublisherName(): self
+    {
+        return $this->remove('publisherName');
     }
 
     /**
@@ -55,6 +75,16 @@ final class Publisher extends ObjectData
         return $this->set('publisherShortname', $value);
     }
 
+    public function hasPublisherShortname(): bool
+    {
+        return $this->has('publisherShortname');
+    }
+
+    public function unsetPublisherShortname(): self
+    {
+        return $this->remove('publisherShortname');
+    }
+
     /**
      * @return string|null
      */
@@ -69,6 +99,16 @@ final class Publisher extends ObjectData
     public function setPublisherUrl($value): self
     {
         return $this->set('publisherUrl', $value);
+    }
+
+    public function hasPublisherUrl(): bool
+    {
+        return $this->has('publisherUrl');
+    }
+
+    public function unsetPublisherUrl(): self
+    {
+        return $this->remove('publisherUrl');
     }
 
     /**
@@ -87,6 +127,16 @@ final class Publisher extends ObjectData
         return $this->set('zitadelId', $value);
     }
 
+    public function hasZitadelId(): bool
+    {
+        return $this->has('zitadelId');
+    }
+
+    public function unsetZitadelId(): self
+    {
+        return $this->remove('zitadelId');
+    }
+
     /**
      * @return string|null
      */
@@ -101,6 +151,16 @@ final class Publisher extends ObjectData
     public function setAccessibilityStatement($value): self
     {
         return $this->set('accessibilityStatement', $value);
+    }
+
+    public function hasAccessibilityStatement(): bool
+    {
+        return $this->has('accessibilityStatement');
+    }
+
+    public function unsetAccessibilityStatement(): self
+    {
+        return $this->remove('accessibilityStatement');
     }
 
     /**
@@ -119,6 +179,16 @@ final class Publisher extends ObjectData
         return $this->set('accessibilityReportUrl', $value);
     }
 
+    public function hasAccessibilityReportUrl(): bool
+    {
+        return $this->has('accessibilityReportUrl');
+    }
+
+    public function unsetAccessibilityReportUrl(): self
+    {
+        return $this->remove('accessibilityReportUrl');
+    }
+
     /**
      * @return string
      */
@@ -133,6 +203,16 @@ final class Publisher extends ObjectData
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
+    }
+
+    public function hasCreatedAt(): bool
+    {
+        return $this->has('createdAt');
+    }
+
+    public function unsetCreatedAt(): self
+    {
+        return $this->remove('createdAt');
     }
 
     /**
@@ -151,6 +231,16 @@ final class Publisher extends ObjectData
         return $this->set('updatedAt', $value);
     }
 
+    public function hasUpdatedAt(): bool
+    {
+        return $this->has('updatedAt');
+    }
+
+    public function unsetUpdatedAt(): self
+    {
+        return $this->remove('updatedAt');
+    }
+
     /**
      * @return Imprint[]
      */
@@ -167,6 +257,16 @@ final class Publisher extends ObjectData
         return $this->set('imprints', $value);
     }
 
+    public function hasImprints(): bool
+    {
+        return $this->has('imprints');
+    }
+
+    public function unsetImprints(): self
+    {
+        return $this->remove('imprints');
+    }
+
     /**
      * @return Contact[]
      */
@@ -181,6 +281,16 @@ final class Publisher extends ObjectData
     public function setContacts($value): self
     {
         return $this->set('contacts', $value);
+    }
+
+    public function hasContacts(): bool
+    {
+        return $this->has('contacts');
+    }
+
+    public function unsetContacts(): self
+    {
+        return $this->remove('contacts');
     }
 
     public static function definition(): ObjectTypeDefinition

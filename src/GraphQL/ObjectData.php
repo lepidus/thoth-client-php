@@ -38,6 +38,17 @@ class ObjectData
         return $this;
     }
 
+    protected function has(string $field): bool
+    {
+        return array_key_exists($field, $this->data);
+    }
+
+    protected function remove(string $field): self
+    {
+        unset($this->data[$field]);
+        return $this;
+    }
+
     private static function hydrateFieldValue(string $fieldName, $value)
     {
         $field = static::getFieldDefinition($fieldName);

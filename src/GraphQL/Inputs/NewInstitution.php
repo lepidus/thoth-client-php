@@ -7,6 +7,110 @@ use ThothApi\GraphQL\InputObject;
 
 final class NewInstitution extends InputObject
 {
+    /**
+     * @return string
+     */
+    public function getInstitutionName()
+    {
+        return $this->get('institutionName');
+    }
+
+    /**
+     * @param string $value
+     */
+    public function setInstitutionName($value): self
+    {
+        return $this->set('institutionName', $value);
+    }
+
+    public function hasInstitutionName(): bool
+    {
+        return $this->has('institutionName');
+    }
+
+    public function unsetInstitutionName(): self
+    {
+        return $this->remove('institutionName');
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getInstitutionDoi()
+    {
+        return $this->get('institutionDoi');
+    }
+
+    /**
+     * @param string|null $value
+     */
+    public function setInstitutionDoi($value): self
+    {
+        return $this->set('institutionDoi', $value);
+    }
+
+    public function hasInstitutionDoi(): bool
+    {
+        return $this->has('institutionDoi');
+    }
+
+    public function unsetInstitutionDoi(): self
+    {
+        return $this->remove('institutionDoi');
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getRor()
+    {
+        return $this->get('ror');
+    }
+
+    /**
+     * @param string|null $value
+     */
+    public function setRor($value): self
+    {
+        return $this->set('ror', $value);
+    }
+
+    public function hasRor(): bool
+    {
+        return $this->has('ror');
+    }
+
+    public function unsetRor(): self
+    {
+        return $this->remove('ror');
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getCountryCode()
+    {
+        return $this->get('countryCode');
+    }
+
+    /**
+     * @param string|null $value
+     */
+    public function setCountryCode($value): self
+    {
+        return $this->set('countryCode', $value);
+    }
+
+    public function hasCountryCode(): bool
+    {
+        return $this->has('countryCode');
+    }
+
+    public function unsetCountryCode(): self
+    {
+        return $this->remove('countryCode');
+    }
+
     public static function definition(): InputObjectTypeDefinition
     {
         return new InputObjectTypeDefinition('NewInstitution', [

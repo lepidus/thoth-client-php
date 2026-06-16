@@ -23,6 +23,16 @@ final class Biography extends ObjectData
         return $this->set('biographyId', $value);
     }
 
+    public function hasBiographyId(): bool
+    {
+        return $this->has('biographyId');
+    }
+
+    public function unsetBiographyId(): self
+    {
+        return $this->remove('biographyId');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class Biography extends ObjectData
     public function setContributionId($value): self
     {
         return $this->set('contributionId', $value);
+    }
+
+    public function hasContributionId(): bool
+    {
+        return $this->has('contributionId');
+    }
+
+    public function unsetContributionId(): self
+    {
+        return $this->remove('contributionId');
     }
 
     /**
@@ -55,6 +75,16 @@ final class Biography extends ObjectData
         return $this->set('localeCode', $value);
     }
 
+    public function hasLocaleCode(): bool
+    {
+        return $this->has('localeCode');
+    }
+
+    public function unsetLocaleCode(): self
+    {
+        return $this->remove('localeCode');
+    }
+
     /**
      * @return string
      */
@@ -69,6 +99,16 @@ final class Biography extends ObjectData
     public function setContent($value): self
     {
         return $this->set('content', $value);
+    }
+
+    public function hasContent(): bool
+    {
+        return $this->has('content');
+    }
+
+    public function unsetContent(): self
+    {
+        return $this->remove('content');
     }
 
     /**
@@ -87,6 +127,16 @@ final class Biography extends ObjectData
         return $this->set('canonical', $value);
     }
 
+    public function hasCanonical(): bool
+    {
+        return $this->has('canonical');
+    }
+
+    public function unsetCanonical(): self
+    {
+        return $this->remove('canonical');
+    }
+
     /**
      * @return Work
      */
@@ -103,6 +153,16 @@ final class Biography extends ObjectData
         return $this->set('work', $value);
     }
 
+    public function hasWork(): bool
+    {
+        return $this->has('work');
+    }
+
+    public function unsetWork(): self
+    {
+        return $this->remove('work');
+    }
+
     /**
      * @return Contribution
      */
@@ -117,6 +177,16 @@ final class Biography extends ObjectData
     public function setContribution($value): self
     {
         return $this->set('contribution', $value);
+    }
+
+    public function hasContribution(): bool
+    {
+        return $this->has('contribution');
+    }
+
+    public function unsetContribution(): self
+    {
+        return $this->remove('contribution');
     }
 
     public static function definition(): ObjectTypeDefinition

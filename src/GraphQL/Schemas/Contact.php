@@ -23,6 +23,16 @@ final class Contact extends ObjectData
         return $this->set('contactId', $value);
     }
 
+    public function hasContactId(): bool
+    {
+        return $this->has('contactId');
+    }
+
+    public function unsetContactId(): self
+    {
+        return $this->remove('contactId');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class Contact extends ObjectData
     public function setPublisherId($value): self
     {
         return $this->set('publisherId', $value);
+    }
+
+    public function hasPublisherId(): bool
+    {
+        return $this->has('publisherId');
+    }
+
+    public function unsetPublisherId(): self
+    {
+        return $this->remove('publisherId');
     }
 
     /**
@@ -55,6 +75,16 @@ final class Contact extends ObjectData
         return $this->set('contactType', $value);
     }
 
+    public function hasContactType(): bool
+    {
+        return $this->has('contactType');
+    }
+
+    public function unsetContactType(): self
+    {
+        return $this->remove('contactType');
+    }
+
     /**
      * @return string
      */
@@ -69,6 +99,16 @@ final class Contact extends ObjectData
     public function setEmail($value): self
     {
         return $this->set('email', $value);
+    }
+
+    public function hasEmail(): bool
+    {
+        return $this->has('email');
+    }
+
+    public function unsetEmail(): self
+    {
+        return $this->remove('email');
     }
 
     /**
@@ -87,6 +127,16 @@ final class Contact extends ObjectData
         return $this->set('createdAt', $value);
     }
 
+    public function hasCreatedAt(): bool
+    {
+        return $this->has('createdAt');
+    }
+
+    public function unsetCreatedAt(): self
+    {
+        return $this->remove('createdAt');
+    }
+
     /**
      * @return string
      */
@@ -103,6 +153,16 @@ final class Contact extends ObjectData
         return $this->set('updatedAt', $value);
     }
 
+    public function hasUpdatedAt(): bool
+    {
+        return $this->has('updatedAt');
+    }
+
+    public function unsetUpdatedAt(): self
+    {
+        return $this->remove('updatedAt');
+    }
+
     /**
      * @return Publisher
      */
@@ -117,6 +177,16 @@ final class Contact extends ObjectData
     public function setPublisher($value): self
     {
         return $this->set('publisher', $value);
+    }
+
+    public function hasPublisher(): bool
+    {
+        return $this->has('publisher');
+    }
+
+    public function unsetPublisher(): self
+    {
+        return $this->remove('publisher');
     }
 
     public static function definition(): ObjectTypeDefinition

@@ -23,6 +23,16 @@ final class Reference extends ObjectData
         return $this->set('referenceId', $value);
     }
 
+    public function hasReferenceId(): bool
+    {
+        return $this->has('referenceId');
+    }
+
+    public function unsetReferenceId(): self
+    {
+        return $this->remove('referenceId');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class Reference extends ObjectData
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
+    }
+
+    public function hasWorkId(): bool
+    {
+        return $this->has('workId');
+    }
+
+    public function unsetWorkId(): self
+    {
+        return $this->remove('workId');
     }
 
     /**
@@ -55,6 +75,16 @@ final class Reference extends ObjectData
         return $this->set('referenceOrdinal', $value);
     }
 
+    public function hasReferenceOrdinal(): bool
+    {
+        return $this->has('referenceOrdinal');
+    }
+
+    public function unsetReferenceOrdinal(): self
+    {
+        return $this->remove('referenceOrdinal');
+    }
+
     /**
      * @return string|null
      */
@@ -69,6 +99,16 @@ final class Reference extends ObjectData
     public function setDoi($value): self
     {
         return $this->set('doi', $value);
+    }
+
+    public function hasDoi(): bool
+    {
+        return $this->has('doi');
+    }
+
+    public function unsetDoi(): self
+    {
+        return $this->remove('doi');
     }
 
     /**
@@ -87,6 +127,16 @@ final class Reference extends ObjectData
         return $this->set('unstructuredCitation', $value);
     }
 
+    public function hasUnstructuredCitation(): bool
+    {
+        return $this->has('unstructuredCitation');
+    }
+
+    public function unsetUnstructuredCitation(): self
+    {
+        return $this->remove('unstructuredCitation');
+    }
+
     /**
      * @return string|null
      */
@@ -101,6 +151,16 @@ final class Reference extends ObjectData
     public function setIssn($value): self
     {
         return $this->set('issn', $value);
+    }
+
+    public function hasIssn(): bool
+    {
+        return $this->has('issn');
+    }
+
+    public function unsetIssn(): self
+    {
+        return $this->remove('issn');
     }
 
     /**
@@ -119,6 +179,16 @@ final class Reference extends ObjectData
         return $this->set('isbn', $value);
     }
 
+    public function hasIsbn(): bool
+    {
+        return $this->has('isbn');
+    }
+
+    public function unsetIsbn(): self
+    {
+        return $this->remove('isbn');
+    }
+
     /**
      * @return string|null
      */
@@ -133,6 +203,16 @@ final class Reference extends ObjectData
     public function setJournalTitle($value): self
     {
         return $this->set('journalTitle', $value);
+    }
+
+    public function hasJournalTitle(): bool
+    {
+        return $this->has('journalTitle');
+    }
+
+    public function unsetJournalTitle(): self
+    {
+        return $this->remove('journalTitle');
     }
 
     /**
@@ -151,6 +231,16 @@ final class Reference extends ObjectData
         return $this->set('articleTitle', $value);
     }
 
+    public function hasArticleTitle(): bool
+    {
+        return $this->has('articleTitle');
+    }
+
+    public function unsetArticleTitle(): self
+    {
+        return $this->remove('articleTitle');
+    }
+
     /**
      * @return string|null
      */
@@ -165,6 +255,16 @@ final class Reference extends ObjectData
     public function setSeriesTitle($value): self
     {
         return $this->set('seriesTitle', $value);
+    }
+
+    public function hasSeriesTitle(): bool
+    {
+        return $this->has('seriesTitle');
+    }
+
+    public function unsetSeriesTitle(): self
+    {
+        return $this->remove('seriesTitle');
     }
 
     /**
@@ -183,6 +283,16 @@ final class Reference extends ObjectData
         return $this->set('volumeTitle', $value);
     }
 
+    public function hasVolumeTitle(): bool
+    {
+        return $this->has('volumeTitle');
+    }
+
+    public function unsetVolumeTitle(): self
+    {
+        return $this->remove('volumeTitle');
+    }
+
     /**
      * @return int|null
      */
@@ -197,6 +307,16 @@ final class Reference extends ObjectData
     public function setEdition($value): self
     {
         return $this->set('edition', $value);
+    }
+
+    public function hasEdition(): bool
+    {
+        return $this->has('edition');
+    }
+
+    public function unsetEdition(): self
+    {
+        return $this->remove('edition');
     }
 
     /**
@@ -215,6 +335,16 @@ final class Reference extends ObjectData
         return $this->set('author', $value);
     }
 
+    public function hasAuthor(): bool
+    {
+        return $this->has('author');
+    }
+
+    public function unsetAuthor(): self
+    {
+        return $this->remove('author');
+    }
+
     /**
      * @return string|null
      */
@@ -229,6 +359,16 @@ final class Reference extends ObjectData
     public function setVolume($value): self
     {
         return $this->set('volume', $value);
+    }
+
+    public function hasVolume(): bool
+    {
+        return $this->has('volume');
+    }
+
+    public function unsetVolume(): self
+    {
+        return $this->remove('volume');
     }
 
     /**
@@ -247,6 +387,16 @@ final class Reference extends ObjectData
         return $this->set('issue', $value);
     }
 
+    public function hasIssue(): bool
+    {
+        return $this->has('issue');
+    }
+
+    public function unsetIssue(): self
+    {
+        return $this->remove('issue');
+    }
+
     /**
      * @return string|null
      */
@@ -261,6 +411,16 @@ final class Reference extends ObjectData
     public function setFirstPage($value): self
     {
         return $this->set('firstPage', $value);
+    }
+
+    public function hasFirstPage(): bool
+    {
+        return $this->has('firstPage');
+    }
+
+    public function unsetFirstPage(): self
+    {
+        return $this->remove('firstPage');
     }
 
     /**
@@ -279,6 +439,16 @@ final class Reference extends ObjectData
         return $this->set('componentNumber', $value);
     }
 
+    public function hasComponentNumber(): bool
+    {
+        return $this->has('componentNumber');
+    }
+
+    public function unsetComponentNumber(): self
+    {
+        return $this->remove('componentNumber');
+    }
+
     /**
      * @return string|null
      */
@@ -293,6 +463,16 @@ final class Reference extends ObjectData
     public function setStandardDesignator($value): self
     {
         return $this->set('standardDesignator', $value);
+    }
+
+    public function hasStandardDesignator(): bool
+    {
+        return $this->has('standardDesignator');
+    }
+
+    public function unsetStandardDesignator(): self
+    {
+        return $this->remove('standardDesignator');
     }
 
     /**
@@ -311,6 +491,16 @@ final class Reference extends ObjectData
         return $this->set('standardsBodyName', $value);
     }
 
+    public function hasStandardsBodyName(): bool
+    {
+        return $this->has('standardsBodyName');
+    }
+
+    public function unsetStandardsBodyName(): self
+    {
+        return $this->remove('standardsBodyName');
+    }
+
     /**
      * @return string|null
      */
@@ -325,6 +515,16 @@ final class Reference extends ObjectData
     public function setStandardsBodyAcronym($value): self
     {
         return $this->set('standardsBodyAcronym', $value);
+    }
+
+    public function hasStandardsBodyAcronym(): bool
+    {
+        return $this->has('standardsBodyAcronym');
+    }
+
+    public function unsetStandardsBodyAcronym(): self
+    {
+        return $this->remove('standardsBodyAcronym');
     }
 
     /**
@@ -343,6 +543,16 @@ final class Reference extends ObjectData
         return $this->set('url', $value);
     }
 
+    public function hasUrl(): bool
+    {
+        return $this->has('url');
+    }
+
+    public function unsetUrl(): self
+    {
+        return $this->remove('url');
+    }
+
     /**
      * @return string|null
      */
@@ -357,6 +567,16 @@ final class Reference extends ObjectData
     public function setPublicationDate($value): self
     {
         return $this->set('publicationDate', $value);
+    }
+
+    public function hasPublicationDate(): bool
+    {
+        return $this->has('publicationDate');
+    }
+
+    public function unsetPublicationDate(): self
+    {
+        return $this->remove('publicationDate');
     }
 
     /**
@@ -375,6 +595,16 @@ final class Reference extends ObjectData
         return $this->set('retrievalDate', $value);
     }
 
+    public function hasRetrievalDate(): bool
+    {
+        return $this->has('retrievalDate');
+    }
+
+    public function unsetRetrievalDate(): self
+    {
+        return $this->remove('retrievalDate');
+    }
+
     /**
      * @return string
      */
@@ -389,6 +619,16 @@ final class Reference extends ObjectData
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
+    }
+
+    public function hasCreatedAt(): bool
+    {
+        return $this->has('createdAt');
+    }
+
+    public function unsetCreatedAt(): self
+    {
+        return $this->remove('createdAt');
     }
 
     /**
@@ -407,6 +647,16 @@ final class Reference extends ObjectData
         return $this->set('updatedAt', $value);
     }
 
+    public function hasUpdatedAt(): bool
+    {
+        return $this->has('updatedAt');
+    }
+
+    public function unsetUpdatedAt(): self
+    {
+        return $this->remove('updatedAt');
+    }
+
     /**
      * @return Work
      */
@@ -421,6 +671,16 @@ final class Reference extends ObjectData
     public function setWork($value): self
     {
         return $this->set('work', $value);
+    }
+
+    public function hasWork(): bool
+    {
+        return $this->has('work');
+    }
+
+    public function unsetWork(): self
+    {
+        return $this->remove('work');
     }
 
     public static function definition(): ObjectTypeDefinition

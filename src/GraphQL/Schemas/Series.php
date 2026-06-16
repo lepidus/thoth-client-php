@@ -23,6 +23,16 @@ final class Series extends ObjectData
         return $this->set('seriesId', $value);
     }
 
+    public function hasSeriesId(): bool
+    {
+        return $this->has('seriesId');
+    }
+
+    public function unsetSeriesId(): self
+    {
+        return $this->remove('seriesId');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class Series extends ObjectData
     public function setSeriesType($value): self
     {
         return $this->set('seriesType', $value);
+    }
+
+    public function hasSeriesType(): bool
+    {
+        return $this->has('seriesType');
+    }
+
+    public function unsetSeriesType(): self
+    {
+        return $this->remove('seriesType');
     }
 
     /**
@@ -55,6 +75,16 @@ final class Series extends ObjectData
         return $this->set('seriesName', $value);
     }
 
+    public function hasSeriesName(): bool
+    {
+        return $this->has('seriesName');
+    }
+
+    public function unsetSeriesName(): self
+    {
+        return $this->remove('seriesName');
+    }
+
     /**
      * @return string|null
      */
@@ -69,6 +99,16 @@ final class Series extends ObjectData
     public function setIssnPrint($value): self
     {
         return $this->set('issnPrint', $value);
+    }
+
+    public function hasIssnPrint(): bool
+    {
+        return $this->has('issnPrint');
+    }
+
+    public function unsetIssnPrint(): self
+    {
+        return $this->remove('issnPrint');
     }
 
     /**
@@ -87,6 +127,16 @@ final class Series extends ObjectData
         return $this->set('issnDigital', $value);
     }
 
+    public function hasIssnDigital(): bool
+    {
+        return $this->has('issnDigital');
+    }
+
+    public function unsetIssnDigital(): self
+    {
+        return $this->remove('issnDigital');
+    }
+
     /**
      * @return string|null
      */
@@ -101,6 +151,16 @@ final class Series extends ObjectData
     public function setSeriesUrl($value): self
     {
         return $this->set('seriesUrl', $value);
+    }
+
+    public function hasSeriesUrl(): bool
+    {
+        return $this->has('seriesUrl');
+    }
+
+    public function unsetSeriesUrl(): self
+    {
+        return $this->remove('seriesUrl');
     }
 
     /**
@@ -119,6 +179,16 @@ final class Series extends ObjectData
         return $this->set('seriesDescription', $value);
     }
 
+    public function hasSeriesDescription(): bool
+    {
+        return $this->has('seriesDescription');
+    }
+
+    public function unsetSeriesDescription(): self
+    {
+        return $this->remove('seriesDescription');
+    }
+
     /**
      * @return string|null
      */
@@ -133,6 +203,16 @@ final class Series extends ObjectData
     public function setSeriesCfpUrl($value): self
     {
         return $this->set('seriesCfpUrl', $value);
+    }
+
+    public function hasSeriesCfpUrl(): bool
+    {
+        return $this->has('seriesCfpUrl');
+    }
+
+    public function unsetSeriesCfpUrl(): self
+    {
+        return $this->remove('seriesCfpUrl');
     }
 
     /**
@@ -151,6 +231,16 @@ final class Series extends ObjectData
         return $this->set('imprintId', $value);
     }
 
+    public function hasImprintId(): bool
+    {
+        return $this->has('imprintId');
+    }
+
+    public function unsetImprintId(): self
+    {
+        return $this->remove('imprintId');
+    }
+
     /**
      * @return string
      */
@@ -165,6 +255,16 @@ final class Series extends ObjectData
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
+    }
+
+    public function hasCreatedAt(): bool
+    {
+        return $this->has('createdAt');
+    }
+
+    public function unsetCreatedAt(): self
+    {
+        return $this->remove('createdAt');
     }
 
     /**
@@ -183,6 +283,16 @@ final class Series extends ObjectData
         return $this->set('updatedAt', $value);
     }
 
+    public function hasUpdatedAt(): bool
+    {
+        return $this->has('updatedAt');
+    }
+
+    public function unsetUpdatedAt(): self
+    {
+        return $this->remove('updatedAt');
+    }
+
     /**
      * @return Imprint
      */
@@ -199,6 +309,16 @@ final class Series extends ObjectData
         return $this->set('imprint', $value);
     }
 
+    public function hasImprint(): bool
+    {
+        return $this->has('imprint');
+    }
+
+    public function unsetImprint(): self
+    {
+        return $this->remove('imprint');
+    }
+
     /**
      * @return Issue[]
      */
@@ -213,6 +333,16 @@ final class Series extends ObjectData
     public function setIssues($value): self
     {
         return $this->set('issues', $value);
+    }
+
+    public function hasIssues(): bool
+    {
+        return $this->has('issues');
+    }
+
+    public function unsetIssues(): self
+    {
+        return $this->remove('issues');
     }
 
     public static function definition(): ObjectTypeDefinition

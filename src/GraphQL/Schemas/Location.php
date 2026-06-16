@@ -23,6 +23,16 @@ final class Location extends ObjectData
         return $this->set('locationId', $value);
     }
 
+    public function hasLocationId(): bool
+    {
+        return $this->has('locationId');
+    }
+
+    public function unsetLocationId(): self
+    {
+        return $this->remove('locationId');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class Location extends ObjectData
     public function setPublicationId($value): self
     {
         return $this->set('publicationId', $value);
+    }
+
+    public function hasPublicationId(): bool
+    {
+        return $this->has('publicationId');
+    }
+
+    public function unsetPublicationId(): self
+    {
+        return $this->remove('publicationId');
     }
 
     /**
@@ -55,6 +75,16 @@ final class Location extends ObjectData
         return $this->set('landingPage', $value);
     }
 
+    public function hasLandingPage(): bool
+    {
+        return $this->has('landingPage');
+    }
+
+    public function unsetLandingPage(): self
+    {
+        return $this->remove('landingPage');
+    }
+
     /**
      * @return string|null
      */
@@ -69,6 +99,16 @@ final class Location extends ObjectData
     public function setFullTextUrl($value): self
     {
         return $this->set('fullTextUrl', $value);
+    }
+
+    public function hasFullTextUrl(): bool
+    {
+        return $this->has('fullTextUrl');
+    }
+
+    public function unsetFullTextUrl(): self
+    {
+        return $this->remove('fullTextUrl');
     }
 
     /**
@@ -87,6 +127,16 @@ final class Location extends ObjectData
         return $this->set('locationPlatform', $value);
     }
 
+    public function hasLocationPlatform(): bool
+    {
+        return $this->has('locationPlatform');
+    }
+
+    public function unsetLocationPlatform(): self
+    {
+        return $this->remove('locationPlatform');
+    }
+
     /**
      * @return bool
      */
@@ -101,6 +151,16 @@ final class Location extends ObjectData
     public function setCanonical($value): self
     {
         return $this->set('canonical', $value);
+    }
+
+    public function hasCanonical(): bool
+    {
+        return $this->has('canonical');
+    }
+
+    public function unsetCanonical(): self
+    {
+        return $this->remove('canonical');
     }
 
     /**
@@ -119,6 +179,16 @@ final class Location extends ObjectData
         return $this->set('checksum', $value);
     }
 
+    public function hasChecksum(): bool
+    {
+        return $this->has('checksum');
+    }
+
+    public function unsetChecksum(): self
+    {
+        return $this->remove('checksum');
+    }
+
     /**
      * @return string|null
      */
@@ -133,6 +203,16 @@ final class Location extends ObjectData
     public function setChecksumAlgorithm($value): self
     {
         return $this->set('checksumAlgorithm', $value);
+    }
+
+    public function hasChecksumAlgorithm(): bool
+    {
+        return $this->has('checksumAlgorithm');
+    }
+
+    public function unsetChecksumAlgorithm(): self
+    {
+        return $this->remove('checksumAlgorithm');
     }
 
     /**
@@ -151,6 +231,16 @@ final class Location extends ObjectData
         return $this->set('createdAt', $value);
     }
 
+    public function hasCreatedAt(): bool
+    {
+        return $this->has('createdAt');
+    }
+
+    public function unsetCreatedAt(): self
+    {
+        return $this->remove('createdAt');
+    }
+
     /**
      * @return string
      */
@@ -167,6 +257,16 @@ final class Location extends ObjectData
         return $this->set('updatedAt', $value);
     }
 
+    public function hasUpdatedAt(): bool
+    {
+        return $this->has('updatedAt');
+    }
+
+    public function unsetUpdatedAt(): self
+    {
+        return $this->remove('updatedAt');
+    }
+
     /**
      * @return Publication
      */
@@ -181,6 +281,16 @@ final class Location extends ObjectData
     public function setPublication($value): self
     {
         return $this->set('publication', $value);
+    }
+
+    public function hasPublication(): bool
+    {
+        return $this->has('publication');
+    }
+
+    public function unsetPublication(): self
+    {
+        return $this->remove('publication');
     }
 
     public static function definition(): ObjectTypeDefinition

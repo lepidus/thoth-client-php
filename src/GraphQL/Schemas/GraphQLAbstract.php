@@ -23,6 +23,16 @@ final class GraphQLAbstract extends ObjectData
         return $this->set('abstractId', $value);
     }
 
+    public function hasAbstractId(): bool
+    {
+        return $this->has('abstractId');
+    }
+
+    public function unsetAbstractId(): self
+    {
+        return $this->remove('abstractId');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class GraphQLAbstract extends ObjectData
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
+    }
+
+    public function hasWorkId(): bool
+    {
+        return $this->has('workId');
+    }
+
+    public function unsetWorkId(): self
+    {
+        return $this->remove('workId');
     }
 
     /**
@@ -55,6 +75,16 @@ final class GraphQLAbstract extends ObjectData
         return $this->set('localeCode', $value);
     }
 
+    public function hasLocaleCode(): bool
+    {
+        return $this->has('localeCode');
+    }
+
+    public function unsetLocaleCode(): self
+    {
+        return $this->remove('localeCode');
+    }
+
     /**
      * @return string
      */
@@ -69,6 +99,16 @@ final class GraphQLAbstract extends ObjectData
     public function setContent($value): self
     {
         return $this->set('content', $value);
+    }
+
+    public function hasContent(): bool
+    {
+        return $this->has('content');
+    }
+
+    public function unsetContent(): self
+    {
+        return $this->remove('content');
     }
 
     /**
@@ -87,6 +127,16 @@ final class GraphQLAbstract extends ObjectData
         return $this->set('canonical', $value);
     }
 
+    public function hasCanonical(): bool
+    {
+        return $this->has('canonical');
+    }
+
+    public function unsetCanonical(): self
+    {
+        return $this->remove('canonical');
+    }
+
     /**
      * @return string
      */
@@ -103,6 +153,16 @@ final class GraphQLAbstract extends ObjectData
         return $this->set('abstractType', $value);
     }
 
+    public function hasAbstractType(): bool
+    {
+        return $this->has('abstractType');
+    }
+
+    public function unsetAbstractType(): self
+    {
+        return $this->remove('abstractType');
+    }
+
     /**
      * @return Work
      */
@@ -117,6 +177,16 @@ final class GraphQLAbstract extends ObjectData
     public function setWork($value): self
     {
         return $this->set('work', $value);
+    }
+
+    public function hasWork(): bool
+    {
+        return $this->has('work');
+    }
+
+    public function unsetWork(): self
+    {
+        return $this->remove('work');
     }
 
     public static function definition(): ObjectTypeDefinition

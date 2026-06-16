@@ -23,6 +23,16 @@ final class Contribution extends ObjectData
         return $this->set('contributionId', $value);
     }
 
+    public function hasContributionId(): bool
+    {
+        return $this->has('contributionId');
+    }
+
+    public function unsetContributionId(): self
+    {
+        return $this->remove('contributionId');
+    }
+
     /**
      * @return string
      */
@@ -37,6 +47,16 @@ final class Contribution extends ObjectData
     public function setContributorId($value): self
     {
         return $this->set('contributorId', $value);
+    }
+
+    public function hasContributorId(): bool
+    {
+        return $this->has('contributorId');
+    }
+
+    public function unsetContributorId(): self
+    {
+        return $this->remove('contributorId');
     }
 
     /**
@@ -55,6 +75,16 @@ final class Contribution extends ObjectData
         return $this->set('workId', $value);
     }
 
+    public function hasWorkId(): bool
+    {
+        return $this->has('workId');
+    }
+
+    public function unsetWorkId(): self
+    {
+        return $this->remove('workId');
+    }
+
     /**
      * @return string
      */
@@ -69,6 +99,16 @@ final class Contribution extends ObjectData
     public function setContributionType($value): self
     {
         return $this->set('contributionType', $value);
+    }
+
+    public function hasContributionType(): bool
+    {
+        return $this->has('contributionType');
+    }
+
+    public function unsetContributionType(): self
+    {
+        return $this->remove('contributionType');
     }
 
     /**
@@ -87,6 +127,16 @@ final class Contribution extends ObjectData
         return $this->set('mainContribution', $value);
     }
 
+    public function hasMainContribution(): bool
+    {
+        return $this->has('mainContribution');
+    }
+
+    public function unsetMainContribution(): self
+    {
+        return $this->remove('mainContribution');
+    }
+
     /**
      * @return Biography[]
      */
@@ -101,6 +151,16 @@ final class Contribution extends ObjectData
     public function setBiographies($value): self
     {
         return $this->set('biographies', $value);
+    }
+
+    public function hasBiographies(): bool
+    {
+        return $this->has('biographies');
+    }
+
+    public function unsetBiographies(): self
+    {
+        return $this->remove('biographies');
     }
 
     /**
@@ -119,6 +179,16 @@ final class Contribution extends ObjectData
         return $this->set('biography', $value);
     }
 
+    public function hasBiography(): bool
+    {
+        return $this->has('biography');
+    }
+
+    public function unsetBiography(): self
+    {
+        return $this->remove('biography');
+    }
+
     /**
      * @return string
      */
@@ -133,6 +203,16 @@ final class Contribution extends ObjectData
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
+    }
+
+    public function hasCreatedAt(): bool
+    {
+        return $this->has('createdAt');
+    }
+
+    public function unsetCreatedAt(): self
+    {
+        return $this->remove('createdAt');
     }
 
     /**
@@ -151,6 +231,16 @@ final class Contribution extends ObjectData
         return $this->set('updatedAt', $value);
     }
 
+    public function hasUpdatedAt(): bool
+    {
+        return $this->has('updatedAt');
+    }
+
+    public function unsetUpdatedAt(): self
+    {
+        return $this->remove('updatedAt');
+    }
+
     /**
      * @return string|null
      */
@@ -165,6 +255,16 @@ final class Contribution extends ObjectData
     public function setFirstName($value): self
     {
         return $this->set('firstName', $value);
+    }
+
+    public function hasFirstName(): bool
+    {
+        return $this->has('firstName');
+    }
+
+    public function unsetFirstName(): self
+    {
+        return $this->remove('firstName');
     }
 
     /**
@@ -183,6 +283,16 @@ final class Contribution extends ObjectData
         return $this->set('lastName', $value);
     }
 
+    public function hasLastName(): bool
+    {
+        return $this->has('lastName');
+    }
+
+    public function unsetLastName(): self
+    {
+        return $this->remove('lastName');
+    }
+
     /**
      * @return string
      */
@@ -197,6 +307,16 @@ final class Contribution extends ObjectData
     public function setFullName($value): self
     {
         return $this->set('fullName', $value);
+    }
+
+    public function hasFullName(): bool
+    {
+        return $this->has('fullName');
+    }
+
+    public function unsetFullName(): self
+    {
+        return $this->remove('fullName');
     }
 
     /**
@@ -215,6 +335,16 @@ final class Contribution extends ObjectData
         return $this->set('contributionOrdinal', $value);
     }
 
+    public function hasContributionOrdinal(): bool
+    {
+        return $this->has('contributionOrdinal');
+    }
+
+    public function unsetContributionOrdinal(): self
+    {
+        return $this->remove('contributionOrdinal');
+    }
+
     /**
      * @return Work
      */
@@ -229,6 +359,16 @@ final class Contribution extends ObjectData
     public function setWork($value): self
     {
         return $this->set('work', $value);
+    }
+
+    public function hasWork(): bool
+    {
+        return $this->has('work');
+    }
+
+    public function unsetWork(): self
+    {
+        return $this->remove('work');
     }
 
     /**
@@ -247,6 +387,16 @@ final class Contribution extends ObjectData
         return $this->set('contributor', $value);
     }
 
+    public function hasContributor(): bool
+    {
+        return $this->has('contributor');
+    }
+
+    public function unsetContributor(): self
+    {
+        return $this->remove('contributor');
+    }
+
     /**
      * @return Affiliation[]
      */
@@ -261,6 +411,16 @@ final class Contribution extends ObjectData
     public function setAffiliations($value): self
     {
         return $this->set('affiliations', $value);
+    }
+
+    public function hasAffiliations(): bool
+    {
+        return $this->has('affiliations');
+    }
+
+    public function unsetAffiliations(): self
+    {
+        return $this->remove('affiliations');
     }
 
     public static function definition(): ObjectTypeDefinition

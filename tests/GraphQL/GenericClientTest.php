@@ -213,6 +213,51 @@ final class GenericClientTest extends TestCase
         ], $work->toArray());
     }
 
+    public function testGeneratedSchemaObjectsDistinguishNullFromMissingFields(): void
+    {
+        $work = new Work();
+
+        $this->assertFalse($work->hasSubtitle());
+
+        $work->setSubtitle(null);
+
+        $this->assertTrue($work->hasSubtitle());
+        $this->assertNull($work->getSubtitle());
+        $this->assertSame(['subtitle' => null], $work->toArray());
+
+        $work->unsetSubtitle();
+
+        $this->assertFalse($work->hasSubtitle());
+        $this->assertSame([], $work->toArray());
+    }
+
+    public function testGeneratedInputObjectsExposeSettersAndPresenceMethods(): void
+    {
+        $newWork = (new NewWork())
+            ->setWorkType(WorkType::MONOGRAPH)
+            ->setWorkStatus(WorkStatus::ACTIVE)
+            ->setImprintId('71faf1c3-900a-4b8c-bca7-4f927699fb90')
+            ->setReference(null);
+
+        $this->assertTrue($newWork->hasReference());
+        $this->assertNull($newWork->getReference());
+        $this->assertSame([
+            'workType' => WorkType::MONOGRAPH,
+            'workStatus' => WorkStatus::ACTIVE,
+            'imprintId' => '71faf1c3-900a-4b8c-bca7-4f927699fb90',
+            'reference' => null,
+        ], $newWork->getAllData());
+
+        $newWork->unsetReference();
+
+        $this->assertFalse($newWork->hasReference());
+        $this->assertSame([
+            'workType' => WorkType::MONOGRAPH,
+            'workStatus' => WorkStatus::ACTIVE,
+            'imprintId' => '71faf1c3-900a-4b8c-bca7-4f927699fb90',
+        ], $newWork->getAllData());
+    }
+
     public function testItUsesFirstIdFieldFromGeneratedSchemaAsDefaultSelection(): void
     {
         $mockHandler = new MockHandler([
@@ -234,6 +279,36 @@ final class GenericClientTest extends TestCase
         ]);
 
         $this->assertSame('upload-1', $client->initPublicationFileUpload($input));
+    }
+
+    public function testGeneratedInputObjectsPreserveExplicitNullVariables(): void
+    {
+        $history = [];
+        $mockHandler = new MockHandler([
+            new Response(200, [], json_encode([
+                'data' => [
+                    'createWork' => [
+                        'workId' => 'work-1',
+                    ],
+                ],
+            ])),
+        ]);
+        $handlerStack = HandlerStack::create($mockHandler);
+        $handlerStack->push(Middleware::history($history));
+        $client = new Client(['handler' => $handlerStack]);
+
+        $newWork = (new NewWork())
+            ->setWorkType(WorkType::MONOGRAPH)
+            ->setWorkStatus(WorkStatus::ACTIVE)
+            ->setImprintId('71faf1c3-900a-4b8c-bca7-4f927699fb90')
+            ->setReference(null);
+
+        $client->createWork($newWork);
+
+        $body = json_decode((string) $history[0]['request']->getBody(), true);
+
+        $this->assertArrayHasKey('reference', $body['variables']['data']);
+        $this->assertNull($body['variables']['data']['reference']);
     }
 
     public function testItReturnsScalarOperationResults(): void

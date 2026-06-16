@@ -23,6 +23,16 @@ final class Me extends ObjectData
         return $this->set('userId', $value);
     }
 
+    public function hasUserId(): bool
+    {
+        return $this->has('userId');
+    }
+
+    public function unsetUserId(): self
+    {
+        return $this->remove('userId');
+    }
+
     /**
      * @return string|null
      */
@@ -37,6 +47,16 @@ final class Me extends ObjectData
     public function setEmail($value): self
     {
         return $this->set('email', $value);
+    }
+
+    public function hasEmail(): bool
+    {
+        return $this->has('email');
+    }
+
+    public function unsetEmail(): self
+    {
+        return $this->remove('email');
     }
 
     /**
@@ -55,6 +75,16 @@ final class Me extends ObjectData
         return $this->set('firstName', $value);
     }
 
+    public function hasFirstName(): bool
+    {
+        return $this->has('firstName');
+    }
+
+    public function unsetFirstName(): self
+    {
+        return $this->remove('firstName');
+    }
+
     /**
      * @return string|null
      */
@@ -69,6 +99,16 @@ final class Me extends ObjectData
     public function setLastName($value): self
     {
         return $this->set('lastName', $value);
+    }
+
+    public function hasLastName(): bool
+    {
+        return $this->has('lastName');
+    }
+
+    public function unsetLastName(): self
+    {
+        return $this->remove('lastName');
     }
 
     /**
@@ -87,6 +127,16 @@ final class Me extends ObjectData
         return $this->set('isSuperuser', $value);
     }
 
+    public function hasIsSuperuser(): bool
+    {
+        return $this->has('isSuperuser');
+    }
+
+    public function unsetIsSuperuser(): self
+    {
+        return $this->remove('isSuperuser');
+    }
+
     /**
      * @return PublisherContext[]
      */
@@ -101,6 +151,16 @@ final class Me extends ObjectData
     public function setPublisherContexts($value): self
     {
         return $this->set('publisherContexts', $value);
+    }
+
+    public function hasPublisherContexts(): bool
+    {
+        return $this->has('publisherContexts');
+    }
+
+    public function unsetPublisherContexts(): self
+    {
+        return $this->remove('publisherContexts');
     }
 
     public static function definition(): ObjectTypeDefinition

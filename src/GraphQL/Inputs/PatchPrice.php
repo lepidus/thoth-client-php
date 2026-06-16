@@ -7,6 +7,110 @@ use ThothApi\GraphQL\InputObject;
 
 final class PatchPrice extends InputObject
 {
+    /**
+     * @return string
+     */
+    public function getPriceId()
+    {
+        return $this->get('priceId');
+    }
+
+    /**
+     * @param string $value
+     */
+    public function setPriceId($value): self
+    {
+        return $this->set('priceId', $value);
+    }
+
+    public function hasPriceId(): bool
+    {
+        return $this->has('priceId');
+    }
+
+    public function unsetPriceId(): self
+    {
+        return $this->remove('priceId');
+    }
+
+    /**
+     * @return string
+     */
+    public function getPublicationId()
+    {
+        return $this->get('publicationId');
+    }
+
+    /**
+     * @param string $value
+     */
+    public function setPublicationId($value): self
+    {
+        return $this->set('publicationId', $value);
+    }
+
+    public function hasPublicationId(): bool
+    {
+        return $this->has('publicationId');
+    }
+
+    public function unsetPublicationId(): self
+    {
+        return $this->remove('publicationId');
+    }
+
+    /**
+     * @return string
+     */
+    public function getCurrencyCode()
+    {
+        return $this->get('currencyCode');
+    }
+
+    /**
+     * @param string $value
+     */
+    public function setCurrencyCode($value): self
+    {
+        return $this->set('currencyCode', $value);
+    }
+
+    public function hasCurrencyCode(): bool
+    {
+        return $this->has('currencyCode');
+    }
+
+    public function unsetCurrencyCode(): self
+    {
+        return $this->remove('currencyCode');
+    }
+
+    /**
+     * @return float
+     */
+    public function getUnitPrice()
+    {
+        return $this->get('unitPrice');
+    }
+
+    /**
+     * @param float $value
+     */
+    public function setUnitPrice($value): self
+    {
+        return $this->set('unitPrice', $value);
+    }
+
+    public function hasUnitPrice(): bool
+    {
+        return $this->has('unitPrice');
+    }
+
+    public function unsetUnitPrice(): self
+    {
+        return $this->remove('unitPrice');
+    }
+
     public static function definition(): InputObjectTypeDefinition
     {
         return new InputObjectTypeDefinition('PatchPrice', [

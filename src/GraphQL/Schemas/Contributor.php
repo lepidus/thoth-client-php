@@ -23,6 +23,16 @@ final class Contributor extends ObjectData
         return $this->set('contributorId', $value);
     }
 
+    public function hasContributorId(): bool
+    {
+        return $this->has('contributorId');
+    }
+
+    public function unsetContributorId(): self
+    {
+        return $this->remove('contributorId');
+    }
+
     /**
      * @return string|null
      */
@@ -37,6 +47,16 @@ final class Contributor extends ObjectData
     public function setFirstName($value): self
     {
         return $this->set('firstName', $value);
+    }
+
+    public function hasFirstName(): bool
+    {
+        return $this->has('firstName');
+    }
+
+    public function unsetFirstName(): self
+    {
+        return $this->remove('firstName');
     }
 
     /**
@@ -55,6 +75,16 @@ final class Contributor extends ObjectData
         return $this->set('lastName', $value);
     }
 
+    public function hasLastName(): bool
+    {
+        return $this->has('lastName');
+    }
+
+    public function unsetLastName(): self
+    {
+        return $this->remove('lastName');
+    }
+
     /**
      * @return string
      */
@@ -69,6 +99,16 @@ final class Contributor extends ObjectData
     public function setFullName($value): self
     {
         return $this->set('fullName', $value);
+    }
+
+    public function hasFullName(): bool
+    {
+        return $this->has('fullName');
+    }
+
+    public function unsetFullName(): self
+    {
+        return $this->remove('fullName');
     }
 
     /**
@@ -87,6 +127,16 @@ final class Contributor extends ObjectData
         return $this->set('orcid', $value);
     }
 
+    public function hasOrcid(): bool
+    {
+        return $this->has('orcid');
+    }
+
+    public function unsetOrcid(): self
+    {
+        return $this->remove('orcid');
+    }
+
     /**
      * @return string|null
      */
@@ -101,6 +151,16 @@ final class Contributor extends ObjectData
     public function setWebsite($value): self
     {
         return $this->set('website', $value);
+    }
+
+    public function hasWebsite(): bool
+    {
+        return $this->has('website');
+    }
+
+    public function unsetWebsite(): self
+    {
+        return $this->remove('website');
     }
 
     /**
@@ -119,6 +179,16 @@ final class Contributor extends ObjectData
         return $this->set('createdAt', $value);
     }
 
+    public function hasCreatedAt(): bool
+    {
+        return $this->has('createdAt');
+    }
+
+    public function unsetCreatedAt(): self
+    {
+        return $this->remove('createdAt');
+    }
+
     /**
      * @return string
      */
@@ -135,6 +205,16 @@ final class Contributor extends ObjectData
         return $this->set('updatedAt', $value);
     }
 
+    public function hasUpdatedAt(): bool
+    {
+        return $this->has('updatedAt');
+    }
+
+    public function unsetUpdatedAt(): self
+    {
+        return $this->remove('updatedAt');
+    }
+
     /**
      * @return Contribution[]
      */
@@ -149,6 +229,16 @@ final class Contributor extends ObjectData
     public function setContributions($value): self
     {
         return $this->set('contributions', $value);
+    }
+
+    public function hasContributions(): bool
+    {
+        return $this->has('contributions');
+    }
+
+    public function unsetContributions(): self
+    {
+        return $this->remove('contributions');
     }
 
     public static function definition(): ObjectTypeDefinition

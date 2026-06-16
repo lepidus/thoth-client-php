@@ -23,6 +23,16 @@ final class PublisherContext extends ObjectData
         return $this->set('publisher', $value);
     }
 
+    public function hasPublisher(): bool
+    {
+        return $this->has('publisher');
+    }
+
+    public function unsetPublisher(): self
+    {
+        return $this->remove('publisher');
+    }
+
     /**
      * @return PublisherPermissions
      */
@@ -37,6 +47,16 @@ final class PublisherContext extends ObjectData
     public function setPermissions($value): self
     {
         return $this->set('permissions', $value);
+    }
+
+    public function hasPermissions(): bool
+    {
+        return $this->has('permissions');
+    }
+
+    public function unsetPermissions(): self
+    {
+        return $this->remove('permissions');
     }
 
     public static function definition(): ObjectTypeDefinition
