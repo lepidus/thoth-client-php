@@ -258,6 +258,34 @@ final class OperationRequestTest extends TestCase
         $operation->toGraphQL();
     }
 
+    public function testItRejectsUnknownEnumValues(): void
+    {
+        $operation = new OperationRequest(
+            'query',
+            new FieldDefinition(
+                'books',
+                TypeReference::named('Work'),
+                [
+                    new ArgumentDefinition(
+                        'workTypes',
+                        TypeReference::listOf(TypeReference::nonNull(TypeReference::named('WorkType')))
+                    ),
+                ]
+            ),
+            [
+                'workTypes' => [
+                    \ThothApi\GraphQL\Enums\WorkType::value('NOT_A_WORK_TYPE'),
+                ],
+            ],
+            ['workId']
+        );
+
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage("Invalid GraphQL enum value 'NOT_A_WORK_TYPE' for 'WorkType'.");
+
+        $operation->toGraphQL();
+    }
+
     public function testItFormatsGeneratedEnumConstantsFromInputSchema(): void
     {
         $operation = new OperationRequest(

@@ -118,6 +118,7 @@ final class OperationRequest
     {
         if ($value instanceof EnumValue) {
             $this->assertIdentifier((string) $value);
+            $this->assertEnumValue((string) $value, $type);
             return (string) $value;
         }
 
@@ -165,6 +166,7 @@ final class OperationRequest
 
         if ($this->isEnumType($type)) {
             $this->assertIdentifier((string) $value);
+            $this->assertEnumValue((string) $value, $type);
         }
 
         return $value;
@@ -309,6 +311,21 @@ final class OperationRequest
         }
 
         return class_exists($this->getSchemaClassName('Enums', $type->baseName()));
+    }
+
+    private function assertEnumValue(string $value, ?TypeReference $type): void
+    {
+        if (!$this->isEnumType($type)) {
+            return;
+        }
+
+        $enumClass = $this->getSchemaClassName('Enums', $type->baseName());
+
+        if (!in_array($value, $enumClass::definition()->getValues(), true)) {
+            throw new \InvalidArgumentException(
+                "Invalid GraphQL enum value '{$value}' for '{$type->baseName()}'."
+            );
+        }
     }
 
     private function getSchemaClassName(string $namespacePart, ?string $typeName): string
