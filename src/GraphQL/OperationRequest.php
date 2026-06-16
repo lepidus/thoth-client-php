@@ -103,6 +103,12 @@ final class OperationRequest
     {
         $normalized = [];
 
+        foreach ($schemaArguments as $name => $type) {
+            if ($this->isNonNullType($type) && (!array_key_exists($name, $variables) || $variables[$name] === null)) {
+                throw new \InvalidArgumentException("Missing required GraphQL argument '{$name}'.");
+            }
+        }
+
         foreach ($variables as $name => $value) {
             $this->assertIdentifier((string) $name);
 

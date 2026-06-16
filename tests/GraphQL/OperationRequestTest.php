@@ -233,6 +233,27 @@ final class OperationRequestTest extends TestCase
         $operation->toGraphQL();
     }
 
+    public function testItRejectsMissingRequiredOperationArguments(): void
+    {
+        $operation = new OperationRequest(
+            'mutation',
+            new FieldDefinition(
+                'createPublisher',
+                TypeReference::named('Publisher'),
+                [
+                    new ArgumentDefinition('data', TypeReference::nonNull(TypeReference::named('NewPublisher'))),
+                ]
+            ),
+            [],
+            ['publisherId']
+        );
+
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage("Missing required GraphQL argument 'data'.");
+
+        $operation->toGraphQL();
+    }
+
     public function testItRejectsInvalidEnumValues(): void
     {
         $operation = new OperationRequest(
