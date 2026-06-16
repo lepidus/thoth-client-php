@@ -7,141 +7,225 @@ use ThothApi\GraphQL\ObjectData;
 
 final class Award extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getAwardId()
     {
         return $this->get('awardId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setAwardId($value): self
     {
         return $this->set('awardId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getWorkId()
     {
         return $this->get('workId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getTitle()
     {
         return $this->get('title');
     }
 
+    /**
+     * @param string $value
+     */
     public function setTitle($value): self
     {
         return $this->set('title', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getUrl()
     {
         return $this->get('url');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setUrl($value): self
     {
         return $this->set('url', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getCategory()
     {
         return $this->get('category');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setCategory($value): self
     {
         return $this->set('category', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getYear()
     {
         return $this->get('year');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setYear($value): self
     {
         return $this->set('year', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getJury()
     {
         return $this->get('jury');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setJury($value): self
     {
         return $this->set('jury', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getCountry()
     {
         return $this->get('country');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setCountry($value): self
     {
         return $this->set('country', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getRole()
     {
         return $this->get('role');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setRole($value): self
     {
         return $this->set('role', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getPrizeStatement()
     {
         return $this->get('prizeStatement');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setPrizeStatement($value): self
     {
         return $this->set('prizeStatement', $value);
     }
 
+    /**
+     * @return int
+     */
     public function getAwardOrdinal()
     {
         return $this->get('awardOrdinal');
     }
 
+    /**
+     * @param int $value
+     */
     public function setAwardOrdinal($value): self
     {
         return $this->set('awardOrdinal', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
     }
 
+    /**
+     * @return Work
+     */
     public function getWork()
     {
         return $this->get('work');
     }
 
+    /**
+     * @param Work $value
+     */
     public function setWork($value): self
     {
         return $this->set('work', $value);

@@ -7,131 +7,209 @@ use ThothApi\GraphQL\ObjectData;
 
 final class Endorsement extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getEndorsementId()
     {
         return $this->get('endorsementId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setEndorsementId($value): self
     {
         return $this->set('endorsementId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getWorkId()
     {
         return $this->get('workId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getAuthorName()
     {
         return $this->get('authorName');
     }
 
+    /**
+     * @param string $value
+     */
     public function setAuthorName($value): self
     {
         return $this->set('authorName', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getAuthorRole()
     {
         return $this->get('authorRole');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setAuthorRole($value): self
     {
         return $this->set('authorRole', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getAuthorOrcid()
     {
         return $this->get('authorOrcid');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setAuthorOrcid($value): self
     {
         return $this->set('authorOrcid', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getAuthorInstitutionId()
     {
         return $this->get('authorInstitutionId');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setAuthorInstitutionId($value): self
     {
         return $this->set('authorInstitutionId', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getUrl()
     {
         return $this->get('url');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setUrl($value): self
     {
         return $this->set('url', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getText()
     {
         return $this->get('text');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setText($value): self
     {
         return $this->set('text', $value);
     }
 
+    /**
+     * @return int
+     */
     public function getEndorsementOrdinal()
     {
         return $this->get('endorsementOrdinal');
     }
 
+    /**
+     * @param int $value
+     */
     public function setEndorsementOrdinal($value): self
     {
         return $this->set('endorsementOrdinal', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
     }
 
+    /**
+     * @return Work
+     */
     public function getWork()
     {
         return $this->get('work');
     }
 
+    /**
+     * @param Work $value
+     */
     public function setWork($value): self
     {
         return $this->set('work', $value);
     }
 
+    /**
+     * @return Institution|null
+     */
     public function getAuthorInstitution()
     {
         return $this->get('authorInstitution');
     }
 
+    /**
+     * @param Institution|null $value
+     */
     public function setAuthorInstitution($value): self
     {
         return $this->set('authorInstitution', $value);

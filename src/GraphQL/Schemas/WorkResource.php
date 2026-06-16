@@ -7,151 +7,241 @@ use ThothApi\GraphQL\ObjectData;
 
 final class WorkResource extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getWorkResourceId()
     {
         return $this->get('workResourceId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setWorkResourceId($value): self
     {
         return $this->set('workResourceId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getWorkId()
     {
         return $this->get('workId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getTitle()
     {
         return $this->get('title');
     }
 
+    /**
+     * @param string $value
+     */
     public function setTitle($value): self
     {
         return $this->set('title', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getDescription()
     {
         return $this->get('description');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setDescription($value): self
     {
         return $this->set('description', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getAttribution()
     {
         return $this->get('attribution');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setAttribution($value): self
     {
         return $this->set('attribution', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getResourceType()
     {
         return $this->get('resourceType');
     }
 
+    /**
+     * @param string $value
+     */
     public function setResourceType($value): self
     {
         return $this->set('resourceType', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getDoi()
     {
         return $this->get('doi');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setDoi($value): self
     {
         return $this->set('doi', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getHandle()
     {
         return $this->get('handle');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setHandle($value): self
     {
         return $this->set('handle', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getUrl()
     {
         return $this->get('url');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setUrl($value): self
     {
         return $this->set('url', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getDate()
     {
         return $this->get('date');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setDate($value): self
     {
         return $this->set('date', $value);
     }
 
+    /**
+     * @return int
+     */
     public function getResourceOrdinal()
     {
         return $this->get('resourceOrdinal');
     }
 
+    /**
+     * @param int $value
+     */
     public function setResourceOrdinal($value): self
     {
         return $this->set('resourceOrdinal', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
     }
 
+    /**
+     * @return Work
+     */
     public function getWork()
     {
         return $this->get('work');
     }
 
+    /**
+     * @param Work $value
+     */
     public function setWork($value): self
     {
         return $this->set('work', $value);
     }
 
+    /**
+     * @return File|null
+     */
     public function getFile()
     {
         return $this->get('file');
     }
 
+    /**
+     * @param File|null $value
+     */
     public function setFile($value): self
     {
         return $this->set('file', $value);

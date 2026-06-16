@@ -7,91 +7,145 @@ use ThothApi\GraphQL\ObjectData;
 
 final class Issue extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getIssueId()
     {
         return $this->get('issueId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setIssueId($value): self
     {
         return $this->set('issueId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getWorkId()
     {
         return $this->get('workId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getSeriesId()
     {
         return $this->get('seriesId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setSeriesId($value): self
     {
         return $this->set('seriesId', $value);
     }
 
+    /**
+     * @return int
+     */
     public function getIssueOrdinal()
     {
         return $this->get('issueOrdinal');
     }
 
+    /**
+     * @param int $value
+     */
     public function setIssueOrdinal($value): self
     {
         return $this->set('issueOrdinal', $value);
     }
 
+    /**
+     * @return int|null
+     */
     public function getIssueNumber()
     {
         return $this->get('issueNumber');
     }
 
+    /**
+     * @param int|null $value
+     */
     public function setIssueNumber($value): self
     {
         return $this->set('issueNumber', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
     }
 
+    /**
+     * @return Series
+     */
     public function getSeries()
     {
         return $this->get('series');
     }
 
+    /**
+     * @param Series $value
+     */
     public function setSeries($value): self
     {
         return $this->set('series', $value);
     }
 
+    /**
+     * @return Work
+     */
     public function getWork()
     {
         return $this->get('work');
     }
 
+    /**
+     * @param Work $value
+     */
     public function setWork($value): self
     {
         return $this->set('work', $value);

@@ -7,201 +7,321 @@ use ThothApi\GraphQL\ObjectData;
 
 final class BookReview extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getBookReviewId()
     {
         return $this->get('bookReviewId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setBookReviewId($value): self
     {
         return $this->set('bookReviewId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getWorkId()
     {
         return $this->get('workId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getTitle()
     {
         return $this->get('title');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setTitle($value): self
     {
         return $this->set('title', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getAuthorName()
     {
         return $this->get('authorName');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setAuthorName($value): self
     {
         return $this->set('authorName', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getReviewerOrcid()
     {
         return $this->get('reviewerOrcid');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setReviewerOrcid($value): self
     {
         return $this->set('reviewerOrcid', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getReviewerInstitutionId()
     {
         return $this->get('reviewerInstitutionId');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setReviewerInstitutionId($value): self
     {
         return $this->set('reviewerInstitutionId', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getUrl()
     {
         return $this->get('url');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setUrl($value): self
     {
         return $this->set('url', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getDoi()
     {
         return $this->get('doi');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setDoi($value): self
     {
         return $this->set('doi', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getReviewDate()
     {
         return $this->get('reviewDate');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setReviewDate($value): self
     {
         return $this->set('reviewDate', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getJournalName()
     {
         return $this->get('journalName');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setJournalName($value): self
     {
         return $this->set('journalName', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getJournalVolume()
     {
         return $this->get('journalVolume');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setJournalVolume($value): self
     {
         return $this->set('journalVolume', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getJournalNumber()
     {
         return $this->get('journalNumber');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setJournalNumber($value): self
     {
         return $this->set('journalNumber', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getJournalIssn()
     {
         return $this->get('journalIssn');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setJournalIssn($value): self
     {
         return $this->set('journalIssn', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getPageRange()
     {
         return $this->get('pageRange');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setPageRange($value): self
     {
         return $this->set('pageRange', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getText()
     {
         return $this->get('text');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setText($value): self
     {
         return $this->set('text', $value);
     }
 
+    /**
+     * @return int
+     */
     public function getReviewOrdinal()
     {
         return $this->get('reviewOrdinal');
     }
 
+    /**
+     * @param int $value
+     */
     public function setReviewOrdinal($value): self
     {
         return $this->set('reviewOrdinal', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
     }
 
+    /**
+     * @return Work
+     */
     public function getWork()
     {
         return $this->get('work');
     }
 
+    /**
+     * @param Work $value
+     */
     public function setWork($value): self
     {
         return $this->set('work', $value);
     }
 
+    /**
+     * @return Institution|null
+     */
     public function getReviewerInstitution()
     {
         return $this->get('reviewerInstitution');
     }
 
+    /**
+     * @param Institution|null $value
+     */
     public function setReviewerInstitution($value): self
     {
         return $this->set('reviewerInstitution', $value);

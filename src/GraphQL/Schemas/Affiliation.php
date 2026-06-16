@@ -7,91 +7,145 @@ use ThothApi\GraphQL\ObjectData;
 
 final class Affiliation extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getAffiliationId()
     {
         return $this->get('affiliationId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setAffiliationId($value): self
     {
         return $this->set('affiliationId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getContributionId()
     {
         return $this->get('contributionId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setContributionId($value): self
     {
         return $this->set('contributionId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getInstitutionId()
     {
         return $this->get('institutionId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setInstitutionId($value): self
     {
         return $this->set('institutionId', $value);
     }
 
+    /**
+     * @return int
+     */
     public function getAffiliationOrdinal()
     {
         return $this->get('affiliationOrdinal');
     }
 
+    /**
+     * @param int $value
+     */
     public function setAffiliationOrdinal($value): self
     {
         return $this->set('affiliationOrdinal', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getPosition()
     {
         return $this->get('position');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setPosition($value): self
     {
         return $this->set('position', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
     }
 
+    /**
+     * @return Institution
+     */
     public function getInstitution()
     {
         return $this->get('institution');
     }
 
+    /**
+     * @param Institution $value
+     */
     public function setInstitution($value): self
     {
         return $this->set('institution', $value);
     }
 
+    /**
+     * @return Contribution
+     */
     public function getContribution()
     {
         return $this->get('contribution');
     }
 
+    /**
+     * @param Contribution $value
+     */
     public function setContribution($value): self
     {
         return $this->set('contribution', $value);

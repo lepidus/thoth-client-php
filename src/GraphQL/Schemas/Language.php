@@ -7,71 +7,113 @@ use ThothApi\GraphQL\ObjectData;
 
 final class Language extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getLanguageId()
     {
         return $this->get('languageId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setLanguageId($value): self
     {
         return $this->set('languageId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getWorkId()
     {
         return $this->get('workId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getLanguageCode()
     {
         return $this->get('languageCode');
     }
 
+    /**
+     * @param string $value
+     */
     public function setLanguageCode($value): self
     {
         return $this->set('languageCode', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getLanguageRelation()
     {
         return $this->get('languageRelation');
     }
 
+    /**
+     * @param string $value
+     */
     public function setLanguageRelation($value): self
     {
         return $this->set('languageRelation', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
     }
 
+    /**
+     * @return Work
+     */
     public function getWork()
     {
         return $this->get('work');
     }
 
+    /**
+     * @param Work $value
+     */
     public function setWork($value): self
     {
         return $this->set('work', $value);

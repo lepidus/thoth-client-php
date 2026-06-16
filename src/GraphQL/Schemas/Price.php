@@ -7,71 +7,113 @@ use ThothApi\GraphQL\ObjectData;
 
 final class Price extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getPriceId()
     {
         return $this->get('priceId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setPriceId($value): self
     {
         return $this->set('priceId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getPublicationId()
     {
         return $this->get('publicationId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setPublicationId($value): self
     {
         return $this->set('publicationId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCurrencyCode()
     {
         return $this->get('currencyCode');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCurrencyCode($value): self
     {
         return $this->set('currencyCode', $value);
     }
 
+    /**
+     * @return float
+     */
     public function getUnitPrice()
     {
         return $this->get('unitPrice');
     }
 
+    /**
+     * @param float $value
+     */
     public function setUnitPrice($value): self
     {
         return $this->set('unitPrice', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
     }
 
+    /**
+     * @return Publication
+     */
     public function getPublication()
     {
         return $this->get('publication');
     }
 
+    /**
+     * @param Publication $value
+     */
     public function setPublication($value): self
     {
         return $this->set('publication', $value);

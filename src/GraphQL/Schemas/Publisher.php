@@ -7,111 +7,177 @@ use ThothApi\GraphQL\ObjectData;
 
 final class Publisher extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getPublisherId()
     {
         return $this->get('publisherId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setPublisherId($value): self
     {
         return $this->set('publisherId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getPublisherName()
     {
         return $this->get('publisherName');
     }
 
+    /**
+     * @param string $value
+     */
     public function setPublisherName($value): self
     {
         return $this->set('publisherName', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getPublisherShortname()
     {
         return $this->get('publisherShortname');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setPublisherShortname($value): self
     {
         return $this->set('publisherShortname', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getPublisherUrl()
     {
         return $this->get('publisherUrl');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setPublisherUrl($value): self
     {
         return $this->set('publisherUrl', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getZitadelId()
     {
         return $this->get('zitadelId');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setZitadelId($value): self
     {
         return $this->set('zitadelId', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getAccessibilityStatement()
     {
         return $this->get('accessibilityStatement');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setAccessibilityStatement($value): self
     {
         return $this->set('accessibilityStatement', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getAccessibilityReportUrl()
     {
         return $this->get('accessibilityReportUrl');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setAccessibilityReportUrl($value): self
     {
         return $this->set('accessibilityReportUrl', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
     }
 
+    /**
+     * @return Imprint[]
+     */
     public function getImprints()
     {
         return $this->get('imprints');
     }
 
+    /**
+     * @param Imprint[] $value
+     */
     public function setImprints($value): self
     {
         return $this->set('imprints', $value);
     }
 
+    /**
+     * @return Contact[]
+     */
     public function getContacts()
     {
         return $this->get('contacts');
     }
 
+    /**
+     * @param Contact[] $value
+     */
     public function setContacts($value): self
     {
         return $this->set('contacts', $value);

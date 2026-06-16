@@ -7,41 +7,65 @@ use ThothApi\GraphQL\ObjectData;
 
 final class FileUploadResponse extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getFileUploadId()
     {
         return $this->get('fileUploadId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setFileUploadId($value): self
     {
         return $this->set('fileUploadId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUploadUrl()
     {
         return $this->get('uploadUrl');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUploadUrl($value): self
     {
         return $this->set('uploadUrl', $value);
     }
 
+    /**
+     * @return UploadRequestHeader[]
+     */
     public function getUploadHeaders()
     {
         return $this->get('uploadHeaders');
     }
 
+    /**
+     * @param UploadRequestHeader[] $value
+     */
     public function setUploadHeaders($value): self
     {
         return $this->set('uploadHeaders', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getExpiresAt()
     {
         return $this->get('expiresAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setExpiresAt($value): self
     {
         return $this->set('expiresAt', $value);

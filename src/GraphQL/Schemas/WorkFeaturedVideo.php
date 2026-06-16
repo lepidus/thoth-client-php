@@ -7,101 +7,161 @@ use ThothApi\GraphQL\ObjectData;
 
 final class WorkFeaturedVideo extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getWorkFeaturedVideoId()
     {
         return $this->get('workFeaturedVideoId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setWorkFeaturedVideoId($value): self
     {
         return $this->set('workFeaturedVideoId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getWorkId()
     {
         return $this->get('workId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getTitle()
     {
         return $this->get('title');
     }
 
+    /**
+     * @param string $value
+     */
     public function setTitle($value): self
     {
         return $this->set('title', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getUrl()
     {
         return $this->get('url');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setUrl($value): self
     {
         return $this->set('url', $value);
     }
 
+    /**
+     * @return int
+     */
     public function getWidth()
     {
         return $this->get('width');
     }
 
+    /**
+     * @param int $value
+     */
     public function setWidth($value): self
     {
         return $this->set('width', $value);
     }
 
+    /**
+     * @return int
+     */
     public function getHeight()
     {
         return $this->get('height');
     }
 
+    /**
+     * @param int $value
+     */
     public function setHeight($value): self
     {
         return $this->set('height', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
     }
 
+    /**
+     * @return Work
+     */
     public function getWork()
     {
         return $this->get('work');
     }
 
+    /**
+     * @param Work $value
+     */
     public function setWork($value): self
     {
         return $this->set('work', $value);
     }
 
+    /**
+     * @return File|null
+     */
     public function getFile()
     {
         return $this->get('file');
     }
 
+    /**
+     * @param File|null $value
+     */
     public function setFile($value): self
     {
         return $this->set('file', $value);

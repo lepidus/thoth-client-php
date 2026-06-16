@@ -7,31 +7,49 @@ use ThothApi\GraphQL\ObjectData;
 
 final class PublisherPermissions extends ObjectData
 {
+    /**
+     * @return bool
+     */
     public function getPublisherAdmin()
     {
         return $this->get('publisherAdmin');
     }
 
+    /**
+     * @param bool $value
+     */
     public function setPublisherAdmin($value): self
     {
         return $this->set('publisherAdmin', $value);
     }
 
+    /**
+     * @return bool
+     */
     public function getWorkLifecycle()
     {
         return $this->get('workLifecycle');
     }
 
+    /**
+     * @param bool $value
+     */
     public function setWorkLifecycle($value): self
     {
         return $this->set('workLifecycle', $value);
     }
 
+    /**
+     * @return bool
+     */
     public function getCdnWrite()
     {
         return $this->get('cdnWrite');
     }
 
+    /**
+     * @param bool $value
+     */
     public function setCdnWrite($value): self
     {
         return $this->set('cdnWrite', $value);

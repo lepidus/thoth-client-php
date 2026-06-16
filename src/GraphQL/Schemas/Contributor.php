@@ -7,91 +7,145 @@ use ThothApi\GraphQL\ObjectData;
 
 final class Contributor extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getContributorId()
     {
         return $this->get('contributorId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setContributorId($value): self
     {
         return $this->set('contributorId', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getFirstName()
     {
         return $this->get('firstName');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setFirstName($value): self
     {
         return $this->set('firstName', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getLastName()
     {
         return $this->get('lastName');
     }
 
+    /**
+     * @param string $value
+     */
     public function setLastName($value): self
     {
         return $this->set('lastName', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getFullName()
     {
         return $this->get('fullName');
     }
 
+    /**
+     * @param string $value
+     */
     public function setFullName($value): self
     {
         return $this->set('fullName', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getOrcid()
     {
         return $this->get('orcid');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setOrcid($value): self
     {
         return $this->set('orcid', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getWebsite()
     {
         return $this->get('website');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setWebsite($value): self
     {
         return $this->set('website', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
     }
 
+    /**
+     * @return Contribution[]
+     */
     public function getContributions()
     {
         return $this->get('contributions');
     }
 
+    /**
+     * @param Contribution[] $value
+     */
     public function setContributions($value): self
     {
         return $this->set('contributions', $value);

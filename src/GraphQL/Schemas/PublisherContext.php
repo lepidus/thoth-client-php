@@ -7,21 +7,33 @@ use ThothApi\GraphQL\ObjectData;
 
 final class PublisherContext extends ObjectData
 {
+    /**
+     * @return Publisher
+     */
     public function getPublisher()
     {
         return $this->get('publisher');
     }
 
+    /**
+     * @param Publisher $value
+     */
     public function setPublisher($value): self
     {
         return $this->set('publisher', $value);
     }
 
+    /**
+     * @return PublisherPermissions
+     */
     public function getPermissions()
     {
         return $this->get('permissions');
     }
 
+    /**
+     * @param PublisherPermissions $value
+     */
     public function setPermissions($value): self
     {
         return $this->set('permissions', $value);

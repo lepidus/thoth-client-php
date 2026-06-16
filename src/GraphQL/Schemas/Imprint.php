@@ -7,151 +7,241 @@ use ThothApi\GraphQL\ObjectData;
 
 final class Imprint extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getImprintId()
     {
         return $this->get('imprintId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setImprintId($value): self
     {
         return $this->set('imprintId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getPublisherId()
     {
         return $this->get('publisherId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setPublisherId($value): self
     {
         return $this->set('publisherId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getImprintName()
     {
         return $this->get('imprintName');
     }
 
+    /**
+     * @param string $value
+     */
     public function setImprintName($value): self
     {
         return $this->set('imprintName', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getImprintUrl()
     {
         return $this->get('imprintUrl');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setImprintUrl($value): self
     {
         return $this->set('imprintUrl', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getCrossmarkDoi()
     {
         return $this->get('crossmarkDoi');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setCrossmarkDoi($value): self
     {
         return $this->set('crossmarkDoi', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getS3Bucket()
     {
         return $this->get('s3Bucket');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setS3Bucket($value): self
     {
         return $this->set('s3Bucket', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getCdnDomain()
     {
         return $this->get('cdnDomain');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setCdnDomain($value): self
     {
         return $this->set('cdnDomain', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getCloudfrontDistId()
     {
         return $this->get('cloudfrontDistId');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setCloudfrontDistId($value): self
     {
         return $this->set('cloudfrontDistId', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getDefaultCurrency()
     {
         return $this->get('defaultCurrency');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setDefaultCurrency($value): self
     {
         return $this->set('defaultCurrency', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getDefaultPlace()
     {
         return $this->get('defaultPlace');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setDefaultPlace($value): self
     {
         return $this->set('defaultPlace', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getDefaultLocale()
     {
         return $this->get('defaultLocale');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setDefaultLocale($value): self
     {
         return $this->set('defaultLocale', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
     }
 
+    /**
+     * @return Publisher
+     */
     public function getPublisher()
     {
         return $this->get('publisher');
     }
 
+    /**
+     * @param Publisher $value
+     */
     public function setPublisher($value): self
     {
         return $this->set('publisher', $value);
     }
 
+    /**
+     * @return Work[]
+     */
     public function getWorks()
     {
         return $this->get('works');
     }
 
+    /**
+     * @param Work[] $value
+     */
     public function setWorks($value): self
     {
         return $this->set('works', $value);

@@ -7,181 +7,289 @@ use ThothApi\GraphQL\ObjectData;
 
 final class Publication extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getPublicationId()
     {
         return $this->get('publicationId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setPublicationId($value): self
     {
         return $this->set('publicationId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getPublicationType()
     {
         return $this->get('publicationType');
     }
 
+    /**
+     * @param string $value
+     */
     public function setPublicationType($value): self
     {
         return $this->set('publicationType', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getWorkId()
     {
         return $this->get('workId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getIsbn()
     {
         return $this->get('isbn');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setIsbn($value): self
     {
         return $this->set('isbn', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
     }
 
+    /**
+     * @return float|null
+     */
     public function getWidth()
     {
         return $this->get('width');
     }
 
+    /**
+     * @param float|null $value
+     */
     public function setWidth($value): self
     {
         return $this->set('width', $value);
     }
 
+    /**
+     * @return float|null
+     */
     public function getHeight()
     {
         return $this->get('height');
     }
 
+    /**
+     * @param float|null $value
+     */
     public function setHeight($value): self
     {
         return $this->set('height', $value);
     }
 
+    /**
+     * @return float|null
+     */
     public function getDepth()
     {
         return $this->get('depth');
     }
 
+    /**
+     * @param float|null $value
+     */
     public function setDepth($value): self
     {
         return $this->set('depth', $value);
     }
 
+    /**
+     * @return float|null
+     */
     public function getWeight()
     {
         return $this->get('weight');
     }
 
+    /**
+     * @param float|null $value
+     */
     public function setWeight($value): self
     {
         return $this->set('weight', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getAccessibilityStandard()
     {
         return $this->get('accessibilityStandard');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setAccessibilityStandard($value): self
     {
         return $this->set('accessibilityStandard', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getAccessibilityAdditionalStandard()
     {
         return $this->get('accessibilityAdditionalStandard');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setAccessibilityAdditionalStandard($value): self
     {
         return $this->set('accessibilityAdditionalStandard', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getAccessibilityException()
     {
         return $this->get('accessibilityException');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setAccessibilityException($value): self
     {
         return $this->set('accessibilityException', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getAccessibilityReportUrl()
     {
         return $this->get('accessibilityReportUrl');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setAccessibilityReportUrl($value): self
     {
         return $this->set('accessibilityReportUrl', $value);
     }
 
+    /**
+     * @return Price[]
+     */
     public function getPrices()
     {
         return $this->get('prices');
     }
 
+    /**
+     * @param Price[] $value
+     */
     public function setPrices($value): self
     {
         return $this->set('prices', $value);
     }
 
+    /**
+     * @return Location[]
+     */
     public function getLocations()
     {
         return $this->get('locations');
     }
 
+    /**
+     * @param Location[] $value
+     */
     public function setLocations($value): self
     {
         return $this->set('locations', $value);
     }
 
+    /**
+     * @return File|null
+     */
     public function getFile()
     {
         return $this->get('file');
     }
 
+    /**
+     * @param File|null $value
+     */
     public function setFile($value): self
     {
         return $this->set('file', $value);
     }
 
+    /**
+     * @return Work
+     */
     public function getWork()
     {
         return $this->get('work');
     }
 
+    /**
+     * @param Work $value
+     */
     public function setWork($value): self
     {
         return $this->set('work', $value);

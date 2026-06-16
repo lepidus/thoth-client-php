@@ -7,931 +7,1489 @@ use ThothApi\GraphQL\ObjectData;
 
 final class MutationRoot extends ObjectData
 {
+    /**
+     * @return Work
+     */
     public function getCreateWork()
     {
         return $this->get('createWork');
     }
 
+    /**
+     * @param Work $value
+     */
     public function setCreateWork($value): self
     {
         return $this->set('createWork', $value);
     }
 
+    /**
+     * @return Publisher
+     */
     public function getCreatePublisher()
     {
         return $this->get('createPublisher');
     }
 
+    /**
+     * @param Publisher $value
+     */
     public function setCreatePublisher($value): self
     {
         return $this->set('createPublisher', $value);
     }
 
+    /**
+     * @return Imprint
+     */
     public function getCreateImprint()
     {
         return $this->get('createImprint');
     }
 
+    /**
+     * @param Imprint $value
+     */
     public function setCreateImprint($value): self
     {
         return $this->set('createImprint', $value);
     }
 
+    /**
+     * @return Contributor
+     */
     public function getCreateContributor()
     {
         return $this->get('createContributor');
     }
 
+    /**
+     * @param Contributor $value
+     */
     public function setCreateContributor($value): self
     {
         return $this->set('createContributor', $value);
     }
 
+    /**
+     * @return Contribution
+     */
     public function getCreateContribution()
     {
         return $this->get('createContribution');
     }
 
+    /**
+     * @param Contribution $value
+     */
     public function setCreateContribution($value): self
     {
         return $this->set('createContribution', $value);
     }
 
+    /**
+     * @return Publication
+     */
     public function getCreatePublication()
     {
         return $this->get('createPublication');
     }
 
+    /**
+     * @param Publication $value
+     */
     public function setCreatePublication($value): self
     {
         return $this->set('createPublication', $value);
     }
 
+    /**
+     * @return Series
+     */
     public function getCreateSeries()
     {
         return $this->get('createSeries');
     }
 
+    /**
+     * @param Series $value
+     */
     public function setCreateSeries($value): self
     {
         return $this->set('createSeries', $value);
     }
 
+    /**
+     * @return Issue
+     */
     public function getCreateIssue()
     {
         return $this->get('createIssue');
     }
 
+    /**
+     * @param Issue $value
+     */
     public function setCreateIssue($value): self
     {
         return $this->set('createIssue', $value);
     }
 
+    /**
+     * @return Language
+     */
     public function getCreateLanguage()
     {
         return $this->get('createLanguage');
     }
 
+    /**
+     * @param Language $value
+     */
     public function setCreateLanguage($value): self
     {
         return $this->set('createLanguage', $value);
     }
 
+    /**
+     * @return Title
+     */
     public function getCreateTitle()
     {
         return $this->get('createTitle');
     }
 
+    /**
+     * @param Title $value
+     */
     public function setCreateTitle($value): self
     {
         return $this->set('createTitle', $value);
     }
 
+    /**
+     * @return GraphQLAbstract
+     */
     public function getCreateAbstract()
     {
         return $this->get('createAbstract');
     }
 
+    /**
+     * @param GraphQLAbstract $value
+     */
     public function setCreateAbstract($value): self
     {
         return $this->set('createAbstract', $value);
     }
 
+    /**
+     * @return Biography
+     */
     public function getCreateBiography()
     {
         return $this->get('createBiography');
     }
 
+    /**
+     * @param Biography $value
+     */
     public function setCreateBiography($value): self
     {
         return $this->set('createBiography', $value);
     }
 
+    /**
+     * @return Institution
+     */
     public function getCreateInstitution()
     {
         return $this->get('createInstitution');
     }
 
+    /**
+     * @param Institution $value
+     */
     public function setCreateInstitution($value): self
     {
         return $this->set('createInstitution', $value);
     }
 
+    /**
+     * @return Funding
+     */
     public function getCreateFunding()
     {
         return $this->get('createFunding');
     }
 
+    /**
+     * @param Funding $value
+     */
     public function setCreateFunding($value): self
     {
         return $this->set('createFunding', $value);
     }
 
+    /**
+     * @return Location
+     */
     public function getCreateLocation()
     {
         return $this->get('createLocation');
     }
 
+    /**
+     * @param Location $value
+     */
     public function setCreateLocation($value): self
     {
         return $this->set('createLocation', $value);
     }
 
+    /**
+     * @return Price
+     */
     public function getCreatePrice()
     {
         return $this->get('createPrice');
     }
 
+    /**
+     * @param Price $value
+     */
     public function setCreatePrice($value): self
     {
         return $this->set('createPrice', $value);
     }
 
+    /**
+     * @return Subject
+     */
     public function getCreateSubject()
     {
         return $this->get('createSubject');
     }
 
+    /**
+     * @param Subject $value
+     */
     public function setCreateSubject($value): self
     {
         return $this->set('createSubject', $value);
     }
 
+    /**
+     * @return Affiliation
+     */
     public function getCreateAffiliation()
     {
         return $this->get('createAffiliation');
     }
 
+    /**
+     * @param Affiliation $value
+     */
     public function setCreateAffiliation($value): self
     {
         return $this->set('createAffiliation', $value);
     }
 
+    /**
+     * @return WorkRelation
+     */
     public function getCreateWorkRelation()
     {
         return $this->get('createWorkRelation');
     }
 
+    /**
+     * @param WorkRelation $value
+     */
     public function setCreateWorkRelation($value): self
     {
         return $this->set('createWorkRelation', $value);
     }
 
+    /**
+     * @return Reference
+     */
     public function getCreateReference()
     {
         return $this->get('createReference');
     }
 
+    /**
+     * @param Reference $value
+     */
     public function setCreateReference($value): self
     {
         return $this->set('createReference', $value);
     }
 
+    /**
+     * @return WorkResource
+     */
     public function getCreateAdditionalResource()
     {
         return $this->get('createAdditionalResource');
     }
 
+    /**
+     * @param WorkResource $value
+     */
     public function setCreateAdditionalResource($value): self
     {
         return $this->set('createAdditionalResource', $value);
     }
 
+    /**
+     * @return Award
+     */
     public function getCreateAward()
     {
         return $this->get('createAward');
     }
 
+    /**
+     * @param Award $value
+     */
     public function setCreateAward($value): self
     {
         return $this->set('createAward', $value);
     }
 
+    /**
+     * @return Endorsement
+     */
     public function getCreateEndorsement()
     {
         return $this->get('createEndorsement');
     }
 
+    /**
+     * @param Endorsement $value
+     */
     public function setCreateEndorsement($value): self
     {
         return $this->set('createEndorsement', $value);
     }
 
+    /**
+     * @return BookReview
+     */
     public function getCreateBookReview()
     {
         return $this->get('createBookReview');
     }
 
+    /**
+     * @param BookReview $value
+     */
     public function setCreateBookReview($value): self
     {
         return $this->set('createBookReview', $value);
     }
 
+    /**
+     * @return WorkFeaturedVideo
+     */
     public function getCreateWorkFeaturedVideo()
     {
         return $this->get('createWorkFeaturedVideo');
     }
 
+    /**
+     * @param WorkFeaturedVideo $value
+     */
     public function setCreateWorkFeaturedVideo($value): self
     {
         return $this->set('createWorkFeaturedVideo', $value);
     }
 
+    /**
+     * @return Contact
+     */
     public function getCreateContact()
     {
         return $this->get('createContact');
     }
 
+    /**
+     * @param Contact $value
+     */
     public function setCreateContact($value): self
     {
         return $this->set('createContact', $value);
     }
 
+    /**
+     * @return Work
+     */
     public function getUpdateWork()
     {
         return $this->get('updateWork');
     }
 
+    /**
+     * @param Work $value
+     */
     public function setUpdateWork($value): self
     {
         return $this->set('updateWork', $value);
     }
 
+    /**
+     * @return Publisher
+     */
     public function getUpdatePublisher()
     {
         return $this->get('updatePublisher');
     }
 
+    /**
+     * @param Publisher $value
+     */
     public function setUpdatePublisher($value): self
     {
         return $this->set('updatePublisher', $value);
     }
 
+    /**
+     * @return Imprint
+     */
     public function getUpdateImprint()
     {
         return $this->get('updateImprint');
     }
 
+    /**
+     * @param Imprint $value
+     */
     public function setUpdateImprint($value): self
     {
         return $this->set('updateImprint', $value);
     }
 
+    /**
+     * @return Contributor
+     */
     public function getUpdateContributor()
     {
         return $this->get('updateContributor');
     }
 
+    /**
+     * @param Contributor $value
+     */
     public function setUpdateContributor($value): self
     {
         return $this->set('updateContributor', $value);
     }
 
+    /**
+     * @return Contribution
+     */
     public function getUpdateContribution()
     {
         return $this->get('updateContribution');
     }
 
+    /**
+     * @param Contribution $value
+     */
     public function setUpdateContribution($value): self
     {
         return $this->set('updateContribution', $value);
     }
 
+    /**
+     * @return Publication
+     */
     public function getUpdatePublication()
     {
         return $this->get('updatePublication');
     }
 
+    /**
+     * @param Publication $value
+     */
     public function setUpdatePublication($value): self
     {
         return $this->set('updatePublication', $value);
     }
 
+    /**
+     * @return Series
+     */
     public function getUpdateSeries()
     {
         return $this->get('updateSeries');
     }
 
+    /**
+     * @param Series $value
+     */
     public function setUpdateSeries($value): self
     {
         return $this->set('updateSeries', $value);
     }
 
+    /**
+     * @return Issue
+     */
     public function getUpdateIssue()
     {
         return $this->get('updateIssue');
     }
 
+    /**
+     * @param Issue $value
+     */
     public function setUpdateIssue($value): self
     {
         return $this->set('updateIssue', $value);
     }
 
+    /**
+     * @return Language
+     */
     public function getUpdateLanguage()
     {
         return $this->get('updateLanguage');
     }
 
+    /**
+     * @param Language $value
+     */
     public function setUpdateLanguage($value): self
     {
         return $this->set('updateLanguage', $value);
     }
 
+    /**
+     * @return Institution
+     */
     public function getUpdateInstitution()
     {
         return $this->get('updateInstitution');
     }
 
+    /**
+     * @param Institution $value
+     */
     public function setUpdateInstitution($value): self
     {
         return $this->set('updateInstitution', $value);
     }
 
+    /**
+     * @return Funding
+     */
     public function getUpdateFunding()
     {
         return $this->get('updateFunding');
     }
 
+    /**
+     * @param Funding $value
+     */
     public function setUpdateFunding($value): self
     {
         return $this->set('updateFunding', $value);
     }
 
+    /**
+     * @return Location
+     */
     public function getUpdateLocation()
     {
         return $this->get('updateLocation');
     }
 
+    /**
+     * @param Location $value
+     */
     public function setUpdateLocation($value): self
     {
         return $this->set('updateLocation', $value);
     }
 
+    /**
+     * @return Price
+     */
     public function getUpdatePrice()
     {
         return $this->get('updatePrice');
     }
 
+    /**
+     * @param Price $value
+     */
     public function setUpdatePrice($value): self
     {
         return $this->set('updatePrice', $value);
     }
 
+    /**
+     * @return Subject
+     */
     public function getUpdateSubject()
     {
         return $this->get('updateSubject');
     }
 
+    /**
+     * @param Subject $value
+     */
     public function setUpdateSubject($value): self
     {
         return $this->set('updateSubject', $value);
     }
 
+    /**
+     * @return Affiliation
+     */
     public function getUpdateAffiliation()
     {
         return $this->get('updateAffiliation');
     }
 
+    /**
+     * @param Affiliation $value
+     */
     public function setUpdateAffiliation($value): self
     {
         return $this->set('updateAffiliation', $value);
     }
 
+    /**
+     * @return WorkRelation
+     */
     public function getUpdateWorkRelation()
     {
         return $this->get('updateWorkRelation');
     }
 
+    /**
+     * @param WorkRelation $value
+     */
     public function setUpdateWorkRelation($value): self
     {
         return $this->set('updateWorkRelation', $value);
     }
 
+    /**
+     * @return Reference
+     */
     public function getUpdateReference()
     {
         return $this->get('updateReference');
     }
 
+    /**
+     * @param Reference $value
+     */
     public function setUpdateReference($value): self
     {
         return $this->set('updateReference', $value);
     }
 
+    /**
+     * @return WorkResource
+     */
     public function getUpdateAdditionalResource()
     {
         return $this->get('updateAdditionalResource');
     }
 
+    /**
+     * @param WorkResource $value
+     */
     public function setUpdateAdditionalResource($value): self
     {
         return $this->set('updateAdditionalResource', $value);
     }
 
+    /**
+     * @return Award
+     */
     public function getUpdateAward()
     {
         return $this->get('updateAward');
     }
 
+    /**
+     * @param Award $value
+     */
     public function setUpdateAward($value): self
     {
         return $this->set('updateAward', $value);
     }
 
+    /**
+     * @return Endorsement
+     */
     public function getUpdateEndorsement()
     {
         return $this->get('updateEndorsement');
     }
 
+    /**
+     * @param Endorsement $value
+     */
     public function setUpdateEndorsement($value): self
     {
         return $this->set('updateEndorsement', $value);
     }
 
+    /**
+     * @return BookReview
+     */
     public function getUpdateBookReview()
     {
         return $this->get('updateBookReview');
     }
 
+    /**
+     * @param BookReview $value
+     */
     public function setUpdateBookReview($value): self
     {
         return $this->set('updateBookReview', $value);
     }
 
+    /**
+     * @return WorkFeaturedVideo
+     */
     public function getUpdateWorkFeaturedVideo()
     {
         return $this->get('updateWorkFeaturedVideo');
     }
 
+    /**
+     * @param WorkFeaturedVideo $value
+     */
     public function setUpdateWorkFeaturedVideo($value): self
     {
         return $this->set('updateWorkFeaturedVideo', $value);
     }
 
+    /**
+     * @return Contact
+     */
     public function getUpdateContact()
     {
         return $this->get('updateContact');
     }
 
+    /**
+     * @param Contact $value
+     */
     public function setUpdateContact($value): self
     {
         return $this->set('updateContact', $value);
     }
 
+    /**
+     * @return Title
+     */
     public function getUpdateTitle()
     {
         return $this->get('updateTitle');
     }
 
+    /**
+     * @param Title $value
+     */
     public function setUpdateTitle($value): self
     {
         return $this->set('updateTitle', $value);
     }
 
+    /**
+     * @return GraphQLAbstract
+     */
     public function getUpdateAbstract()
     {
         return $this->get('updateAbstract');
     }
 
+    /**
+     * @param GraphQLAbstract $value
+     */
     public function setUpdateAbstract($value): self
     {
         return $this->set('updateAbstract', $value);
     }
 
+    /**
+     * @return Biography
+     */
     public function getUpdateBiography()
     {
         return $this->get('updateBiography');
     }
 
+    /**
+     * @param Biography $value
+     */
     public function setUpdateBiography($value): self
     {
         return $this->set('updateBiography', $value);
     }
 
+    /**
+     * @return Work
+     */
     public function getDeleteWork()
     {
         return $this->get('deleteWork');
     }
 
+    /**
+     * @param Work $value
+     */
     public function setDeleteWork($value): self
     {
         return $this->set('deleteWork', $value);
     }
 
+    /**
+     * @return Publisher
+     */
     public function getDeletePublisher()
     {
         return $this->get('deletePublisher');
     }
 
+    /**
+     * @param Publisher $value
+     */
     public function setDeletePublisher($value): self
     {
         return $this->set('deletePublisher', $value);
     }
 
+    /**
+     * @return Imprint
+     */
     public function getDeleteImprint()
     {
         return $this->get('deleteImprint');
     }
 
+    /**
+     * @param Imprint $value
+     */
     public function setDeleteImprint($value): self
     {
         return $this->set('deleteImprint', $value);
     }
 
+    /**
+     * @return Contributor
+     */
     public function getDeleteContributor()
     {
         return $this->get('deleteContributor');
     }
 
+    /**
+     * @param Contributor $value
+     */
     public function setDeleteContributor($value): self
     {
         return $this->set('deleteContributor', $value);
     }
 
+    /**
+     * @return Contribution
+     */
     public function getDeleteContribution()
     {
         return $this->get('deleteContribution');
     }
 
+    /**
+     * @param Contribution $value
+     */
     public function setDeleteContribution($value): self
     {
         return $this->set('deleteContribution', $value);
     }
 
+    /**
+     * @return Publication
+     */
     public function getDeletePublication()
     {
         return $this->get('deletePublication');
     }
 
+    /**
+     * @param Publication $value
+     */
     public function setDeletePublication($value): self
     {
         return $this->set('deletePublication', $value);
     }
 
+    /**
+     * @return Series
+     */
     public function getDeleteSeries()
     {
         return $this->get('deleteSeries');
     }
 
+    /**
+     * @param Series $value
+     */
     public function setDeleteSeries($value): self
     {
         return $this->set('deleteSeries', $value);
     }
 
+    /**
+     * @return Issue
+     */
     public function getDeleteIssue()
     {
         return $this->get('deleteIssue');
     }
 
+    /**
+     * @param Issue $value
+     */
     public function setDeleteIssue($value): self
     {
         return $this->set('deleteIssue', $value);
     }
 
+    /**
+     * @return Language
+     */
     public function getDeleteLanguage()
     {
         return $this->get('deleteLanguage');
     }
 
+    /**
+     * @param Language $value
+     */
     public function setDeleteLanguage($value): self
     {
         return $this->set('deleteLanguage', $value);
     }
 
+    /**
+     * @return Title
+     */
     public function getDeleteTitle()
     {
         return $this->get('deleteTitle');
     }
 
+    /**
+     * @param Title $value
+     */
     public function setDeleteTitle($value): self
     {
         return $this->set('deleteTitle', $value);
     }
 
+    /**
+     * @return Institution
+     */
     public function getDeleteInstitution()
     {
         return $this->get('deleteInstitution');
     }
 
+    /**
+     * @param Institution $value
+     */
     public function setDeleteInstitution($value): self
     {
         return $this->set('deleteInstitution', $value);
     }
 
+    /**
+     * @return Funding
+     */
     public function getDeleteFunding()
     {
         return $this->get('deleteFunding');
     }
 
+    /**
+     * @param Funding $value
+     */
     public function setDeleteFunding($value): self
     {
         return $this->set('deleteFunding', $value);
     }
 
+    /**
+     * @return Location
+     */
     public function getDeleteLocation()
     {
         return $this->get('deleteLocation');
     }
 
+    /**
+     * @param Location $value
+     */
     public function setDeleteLocation($value): self
     {
         return $this->set('deleteLocation', $value);
     }
 
+    /**
+     * @return Price
+     */
     public function getDeletePrice()
     {
         return $this->get('deletePrice');
     }
 
+    /**
+     * @param Price $value
+     */
     public function setDeletePrice($value): self
     {
         return $this->set('deletePrice', $value);
     }
 
+    /**
+     * @return Subject
+     */
     public function getDeleteSubject()
     {
         return $this->get('deleteSubject');
     }
 
+    /**
+     * @param Subject $value
+     */
     public function setDeleteSubject($value): self
     {
         return $this->set('deleteSubject', $value);
     }
 
+    /**
+     * @return Affiliation
+     */
     public function getDeleteAffiliation()
     {
         return $this->get('deleteAffiliation');
     }
 
+    /**
+     * @param Affiliation $value
+     */
     public function setDeleteAffiliation($value): self
     {
         return $this->set('deleteAffiliation', $value);
     }
 
+    /**
+     * @return WorkRelation
+     */
     public function getDeleteWorkRelation()
     {
         return $this->get('deleteWorkRelation');
     }
 
+    /**
+     * @param WorkRelation $value
+     */
     public function setDeleteWorkRelation($value): self
     {
         return $this->set('deleteWorkRelation', $value);
     }
 
+    /**
+     * @return Reference
+     */
     public function getDeleteReference()
     {
         return $this->get('deleteReference');
     }
 
+    /**
+     * @param Reference $value
+     */
     public function setDeleteReference($value): self
     {
         return $this->set('deleteReference', $value);
     }
 
+    /**
+     * @return WorkResource
+     */
     public function getDeleteAdditionalResource()
     {
         return $this->get('deleteAdditionalResource');
     }
 
+    /**
+     * @param WorkResource $value
+     */
     public function setDeleteAdditionalResource($value): self
     {
         return $this->set('deleteAdditionalResource', $value);
     }
 
+    /**
+     * @return Award
+     */
     public function getDeleteAward()
     {
         return $this->get('deleteAward');
     }
 
+    /**
+     * @param Award $value
+     */
     public function setDeleteAward($value): self
     {
         return $this->set('deleteAward', $value);
     }
 
+    /**
+     * @return Endorsement
+     */
     public function getDeleteEndorsement()
     {
         return $this->get('deleteEndorsement');
     }
 
+    /**
+     * @param Endorsement $value
+     */
     public function setDeleteEndorsement($value): self
     {
         return $this->set('deleteEndorsement', $value);
     }
 
+    /**
+     * @return BookReview
+     */
     public function getDeleteBookReview()
     {
         return $this->get('deleteBookReview');
     }
 
+    /**
+     * @param BookReview $value
+     */
     public function setDeleteBookReview($value): self
     {
         return $this->set('deleteBookReview', $value);
     }
 
+    /**
+     * @return WorkFeaturedVideo
+     */
     public function getDeleteWorkFeaturedVideo()
     {
         return $this->get('deleteWorkFeaturedVideo');
     }
 
+    /**
+     * @param WorkFeaturedVideo $value
+     */
     public function setDeleteWorkFeaturedVideo($value): self
     {
         return $this->set('deleteWorkFeaturedVideo', $value);
     }
 
+    /**
+     * @return GraphQLAbstract
+     */
     public function getDeleteAbstract()
     {
         return $this->get('deleteAbstract');
     }
 
+    /**
+     * @param GraphQLAbstract $value
+     */
     public function setDeleteAbstract($value): self
     {
         return $this->set('deleteAbstract', $value);
     }
 
+    /**
+     * @return Biography
+     */
     public function getDeleteBiography()
     {
         return $this->get('deleteBiography');
     }
 
+    /**
+     * @param Biography $value
+     */
     public function setDeleteBiography($value): self
     {
         return $this->set('deleteBiography', $value);
     }
 
+    /**
+     * @return Affiliation
+     */
     public function getMoveAffiliation()
     {
         return $this->get('moveAffiliation');
     }
 
+    /**
+     * @param Affiliation $value
+     */
     public function setMoveAffiliation($value): self
     {
         return $this->set('moveAffiliation', $value);
     }
 
+    /**
+     * @return Contribution
+     */
     public function getMoveContribution()
     {
         return $this->get('moveContribution');
     }
 
+    /**
+     * @param Contribution $value
+     */
     public function setMoveContribution($value): self
     {
         return $this->set('moveContribution', $value);
     }
 
+    /**
+     * @return Issue
+     */
     public function getMoveIssue()
     {
         return $this->get('moveIssue');
     }
 
+    /**
+     * @param Issue $value
+     */
     public function setMoveIssue($value): self
     {
         return $this->set('moveIssue', $value);
     }
 
+    /**
+     * @return Reference
+     */
     public function getMoveReference()
     {
         return $this->get('moveReference');
     }
 
+    /**
+     * @param Reference $value
+     */
     public function setMoveReference($value): self
     {
         return $this->set('moveReference', $value);
     }
 
+    /**
+     * @return WorkResource
+     */
     public function getMoveAdditionalResource()
     {
         return $this->get('moveAdditionalResource');
     }
 
+    /**
+     * @param WorkResource $value
+     */
     public function setMoveAdditionalResource($value): self
     {
         return $this->set('moveAdditionalResource', $value);
     }
 
+    /**
+     * @return Award
+     */
     public function getMoveAward()
     {
         return $this->get('moveAward');
     }
 
+    /**
+     * @param Award $value
+     */
     public function setMoveAward($value): self
     {
         return $this->set('moveAward', $value);
     }
 
+    /**
+     * @return Endorsement
+     */
     public function getMoveEndorsement()
     {
         return $this->get('moveEndorsement');
     }
 
+    /**
+     * @param Endorsement $value
+     */
     public function setMoveEndorsement($value): self
     {
         return $this->set('moveEndorsement', $value);
     }
 
+    /**
+     * @return BookReview
+     */
     public function getMoveBookReview()
     {
         return $this->get('moveBookReview');
     }
 
+    /**
+     * @param BookReview $value
+     */
     public function setMoveBookReview($value): self
     {
         return $this->set('moveBookReview', $value);
     }
 
+    /**
+     * @return Subject
+     */
     public function getMoveSubject()
     {
         return $this->get('moveSubject');
     }
 
+    /**
+     * @param Subject $value
+     */
     public function setMoveSubject($value): self
     {
         return $this->set('moveSubject', $value);
     }
 
+    /**
+     * @return WorkRelation
+     */
     public function getMoveWorkRelation()
     {
         return $this->get('moveWorkRelation');
     }
 
+    /**
+     * @param WorkRelation $value
+     */
     public function setMoveWorkRelation($value): self
     {
         return $this->set('moveWorkRelation', $value);
     }
 
+    /**
+     * @return FileUploadResponse
+     */
     public function getInitPublicationFileUpload()
     {
         return $this->get('initPublicationFileUpload');
     }
 
+    /**
+     * @param FileUploadResponse $value
+     */
     public function setInitPublicationFileUpload($value): self
     {
         return $this->set('initPublicationFileUpload', $value);
     }
 
+    /**
+     * @return FileUploadResponse
+     */
     public function getInitFrontcoverFileUpload()
     {
         return $this->get('initFrontcoverFileUpload');
     }
 
+    /**
+     * @param FileUploadResponse $value
+     */
     public function setInitFrontcoverFileUpload($value): self
     {
         return $this->set('initFrontcoverFileUpload', $value);
     }
 
+    /**
+     * @return FileUploadResponse
+     */
     public function getInitAdditionalResourceFileUpload()
     {
         return $this->get('initAdditionalResourceFileUpload');
     }
 
+    /**
+     * @param FileUploadResponse $value
+     */
     public function setInitAdditionalResourceFileUpload($value): self
     {
         return $this->set('initAdditionalResourceFileUpload', $value);
     }
 
+    /**
+     * @return FileUploadResponse
+     */
     public function getInitWorkFeaturedVideoFileUpload()
     {
         return $this->get('initWorkFeaturedVideoFileUpload');
     }
 
+    /**
+     * @param FileUploadResponse $value
+     */
     public function setInitWorkFeaturedVideoFileUpload($value): self
     {
         return $this->set('initWorkFeaturedVideoFileUpload', $value);
     }
 
+    /**
+     * @return File
+     */
     public function getCompleteFileUpload()
     {
         return $this->get('completeFileUpload');
     }
 
+    /**
+     * @param File $value
+     */
     public function setCompleteFileUpload($value): self
     {
         return $this->set('completeFileUpload', $value);
     }
 
+    /**
+     * @return Contact
+     */
     public function getDeleteContact()
     {
         return $this->get('deleteContact');
     }
 
+    /**
+     * @param Contact $value
+     */
     public function setDeleteContact($value): self
     {
         return $this->set('deleteContact', $value);

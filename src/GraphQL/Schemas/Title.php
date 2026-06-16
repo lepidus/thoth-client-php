@@ -7,81 +7,129 @@ use ThothApi\GraphQL\ObjectData;
 
 final class Title extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getTitleId()
     {
         return $this->get('titleId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setTitleId($value): self
     {
         return $this->set('titleId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getWorkId()
     {
         return $this->get('workId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getLocaleCode()
     {
         return $this->get('localeCode');
     }
 
+    /**
+     * @param string $value
+     */
     public function setLocaleCode($value): self
     {
         return $this->set('localeCode', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getFullTitle()
     {
         return $this->get('fullTitle');
     }
 
+    /**
+     * @param string $value
+     */
     public function setFullTitle($value): self
     {
         return $this->set('fullTitle', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getTitle()
     {
         return $this->get('title');
     }
 
+    /**
+     * @param string $value
+     */
     public function setTitle($value): self
     {
         return $this->set('title', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getSubtitle()
     {
         return $this->get('subtitle');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setSubtitle($value): self
     {
         return $this->set('subtitle', $value);
     }
 
+    /**
+     * @return bool
+     */
     public function getCanonical()
     {
         return $this->get('canonical');
     }
 
+    /**
+     * @param bool $value
+     */
     public function setCanonical($value): self
     {
         return $this->set('canonical', $value);
     }
 
+    /**
+     * @return Work
+     */
     public function getWork()
     {
         return $this->get('work');
     }
 
+    /**
+     * @param Work $value
+     */
     public function setWork($value): self
     {
         return $this->set('work', $value);

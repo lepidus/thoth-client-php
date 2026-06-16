@@ -7,71 +7,113 @@ use ThothApi\GraphQL\ObjectData;
 
 final class GraphQLAbstract extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getAbstractId()
     {
         return $this->get('abstractId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setAbstractId($value): self
     {
         return $this->set('abstractId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getWorkId()
     {
         return $this->get('workId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getLocaleCode()
     {
         return $this->get('localeCode');
     }
 
+    /**
+     * @param string $value
+     */
     public function setLocaleCode($value): self
     {
         return $this->set('localeCode', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getContent()
     {
         return $this->get('content');
     }
 
+    /**
+     * @param string $value
+     */
     public function setContent($value): self
     {
         return $this->set('content', $value);
     }
 
+    /**
+     * @return bool
+     */
     public function getCanonical()
     {
         return $this->get('canonical');
     }
 
+    /**
+     * @param bool $value
+     */
     public function setCanonical($value): self
     {
         return $this->set('canonical', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getAbstractType()
     {
         return $this->get('abstractType');
     }
 
+    /**
+     * @param string $value
+     */
     public function setAbstractType($value): self
     {
         return $this->set('abstractType', $value);
     }
 
+    /**
+     * @return Work
+     */
     public function getWork()
     {
         return $this->get('work');
     }
 
+    /**
+     * @param Work $value
+     */
     public function setWork($value): self
     {
         return $this->set('work', $value);

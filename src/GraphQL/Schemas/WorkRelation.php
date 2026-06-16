@@ -7,81 +7,129 @@ use ThothApi\GraphQL\ObjectData;
 
 final class WorkRelation extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getWorkRelationId()
     {
         return $this->get('workRelationId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setWorkRelationId($value): self
     {
         return $this->set('workRelationId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getRelatorWorkId()
     {
         return $this->get('relatorWorkId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setRelatorWorkId($value): self
     {
         return $this->set('relatorWorkId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getRelatedWorkId()
     {
         return $this->get('relatedWorkId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setRelatedWorkId($value): self
     {
         return $this->set('relatedWorkId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getRelationType()
     {
         return $this->get('relationType');
     }
 
+    /**
+     * @param string $value
+     */
     public function setRelationType($value): self
     {
         return $this->set('relationType', $value);
     }
 
+    /**
+     * @return int
+     */
     public function getRelationOrdinal()
     {
         return $this->get('relationOrdinal');
     }
 
+    /**
+     * @param int $value
+     */
     public function setRelationOrdinal($value): self
     {
         return $this->set('relationOrdinal', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
     }
 
+    /**
+     * @return Work
+     */
     public function getRelatedWork()
     {
         return $this->get('relatedWork');
     }
 
+    /**
+     * @param Work $value
+     */
     public function setRelatedWork($value): self
     {
         return $this->set('relatedWork', $value);

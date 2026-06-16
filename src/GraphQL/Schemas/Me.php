@@ -7,61 +7,97 @@ use ThothApi\GraphQL\ObjectData;
 
 final class Me extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getUserId()
     {
         return $this->get('userId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUserId($value): self
     {
         return $this->set('userId', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getEmail()
     {
         return $this->get('email');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setEmail($value): self
     {
         return $this->set('email', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getFirstName()
     {
         return $this->get('firstName');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setFirstName($value): self
     {
         return $this->set('firstName', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getLastName()
     {
         return $this->get('lastName');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setLastName($value): self
     {
         return $this->set('lastName', $value);
     }
 
+    /**
+     * @return bool
+     */
     public function getIsSuperuser()
     {
         return $this->get('isSuperuser');
     }
 
+    /**
+     * @param bool $value
+     */
     public function setIsSuperuser($value): self
     {
         return $this->set('isSuperuser', $value);
     }
 
+    /**
+     * @return PublisherContext[]
+     */
     public function getPublisherContexts()
     {
         return $this->get('publisherContexts');
     }
 
+    /**
+     * @param PublisherContext[] $value
+     */
     public function setPublisherContexts($value): self
     {
         return $this->set('publisherContexts', $value);

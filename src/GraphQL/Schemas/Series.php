@@ -7,131 +7,209 @@ use ThothApi\GraphQL\ObjectData;
 
 final class Series extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getSeriesId()
     {
         return $this->get('seriesId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setSeriesId($value): self
     {
         return $this->set('seriesId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getSeriesType()
     {
         return $this->get('seriesType');
     }
 
+    /**
+     * @param string $value
+     */
     public function setSeriesType($value): self
     {
         return $this->set('seriesType', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getSeriesName()
     {
         return $this->get('seriesName');
     }
 
+    /**
+     * @param string $value
+     */
     public function setSeriesName($value): self
     {
         return $this->set('seriesName', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getIssnPrint()
     {
         return $this->get('issnPrint');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setIssnPrint($value): self
     {
         return $this->set('issnPrint', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getIssnDigital()
     {
         return $this->get('issnDigital');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setIssnDigital($value): self
     {
         return $this->set('issnDigital', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getSeriesUrl()
     {
         return $this->get('seriesUrl');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setSeriesUrl($value): self
     {
         return $this->set('seriesUrl', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getSeriesDescription()
     {
         return $this->get('seriesDescription');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setSeriesDescription($value): self
     {
         return $this->set('seriesDescription', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getSeriesCfpUrl()
     {
         return $this->get('seriesCfpUrl');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setSeriesCfpUrl($value): self
     {
         return $this->set('seriesCfpUrl', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getImprintId()
     {
         return $this->get('imprintId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setImprintId($value): self
     {
         return $this->set('imprintId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
     }
 
+    /**
+     * @return Imprint
+     */
     public function getImprint()
     {
         return $this->get('imprint');
     }
 
+    /**
+     * @param Imprint $value
+     */
     public function setImprint($value): self
     {
         return $this->set('imprint', $value);
     }
 
+    /**
+     * @return Issue[]
+     */
     public function getIssues()
     {
         return $this->get('issues');
     }
 
+    /**
+     * @param Issue[] $value
+     */
     public function setIssues($value): self
     {
         return $this->set('issues', $value);

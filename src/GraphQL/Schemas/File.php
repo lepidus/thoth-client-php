@@ -7,131 +7,209 @@ use ThothApi\GraphQL\ObjectData;
 
 final class File extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getFileId()
     {
         return $this->get('fileId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setFileId($value): self
     {
         return $this->set('fileId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getFileType()
     {
         return $this->get('fileType');
     }
 
+    /**
+     * @param string $value
+     */
     public function setFileType($value): self
     {
         return $this->set('fileType', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getWorkId()
     {
         return $this->get('workId');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getPublicationId()
     {
         return $this->get('publicationId');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setPublicationId($value): self
     {
         return $this->set('publicationId', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getAdditionalResourceId()
     {
         return $this->get('additionalResourceId');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setAdditionalResourceId($value): self
     {
         return $this->set('additionalResourceId', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getWorkFeaturedVideoId()
     {
         return $this->get('workFeaturedVideoId');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setWorkFeaturedVideoId($value): self
     {
         return $this->set('workFeaturedVideoId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getObjectKey()
     {
         return $this->get('objectKey');
     }
 
+    /**
+     * @param string $value
+     */
     public function setObjectKey($value): self
     {
         return $this->set('objectKey', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCdnUrl()
     {
         return $this->get('cdnUrl');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCdnUrl($value): self
     {
         return $this->set('cdnUrl', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getMimeType()
     {
         return $this->get('mimeType');
     }
 
+    /**
+     * @param string $value
+     */
     public function setMimeType($value): self
     {
         return $this->set('mimeType', $value);
     }
 
+    /**
+     * @return int
+     */
     public function getBytes()
     {
         return $this->get('bytes');
     }
 
+    /**
+     * @param int $value
+     */
     public function setBytes($value): self
     {
         return $this->set('bytes', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getSha256()
     {
         return $this->get('sha256');
     }
 
+    /**
+     * @param string $value
+     */
     public function setSha256($value): self
     {
         return $this->set('sha256', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);

@@ -7,81 +7,129 @@ use ThothApi\GraphQL\ObjectData;
 
 final class Subject extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getSubjectId()
     {
         return $this->get('subjectId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setSubjectId($value): self
     {
         return $this->set('subjectId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getWorkId()
     {
         return $this->get('workId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getSubjectType()
     {
         return $this->get('subjectType');
     }
 
+    /**
+     * @param string $value
+     */
     public function setSubjectType($value): self
     {
         return $this->set('subjectType', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getSubjectCode()
     {
         return $this->get('subjectCode');
     }
 
+    /**
+     * @param string $value
+     */
     public function setSubjectCode($value): self
     {
         return $this->set('subjectCode', $value);
     }
 
+    /**
+     * @return int
+     */
     public function getSubjectOrdinal()
     {
         return $this->get('subjectOrdinal');
     }
 
+    /**
+     * @param int $value
+     */
     public function setSubjectOrdinal($value): self
     {
         return $this->set('subjectOrdinal', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
     }
 
+    /**
+     * @return Work
+     */
     public function getWork()
     {
         return $this->get('work');
     }
 
+    /**
+     * @param Work $value
+     */
     public function setWork($value): self
     {
         return $this->set('work', $value);

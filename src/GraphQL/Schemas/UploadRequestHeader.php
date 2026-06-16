@@ -7,21 +7,33 @@ use ThothApi\GraphQL\ObjectData;
 
 final class UploadRequestHeader extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getName()
     {
         return $this->get('name');
     }
 
+    /**
+     * @param string $value
+     */
     public function setName($value): self
     {
         return $this->set('name', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getValue()
     {
         return $this->get('value');
     }
 
+    /**
+     * @param string $value
+     */
     public function setValue($value): self
     {
         return $this->set('value', $value);

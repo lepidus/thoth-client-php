@@ -7,161 +7,257 @@ use ThothApi\GraphQL\ObjectData;
 
 final class Contribution extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getContributionId()
     {
         return $this->get('contributionId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setContributionId($value): self
     {
         return $this->set('contributionId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getContributorId()
     {
         return $this->get('contributorId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setContributorId($value): self
     {
         return $this->set('contributorId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getWorkId()
     {
         return $this->get('workId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setWorkId($value): self
     {
         return $this->set('workId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getContributionType()
     {
         return $this->get('contributionType');
     }
 
+    /**
+     * @param string $value
+     */
     public function setContributionType($value): self
     {
         return $this->set('contributionType', $value);
     }
 
+    /**
+     * @return bool
+     */
     public function getMainContribution()
     {
         return $this->get('mainContribution');
     }
 
+    /**
+     * @param bool $value
+     */
     public function setMainContribution($value): self
     {
         return $this->set('mainContribution', $value);
     }
 
+    /**
+     * @return Biography[]
+     */
     public function getBiographies()
     {
         return $this->get('biographies');
     }
 
+    /**
+     * @param Biography[] $value
+     */
     public function setBiographies($value): self
     {
         return $this->set('biographies', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getBiography()
     {
         return $this->get('biography');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setBiography($value): self
     {
         return $this->set('biography', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getCreatedAt()
     {
         return $this->get('createdAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setCreatedAt($value): self
     {
         return $this->set('createdAt', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getUpdatedAt()
     {
         return $this->get('updatedAt');
     }
 
+    /**
+     * @param string $value
+     */
     public function setUpdatedAt($value): self
     {
         return $this->set('updatedAt', $value);
     }
 
+    /**
+     * @return string|null
+     */
     public function getFirstName()
     {
         return $this->get('firstName');
     }
 
+    /**
+     * @param string|null $value
+     */
     public function setFirstName($value): self
     {
         return $this->set('firstName', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getLastName()
     {
         return $this->get('lastName');
     }
 
+    /**
+     * @param string $value
+     */
     public function setLastName($value): self
     {
         return $this->set('lastName', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getFullName()
     {
         return $this->get('fullName');
     }
 
+    /**
+     * @param string $value
+     */
     public function setFullName($value): self
     {
         return $this->set('fullName', $value);
     }
 
+    /**
+     * @return int
+     */
     public function getContributionOrdinal()
     {
         return $this->get('contributionOrdinal');
     }
 
+    /**
+     * @param int $value
+     */
     public function setContributionOrdinal($value): self
     {
         return $this->set('contributionOrdinal', $value);
     }
 
+    /**
+     * @return Work
+     */
     public function getWork()
     {
         return $this->get('work');
     }
 
+    /**
+     * @param Work $value
+     */
     public function setWork($value): self
     {
         return $this->set('work', $value);
     }
 
+    /**
+     * @return Contributor
+     */
     public function getContributor()
     {
         return $this->get('contributor');
     }
 
+    /**
+     * @param Contributor $value
+     */
     public function setContributor($value): self
     {
         return $this->set('contributor', $value);
     }
 
+    /**
+     * @return Affiliation[]
+     */
     public function getAffiliations()
     {
         return $this->get('affiliations');
     }
 
+    /**
+     * @param Affiliation[] $value
+     */
     public function setAffiliations($value): self
     {
         return $this->set('affiliations', $value);

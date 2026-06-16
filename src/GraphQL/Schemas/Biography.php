@@ -7,71 +7,113 @@ use ThothApi\GraphQL\ObjectData;
 
 final class Biography extends ObjectData
 {
+    /**
+     * @return string
+     */
     public function getBiographyId()
     {
         return $this->get('biographyId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setBiographyId($value): self
     {
         return $this->set('biographyId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getContributionId()
     {
         return $this->get('contributionId');
     }
 
+    /**
+     * @param string $value
+     */
     public function setContributionId($value): self
     {
         return $this->set('contributionId', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getLocaleCode()
     {
         return $this->get('localeCode');
     }
 
+    /**
+     * @param string $value
+     */
     public function setLocaleCode($value): self
     {
         return $this->set('localeCode', $value);
     }
 
+    /**
+     * @return string
+     */
     public function getContent()
     {
         return $this->get('content');
     }
 
+    /**
+     * @param string $value
+     */
     public function setContent($value): self
     {
         return $this->set('content', $value);
     }
 
+    /**
+     * @return bool
+     */
     public function getCanonical()
     {
         return $this->get('canonical');
     }
 
+    /**
+     * @param bool $value
+     */
     public function setCanonical($value): self
     {
         return $this->set('canonical', $value);
     }
 
+    /**
+     * @return Work
+     */
     public function getWork()
     {
         return $this->get('work');
     }
 
+    /**
+     * @param Work $value
+     */
     public function setWork($value): self
     {
         return $this->set('work', $value);
     }
 
+    /**
+     * @return Contribution
+     */
     public function getContribution()
     {
         return $this->get('contribution');
     }
 
+    /**
+     * @param Contribution $value
+     */
     public function setContribution($value): self
     {
         return $this->set('contribution', $value);
