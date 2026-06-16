@@ -112,6 +112,12 @@ final class OperationRequest
         foreach ($variables as $name => $value) {
             $this->assertIdentifier((string) $name);
 
+            if (!array_key_exists($name, $schemaArguments)) {
+                throw new \InvalidArgumentException(
+                    "Unknown GraphQL argument '{$name}' for '{$this->field->getName()}'."
+                );
+            }
+
             if ($value !== null) {
                 $normalized[$name] = $this->normalizeVariableValue($value, $schemaArguments[$name] ?? null);
             }

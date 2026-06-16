@@ -254,6 +254,27 @@ final class OperationRequestTest extends TestCase
         $operation->toGraphQL();
     }
 
+    public function testItRejectsUnknownOperationArguments(): void
+    {
+        $operation = new OperationRequest(
+            'query',
+            new FieldDefinition(
+                'books',
+                TypeReference::named('Work'),
+                [
+                    new ArgumentDefinition('limit', TypeReference::named('Int')),
+                ]
+            ),
+            ['unknownArgument' => 1],
+            ['workId']
+        );
+
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage("Unknown GraphQL argument 'unknownArgument' for 'books'.");
+
+        $operation->toGraphQL();
+    }
+
     public function testItRejectsInvalidEnumValues(): void
     {
         $operation = new OperationRequest(
