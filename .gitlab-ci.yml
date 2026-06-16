@@ -16,7 +16,7 @@ before_script:
   - vendor/bin/phpunit tests/
 
 .analyse: &analyse
-  - composer analyse
+  - vendor/bin/phpstan analyse --debug --memory-limit=1G
 
 lint:php7.4:
   image: php:7.4
