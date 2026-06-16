@@ -147,6 +147,57 @@ final class OperationRequestTest extends TestCase
         $operation->toGraphQL();
     }
 
+    public function testItRejectsUnknownInputFields(): void
+    {
+        $operation = new OperationRequest(
+            'mutation',
+            new FieldDefinition(
+                'createPublisher',
+                TypeReference::named('Publisher'),
+                [
+                    new ArgumentDefinition('data', TypeReference::named('NewPublisher')),
+                ]
+            ),
+            [
+                'data' => [
+                    'publisherName' => 'ACME Press',
+                    'unknownField' => 'value',
+                ],
+            ],
+            ['publisherId']
+        );
+
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage("Unknown GraphQL input field 'unknownField' for 'NewPublisher'.");
+
+        $operation->toGraphQL();
+    }
+
+    public function testItRejectsMissingRequiredInputFields(): void
+    {
+        $operation = new OperationRequest(
+            'mutation',
+            new FieldDefinition(
+                'createPublisher',
+                TypeReference::named('Publisher'),
+                [
+                    new ArgumentDefinition('data', TypeReference::named('NewPublisher')),
+                ]
+            ),
+            [
+                'data' => [
+                    'publisherUrl' => 'https://example.test',
+                ],
+            ],
+            ['publisherId']
+        );
+
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage("Missing required GraphQL input field 'publisherName' for 'NewPublisher'.");
+
+        $operation->toGraphQL();
+    }
+
     public function testItRejectsInvalidEnumValues(): void
     {
         $operation = new OperationRequest(
@@ -248,7 +299,8 @@ final class OperationRequestTest extends TestCase
                 'data' => [
                     'workType' => WorkType::MONOGRAPH,
                     'workStatus' => WorkStatus::ACTIVE,
-                    'fullTitle' => 'MONOGRAPH',
+                    'imprintId' => '71faf1c3-900a-4b8c-bca7-4f927699fb90',
+                    'reference' => 'MONOGRAPH',
                 ],
             ],
             ['workId']
@@ -259,7 +311,8 @@ final class OperationRequestTest extends TestCase
             'data' => [
                 'workType' => 'MONOGRAPH',
                 'workStatus' => 'ACTIVE',
-                'fullTitle' => 'MONOGRAPH',
+                'imprintId' => '71faf1c3-900a-4b8c-bca7-4f927699fb90',
+                'reference' => 'MONOGRAPH',
             ],
         ], $operation->getVariables());
     }

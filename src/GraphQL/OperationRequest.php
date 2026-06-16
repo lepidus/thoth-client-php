@@ -131,15 +131,32 @@ final class OperationRequest
             }
 
             $normalized = [];
+            $inputFields = $this->getInputFieldDefinitions($type);
 
             foreach ($value as $field => $fieldValue) {
                 $this->assertIdentifier((string) $field);
 
+                if ($inputFields !== null && !array_key_exists($field, $inputFields)) {
+                    throw new \InvalidArgumentException(
+                        "Unknown GraphQL input field '{$field}' for '{$type->baseName()}'."
+                    );
+                }
+
                 if ($fieldValue !== null) {
                     $normalized[$field] = $this->normalizeVariableValue(
                         $fieldValue,
-                        $this->getInputFieldType($type, (string) $field)
+                        $inputFields[$field] ?? $this->getInputFieldType($type, (string) $field)
                     );
+                }
+            }
+
+            if ($inputFields !== null) {
+                foreach ($inputFields as $fieldName => $fieldType) {
+                    if ($this->isNonNullType($fieldType) && !array_key_exists($fieldName, $normalized)) {
+                        throw new \InvalidArgumentException(
+                            "Missing required GraphQL input field '{$fieldName}' for '{$type->baseName()}'."
+                        );
+                    }
                 }
             }
 
@@ -267,19 +284,13 @@ final class OperationRequest
 
     private function getInputFieldType(?TypeReference $type, string $fieldName): ?TypeReference
     {
-        $inputClass = $this->getSchemaClassName('Inputs', $type ? $type->baseName() : null);
+        $inputFields = $this->getInputFieldDefinitions($type);
 
-        if (!class_exists($inputClass)) {
+        if ($inputFields === null) {
             return null;
         }
 
-        foreach ($inputClass::definition()->getFields() as $field) {
-            if ($field->getName() === $fieldName) {
-                return $field->getType();
-            }
-        }
-
-        return null;
+        return $inputFields[$fieldName] ?? null;
     }
 
     private function isEnumType(?TypeReference $type): bool
@@ -298,5 +309,27 @@ final class OperationRequest
     private function getSchemaClassName(string $namespacePart, ?string $typeName): string
     {
         return '\\ThothApi\\GraphQL\\' . $namespacePart . '\\' . ($typeName === 'Abstract' ? 'GraphQLAbstract' : $typeName);
+    }
+
+    private function getInputFieldDefinitions(?TypeReference $type): ?array
+    {
+        $inputClass = $this->getSchemaClassName('Inputs', $type ? $type->baseName() : null);
+
+        if (!class_exists($inputClass)) {
+            return null;
+        }
+
+        $fields = [];
+
+        foreach ($inputClass::definition()->getFields() as $field) {
+            $fields[$field->getName()] = $field->getType();
+        }
+
+        return $fields;
+    }
+
+    private function isNonNullType(TypeReference $type): bool
+    {
+        return $type->getKind() === 'NON_NULL';
     }
 }

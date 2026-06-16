@@ -71,7 +71,7 @@ final class GenericClientTest extends TestCase
         $this->assertSame('work-1', $client->createWork([
             'workType' => OperationRequest::enum('MONOGRAPH'),
             'workStatus' => OperationRequest::enum('ACTIVE'),
-            'fullTitle' => 'Generated client',
+            'imprintId' => '71faf1c3-900a-4b8c-bca7-4f927699fb90',
         ]));
     }
 
@@ -94,7 +94,7 @@ final class GenericClientTest extends TestCase
                 return [
                     'workType' => OperationRequest::enum('MONOGRAPH'),
                     'workStatus' => OperationRequest::enum('ACTIVE'),
-                    'fullTitle' => 'Generated client',
+                    'imprintId' => '71faf1c3-900a-4b8c-bca7-4f927699fb90',
                 ];
             }
         };
@@ -118,7 +118,7 @@ final class GenericClientTest extends TestCase
         $newWork = new NewWork([
             'workType' => WorkType::MONOGRAPH,
             'workStatus' => WorkStatus::ACTIVE,
-            'fullTitle' => 'Generated client',
+            'imprintId' => '71faf1c3-900a-4b8c-bca7-4f927699fb90',
         ]);
 
         $this->assertSame('work-1', $client->createWork($newWork));
@@ -143,7 +143,7 @@ final class GenericClientTest extends TestCase
         $newWork = new NewWork([
             'workType' => WorkType::MONOGRAPH,
             'workStatus' => WorkStatus::ACTIVE,
-            'fullTitle' => 'Generated client',
+            'imprintId' => '71faf1c3-900a-4b8c-bca7-4f927699fb90',
         ]);
 
         $work = $client->createWork($newWork, ['workId', 'fullTitle']);
@@ -181,7 +181,7 @@ final class GenericClientTest extends TestCase
         $newWork = new NewWork([
             'workType' => WorkType::MONOGRAPH,
             'workStatus' => WorkStatus::ACTIVE,
-            'fullTitle' => 'Generated client',
+            'imprintId' => '71faf1c3-900a-4b8c-bca7-4f927699fb90',
         ]);
         $work = $client->createWork($newWork, [
             'workId',
