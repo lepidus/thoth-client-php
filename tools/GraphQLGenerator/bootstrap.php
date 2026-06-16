@@ -7,6 +7,7 @@ const GENERATED_DIRECTORIES = ['Queries', 'Mutations', 'Schemas', 'Inputs', 'Enu
 
 require_once __DIR__ . '/GeneratorException.php';
 require_once __DIR__ . '/CodeGeneration.php';
+require_once __DIR__ . '/AccessorMethodsBuilder.php';
 require_once __DIR__ . '/ClassFileWriter.php';
 require_once __DIR__ . '/TypeClassBuilder.php';
 require_once __DIR__ . '/EnumTypeClassBuilder.php';

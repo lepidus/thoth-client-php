@@ -4,6 +4,13 @@ declare(strict_types=1);
 
 final class InputTypeClassBuilder implements TypeClassBuilder
 {
+    private AccessorMethodsBuilder $accessorMethodsBuilder;
+
+    public function __construct(?AccessorMethodsBuilder $accessorMethodsBuilder = null)
+    {
+        $this->accessorMethodsBuilder = $accessorMethodsBuilder ?: new AccessorMethodsBuilder();
+    }
+
     public function className(array $type): string
     {
         return safeClassName(studly($type['name']));
@@ -15,7 +22,7 @@ final class InputTypeClassBuilder implements TypeClassBuilder
             $namespacePart,
             $this->className($type),
             $type['name'],
-            $this->fieldMethodsCode($type['inputFields'] ?? []),
+            $this->accessorMethodsBuilder->code($type['inputFields'] ?? []),
             argumentDefinitionListCode($type['inputFields'] ?? [], 3)
         );
     }
@@ -46,46 +53,6 @@ final class {$className} extends InputObject
         ]);
     }
 }
-PHP;
-    }
-
-    private function fieldMethodsCode(array $fields): string
-    {
-        return implode("\n\n", array_map([$this, 'fieldMethods'], $fields));
-    }
-
-    private function fieldMethods(array $field): string
-    {
-        $methodName = studly($field['name']);
-        $fieldName = exportPhpValue($field['name']);
-        $phpDocType = phpDocType($field['type']);
-
-        return <<<PHP
-    /**
-     * @return {$phpDocType}
-     */
-    public function get{$methodName}()
-    {
-        return \$this->get({$fieldName});
-    }
-
-    /**
-     * @param {$phpDocType} \$value
-     */
-    public function set{$methodName}(\$value): self
-    {
-        return \$this->set({$fieldName}, \$value);
-    }
-
-    public function has{$methodName}(): bool
-    {
-        return \$this->has({$fieldName});
-    }
-
-    public function unset{$methodName}(): self
-    {
-        return \$this->remove({$fieldName});
-    }
 PHP;
     }
 }
