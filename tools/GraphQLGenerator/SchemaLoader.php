@@ -9,8 +9,7 @@ final class SchemaLoader
         $response = $schemaSource ? $this->loadFromFile($schemaSource) : $this->fetch(THOTH_GRAPHQL_ENDPOINT);
 
         if (!isset($response['data']['__schema']) || !is_array($response['data']['__schema'])) {
-            fwrite(STDERR, "Invalid GraphQL introspection schema.\n");
-            exit(1);
+            throw new GeneratorException('Invalid GraphQL introspection schema.');
         }
 
         return $response['data']['__schema'];

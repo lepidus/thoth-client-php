@@ -10,5 +10,10 @@ function main(array $argv): void
 {
     $target = $argv[2] ?? dirname(__DIR__) . '/src/GraphQL';
 
-    (new GraphQLClientGenerator())->generate($argv[1] ?? null, $target);
+    try {
+        (new GraphQLClientGenerator())->generate($argv[1] ?? null, $target);
+    } catch (GeneratorException $exception) {
+        fwrite(STDERR, $exception->getMessage() . "\n");
+        exit(1);
+    }
 }

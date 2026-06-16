@@ -69,6 +69,19 @@ final class GeneratorTest extends TestCase
         $this->assertStringNotContainsString('final class GraphQLClientGenerator', $script);
     }
 
+    public function testGeneratorEntrypointHandlesComponentExceptions(): void
+    {
+        $projectRoot = dirname(__DIR__, 2);
+        $script = file_get_contents($projectRoot . '/tools/generate-graphql-client.php');
+        $guard = file_get_contents($projectRoot . '/tools/GraphQLGenerator/TargetDirectoryGuard.php');
+        $loader = file_get_contents($projectRoot . '/tools/GraphQLGenerator/SchemaLoader.php');
+
+        $this->assertFileExists($projectRoot . '/tools/GraphQLGenerator/GeneratorException.php');
+        $this->assertStringContainsString('catch (GeneratorException $exception)', $script);
+        $this->assertStringNotContainsString('exit(1)', $guard);
+        $this->assertStringNotContainsString('exit(1)', $loader);
+    }
+
     private function removeDirectory(string $directory): void
     {
         if (!is_dir($directory)) {
