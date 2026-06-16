@@ -23,6 +23,8 @@ final class GeneratorTest extends TestCase
 
         $schema = __DIR__ . '/fixtures/minimal-introspection.json';
         $script = dirname(__DIR__, 2) . '/tools/generate-graphql-client.php';
+        copy(dirname(__DIR__, 2) . '/src/GraphQL/Client.php', $target . '/Client.php');
+
         $command = PHP_BINARY . ' ' . escapeshellarg($script) . ' ' . escapeshellarg($schema) . ' '
             . escapeshellarg($target);
 
@@ -40,8 +42,14 @@ final class GeneratorTest extends TestCase
         $this->assertStringContainsString('public function hasTitle(): bool', $workClass);
         $this->assertStringContainsString('public function unsetTitle(): self', $workClass);
         $this->assertFileExists($target . '/Queries/BooksQuery.php');
+        $this->assertFileExists($target . '/Mutations/CreateWorkMutation.php');
         $this->assertFileDoesNotExist($target . '/Schemas/QueryRoot.php');
         $this->assertFileDoesNotExist($target . '/Schemas/MutationRoot.php');
+
+        $clientClass = file_get_contents($target . '/Client.php');
+
+        $this->assertStringContainsString('@method \\ThothApi\\GraphQL\\Schemas\\Work[]|null books(array $selection = [])', $clientClass);
+        $this->assertStringContainsString('@method \\ThothApi\\GraphQL\\Schemas\\Work createWork(array $selection = [])', $clientClass);
     }
 
     public function testItRejectsUnsafeTargets(): void

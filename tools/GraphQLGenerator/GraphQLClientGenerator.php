@@ -16,13 +16,16 @@ final class GraphQLClientGenerator
 
     private SchemaTypeGenerator $schemaTypeGenerator;
 
+    private ClientPhpDocGenerator $clientPhpDocGenerator;
+
     public function __construct(
         ?SchemaLoader $schemaLoader = null,
         ?TypeIndexer $typeIndexer = null,
         ?TargetDirectoryGuard $targetDirectoryGuard = null,
         ?GeneratedDirectoryPreparer $directoryPreparer = null,
         ?RootOperationGenerator $rootOperationGenerator = null,
-        ?SchemaTypeGenerator $schemaTypeGenerator = null
+        ?SchemaTypeGenerator $schemaTypeGenerator = null,
+        ?ClientPhpDocGenerator $clientPhpDocGenerator = null
     ) {
         $this->schemaLoader = $schemaLoader ?: new SchemaLoader();
         $this->typeIndexer = $typeIndexer ?: new TypeIndexer();
@@ -30,6 +33,7 @@ final class GraphQLClientGenerator
         $this->directoryPreparer = $directoryPreparer ?: new GeneratedDirectoryPreparer();
         $this->rootOperationGenerator = $rootOperationGenerator ?: new RootOperationGenerator();
         $this->schemaTypeGenerator = $schemaTypeGenerator ?: new SchemaTypeGenerator();
+        $this->clientPhpDocGenerator = $clientPhpDocGenerator ?: new ClientPhpDocGenerator();
     }
 
     public function generate(?string $schemaSource, string $target): void
@@ -42,6 +46,7 @@ final class GraphQLClientGenerator
         $this->directoryPreparer->prepare($target);
         $this->rootOperationGenerator->generate($schema, $types, $target);
         $this->schemaTypeGenerator->generate($types, $target, $this->rootTypeNames($schema));
+        $this->clientPhpDocGenerator->generate($schema, $types, $target);
     }
 
     private function rootTypeNames(array $schema): array
