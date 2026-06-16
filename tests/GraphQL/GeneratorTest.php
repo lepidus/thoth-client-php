@@ -39,6 +39,24 @@ final class GeneratorTest extends TestCase
         $this->assertStringContainsString('@param string $value', $workClass);
     }
 
+    public function testItRejectsUnsafeTargets(): void
+    {
+        $this->temporaryDirectory = sys_get_temp_dir() . '/thoth-graphql-generator-' . uniqid('', true);
+        $target = $this->temporaryDirectory . '/not-graphql';
+        mkdir($target, 0777, true);
+
+        $schema = __DIR__ . '/fixtures/minimal-introspection.json';
+        $script = dirname(__DIR__, 2) . '/tools/generate-graphql-client.php';
+        $command = PHP_BINARY . ' ' . escapeshellarg($script) . ' ' . escapeshellarg($schema) . ' '
+            . escapeshellarg($target) . ' 2>&1';
+
+        exec($command, $output, $exitCode);
+
+        $this->assertSame(1, $exitCode);
+        $this->assertSame('Refusing to generate GraphQL client outside a GraphQL target directory.', $output[0]);
+        $this->assertDirectoryDoesNotExist($target . '/Queries');
+    }
+
     private function removeDirectory(string $directory): void
     {
         if (!is_dir($directory)) {

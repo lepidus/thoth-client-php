@@ -13,9 +13,18 @@ function main(array $argv): void
     $schema = loadIntrospectionSchema($argv[1] ?? null);
     $types = indexTypesByName($schema['types'] ?? []);
 
+    assertSafeGeneratedTarget($target);
     prepareGeneratedDirectories($target);
     generateRootOperations($schema, $types, $target);
     generateSchemaTypes($types, $target);
+}
+
+function assertSafeGeneratedTarget(string $target): void
+{
+    if (basename($target) !== 'GraphQL') {
+        fwrite(STDERR, "Refusing to generate GraphQL client outside a GraphQL target directory.\n");
+        exit(1);
+    }
 }
 
 function loadIntrospectionSchema(?string $schemaSource): array
