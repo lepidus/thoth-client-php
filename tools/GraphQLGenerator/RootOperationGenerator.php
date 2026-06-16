@@ -4,6 +4,13 @@ declare(strict_types=1);
 
 final class RootOperationGenerator
 {
+    private ClassFileWriter $classFileWriter;
+
+    public function __construct(?ClassFileWriter $classFileWriter = null)
+    {
+        $this->classFileWriter = $classFileWriter ?: new ClassFileWriter();
+    }
+
     public function generate(array $schema, array $types, string $target): void
     {
         $this->generateOperations(
@@ -25,7 +32,7 @@ final class RootOperationGenerator
         foreach ($rootType['fields'] ?? [] as $field) {
             $className = safeClassName(studly($field['name']) . operationClassSuffix($operationType));
 
-            writeGeneratedClass($directory, $className, operationClassCode(
+            $this->classFileWriter->write($directory, $className, operationClassCode(
                 $namespacePart,
                 $className,
                 $operationType,

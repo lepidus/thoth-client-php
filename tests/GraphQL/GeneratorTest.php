@@ -118,6 +118,21 @@ final class GeneratorTest extends TestCase
         $this->assertStringNotContainsString('exit(1)', $loader);
     }
 
+    public function testSchemaTypeGenerationUsesDedicatedBuilders(): void
+    {
+        $projectRoot = dirname(__DIR__, 2);
+        $schemaTypeGenerator = file_get_contents($projectRoot . '/tools/GraphQLGenerator/SchemaTypeGenerator.php');
+        $codeGeneration = file_get_contents($projectRoot . '/tools/GraphQLGenerator/CodeGeneration.php');
+
+        $this->assertFileExists($projectRoot . '/tools/GraphQLGenerator/ObjectTypeClassBuilder.php');
+        $this->assertFileExists($projectRoot . '/tools/GraphQLGenerator/InputTypeClassBuilder.php');
+        $this->assertFileExists($projectRoot . '/tools/GraphQLGenerator/EnumTypeClassBuilder.php');
+        $this->assertFileExists($projectRoot . '/tools/GraphQLGenerator/ScalarTypeClassBuilder.php');
+        $this->assertStringContainsString('private ObjectTypeClassBuilder $objectTypeBuilder;', $schemaTypeGenerator);
+        $this->assertStringNotContainsString('function generateObjectType', $codeGeneration);
+        $this->assertStringNotContainsString('function generateInputType', $codeGeneration);
+    }
+
     private function removeDirectory(string $directory): void
     {
         if (!is_dir($directory)) {
