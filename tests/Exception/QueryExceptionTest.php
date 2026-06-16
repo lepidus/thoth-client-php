@@ -35,4 +35,17 @@ class QueryExceptionTest extends TestCase
         $this->assertSame($query, $queryException->getQuery());
         $this->assertSame($variables, $queryException->getVariables());
     }
+
+    public function testGetErrorsAndStatusCode(): void
+    {
+        $errors = [
+            ['message' => 'first error'],
+            ['message' => 'second error'],
+        ];
+
+        $queryException = new QueryException($errors[0], null, null, $errors, 400);
+
+        $this->assertSame($errors, $queryException->getErrors());
+        $this->assertSame(400, $queryException->getStatusCode());
+    }
 }
