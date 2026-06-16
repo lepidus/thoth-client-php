@@ -41,6 +41,15 @@ final class GraphQLClientGenerator
 
         $this->directoryPreparer->prepare($target);
         $this->rootOperationGenerator->generate($schema, $types, $target);
-        $this->schemaTypeGenerator->generate($types, $target);
+        $this->schemaTypeGenerator->generate($types, $target, $this->rootTypeNames($schema));
+    }
+
+    private function rootTypeNames(array $schema): array
+    {
+        return array_values(array_filter([
+            $schema['queryType']['name'] ?? null,
+            $schema['mutationType']['name'] ?? null,
+            $schema['subscriptionType']['name'] ?? null,
+        ]));
     }
 }

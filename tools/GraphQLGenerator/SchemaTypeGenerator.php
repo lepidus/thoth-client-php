@@ -28,15 +28,24 @@ final class SchemaTypeGenerator
         $this->scalarTypeBuilder = $scalarTypeBuilder ?: new ScalarTypeClassBuilder();
     }
 
-    public function generate(array $types, string $target): void
+    public function generate(array $types, string $target, array $ignoredTypeNames = []): void
     {
         foreach ($types as $type) {
-            if ($this->isInternalType($type)) {
+            if ($this->shouldSkipType($type, $ignoredTypeNames)) {
                 continue;
             }
 
             $this->generateType($type, $target);
         }
+    }
+
+    private function shouldSkipType(array $type, array $ignoredTypeNames): bool
+    {
+        if ($this->isInternalType($type)) {
+            return true;
+        }
+
+        return isset($type['name']) && in_array($type['name'], $ignoredTypeNames, true);
     }
 
     private function isInternalType(array $type): bool

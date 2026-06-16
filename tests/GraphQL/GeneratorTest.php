@@ -39,6 +39,9 @@ final class GeneratorTest extends TestCase
         $this->assertStringContainsString('@param string $value', $workClass);
         $this->assertStringContainsString('public function hasTitle(): bool', $workClass);
         $this->assertStringContainsString('public function unsetTitle(): self', $workClass);
+        $this->assertFileExists($target . '/Queries/BooksQuery.php');
+        $this->assertFileDoesNotExist($target . '/Schemas/QueryRoot.php');
+        $this->assertFileDoesNotExist($target . '/Schemas/MutationRoot.php');
     }
 
     public function testItRejectsUnsafeTargets(): void
