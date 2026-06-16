@@ -507,7 +507,7 @@ function phpDocBaseType(array $type): string
     }
 
     if (($type['kind'] ?? null) === 'LIST') {
-        return 'array';
+        return phpDocBaseType($type['ofType'] ?? []) . '[]';
     }
 
     if (($type['kind'] ?? null) === 'ENUM') {

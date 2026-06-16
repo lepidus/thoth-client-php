@@ -35,7 +35,7 @@ final class GeneratorTest extends TestCase
         $this->assertStringContainsString('@return string', $workClass);
         $this->assertStringContainsString('@return string|null', $workClass);
         $this->assertStringContainsString('@return Imprint|null', $workClass);
-        $this->assertStringContainsString('@return array|null', $workClass);
+        $this->assertStringContainsString('@return string[]|null', $workClass);
         $this->assertStringContainsString('@param string $value', $workClass);
     }
 
